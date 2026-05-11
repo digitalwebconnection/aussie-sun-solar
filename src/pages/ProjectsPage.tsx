@@ -1,0 +1,12 @@
+const ProjectsPage = () => {
+  return (
+    <main className="min-h-screen bg-white pt-28 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-5xl font-black text-[#004093]">Our Projects</h1>
+        <p className="mt-4 text-gray-500 text-lg">Explore our completed solar installations across Australia.</p>
+      </div>
+    </main>
+  );
+};
+
+export default ProjectsPage;

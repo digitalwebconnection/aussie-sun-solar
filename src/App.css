@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+
+/* Carousel.css */
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.carousel-item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: grab;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+
+  transition: all 0.4s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-8px);
+}
+
+.carousel-item-header {
+  padding: 24px;
+}
+
+.carousel-icon-container {
+  display: flex;
+  height: 58px;
+  width: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #00D2FF,
+    #FE9900
+  );
+
+  color: white;
+
+  box-shadow:
+    0 12px 30px rgba(0,210,255,0.35);
+}
+
+.carousel-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.carousel-item-content {
+  padding: 0 24px 24px;
+}
+
+.carousel-item-title {
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+}
+
+.carousel-item-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+}
+
+.carousel-indicators-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel-indicators {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.carousel-indicator {
+  height: 10px;
+  width: 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  width: 30px;
+  background: linear-gradient(
+    to right,
+    #00D2FF,
+    #FE9900
+  );
+}
+
+.carousel-indicator.inactive {
+  background: rgba(255,255,255,0.2);
+}
