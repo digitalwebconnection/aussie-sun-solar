@@ -9,10 +9,14 @@ import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import './App.css'
 import WhatsAppChatWidget from './Component/WhatsAppChatWidget'
+import Preloader from './Component/Home/Preloader'
+import SmoothScroll from './Component/SmoothScroll'
 
 function App() {
   return (
     <BrowserRouter>
+      <SmoothScroll />
+      <Preloader />
       {/* Fixed Navbar — sits above all pages */}
       <SolarNavbar />
 
