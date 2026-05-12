@@ -86,17 +86,16 @@ export default function TrustedBrandsSection() {
                         Trusted Technology Partners
                     </p>
 
-                    <h2 className="text-5xl font-black tracking-[-3px] text-slate-900 md:text-7xl">
-
+                    <h2 className="text-5xl font-black tracking-tight text-slate-900 md:text-7xl leading-[1.2]">
                         Powered By
-                        <span className="block bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent">
+                        <span className="block bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent py-2 pb-4">
                             Leading Solar Brands
                         </span>
                     </h2>
 
-                    <div className="mx-auto mt-8 h-1 w-40 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
 
-                    <p className="mx-auto mt-8 max-w-7xl text-lg leading-loose text-slate-600">
+
+                    <p className="mx-auto mt-5 max-w-7xl text-lg leading-loose text-slate-600">
                         We partner with globally trusted manufacturers to deliver
                         reliable solar systems built for performance, efficiency,
                         and long-term energy savings.

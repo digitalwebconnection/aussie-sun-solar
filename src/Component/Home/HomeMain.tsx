@@ -12,6 +12,8 @@ import WhyChooseSection from './WhyChoose'
 import TestimonialsSection from './TestimonialsSection'
 import TrustedBrandsSection from './TrustedBrandsSection'
 import SolarSupportSection from './SolarSupportSection'
+import SolarSavingsCalculator from './AussieSolarCalculator'
+import AussiesSunSolarFinance from './AussiesSunSolarFinance'
 
 const HomeMain = () => {
   return (
@@ -22,6 +24,8 @@ const HomeMain = () => {
       <ServicesSection />
       <SolarPackages />
       <SolarLeadSection />
+       <SolarSavingsCalculator/>
+      
       <SolarRebateSection />
       <StatsSection />
       <WellnessExpertsSection />
@@ -30,6 +34,7 @@ const HomeMain = () => {
       <SolarSupportSection />
       <TestimonialsSection />
       <TrustedBrandsSection />
+       <AussiesSunSolarFinance />
     </>
   )
 }

@@ -4,7 +4,6 @@ import {
     Phone,
     Mail,
     MapPin,
-    ArrowUp,
     ExternalLink,
 } from "lucide-react";
 import {
@@ -41,9 +40,7 @@ const itemVariants: Variants = {
 };
 
 const Footer = () => {
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+
 
     return (
         <footer className="relative bg-white text-[#004093] overflow-hidden border-t border-gray-100">
@@ -54,7 +51,7 @@ const Footer = () => {
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#004093]/5 rounded-full blur-[100px] pointer-events-none" /> */}
 
             {/* --- TOP CTA SECTION --- */}
-            <div className="relative z-10 bg-[#ececec] border-b border-gray-500/40">
+            <div className="relative z-10 bg-[#000000] border-b border-gray-500/40">
                 <div className="max-w-7xl mx-auto py-2 flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div>
                         <motion.h2
@@ -65,7 +62,7 @@ const Footer = () => {
                         >
                             Start Your <span className="text-[#FE9900]">Solar Journey</span>
                         </motion.h2>
-                        <p className="text-gray-500 mt-2 text-lg">Premium energy solutions for a sustainable future.</p>
+                        <p className="text-gray-100 mt-2 text-lg">Premium energy solutions for a sustainable future.</p>
                     </div>
 
                     <motion.button
@@ -95,13 +92,7 @@ const Footer = () => {
                         <p className="text-gray-600 leading-relaxed text-base">
                             Australia's trusted partner in renewable energy. We provide high-efficiency solar panels and battery systems tailored for your needs.
                         </p>
-                        <div className="flex gap-3">
-                            {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-                                <a key={i} href="#" className="w-11 h-11 rounded-xl bg-gray-50 flex items-center justify-center text-[#004093] hover:bg-[#004093] hover:text-white transition-all border border-gray-100 shadow-sm">
-                                    <Icon size={18} />
-                                </a>
-                            ))}
-                        </div>
+                  
                     </motion.div>
 
                     {/* COL 2: CONTACT */}
@@ -175,24 +166,119 @@ const Footer = () => {
                 </div>
             </motion.div>
 
-            {/* --- BOTTOM STRIP --- */}
-            <div className="border-t border-gray-100 py-2 bg-[#fcfdfe]">
-                <div className="w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-sm text-gray-500 font-medium">
-                        © 2025 <span className="text-[#004093] font-bold">HexaSolar Solutions</span>. All Rights Reserved.
-                    </p>
+     
 
-                    <button
-                        onClick={scrollToTop}
-                        className="fixed bottom-8 right-8 w-14 h-14 rounded-2xl bg-[#004093] text-white flex items-center justify-center hover:bg-[#FE9900] hover:-translate-y-2 transition-all shadow-2xl z-50 group"
-                    >
-                        <ArrowUp size={24} className="group-hover:animate-bounce" />
-                    </button>
+
+            {/* --- ACCREDITATION BAR --- */}
+            <div className="border-t border-gray-400 bg-[#f8f8f8]">
+                <div className="max-w-7xl mx-auto py-2 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+                    {/* LEFT SIDE */}
+                    <div className="flex flex-col md:flex-row items-center gap-8">
+
+                        {/* SMART ENERGY */}
+                        <div className="flex items-center gap-5">
+                            <img
+                                src="https://arisesolar.com.au/wp-content/themes/arise-solar/assets/images/sec-logo.svg"
+                                alt="Smart Energy Council"
+                                className="h-24 object-contain"
+                            />
+
+                            {/* SOCIAL */}
+                            <div className="flex items-center gap-4">
+                                {[FaFacebookF, FaInstagram, FaLinkedinIn].map(
+                                    (Icon, i) => (
+                                        <a
+                                            key={i}
+                                            href="#"
+                                            className="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center text-[#004093] hover:bg-[#FE9900] hover:text-white hover:border-[#FE9900] transition-all duration-300"
+                                        >
+                                            <Icon size={18} />
+                                        </a>
+                                    )
+                                )}
+
+                                {/* YOUTUBE */}
+                                <a
+                                    href="#"
+                                    className="w-11 h-11 rounded-full border border-gray-300 flex items-center justify-center text-[#004093] hover:bg-[#FE9900] hover:text-white hover:border-[#FE9900] transition-all duration-300"
+                                >
+                                    ▶
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* RIGHT SIDE */}
+                    <div className="text-center lg:text-right">
+                        <p className="text-[#004093] font-semibold text-sm md:text-base">
+                            QLD : 83780 / VIC : 27677 / SA : BLD286542 / NSW : 322855c
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            {/* --- FLOATING ACTION --- */}
+            {/* --- POLICY LINKS --- */}
+            <div className="border-t border-gray-400 bg-white">
+                <div className="max-w-7xl mx-auto py-5 flex flex-col lg:flex-row justify-between items-center gap-5">
 
+                    {/* LINKS */}
+                    <div className="flex flex-wrap items-center gap-6 text-sm md:text-base">
+                        <a
+                            href="/privacy-policy"
+                            className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
+                        >
+                            Privacy Policy
+                        </a>
+
+                        <a
+                            href="/terms-condition"
+                            className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
+                        >
+                            Terms & Conditions
+                        </a>
+
+                        <a
+                            href="/complaints-policy"
+                            className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
+                        >
+                            Complaints Handling Policy
+                        </a>
+                    </div>
+
+                    {/* COPYRIGHT */}
+                    <div>
+                        <p className="text-gray-500 text-sm md:text-base text-center lg:text-right">
+                            ©2026
+                            <span className="font-bold text-[#004093]">
+                                {" "}
+                                AUSSIE SUN SOLAR PTY LTD
+                            </span>{" "}
+                            ABN 32 168 693 987
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* --- DISCLAIMER --- */}
+            <div className="border-t border-gray-400 bg-[#f8f8f8]">
+                <div className="max-w-7xl mx-auto py-8">
+
+                    <p className="text-gray-600 leading-8 text-sm md:text-base">
+                        This Solar System Promotion is available for standard metropolitan based
+                        installations only. Price is after Small Scale Technology Certificates
+                        (STCs) have been assigned to Aussies Sun Solar Pty Ltd or its agents.
+                        Any additional extras including but not limited to double storey,
+                        roof type, meter box upgrades or three phase power, may attract
+                        additional charges. Price beat offer applies to local competitor
+                        advertised quotes only and must be for identical goods.
+                    </p>
+
+                    <p className="text-[#004093] font-semibold mt-4 text-sm md:text-base">
+                        *Terms and conditions apply.
+                    </p>
+                </div>
+            </div>
         </footer>
     );
 };

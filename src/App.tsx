@@ -8,6 +8,7 @@ import ProductsPage from './pages/ProductsPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import './App.css'
+import WhatsAppChatWidget from './Component/WhatsAppChatWidget'
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-
+<WhatsAppChatWidget/>
       {/* Footer — shown on every page */}
       <Footer />
     </BrowserRouter>
