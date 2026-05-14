@@ -93,9 +93,9 @@ const SolarNavbar = () => {
       ==================================== */}
 
       <div
-        className={`relative rounded-full  shadow-lg shadow-blur-xl shadow-[#FE9900] transition-all duration-500 ${scrolled
-            ? "bg-white  border border-white/20 "
-            : "bg-white  border border-white/50"
+        className={`relative rounded-full shadow-2xl transition-all duration-500 ${scrolled
+            ? "bg-white border border-gray-100 shadow-[#FE9900]/10"
+            : "bg-white border border-gray-50 shadow-[#004093]/5"
           }`}
       >
 
@@ -325,9 +325,9 @@ const SolarNavbar = () => {
               {/* CALL */}
               <div className="flex items-center gap-3">
 
-                <div className="w-10 h-10 rounded-full bg-[#004093] flex items-center justify-center text-[#FE9900] shadow-lg">
+                <div className="w-10 h-10 rounded-full bg-[#004093] flex items-center justify-center text-white shadow-lg">
 
-                  <Phone size={18} />
+                  <Phone size={18} fill="currentColor" />
 
                 </div>
 
@@ -337,8 +337,8 @@ const SolarNavbar = () => {
                     Call Us On
                   </p>
 
-                  <h4 className="font-bold text--[#004093] text-lg">
-                    1300 555 947
+                  <h4 className="font-bold text-[#004093] text-lg">
+                    1300 504 912
                   </h4>
 
                 </div>
@@ -348,7 +348,7 @@ const SolarNavbar = () => {
               {/* BUTTON */}
               <Link
                 to="/contact"
-                className="group bg-[#FE9900] hover:bg-[#ffad2e] text-[#004093] px-7 py-3 rounded-full font-bold flex items-center gap-3 transition duration-300 shadow-[0_10px_30px_rgba(254,153,0,0.45)] hover:scale-105"
+                className="group bg-[#FE9900] hover:bg-[#ffb033] text-white px-7 py-3 rounded-full font-bold flex items-center gap-3 transition duration-300 shadow-[0_10px_30px_rgba(254,153,0,0.3)] hover:scale-105"
               >
 
                 Get A Quote

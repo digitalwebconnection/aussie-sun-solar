@@ -1,10 +1,26 @@
+import ProjectsHero from '../Component/Projects/ProjectsHero';
+import ProjectStats from '../Component/Projects/ProjectStats';
+import ProjectsGrid from '../Component/Projects/ProjectsGrid';
+import ProjectProcess from '../Component/Projects/ProjectProcess';
+
+
 const ProjectsPage = () => {
   return (
-    <main className="min-h-screen bg-white pt-28 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-black text-[#004093]">Our Projects</h1>
-        <p className="mt-4 text-gray-500 text-lg">Explore our completed solar installations across Australia.</p>
-      </div>
+    <main className="overflow-x-hidden">
+      {/* 1. Cinematic hero with animated stats card */}
+      <ProjectsHero />
+
+      {/* 2. Floating dark stats band */}
+      <ProjectStats />
+
+      {/* 3. Filterable projects grid */}
+      <ProjectsGrid />
+
+      {/* 4. 4-step installation process */}
+      <ProjectProcess />
+
+      {/* 7. Dark CTA with contact cards */}
+     
     </main>
   );
 };

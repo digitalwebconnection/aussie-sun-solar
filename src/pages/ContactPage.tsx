@@ -1,10 +1,26 @@
+import ContactPageHero from '../Component/Contact/ContactPageHero';
+import ContactHero from '../Component/Contact/ContactHero';
+import ContactOffices from '../Component/Contact/ContactOffices';
+import ContactServices from '../Component/Contact/ContactServices';
+
+
 const ContactPage = () => {
   return (
-    <main className="min-h-screen bg-white pt-28 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-black text-[#004093]">Contact Us</h1>
-        <p className="mt-4 text-gray-500 text-lg">Get in touch with our solar energy experts today.</p>
-      </div>
+    <main className="min-h-screen bg-white">
+      {/* 0. Cinematic Hero Section */}
+      <ContactPageHero />
+
+      {/* 1. Contact Info & Form Section */}
+      <ContactHero />
+
+      {/* 2. Office Locations */}
+      <ContactOffices />
+
+      {/* 3. Services Grid */}
+      <ContactServices />
+
+
+
     </main>
   );
 };

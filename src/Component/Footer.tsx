@@ -68,7 +68,7 @@ const Footer = () => {
                     <motion.button
                         whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(254 153 0 / 0.2)" }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-3 bg-[#FE9900] text-white px-15 py-3 rounded-lg font-bold text-lg shadow-xl shadow-[#FE9900]/20 transition-all group"
+                        className="flex items-center gap-3 bg-[#FE9900] text-white px-8 py-3 rounded-lg font-bold text-lg shadow-xl shadow-[#FE9900]/20 transition-all group"
                     >
                         Get A Free Quote
                         <ExternalLink size={20} className="group-hover:rotate-45 transition-transform" />
@@ -88,7 +88,7 @@ const Footer = () => {
 
                     {/* COL 1: BRAND */}
                     <motion.div variants={itemVariants} className="space-y-8">
-                        <img src={logo} alt="HexaSolar" className="h-26 w-auto" />
+                        <img src={logo} alt="Aussie Sun Solar" className="h-26 w-auto" />
                         <p className="text-gray-600 leading-relaxed text-base">
                             Australia's trusted partner in renewable energy. We provide high-efficiency solar panels and battery systems tailored for your needs.
                         </p>
@@ -112,13 +112,13 @@ const Footer = () => {
                                 </div>
                             </a>
 
-                            <a href="mailto:info@hexasolarsolutions.com.au" className="flex items-center gap-4 group">
+                            <a href="mailto:info@aussiesunsolar.com.au" className="flex items-center gap-4 group">
                                 <div className="w-12 h-12 rounded-2xl bg-[#004093] flex items-center justify-center group-hover:bg-[#FE9900] transition-colors shadow-lg shadow-blue-900/10">
                                     <Mail size={20} className="text-white" />
                                 </div>
                                 <div className="min-w-0">
                                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Email Us</p>
-                                    <h4 className="font-extrabold text-sm truncate group-hover:text-[#FE9900] transition-colors">info@hexasolar.com.au</h4>
+                                    <h4 className="font-extrabold text-sm truncate group-hover:text-[#FE9900] transition-colors">info@aussiesunsolar.com.au</h4>
                                 </div>
                             </a>
                         </div>
@@ -254,7 +254,7 @@ const Footer = () => {
                                 {" "}
                                 AUSSIE SUN SOLAR PTY LTD
                             </span>{" "}
-                            ABN 32 168 693 987
+                            ABN 14 657 213 873
                         </p>
                     </div>
                 </div>
