@@ -41,7 +41,7 @@ const ContactFeatures = () => {
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-black text-[#004093]">
             Why More Australians Choose <br />
-            <span className="text-[#007A7A]">Hexa Solar Solutions?</span>
+            <span className="text-[#FE9900]">Aussie Sun Solar?</span>
           </h2>
         </div>
 
@@ -55,9 +55,9 @@ const ContactFeatures = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-2xl border-b-4 border-transparent hover:border-[#007A7A] shadow-sm hover:shadow-xl transition-all duration-300 text-center"
+                className="bg-white p-10 rounded-2xl border-b-4 border-transparent hover:border-[#FE9900] shadow-sm hover:shadow-xl transition-all duration-300 text-center"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#007A7A]/10 flex items-center justify-center text-[#007A7A] mx-auto mb-8">
+                <div className="w-16 h-16 rounded-2xl bg-[#004093]/10 flex items-center justify-center text-[#004093] mx-auto mb-8">
                   <Icon size={32} />
                 </div>
                 <h3 className="text-xl font-black text-[#004093] mb-3">
