@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
   ChevronDown,
@@ -148,7 +149,7 @@ const SolarNavbar = () => {
             ==================================== */}
 
             <div
-              className="relative"
+              className="relative py-2"
               onMouseEnter={() =>
                 setActiveMenu("services")
               }
@@ -167,31 +168,38 @@ const SolarNavbar = () => {
 
                 Services
 
-                <ChevronDown size={16} />
+                <ChevronDown size={16} className={`transition-transform duration-300 ${activeMenu === "services" ? "rotate-180" : ""}`} />
 
               </Link>
 
               {/* DROPDOWN */}
-              {activeMenu === "services" && (
-                <div className="absolute top-14 left-0 w-72 bg-white rounded-3xl shadow-2xl border border-gray-100 p-4 z-50">
+              <AnimatePresence>
+                {activeMenu === "services" && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 15 }}
+                    className="absolute top-full left-0 w-72 bg-white rounded-3xl shadow-2xl border border-gray-100 p-4 z-50 mt-2"
+                  >
 
-                  {[
-                    "Solar Power Systems",
-                    "Battery Storage Solutions",
-                    "EV Chargers",
-                    "Commercial Solar",
-                  ].map((item, index) => (
-                    <Link
-                      key={index}
-                      to="/services"
-                      className="block px-5 py-4 rounded-2xl hover:bg-[#004093] hover:text-white transition font-semibold text-[#004093]"
-                    >
-                      {item}
-                    </Link>
-                  ))}
+                    {[
+                      { name: "Solar Power Systems", path: "/services/solar-power-systems" },
+                      { name: "Battery Storage Solutions", path: "/services" },
+                      { name: "EV Chargers", path: "/services" },
+                      { name: "Commercial Solar", path: "/services" },
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="block px-5 py-4 rounded-2xl hover:bg-[#004093] hover:text-white transition font-semibold text-[#004093]"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
 
-                </div>
-              )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
             </div>
 
@@ -200,7 +208,7 @@ const SolarNavbar = () => {
             ==================================== */}
 
             <div
-              className="relative"
+              className="relative py-2"
               onMouseEnter={() =>
                 setActiveMenu("products")
               }
@@ -220,67 +228,74 @@ const SolarNavbar = () => {
 
                 Products
 
-                <ChevronDown size={16} />
+                <ChevronDown size={16} className={`transition-transform duration-300 ${activeMenu === "products" ? "rotate-180" : ""}`} />
 
               </Link>
 
               {/* MEGA MENU */}
-              {activeMenu === "products" && (
-                <div className="absolute top-14 left-[-120px] flex bg-white rounded-[32px] shadow-2xl overflow-hidden border border-gray-100 z-50">
+              <AnimatePresence>
+                {activeMenu === "products" && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 15 }}
+                    className="absolute top-full left-[-120px] flex bg-white rounded-[32px] shadow-2xl overflow-hidden border border-gray-100 z-50 mt-2"
+                  >
 
-                  {/* LEFT SIDE */}
-                  <div className="w-72 bg-[#f7f9fc] p-4">
+                    {/* LEFT SIDE */}
+                    <div className="w-72 bg-[#f7f9fc] p-4">
 
-                    {Object.keys(products).map(
-                      (category, index) => (
-                        <button
-                          key={index}
-                          onMouseEnter={() =>
-                            setActiveSubMenu(category)
-                          }
-                          className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl text-left font-semibold transition mb-2 ${activeSubMenu === category
-                              ? "bg-[#004093] text-white"
-                              : "hover:bg-white text-[#004093]"
-                            }`}
-                        >
+                      {Object.keys(products).map(
+                        (category, index) => (
+                          <button
+                            key={index}
+                            onMouseEnter={() =>
+                              setActiveSubMenu(category)
+                            }
+                            className={`w-full flex items-center justify-between px-5 py-4 rounded-2xl text-left font-semibold transition mb-2 ${activeSubMenu === category
+                                ? "bg-[#004093] text-white"
+                                : "hover:bg-white text-[#004093]"
+                              }`}
+                          >
 
-                          {category}
+                            {category}
 
-                          <ChevronRight size={18} />
+                            <ChevronRight size={18} />
 
-                        </button>
-                      )
-                    )}
-
-                  </div>
-
-                  {/* RIGHT SIDE */}
-                  <div className="w-80 p-6">
-
-                    <h3 className="text-xl font-bold mb-5 text-[#004093]">
-                      {activeSubMenu}
-                    </h3>
-
-                    <div className="space-y-4">
-
-                      {products[
-                        activeSubMenu
-                      ]?.map((item, index) => (
-                        <Link
-                          key={index}
-                          to="/products"
-                          className="block font-semibold hover:text-[#FE9900] transition text-gray-700"
-                        >
-                          {item}
-                        </Link>
-                      ))}
+                          </button>
+                        )
+                      )}
 
                     </div>
 
-                  </div>
+                    {/* RIGHT SIDE */}
+                    <div className="w-80 p-6">
 
-                </div>
-              )}
+                      <h3 className="text-xl font-bold mb-5 text-[#004093]">
+                        {activeSubMenu}
+                      </h3>
+
+                      <div className="space-y-4">
+
+                        {products[
+                          activeSubMenu
+                        ]?.map((item, index) => (
+                          <Link
+                            key={index}
+                            to="/products"
+                            className="block font-semibold hover:text-[#FE9900] transition text-gray-700"
+                          >
+                            {item}
+                          </Link>
+                        ))}
+
+                      </div>
+
+                    </div>
+
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
             </div>
 

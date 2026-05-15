@@ -12,6 +12,7 @@ import Preloader from './Component/Home/Preloader'
 import SmoothScroll from './Component/SmoothScroll'
 import AboutMain from './Component/Aboutus/AboutMain'
 import ProjectsCTA from './Component/Projects/ProjectsCTA'
+import SolarPowerSystems from './pages/SolarPowerSystems'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<HomeMain />} />
         <Route path="/about" element={<AboutMain/>} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/solar-power-systems" element={<SolarPowerSystems />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />

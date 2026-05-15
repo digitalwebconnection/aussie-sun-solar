@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Hammer, Zap, BadgeDollarSign, Battery, Activity, Users } from "lucide-react";
 
