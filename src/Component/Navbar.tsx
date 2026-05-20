@@ -15,33 +15,38 @@ import logo from "../assets/logo.png";
    PRODUCTS
 ==================================== */
 
-const products: Record<string, string[]> = {
+const products: Record<string, { name: string; slug: string }[]> = {
   "Solar Panels": [
-    "Jinko Solar Panels",
-    "JA Solar Panels",
-    "Longi Solar Panels",
-    "Canadian Solar Panels",
-    "Trina Solar Panels",
-    "Risen Solar Panels",
-    "DMEGC Solar Panels",
+    { name: "Jinko Solar Panels", slug: "jinko-solar-panels" },
+    { name: "JA Solar Panels", slug: "ja-solar-panels" },
+    { name: "AIKO Solar Panels", slug: "aiko-solar-panels" },
+    { name: "Canadian Solar Panels", slug: "canadian-solar-panels" },
+    { name: "DAS Solar Panels", slug: "das-solar-panels" },
+    { name: "DMEGC Solar Panels", slug: "dmegc-solar-panels" },
+    { name: "Eging Solar Panels", slug: "eging-solar-panels" },
+    { name: "Risen Solar Panels", slug: "risen-solar-panels" },
+    { name: "Trina Solar Panels", slug: "trina-solar-panels" },
+    { name: "Longi Solar Panels", slug: "longi-solar-panels" },
   ],
 
   "Solar Inverters": [
-    "Growatt Inverters",
-    "Sungrow Inverters",
-    "GoodWe Inverters",
-    "SAJ Inverters",
-    "Solis Inverters",
-    "Solix Inverters",
+    { name: "GoodWe Inverters", slug: "goodwe-inverters" },
+    { name: "Sungrow Inverters", slug: "sungrow-inverters" },
+    { name: "Growatt Inverters", slug: "growatt-inverters" },
+    { name: "Solis Inverters", slug: "solis-inverters" },
+    { name: "SAJ Inverters", slug: "saj-inverters" },
+    { name: "Solix Inverters", slug: "solix-inverters" },
   ],
 
   "Solar Batteries": [
-    "FoxESS Battery",
-    "Growatt Battery Systems",
-    "Sungrow Battery Systems",
-    "Alpha ESS Battery Systems",
-    "Neovolt Battery Systems",
-    "Sigenergy Battery Systems",
+    { name: "FoxESS Battery", slug: "foxess-battery" },
+    { name: "Growatt Battery Systems", slug: "growatt-battery-systems" },
+    { name: "SAJ Battery Systems", slug: "saj-battery-systems" },
+    { name: "Anker Solix Battery Systems", slug: "anker-solix-battery-systems" },
+    { name: "Sungrow Battery Systems", slug: "sungrow-battery-systems" },
+    { name: "Alpha ESS Battery Systems", slug: "alpha-ess-battery-systems" },
+    { name: "Neovolt Battery Systems", slug: "neovolt-battery-systems" },
+    { name: "Sigenergy Battery Systems", slug: "sigenergy-battery-systems" },
   ],
 };
 
@@ -282,10 +287,10 @@ const SolarNavbar = () => {
                         ]?.map((item, index) => (
                           <Link
                             key={index}
-                            to="/products"
+                            to={`/products/${item.slug}`}
                             className="block font-semibold hover:text-[#FE9900] transition text-gray-700"
                           >
-                            {item}
+                            {item.name}
                           </Link>
                         ))}
 

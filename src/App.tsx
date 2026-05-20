@@ -13,6 +13,7 @@ import SmoothScroll from './Component/SmoothScroll'
 import AboutMain from './Component/Aboutus/AboutMain'
 import ProjectsCTA from './Component/Projects/ProjectsCTA'
 import SolarPowerSystems from './pages/SolarPowerSystems'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/solar-power-systems" element={<SolarPowerSystems />} />
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/:slug" element={<ProductDetailPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
