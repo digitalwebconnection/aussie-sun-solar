@@ -14,6 +14,7 @@ import TrustedBrandsSection from './TrustedBrandsSection'
 import SolarSupportSection from './SolarSupportSection'
 import SolarSavingsCalculator from './AussieSolarCalculator'
 import AussiesSunSolarFinance from './AussiesSunSolarFinance'
+import BatterySlider from './BatterySlider'
 
 const HomeMain = () => {
   return (
@@ -35,6 +36,7 @@ const HomeMain = () => {
       <TestimonialsSection />
       <TrustedBrandsSection />
        <AussiesSunSolarFinance />
+      <BatterySlider />
     </>
   )
 }

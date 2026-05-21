@@ -255,10 +255,6 @@ export default function AussiesSunSolarFinance() {
                   />
                 </button>
 
-                <p className="text-gray-9+00 text-sm leading-relaxed">
-                  By submitting this form, you agree to be contacted by
-                  Aussies Sun Solar regarding solar solutions and offers.
-                </p>
               </form>
             </div>
           </div>
