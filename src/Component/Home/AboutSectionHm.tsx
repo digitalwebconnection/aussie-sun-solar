@@ -9,7 +9,7 @@ import Stack from "../Stack";
 
 const AboutSection = () => {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-12 md:py-24 bg-white overflow-hidden">
       {/* SUBTLE BACKGROUND TEXTURE */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -105,26 +105,26 @@ const AboutSection = () => {
           </h2>
 
           {/* DESCRIPTION */}
-          <div className="mt-10">
+          <div className="mt-5 md:mt-10">
             <BlurText
               text="Aussie Sun Solar is committed to making sustainable energy accessible for everyone. We provide customized solar solutions that combine cutting-edge technology with local expertise, ensuring maximum efficiency for your home or business."
               delay={20}
               animateBy="words"
               direction="top"
-              className="text-gray-600 text-lg leading-relaxed"
+              className="text-gray-900 text-lg leading-relaxed"
             />
           </div>
 
           {/* CORE FEATURES GRID */}
-          <div className="grid sm:grid-cols-2 gap-6 mt-12">
+          <div className="grid sm:grid-cols-2 gap-6 mt-5 md:mt-12 ">
             {[
               { title: "CEC Certified Installers", icon: Award },
               { title: "Tier-1 Premium Tech", icon: Zap },
               { title: "Zero Upfront Cost", icon: CheckCircle2 },
               { title: "Local Ongoing Support", icon: ShieldCheck },
             ].map((feature, idx) => (
-              <div key={idx} className="flex items-center gap-3 group">
-                <div className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-[#004093] transition-colors duration-300">
+              <div key={idx} className="flex items-center gap-3 group ">
+                <div className="w-10 h-10 rounded-xl bg-gray-50 flex  border border-gray-300  items-center justify-center group-hover:bg-[#004093] transition-colors duration-300">
                   <feature.icon size={20} className="text-[#FE9900]" />
                 </div>
                 <span className="font-bold text-gray-800">{feature.title}</span>

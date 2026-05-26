@@ -16,6 +16,7 @@ interface TestimonialsCardProps {
   items: TestimonialItem[];
   className?: string;
   width?: number;
+  height?: number;
   showNavigation?: boolean;
   showCounter?: boolean;
   autoPlay?: boolean;

@@ -60,11 +60,11 @@ const SolarLeadSection = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section className="relative py-14 bg-white overflow-hidden text-[#004093] font-sans">
+        <section className="relative py-6 md:py-14 bg-white overflow-hidden text-[#004093] font-sans">
 
             <div className="max-w-7xl mx-auto px-6  relative z-10">
                 {/* Simple Header */}
-                <div className="mb-8 relative text-center">
+                <div className="mb-4 md:mb-8 relative text-center">
 
                     {/* Right Shadow Glow */}
                     <div className="absolute right-0 top-10 w-[300px] h-[300px] bg-[#FE9900]/20 blur-[120px] rounded-full pointer-events-none" />
@@ -81,7 +81,7 @@ const SolarLeadSection = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-[#004093] relative z-10">
+                    <h2 className="text-3xl md:text-7xl font-bold tracking-tight text-[#004093] relative z-10">
                         Build Your{" "}
 
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900] drop-shadow-[4px_4px_12px_rgba(254,153,0,0.35)]">
@@ -96,7 +96,7 @@ const SolarLeadSection = () => {
                     </h2>
                 </div>
                 {/* Minimalist Tabs */}
-                <div className="flex flex-wrap gap-2 justify-center items-center max-w-7xl mx-auto mb-8 p-1.5 bg-slate-50 rounded-2xl w-fit">
+                <div className="flex flex-wrap gap-2 justify-center items-center max-w-7xl mx-auto mb-4 md:mb-8 py-0 md:p-1.5 bg-slate-50 rounded-2xl w-fit">
                     {solarOptions.map((item, index) => (
                         <button
                             key={item.id}
@@ -172,7 +172,7 @@ const SolarLeadSection = () => {
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-white p-8 md:p-10  border border-slate-300   shadow-lg shadow-black relative overflow-hidden"
+                            className="bg-white p-5 md:p-10  border border-slate-300   shadow-lg shadow-black relative overflow-hidden"
                         >
                             {/* Subtle decorative glow */}
                             <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#FE9900]/5 blur-[60px] rounded-full" />
@@ -273,7 +273,7 @@ const SolarLeadSection = () => {
                                     <div className="absolute inset-0 bg-[#FE9900] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 </motion.button>
 
-                                <p className="text-[10px] text-center text-slate-400 font-bold uppercase tracking-widest mt-6">
+                                <p className="text-[10px] text-center text-slate-400 font-bold uppercase tracking-widest mt-4 md:mt-6">
                                     🔒 256-bit Secure Data Encryption
                                 </p>
                             </form>

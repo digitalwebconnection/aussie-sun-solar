@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full py-25 overflow-hidden">
 
       {/* ================================
           BACKGROUND SLIDER
@@ -67,16 +67,16 @@ const HeroSection = () => {
           CONTENT
       ================================= */}
 
-      <div className="relative z-20 max-w-7xl mx-auto h-full flex items-center">
+      <div className="relative z-20 px-3 sm:px-6 md:px-0 max-w-7xl mx-auto h-full flex items-center">
 
         <div className="max-w-7xl ">
 
           {/* TOP BADGE */}
-          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-white/10 bg-white/10 backdrop-blur-xl shadow-2xl mb-8 animate-[pulse_4s_ease-in-out_infinite]">
+          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-white/10 bg-white/10 backdrop-blur-xl shadow-2xl mb-4 md:mb-8 animate-[pulse_4s_ease-in-out_infinite]">
 
             <div className="w-3 h-3 rounded-full bg-[#FE9900]"></div>
 
-            <p className="text-white font-medium tracking-wide">
+            <p className="text-white text-[12px] sm:text-sm font-medium tracking-wide">
               Australia's #1 Smart Solar Energy Provider
             </p>
 
@@ -98,7 +98,7 @@ const HeroSection = () => {
           </h1>
 
           {/* DESCRIPTION */}
-          <p className="mt-8 text-white/80 text-[20px] md:text-[22px] leading-[1.8] max-w-[720px]">
+          <p className="mt-8 text-white/80 text-md md:text-lg leading-[1.8] max-w-7xl">
 
             Upgrade your home with premium solar panels,
             advanced battery storage, EV charging and
@@ -108,7 +108,7 @@ const HeroSection = () => {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-wrap items-center gap-5 mt-12">
+          <div className="flex flex-wrap items-center gap-5   mt-5 md:mt-12">
 
             {/* BUTTON */}
             <button className="group bg-[#FE9900] hover:bg-[#ffae2b] text-white  px-10 py-2 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-[0_10px_40px_rgba(254,153,0,0.45)] transition-all duration-300 hover:scale-105">

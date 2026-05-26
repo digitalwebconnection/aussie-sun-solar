@@ -16,15 +16,15 @@ const rebatePoints = [
 
 const SolarBatterySection = () => {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative md:py-24 py-10 bg-white overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FE9900]/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#004093]/10 blur-[120px] rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 md:px-0 relative z-10">
         
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
           
           {/* LEFT SIDE */}
           <div>
@@ -46,7 +46,7 @@ const SolarBatterySection = () => {
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-black leading-[1.1] text-[#004093]"
+              className="text-3xl md:text-6xl font-black leading-[1.1] text-[#004093]"
             >
               Save More With <br />
 
@@ -59,7 +59,7 @@ const SolarBatterySection = () => {
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-slate-900 text-lg leading-relaxed mt-8 max-w-xl"
+              className="text-slate-900 md:text-lg text-md leading-relaxed mt-8 max-w-xl"
             >
               Upgrade your home with smart solar battery solutions
               and take advantage of available government rebates
@@ -116,7 +116,7 @@ const SolarBatterySection = () => {
           >
             
             {/* Main Card */}
-            <div className="relative bg-[#f8fafc]  p-10 border border-slate-300 shadow-black shadow-2xl overflow-hidden">
+            <div className="relative bg-[#f8fafc]  md:p-10 p-5 border border-slate-300 shadow-black shadow-2xl overflow-hidden">
               
               {/* Glow */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#FE9900]/10 blur-[80px] rounded-full" />
@@ -127,18 +127,18 @@ const SolarBatterySection = () => {
               </div>
 
               {/* Card Heading */}
-              <h3 className="text-4xl font-black text-[#004093] leading-tight">
+              <h3 className="md:text-4xl text-2xl font-black text-[#004093] leading-tight">
                 Smart Energy <br />
                 Backup Solution
               </h3>
 
-              <p className="text-slate-500 leading-relaxed mt-6">
+              <p className="text-slate-900 md:text-lg text-md leading-relaxed mt-6">
                 Store excess solar energy and use it anytime with
                 advanced battery systems designed for modern homes.
               </p>
 
               {/* Small Cards */}
-              <div className="grid grid-cols-2 gap-5 mt-10">
+              <div className="grid grid-cols-2 gap-5 mt-5 md:mt-10">
                 
                 <div className="bg-white rounded-lg p-6 border border-slate-400">
                   <Zap className="text-[#FE9900] mb-4" size={28} />
@@ -169,10 +169,10 @@ const SolarBatterySection = () => {
               </div>
 
               {/* Bottom Box */}
-              <div className="mt-8 bg-linear-to-r from-[#004093] to-[#0f5bc7] rounded-lg  p-6 flex items-center justify-between">
+              <div className="mt-8 bg-linear-to-r from-[#004093] to-[#0f5bc7] rounded-lg  md:p-6 p-3 flex items-center justify-between">
                 
                 <div>
-                  <p className="text-white/70 text-sm uppercase tracking-wider">
+                  <p className="text-white/90 text-sm uppercase tracking-wider">
                     Free Consultation
                   </p>
 

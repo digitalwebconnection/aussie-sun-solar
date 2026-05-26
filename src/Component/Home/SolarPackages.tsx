@@ -52,9 +52,9 @@ const PremiumSolarPackages = () => {
     <section className="relative py-14 bg-[#05070a] overflow-hidden font-sans">
 
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 md:px-0 relative z-10">
         {/* Header */}
-        <div className="flex flex-col  md:items-end justify-center text-center mb-20 gap-8">
+        <div className="flex flex-col  md:items-end justify-center text-center md:mb-20 mb-5 gap-8">
           <div className="max-w-2xl mx-auto">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -66,7 +66,7 @@ const PremiumSolarPackages = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[0.9]"
+              className="text-3xl md:text-7xl font-bold text-white tracking-tight leading-[0.9]"
             >
               Future-Proof <br />
               <span className="text-[#FE9900]">Energy Portfolios.</span>
@@ -133,18 +133,18 @@ const PremiumSolarPackages = () => {
                 {/* System Specs Bar */}
                 <div className="flex justify-between items-center py-4 border-y border-white/5 mb-8">
                   <div className="text-center px-2">
-                    <Cpu size={14} className="mx-auto mb-1 text-white/20" />
-                    <p className="text-[10px] text-white/40 font-bold uppercase tracking-tighter">{pkg.stats.inverter}</p>
+                    <Cpu size={14} className="mx-auto mb-1 text-white/90" />
+                    <p className="text-[10px] text-white/90 font-bold uppercase tracking-tighter">{pkg.stats.inverter}</p>
                   </div>
                   <div className="h-8 w-px bg-white/5" />
                   <div className="text-center px-2">
-                    <Globe size={14} className="mx-auto mb-1 text-white/20" />
-                    <p className="text-[10px] text-white/40 font-bold uppercase tracking-tighter">{pkg.stats.panels} Units</p>
+                    <Globe size={14} className="mx-auto mb-1 text-white/90" />
+                    <p className="text-[10px] text-white/90 font-bold uppercase tracking-tighter">{pkg.stats.panels} Units</p>
                   </div>
                   <div className="h-8 w-px bg-white/5" />
                   <div className="text-center px-2">
-                    <ShieldCheck size={14} className="mx-auto mb-1 text-white/20" />
-                    <p className="text-[10px] text-white/40 font-bold uppercase tracking-tighter">{pkg.stats.warranty} Pro</p>
+                    <ShieldCheck size={14} className="mx-auto mb-1 text-white/90" />
+                    <p className="text-[10px] text-white/90 font-bold uppercase tracking-tighter">{pkg.stats.warranty} Pro</p>
                   </div>
                 </div>
 
@@ -196,15 +196,15 @@ const PremiumSolarPackages = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-16 flex flex-col items-center gap-4 border-t border-white/50 pt-12"
+          className="mt-6 md:mt-16 flex flex-col items-center gap-4 border-t border-white/50 pt-6 md:pt-12"
         >
           <div className="flex gap-8 items-center  grayscale hover:grayscale-0 transition-all duration-500">
             <span className="text-xs font-bold tracking-widest text-white">CEC ACCREDITED</span>
             <span className="text-xs font-bold tracking-widest text-white">ISO 9001</span>
             <span className="text-xs font-bold tracking-widest text-white">NET ZERO 2050</span>
           </div>
-          <p className="text-[9px] text-white uppercase tracking-[0.3em] text-center max-w-4xl leading-loose">
-            *Pricing estimates are based on standard metro installation criteria and current STC market values.
+          <p className="text-xs md:text-sm text-white uppercase tracking-[0.3em] text-center max-w-4xl leading-loose">
+            Pricing estimates are based on standard metro installation criteria and current STC market values.
             Official quotations subject to technical roof assessment and orientation analysis.
           </p>
         </motion.div>

@@ -71,7 +71,7 @@ export default function ProcessTimelineSection() {
                     viewport={{
                         once: true,
                     }}
-                    className="mx-auto mb-44 max-w-5xl text-center"
+                    className="mx-auto mb-12 md:mb-44 max-w-5xl text-center"
                 >
 
                     {/* TOP LABEL */}
@@ -88,7 +88,7 @@ export default function ProcessTimelineSection() {
                     </div>
 
                     {/* TITLE */}
-                    <h2 className="text-5xl  font-serif font-bold tracking-[-3px] text-slate-900 md:text-7xl">
+                    <h2 className="text-3xl md:text-5xl  font-serif font-bold tracking-[-3px] text-slate-900 xl:text-7xl">
 
                         Simple Process.
                         <br />
@@ -102,7 +102,7 @@ export default function ProcessTimelineSection() {
                     <div className="mx-auto mt-6 h-1 w-40 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
 
                     {/* DESCRIPTION */}
-                    <p className="mx-auto mt-8 max-w-5xl text-lg leading-loose text-slate-600">
+                    <p className="mx-auto mt-4 md:mt-8 max-w-5xl text-md md:text-lg leading-loose text-slate-600">
                         From consultation and installation to lifetime monitoring,
                         we make switching to solar smooth, transparent, and stress-free.
                     </p>
@@ -173,7 +173,7 @@ export default function ProcessTimelineSection() {
                                 <div className="
                                 relative overflow-hidden rounded-lg
                                 border border-black/30
-                                bg-white/70 p-10 shadow-xl
+                                bg-white/70 p-5 md:p-10 shadow-xl
                                 shadow-black/40
                                 backdrop-blur-xl
                                 transition-all duration-500
@@ -221,7 +221,7 @@ export default function ProcessTimelineSection() {
                                         </h3>
 
                                         {/* DESCRIPTION */}
-                                        <p className="mt-6 text-[16px] leading-loose text-slate-600">
+                                        <p className="mt-6 text-[16px] leading-loose text-slate-900">
                                             {item.description}
                                         </p>
 

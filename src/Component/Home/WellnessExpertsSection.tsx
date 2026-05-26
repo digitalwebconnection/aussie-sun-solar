@@ -95,14 +95,14 @@ export default function WellnessExpertsSection() {
                             Trusted Wellness Professionals
                         </p>
 
-                        <h2 className="text-6xl font-black font-serif leading-[0.92] tracking-[-4px] text-[#111]">
+                        <h2 className="text-3xl md:text-6xl font-black font-serif leading-[0.92] tracking-[-4px] text-[#111]">
                             Natural Wellness
                             <span className="block font-medium text-[#d4af37]">
                                 Transformation Experts
                             </span>
                         </h2>
 
-                        <p className="mx-auto mt-7 max-w-6xl text-lg leading-[1.9] text-[#141414]">
+                        <p className="mx-auto mt-7 max-w-6xl text-md md:text-lg leading-[1.9] text-[#141414]">
                             Helping people naturally transform their body,
                             lifestyle, and confidence through scientifically
                             designed wellness programs and expert guidance.
@@ -141,7 +141,7 @@ export default function WellnessExpertsSection() {
                                             y: isActive ? -10 : 0,
                                             scale: isActive ? 1.03 : 1,
                                         }}
-                                        className={`group rounded-lg border  bg-white/80 p-7 shadow-xl shadow-black/30 backdrop-blur-2xl transition-all duration-500
+                                        className={`group rounded-lg border  bg-white/80 p-4 md:p-7 shadow-xl shadow-black/30 backdrop-blur-2xl transition-all duration-500
                                         
                                         ${isActive
                                                 ? 'border-[#f7d66d] shadow-[0_20px_70px_rgba(212,175,55,0.25)]'
@@ -301,7 +301,9 @@ export default function WellnessExpertsSection() {
                                             y: isActive ? -10 : 0,
                                             scale: isActive ? 1.03 : 1,
                                         }}
-                                        className={`group rounded-lg border bg-white/80 p-7 shadow-xl shadow-black/30  backdrop-blur-2xl transition-all duration-500
+                                        className={`group rounded-lg border bg-white/80
+                                            
+                                            md:p-7 p-4 shadow-xl shadow-black/30  backdrop-blur-2xl transition-all duration-500
                                         
                                         ${isActive
                                                 ? 'border-[#f7d66d] shadow-[0_20px_70px_rgba(212,175,55,0.25)]'
@@ -335,11 +337,7 @@ export default function WellnessExpertsSection() {
                                 );
                             })}
                         </div>
-                    </div>
-
-
-
-                
+                    </div>               
                 </div>
             </section>
 

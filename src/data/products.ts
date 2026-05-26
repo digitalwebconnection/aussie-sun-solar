@@ -1,3 +1,25 @@
+import battery1 from '../assets/Battery Partners/1.webp';
+import battery2 from '../assets/Battery Partners/2.webp';
+import battery3 from '../assets/Battery Partners/3.webp';
+import battery4 from '../assets/Battery Partners/4.webp';
+import battery5 from '../assets/Battery Partners/5.webp';
+import inverter1 from '../assets/Inverters/1.webp';
+import inverter2 from '../assets/Inverters/2.webp';
+import inverter3 from '../assets/Inverters/3.webp';
+import inverter4 from '../assets/Inverters/4.webp';
+import inverter5 from '../assets/Inverters/5.webp';
+import panel1 from '../assets/Panel/1.webp';
+import panel2 from '../assets/Panel/2.webp';
+import panel3 from '../assets/Panel/3.webp';
+import panel4 from '../assets/Panel/4.webp';
+import panel5 from '../assets/Panel/5.webp';
+
+// Jinko Solar section
+import j1 from "../assets/Jinko Solar/1.jpg";
+import j2 from "../assets/Jinko Solar/2.jpg";
+import pdf330 from "../assets/Jinko Solar/Jinko-330-cheetah-mono-perc.pdf";
+import pdf390 from "../assets/Jinko Solar/Jinko-Tiger-390W-Datasheet.pdf"
+
 export interface ProductData {
   slug: string;
   name: string;
@@ -18,6 +40,12 @@ export interface ProductData {
   recommendation: string;
   logoText: string;
   brandColor: string;
+  logoUrl?: string;
+  productImages?: string[];
+  pdfUrl?: string;
+  pdfUrls?: { label: string; url: string }[];
+  datasheetSpecs?: { label: string; value: string }[];
+  models?: { name: string; watts: string; efficiency: string; type: string }[];
 }
 
 export const productsData: Record<string, ProductData> = {
@@ -71,6 +99,33 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Jinko Solar Panels are highly recommended for those looking for a brand that is a household name in the solar industry, offering cutting-edge TOPCon technology with excellent local warranty support.",
     logoText: "JinkoSolar",
     brandColor: "#5CB85C"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel1,
+    productImages: [
+      j1,j2
+    ],
+    pdfUrl: "https://www.jinkosolar.com/uploads/Tiger%20Neo%20N-type%2054HL4-(V)-A3-EN.pdf",
+    pdfUrls: [
+      { label: "Jinko Cheetah 330W", url: pdf330 },
+      { label: "Jinko Tiger 370W", url: pdf390 }
+    ],
+    datasheetSpecs: [
+      { label: "Cell Type", value: "N-type Mono-crystalline" },
+      { label: "Module Efficiency", value: "Up to 22.5%" },
+      { label: "Max Power Output", value: "440W" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "22.0 kg" },
+      { label: "Front Glass", value: "3.2mm Anti-Reflection Coated" },
+      { label: "Frame", value: "Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68 Rated (3 bypass diodes)" },
+      { label: "Connector", value: "MC4 Compatible" }
+    ],
+    models: [
+      { name: "Tiger Neo 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
+      { name: "Tiger Neo 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" },
+      { name: "Tiger Neo 440W", watts: "440W", efficiency: "22.5%", type: "N-Type TOPCon" }
+    ],
   },
   "ja-solar-panels": {
     slug: "ja-solar-panels",
@@ -120,6 +175,30 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "JA Solar offers a perfect balance of reliability, premium technology, and cost efficiency, making it one of the most popular choices for Australian homes.",
     logoText: "JASOLAR",
     brandColor: "#0055A5"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel2,
+    productImages: [
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "http://www.jasolar.com.cn/uploadfile/2022/0329/20220329040356514.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "PERC Half-Cell / N-type Mono" },
+      { label: "Module Efficiency", value: "Up to 22.0%" },
+      { label: "Max Power Output", value: "440W" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "21.5 kg" },
+      { label: "Front Glass", value: "3.2mm High Transmission tempered glass" },
+      { label: "Frame", value: "Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68, 3 diodes" },
+      { label: "Mechanical Load", value: "Wind 2400Pa / Snow 5400Pa" }
+    ],
+    models: [
+      { name: "DeepBlue 3.0 415W", watts: "415W", efficiency: "21.3%", type: "PERC Mono" },
+      { name: "DeepBlue 4.0 Pro 435W", watts: "435W", efficiency: "22.3%", type: "N-Type TOPCon" },
+      { name: "DeepBlue 4.0 Pro 440W", watts: "440W", efficiency: "22.5%", type: "N-Type TOPCon" }
+    ],
   },
   "aiko-solar-panels": {
     slug: "aiko-solar-panels",
@@ -169,6 +248,30 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "AIKO ABC panels are the premium choice for homeowners who want the absolute best efficiency and a modern, high-end look on their roofs.",
     logoText: "AIKO",
     brandColor: "#E30613"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel3,
+    productImages: [
+      "https://images.unsplash.com/photo-1548613053-220cdb5e36cc?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://aikosolar.com/wp-content/uploads/2023/11/AIKO-A-MAH54Db-Datasheet-EN-202311.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "ABC (All-Back-Contact) N-type" },
+      { label: "Module Efficiency", value: "Up to 24.0%" },
+      { label: "Max Power Output", value: "450W" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "20.5 kg" },
+      { label: "Aesthetic Design", value: "Full-Black Gridless Front" },
+      { label: "Frame", value: "Black Anodized Aluminium" },
+      { label: "Junction Box", value: "IP68 Rated, 3 diodes" },
+      { label: "Temp. Coefficient", value: "-0.29% / °C" }
+    ],
+    models: [
+      { name: "ABC Black Hole 440W", watts: "440W", efficiency: "22.5%", type: "All-Back-Contact" },
+      { name: "ABC White Hole 450W", watts: "450W", efficiency: "23.0%", type: "All-Back-Contact" },
+      { name: "ABC White Hole 460W", watts: "460W", efficiency: "23.6%", type: "All-Back-Contact" }
+    ],
   },
   "canadian-solar-panels": {
     slug: "canadian-solar-panels",
@@ -218,6 +321,30 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Canadian Solar is a safe, reliable, and solid investment for any homeowner, offering proven performance from one of the oldest names in the solar industry.",
     logoText: "CanadianSolar",
     brandColor: "#CC3333"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel4,
+    productImages: [
+      "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.canadiansolar.com/wp-content/uploads/2020/12/Canadian_Solar-Datasheet-HiKu6_CS6R-MS_EN.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "Monocrystalline Half-Cell" },
+      { label: "Module Efficiency", value: "Up to 21.5%" },
+      { label: "Max Power Output", value: "420W" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "21.3 kg" },
+      { label: "Front Glass", value: "3.2mm tempered glass with ARC" },
+      { label: "Frame", value: "Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68, 3 bypass diodes" },
+      { label: "Warranty Support", value: "Australian Direct Support" }
+    ],
+    models: [
+      { name: "HiKu6 Mono 410W", watts: "410W", efficiency: "21.0%", type: "Half-Cell Mono" },
+      { name: "HiKu6 Mono 415W", watts: "415W", efficiency: "21.3%", type: "Half-Cell Mono" },
+      { name: "HiKu6 Mono 420W", watts: "420W", efficiency: "21.5%", type: "Half-Cell Mono" }
+    ],
   },
   "das-solar-panels": {
     slug: "das-solar-panels",
@@ -267,6 +394,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "DAS Solar is a fantastic choice for those looking to invest in next-gen N-type TOPCon technology without paying a massive brand premium.",
     logoText: "DASSOLAR",
     brandColor: "#0088CE"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel5,
+    productImages: [
+      "https://images.unsplash.com/photo-1548613053-220cdb5e36cc?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.das-solar.com/upload/file/20230526/DAS-dh54na-EN.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "N-type TOPCon Mono" },
+      { label: "Module Efficiency", value: "Up to 22.3%" },
+      { label: "Max Power Output", value: "440W" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "22.0 kg" },
+      { label: "Temp. Coefficient", value: "-0.30% / °C" },
+      { label: "First Year Degradation", value: "Less than 1.0%" },
+      { label: "Bifaciality", value: "Up to 80% (Double-Glass)" },
+      { label: "Mechanical Load", value: "Wind 2400Pa / Snow 5400Pa" }
+    ],
+    models: [
+      { name: "TOPCon Mono 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
+      { name: "TOPCon Mono 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" },
+      { name: "TOPCon Mono 440W", watts: "440W", efficiency: "22.3%", type: "N-Type TOPCon" }
+    ],
   },
   "dmegc-solar-panels": {
     slug: "dmegc-solar-panels",
@@ -316,6 +466,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "DMEGC Solar panels are highly recommended for customers who prioritize manufacturing precision, environmental standards, and robust product build quality.",
     logoText: "DMEGC",
     brandColor: "#0F7C3E"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel1,
+    productImages: [
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.dmegcsolar.com/upload/file/datasheet-dmegc-n-type-en.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "N-type TOPCon Monocrystalline" },
+      { label: "Module Efficiency", value: "Up to 22.3%" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "22.0 kg" },
+      { label: "Fire Rating", value: "Class A (Double-Glass)" },
+      { label: "Front / Back Glass", value: "2.0mm Semi-tempered glass" },
+      { label: "Frame", value: "Anodized Aluminium Alloy (Black)" },
+      { label: "Operating Temp", value: "-40°C to +85°C" },
+      { label: "Junction Box", value: "IP68, 3 bypass diodes" }
+    ],
+    models: [
+      { name: "DMEGC N-Type 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
+      { name: "DMEGC N-Type 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" },
+      { name: "DMEGC N-Type 440W", watts: "440W", efficiency: "22.3%", type: "N-Type TOPCon" }
+    ],
   },
   "eging-solar-panels": {
     slug: "eging-solar-panels",
@@ -365,6 +538,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "EGing PV panels are a great fit for users looking for a reliable, time-tested brand that offers outstanding value for money.",
     logoText: "EGingPV",
     brandColor: "#0D4F90"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel2,
+    productImages: [
+      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.egingpv.com/upload/file/eging-star-series-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "N-type TOPCon Monocrystalline" },
+      { label: "Module Efficiency", value: "Up to 22.0%" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "21.5 kg" },
+      { label: "Frame", value: "Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68 Rated, 3 diodes" },
+      { label: "Max System Voltage", value: "1500V DC" },
+      { label: "Connector", value: "MC4-EVO2 compatible" },
+      { label: "Certifications", value: "CEC Approved, TUV, CE" }
+    ],
+    models: [
+      { name: "Star Series 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
+      { name: "Star Series 425W", watts: "425W", efficiency: "21.8%", type: "N-Type TOPCon" },
+      { name: "Star Series 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" }
+    ],
   },
   "risen-solar-panels": {
     slug: "risen-solar-panels",
@@ -414,6 +610,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Risen Solar is a highly reliable option for users looking for high-capacity, heavy-duty solar panels engineered to withstand hot conditions.",
     logoText: "risen",
     brandColor: "#0D5CA4"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel3,
+    productImages: [
+      "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.risenenergy.com.au/wp-content/uploads/2021/08/Risen-Titan-400W-420W-Datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "Mono PERC / Heterojunction (HJT)" },
+      { label: "Module Efficiency", value: "Up to 22.5%" },
+      { label: "Temp. Coefficient", value: "-0.34% / °C (HJT: -0.26% / °C)" },
+      { label: "Dimensions", value: "1754 x 1096 x 30 mm" },
+      { label: "Weight", value: "21.0 kg" },
+      { label: "Front Glass", value: "3.2mm ARC tempered glass" },
+      { label: "Frame", value: "Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68, 3 diodes" },
+      { label: "Connector", value: "MC4 compatible" }
+    ],
+    models: [
+      { name: "Titan 415W Mono", watts: "415W", efficiency: "21.5%", type: "PERC Half-Cell" },
+      { name: "Titan 420W Mono", watts: "420W", efficiency: "21.8%", type: "PERC Half-Cell" },
+      { name: "Hyper-ion 440W HJT", watts: "440W", efficiency: "22.5%", type: "Heterojunction" }
+    ],
   },
   "trina-solar-panels": {
     slug: "trina-solar-panels",
@@ -463,6 +682,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Trina Vertex S+ is one of the best residential panels on the market today, combining N-type TOPCon efficiency with the ultimate protection of dual-glass construction.",
     logoText: "Trinasolar",
     brandColor: "#0D6EB5"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel4,
+    productImages: [
+      "https://images.unsplash.com/photo-1548613053-220cdb5e36cc?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.trinasolar.com/download/Vertex_S_Plus_NEG9R.28_EN.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "N-type i-TOPCon Double-Glass" },
+      { label: "Module Efficiency", value: "Up to 22.3%" },
+      { label: "Dimensions", value: "1762 x 1134 x 30 mm" },
+      { label: "Weight", value: "21.0 kg" },
+      { label: "Glass Structure", value: "1.6mm + 1.6mm Double-Glass" },
+      { label: "Fire Safety", value: "Class A certified" },
+      { label: "Frame", value: "Black Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68 Rated, 3 bypass diodes" },
+      { label: "Connector", value: "TS4 / MC4 EVO2" }
+    ],
+    models: [
+      { name: "Vertex S+ 415W", watts: "415W", efficiency: "21.3%", type: "TOPCon Dual-Glass" },
+      { name: "Vertex S+ 430W", watts: "430W", efficiency: "21.8%", type: "TOPCon Dual-Glass" },
+      { name: "Vertex S+ 440W", watts: "440W", efficiency: "22.3%", type: "TOPCon Dual-Glass" }
+    ],
   },
   "longi-solar-panels": {
     slug: "longi-solar-panels",
@@ -512,6 +754,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "LONGi's Hi-MO 6 panels are a top-tier choice, offering a unique grid-free look, excellent dirt tolerance, and the financial backing of the world's largest wafer manufacturer.",
     logoText: "LONGi",
     brandColor: "#D1121A"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: panel5,
+    productImages: [
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.longi.com/files/datasheet-himo6-explorer.pdf",
+    datasheetSpecs: [
+      { label: "Cell Type", value: "HPBC Monocrystalline (Back Contact)" },
+      { label: "Module Efficiency", value: "Up to 22.8%" },
+      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
+      { label: "Weight", value: "20.8 kg" },
+      { label: "Front Glass", value: "3.2mm tempered glass with ARC" },
+      { label: "Frame", value: "Anodized Aluminium Alloy" },
+      { label: "Junction Box", value: "IP68, 3 diodes" },
+      { label: "Temp. Coefficient", value: "-0.29% / °C" },
+      { label: "Cell Connection", value: "108 (6x18) cells" }
+    ],
+    models: [
+      { name: "Hi-MO 6 Explorer 420W", watts: "420W", efficiency: "21.5%", type: "HPBC Mono" },
+      { name: "Hi-MO 6 Explorer 430W", watts: "430W", efficiency: "22.0%", type: "HPBC Mono" },
+      { name: "Hi-MO 6 Explorer 440W", watts: "440W", efficiency: "22.5%", type: "HPBC Mono" }
+    ],
   },
 
   // ==================== SOLAR INVERTERS ====================
@@ -563,6 +828,28 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "GoodWe hybrid inverters are highly recommended for homeowners who want a smart, quiet, battery-ready solar system with robust backup power capabilities.",
     logoText: "GOODWE",
     brandColor: "#E30613"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: inverter1,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://en.goodwe.com/Ftp/Downlods/Datasheet/GW_ES_Datasheet-EN.pdf",
+    datasheetSpecs: [
+      { label: "Max Efficiency", value: "98.2%" },
+      { label: "Euro Efficiency", value: "97.5%" },
+      { label: "MPPT Tracker Number", value: "2" },
+      { label: "Max DC Input Power", value: "6500W" },
+      { label: "Nominal AC Power", value: "5000W" },
+      { label: "Backup Transition Time", value: "< 10ms (UPS Class)" },
+      { label: "Cooling System", value: "Natural Convection (Fanless)" },
+      { label: "Dimensions", value: "516 x 440 x 184 mm" },
+      { label: "Weight", value: "28.0 kg" }
+    ],
+    models: [
+      { name: "GW5000-ES-20 (5kW)", watts: "5000W", efficiency: "98.2%", type: "Hybrid Inverter" },
+      { name: "GW6000-ES-20 (6kW)", watts: "6000W", efficiency: "98.2%", type: "Hybrid Inverter" }
+    ],
   },
   "sungrow-inverters": {
     slug: "sungrow-inverters",
@@ -612,6 +899,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Sungrow inverters are the gold standard for Australian solar installations, combining premium performance, long warranties, and outstanding app monitoring.",
     logoText: "SUNGROW",
     brandColor: "#FE9900"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: inverter2,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.sungrowpower.com.au/wp-content/uploads/2021/06/SG5.0-10RS-Datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Max Efficiency", value: "98.4%" },
+      { label: "Euro Efficiency", value: "97.9%" },
+      { label: "Protection Rating", value: "IP66 (Outdoor Approved)" },
+      { label: "MPPT Number", value: "2 / 3 depending on model" },
+      { label: "Built-in Protection", value: "PID Recovery & DC Isolator" },
+      { label: "Noise Emission", value: "< 25 dB (Ultra-quiet)" },
+      { label: "Cooling Method", value: "Natural Cooling" },
+      { label: "Communications", value: "WLAN / Ethernet / RS485" },
+      { label: "Weight", value: "18.5 kg" }
+    ],
+    models: [
+      { name: "SG5.0RS (5kW)", watts: "5000W", efficiency: "98.4%", type: "Grid-Tied String" },
+      { name: "SH5.0RS (5kW Hybrid)", watts: "5000W", efficiency: "98.2%", type: "Hybrid Inverter" },
+      { name: "SH10RS (10kW Hybrid)", watts: "10000W", efficiency: "98.2%", type: "Hybrid Inverter" }
+    ],
   },
   "growatt-inverters": {
     slug: "growatt-inverters",
@@ -661,6 +971,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Growatt is a highly recommended, cost-effective option that doesn't compromise on features, offering a sleek look, user-friendly screen, and reliable performance.",
     logoText: "Growatt",
     brandColor: "#A6CE39"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: inverter3,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.ginlong.com/uploads/2022/11/Solis_Datasheet_S6-GR1P-K-US_EN.pdf",
+    datasheetSpecs: [
+      { label: "Max Efficiency", value: "98.4%" },
+      { label: "Display Screen", value: "OLED display with touch key" },
+      { label: "MPPT Trackers", value: "2" },
+      { label: "Max Input Current", value: "13.5A per string" },
+      { label: "Cooling System", value: "Natural convection (no fans)" },
+      { label: "DC / AC surge protection", value: "Type II" },
+      { label: "Dimensions", value: "375 x 350 x 160 mm" },
+      { label: "Weight", value: "10.8 kg" },
+      { label: "Grid Standards", value: "AS/NZS 4777.2 compliant" }
+    ],
+    models: [
+      { name: "MIN 5000TL-X (5kW)", watts: "5000W", efficiency: "98.4%", type: "Single Phase String" },
+      { name: "MIN 6000TL-X (6kW)", watts: "6000W", efficiency: "98.4%", type: "Single Phase String" },
+      { name: "SPH 5000 (5kW Hybrid)", watts: "5000W", efficiency: "97.6%", type: "Hybrid Inverter" }
+    ],
   },
   "solis-inverters": {
     slug: "solis-inverters",
@@ -710,6 +1043,28 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Solis inverters are an excellent choice for complex roof layouts, providing top-tier safety features and multi-MPPT capabilities at a very competitive price.",
     logoText: "solis",
     brandColor: "#F4911E"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: inverter4,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.solisinverters.com.au/downloads/solis-s6-hybrid-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Max Efficiency", value: "98.1%" },
+      { label: "Safety Protections", value: "Integrated AFCI arc fault protection" },
+      { label: "MPPT Trackers", value: "2" },
+      { label: "Max Input Current", value: "16A" },
+      { label: "Protection Rating", value: "IP66" },
+      { label: "Export Control", value: "Integrated export limitation system" },
+      { label: "Backup Output", value: "5kW continuous backup capability" },
+      { label: "Dimensions", value: "410 x 515 x 180 mm" },
+      { label: "Weight", value: "18.3 kg" }
+    ],
+    models: [
+      { name: "S6-GR1P5K (5kW)", watts: "5000W", efficiency: "97.7%", type: "Grid-Tied String" },
+      { name: "S6-EH1P5K-L-PRO (5kW Hybrid)", watts: "5000W", efficiency: "98.0%", type: "Hybrid Inverter" }
+    ],
   },
   "saj-inverters": {
     slug: "saj-inverters",
@@ -759,6 +1114,28 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "SAJ inverters are an ideal choice for residential homes looking for a silent, stylish, and smart-home integrated inverter with excellent software monitoring.",
     logoText: "SAJ",
     brandColor: "#009140"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: inverter5,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.saj-electric.com/upload/file/saj-r5-series-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Max Efficiency", value: "98.2%" },
+      { label: "Euro Efficiency", value: "97.8%" },
+      { label: "MPPT Numbers", value: "2" },
+      { label: "Oversizing Cap", value: "Up to 150% DC oversizing" },
+      { label: "Cooling system", value: "Natural heat dissipation" },
+      { label: "Noise level", value: "< 25 dB" },
+      { label: "Protection Class", value: "IP65 Rated" },
+      { label: "Dimensions", value: "389 x 342 x 150 mm" },
+      { label: "Weight", value: "11.5 kg" }
+    ],
+    models: [
+      { name: "R5-5K-S2 (5kW)", watts: "5000W", efficiency: "98.2%", type: "Single Phase String" },
+      { name: "H2-5K-S2 (5kW Hybrid)", watts: "5000W", efficiency: "98.0%", type: "Hybrid Inverter" }
+    ],
   },
   "solix-inverters": {
     slug: "solix-inverters",
@@ -808,6 +1185,27 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Anker Solix microinverters are the ultimate choice for shaded roofs, offering panel-level optimization, modular growth, and the reliability of a global charging giant.",
     logoText: "ANKERSOLIX",
     brandColor: "#000000"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: inverter1,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.ankersolix.com/files/anker-solix-mi800-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Peak Efficiency", value: "97.3%" },
+      { label: "CEC Efficiency", value: "96.7%" },
+      { label: "Nominal AC Power", value: "800W" },
+      { label: "MPPT Number", value: "2 (Independent Panel Optimization)" },
+      { label: "Environmental Rating", value: "IP67 (Waterproof & Dustproof)" },
+      { label: "Cooling Type", value: "Natural Convection" },
+      { label: "Dimensions", value: "263 x 218 x 40 mm" },
+      { label: "Weight", value: "2.8 kg" },
+      { label: "Warranty", value: "12-25 Years" }
+    ],
+    models: [
+      { name: "Solix MI800 Microinverter", watts: "800W", efficiency: "96.7%", type: "Microinverter" }
+    ],
   },
 
   // ==================== SOLAR BATTERIES ====================
@@ -859,6 +1257,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "FoxESS batteries are an excellent, high-performance storage solution for those wanting a safe, modular, and easily expandable battery backed by a global industrial giant.",
     logoText: "FoxESS",
     brandColor: "#FF6200"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery1,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.fox-ess.com.au/wp-content/uploads/2021/03/FoxESS-ECS-Datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "LiFePO4 (Lithium Iron Phosphate)" },
+      { label: "Module Capacity", value: "2.88 kWh / block" },
+      { label: "Max Stack Capacity", value: "20.16 kWh (7 modules)" },
+      { label: "Depth of Discharge", value: "90%" },
+      { label: "Roundtrip Efficiency", value: "97%" },
+      { label: "Operating Temp", value: "-10°C to 50°C" },
+      { label: "IP Protection Class", value: "IP65 Rated" },
+      { label: "Weight per Module", value: "32.5 kg" },
+      { label: "Dimensions (W x H x D)", value: "570 x 350 x 380 mm (3 modules)" }
+    ],
+    models: [
+      { name: "ECS2900-H2 (5.76 kWh)", watts: "5.76 kWh", efficiency: "97.0%", type: "High-Voltage LFP Stack" },
+      { name: "ECS2900-H3 (8.64 kWh)", watts: "8.64 kWh", efficiency: "97.0%", type: "High-Voltage LFP Stack" },
+      { name: "ECS2900-H4 (11.52 kWh)", watts: "11.52 kWh", efficiency: "97.0%", type: "High-Voltage LFP Stack" }
+    ],
   },
   "growatt-battery-systems": {
     slug: "growatt-battery-systems",
@@ -908,6 +1329,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Growatt battery systems are the natural choice for anyone running a Growatt inverter, offering modular expansion, maximum usable storage, and single-app control.",
     logoText: "Growatt",
     brandColor: "#A6CE39"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery2,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.growatt.com/upload/file/ARK_2.5H-A1_Datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
+      { label: "Module Energy", value: "2.56 kWh" },
+      { label: "Max Stack Capacity", value: "25.6 kWh (10 modules)" },
+      { label: "Depth of Discharge", value: "100% Usable Capacity" },
+      { label: "Protection Rating", value: "IP65" },
+      { label: "Cooling Method", value: "Natural Passive Cooling" },
+      { label: "Installation Method", value: "Floor-stand or Wall-mount" },
+      { label: "Dimensions", value: "650 x 260 x 185 mm per module" },
+      { label: "Weight per Block", value: "30.0 kg" }
+    ],
+    models: [
+      { name: "ARK 5.1H Stack (5.12 kWh)", watts: "5.12 kWh", efficiency: "97.2%", type: "LFP High Voltage" },
+      { name: "ARK 7.6H Stack (7.68 kWh)", watts: "7.68 kWh", efficiency: "97.2%", type: "LFP High Voltage" },
+      { name: "ARK 10.2H Stack (10.24 kWh)", watts: "10.24 kWh", efficiency: "97.2%", type: "LFP High Voltage" }
+    ],
   },
   "saj-battery-systems": {
     slug: "saj-battery-systems",
@@ -957,6 +1401,28 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "SAJ batteries are highly recommended for homes seeking a beautiful, quiet, cable-free storage setup with smart automation to slash power bills.",
     logoText: "SAJ",
     brandColor: "#009140"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery3,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.saj-electric.com/upload/file/saj-b2-battery-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
+      { label: "Module Capacity", value: "5.0 kWh" },
+      { label: "Max Configuration", value: "25.0 kWh (5 stacks in parallel)" },
+      { label: "Depth of Discharge", value: "90%" },
+      { label: "Max Charge/Discharge", value: "30A / 30A" },
+      { label: "Protection Rating", value: "IP65" },
+      { label: "Operating Temp", value: "-10°C to 50°C" },
+      { label: "Weight per Module", value: "48.0 kg" },
+      { label: "Dimensions", value: "626 x 365 x 165 mm" }
+    ],
+    models: [
+      { name: "B2-5.0 (5.0 kWh)", watts: "5.0 kWh", efficiency: "97.0%", type: "High-Voltage LFP" },
+      { name: "B2-10.0 (10.0 kWh)", watts: "10.0 kWh", efficiency: "97.0%", type: "High-Voltage LFP" }
+    ],
   },
   "anker-solix-battery-systems": {
     slug: "anker-solix-battery-systems",
@@ -1006,6 +1472,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Anker Solix X1 is a top-tier home battery, offering an ultra-thin design, modular cell optimization, and outstanding app features from a brand known for battery reliability.",
     logoText: "ANKERSOLIX",
     brandColor: "#000000"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery4,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.ankersolix.com/files/anker-solix-x1-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "Automotive-Grade LiFePO4" },
+      { label: "Module Energy", value: "5.0 kWh" },
+      { label: "Max Capacity per Stack", value: "30.0 kWh" },
+      { label: "Thickness", value: "15 cm (Ultra-thin profile)" },
+      { label: "Operating Temperature", value: "-20°C to 55°C (Built-in thermal sheets)" },
+      { label: "Environmental Rating", value: "IP65 Rated" },
+      { label: "Depth of Discharge", value: "100%" },
+      { label: "Roundtrip Efficiency", value: "97.5%" },
+      { label: "Backup Switching Speed", value: "< 20ms" }
+    ],
+    models: [
+      { name: "Solix X1 - 5kWh", watts: "5.0 kWh", efficiency: "97.5%", type: "Ultra-thin Modular" },
+      { name: "Solix X1 - 10kWh", watts: "10.0 kWh", efficiency: "97.5%", type: "Ultra-thin Modular" },
+      { name: "Solix X1 - 15kWh", watts: "15.0 kWh", efficiency: "97.5%", type: "Ultra-thin Modular" }
+    ],
   },
   "sungrow-battery-systems": {
     slug: "sungrow-battery-systems",
@@ -1055,6 +1544,29 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "The Sungrow SBR battery is one of the best high-voltage residential batteries available, offering outstanding power output, modular stacking, and perfect Sungrow integration.",
     logoText: "SUNGROW",
     brandColor: "#FE9900"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery5,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.sungrowpower.com.au/wp-content/uploads/2021/06/SBR096-256-Datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
+      { label: "Module Energy Capacity", value: "3.2 kWh per block" },
+      { label: "Stack Options", value: "9.6 kWh to 25.6 kWh (3-8 modules)" },
+      { label: "Max Discharge Power", value: "Up to 30A continuous" },
+      { label: "Depth of Discharge", value: "100% Usable" },
+      { label: "Protection Rating", value: "IP55" },
+      { label: "Roundtrip Efficiency", value: "98.0%" },
+      { label: "Dimensions", value: "625 x 330 x 140 mm per module" },
+      { label: "Weight per Module", value: "33.0 kg" }
+    ],
+    models: [
+      { name: "SBR096 (9.6 kWh)", watts: "9.6 kWh", efficiency: "98.0%", type: "High-Voltage LFP Stack" },
+      { name: "SBR128 (12.8 kWh)", watts: "12.8 kWh", efficiency: "98.0%", type: "High-Voltage LFP Stack" },
+      { name: "SBR160 (16.0 kWh)", watts: "16.0 kWh", efficiency: "98.0%", type: "High-Voltage LFP Stack" }
+    ],
   },
   "alpha-ess-battery-systems": {
     slug: "alpha-ess-battery-systems",
@@ -1104,6 +1616,28 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Alpha ESS is a top-tier storage pioneer, offering robust cabinet installations, long cycle lives, and easy integration into Australian VPP networks.",
     logoText: "AlphaESS",
     brandColor: "#006FA6"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery1,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.alphaess.com/Uploads/Products/Smile5-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
+      { label: "Module Capacity", value: "5.04 kWh" },
+      { label: "Max Storage Cap", value: "Smile5: 30.24 kWh (6 modules)" },
+      { label: "Depth of Discharge", value: "95%" },
+      { label: "Cabinet Protection", value: "IP21 (Indoor) / IP65 (With outdoor cover)" },
+      { label: "Design Cycle Life", value: "10000+ Cycles" },
+      { label: "Virtual Power Plant", value: "VPP Ready" },
+      { label: "Weight per Block", value: "48.0 kg" },
+      { label: "Dimensions", value: "610 x 236 x 312 mm per module" }
+    ],
+    models: [
+      { name: "Smile5-BAT (5.04 kWh)", watts: "5.04 kWh", efficiency: "95.0%", type: "Modular Storage" },
+      { name: "SMILE-G3-BAT (10.1 kWh)", watts: "10.1 kWh", efficiency: "96.0%", type: "Modular Storage" }
+    ],
   },
   "neovolt-battery-systems": {
     slug: "neovolt-battery-systems",
@@ -1153,6 +1687,28 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Neovolt is a great choice for Australian homes looking for high-power, thermally resilient battery storage that offers excellent value and localized support.",
     logoText: "Neovolt",
     brandColor: "#00A896"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery2,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.neovolt.com.au/files/neovolt-powerstack-datasheet.pdf",
+    datasheetSpecs: [
+      { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
+      { label: "Module energy", value: "5.12 kWh" },
+      { label: "Max Capacity", value: "20.48 kWh (4 stacks)" },
+      { label: "IP Weatherproof", value: "IP65 Rated" },
+      { label: "Continuous Discharge", value: "100A continuous" },
+      { label: "Operating Temp", value: "-10°C to 55°C" },
+      { label: "Cooling system", value: "Smart BMS Thermal management" },
+      { label: "Weight per Stack", value: "46.0 kg" },
+      { label: "Dimensions", value: "600 x 380 x 170 mm per block" }
+    ],
+    models: [
+      { name: "PowerStack 5.1 (5.12 kWh)", watts: "5.12 kWh", efficiency: "97.0%", type: "Stackable LFP" },
+      { name: "PowerStack 10.2 (10.24 kWh)", watts: "10.24 kWh", efficiency: "97.0%", type: "Stackable LFP" }
+    ],
   },
   "sigenergy-battery-systems": {
     slug: "sigenergy-battery-systems",
@@ -1202,5 +1758,27 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Sigenergy SigenStor is the most advanced energy storage system available, offering an AI-powered 5-in-1 vertical design that is perfect for forward-thinking smart homes.",
     logoText: "SIGENERGY",
     brandColor: "#000000"
+  ,
+    // Extra fields dynamically merged
+    logoUrl: battery3,
+    productImages: [
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    ],
+    pdfUrl: "https://www.sigenergy.com/download/SigenStor-datasheet-EN.pdf",
+    datasheetSpecs: [
+      { label: "System Integration", value: "5-in-1: Inverter, Battery, EV Charger, PCS, EMS" },
+      { label: "Battery Capacity Block", value: "5.0 kWh or 8.0 kWh" },
+      { label: "Max Stack Capacity", value: "48.0 kWh" },
+      { label: "Internal Fire Safety", value: "Built-in aerosol fire-extinguisher" },
+      { label: "IP Rating", value: "IP66 Casing" },
+      { label: "AI Optimization", value: "Sigen AI energy forecasting" },
+      { label: "Max charging rate", value: "1.0C charge/discharge capability" },
+      { label: "Weight per Module", value: "45.0 kg" },
+      { label: "Thickness", value: "26.0 cm (flush vertical stack)" }
+    ],
+    models: [
+      { name: "Sigen Battery 5.0 (5.0 kWh)", watts: "5.0 kWh", efficiency: "98.0%", type: "AI Modular 5-in-1" },
+      { name: "Sigen Battery 8.0 (8.0 kWh)", watts: "8.0 kWh", efficiency: "98.0%", type: "AI Modular 5-in-1" }
+    ],
   }
 };

@@ -46,7 +46,7 @@ const BRANDS = [
 
 export default function TrustedBrandsSection() {
     return (
-        <section className="relative overflow-hidden bg-[#f8fafc] py-24">
+        <section className="relative overflow-hidden bg-[#f8fafc] py-10 md:py-16">
 
             {/* BACKGROUND EFFECTS */}
             <div className="absolute inset-0">
@@ -86,7 +86,7 @@ export default function TrustedBrandsSection() {
                         Trusted Technology Partners
                     </p>
 
-                    <h2 className="text-5xl font-black tracking-tight text-slate-900 md:text-7xl leading-[1.2]">
+                    <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-7xl leading-[1.2]">
                         Powered By
                         <span className="block bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent py-2 pb-4">
                             Leading Solar Brands
@@ -95,7 +95,7 @@ export default function TrustedBrandsSection() {
 
 
 
-                    <p className="mx-auto mt-5 max-w-7xl text-lg leading-loose text-slate-600">
+                    <p className="mx-auto mt-5 max-w-7xl text-md md:text-lg leading-loose text-slate-900">
                         We partner with globally trusted manufacturers to deliver
                         reliable solar systems built for performance, efficiency,
                         and long-term energy savings.
@@ -103,7 +103,7 @@ export default function TrustedBrandsSection() {
                 </motion.div>
 
                 {/* BRAND ROWS */}
-                <div className="space-y-10">
+                <div className="md:space-y-10 space-y-6">
 
                     {BRANDS.map((item, i) => (
                         <motion.div
@@ -151,7 +151,7 @@ export default function TrustedBrandsSection() {
                                     </div>
 
                                     {/* TITLE */}
-                                    <h3 className="mt-6 text-4xl font-black tracking-[-2px] text-slate-900">
+                                    <h3 className="mt-6 text-3xl md:text-4xl font-black tracking-[-2px] text-slate-900">
                                         {item.category}
                                     </h3>
 
@@ -163,7 +163,7 @@ export default function TrustedBrandsSection() {
                                 {/* LOGO ROW */}
                                 <div className="relative z-10">
 
-                                    <div className="grid grid-cols-2 items-center gap-8 sm:grid-cols-3 lg:grid-cols-5">
+                                    <div className="grid grid-cols-2 items-center gap-3  md:gap-8 sm:grid-cols-3 lg:grid-cols-5">
 
                                         {item.logos.map((logo, idx) => (
                                             <motion.div
@@ -176,7 +176,7 @@ export default function TrustedBrandsSection() {
                                                     duration: 0.3,
                                                 }}
                                                 className="
-                                                group relative flex h-32 items-center justify-center
+                                                group relative flex h-20 md:h-32 items-center justify-center
                                                    transition-all duration-500
                                                
                                                 "

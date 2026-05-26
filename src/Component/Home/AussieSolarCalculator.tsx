@@ -27,7 +27,7 @@ export default function PremiumSolarCalculator() {
             <div className="max-w-7xl mx-auto bg-white   overflow-hidden grid lg:grid-cols-2 relative z-10">
 
                 {/* LEFT SECTION */}
-                <div className="bg-[#004093] relative shadow-xl shadow-black p-8 lg:p-10 overflow-hidden">
+                <div className="bg-[#004093] relative shadow-xl shadow-black p-5 lg:p-10 overflow-hidden">
 
 
                     <div className="relative z-10">
@@ -39,7 +39,7 @@ export default function PremiumSolarCalculator() {
                         </div>
 
                         {/* Heading */}
-                        <h1 className="text-5xl leading-tight font-black text-white mb-4">
+                        <h1 className="text-3xl leading-tight font-black text-white mb-4">
                             Calculate Your
                             <span className="block text-[#FE9900]">
                                 Solar Savings
@@ -135,7 +135,7 @@ export default function PremiumSolarCalculator() {
                 </div>
 
                 {/* RIGHT SECTION */}
-                <div className="p-8 lg:p-10 bg-linear-to-b from-white to-[#f7faff]">
+                <div className="p-5 lg:p-10 bg-linear-to-b from-white to-[#f7faff]">
 
                     <div className="flex items-center gap-3 mb-10">
                         <div className="w-14 h-14 rounded-lg bg-[#FE9900] flex items-center justify-center">
@@ -147,7 +147,7 @@ export default function PremiumSolarCalculator() {
                                 Solar Performance
                             </p>
 
-                            <h2 className="text-4xl font-black text-[#004093]">
+                            <h2 className="md:text-4xl text-2xl font-black text-[#004093]">
                                 Estimated Benefits
                             </h2>
                         </div>
@@ -172,7 +172,7 @@ export default function PremiumSolarCalculator() {
                         </div>
 
                         {/* Card */}
-                        <div className="group bg-white rounded-lg p-7 border border-gray-100 shadow-lg  shadow-black hover:-translate-y-2 transition-all duration-300">
+                        <div className="group bg-white rounded-lg p-4  md:p-7 border border-gray-100 shadow-lg  shadow-black hover:-translate-y-2 transition-all duration-300">
                             <div className="w-14 h-14 rounded-2xl bg-[#FE9900] flex items-center justify-center mb-5">
                                 <Sun className="text-white" />
                             </div>
@@ -226,7 +226,7 @@ export default function PremiumSolarCalculator() {
                     </div>
 
                     {/* Bottom Card */}
-                    <div className="mt-8 bg-[#004093] rounded-lg shadow-lg  shadow-black p-8 relative overflow-hidden">
+                    <div className="mt-8 bg-[#004093] rounded-lg shadow-lg  shadow-black md:p-8 p-4 relative overflow-hidden">
 
                         <div className="absolute top-0 right-0 w-52 h-52 bg-[#FE9900]/20 rounded-full blur-[100px]"></div>
 

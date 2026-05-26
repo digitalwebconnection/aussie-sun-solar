@@ -1,5 +1,3 @@
-"use client";
-
 import { TestimonialsCard } from "../ui/testimonials-card";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
@@ -33,16 +31,16 @@ const items = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-10">
+    <section className="relative overflow-hidden  bg-white py-10">
 
-      <div className="max-w-7xl mx-auto relative z-10 mpx-5">
+      <div className="max-w-7xl mx-auto relative z-10 px-5 md:px-0">
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mx-auto mb-16 max-w-5xl text-center"
+          className="mx-auto mb-6 md:mb-8 max-w-5xl text-center"
         >
           <div className="mb-4 flex justify-center">
             <div className="flex items-center gap-2 rounded-full border border-[#004093]/10 bg-slate-50 px-4 py-1.5 shadow-sm">
@@ -57,7 +55,7 @@ export default function TestimonialsSection() {
             What Our <br /> <span className="text-[#004093]">Customers</span> Say
           </h2>
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
-          <p className="mt-8 text-lg text-slate-600">
+          <p className="mt-8  text-md md:text-lg text-slate-600">
             Real feedback from homeowners and businesses across Australia who have made the switch to cleaner, cheaper energy.
           </p>
         </motion.div>
@@ -66,6 +64,7 @@ export default function TestimonialsSection() {
         <div className="flex  w-full items-center justify-center">
           <TestimonialsCard 
             items={items} 
+            height={200}
             width={800} 
             autoPlay={true} 
             autoPlayInterval={5000}

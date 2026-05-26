@@ -9,14 +9,14 @@ import {
 
 export default function AussiesSunSolarFinance() {
   return (
-    <section className="w-full bg-[#f4f8ff] py-20 px-4 overflow-hidden">
+    <section className="w-full bg-[#f4f8ff] py-10 md:py-16  overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* MAIN CARD */}
         <div className="grid lg:grid-cols-3  overflow-hidden shadow-xl shadow-black/50">
 
           {/* LEFT SECTION */}
-          <div className="bg-[#FE9900] p-10 shadow-xl shadow-black/50 lg:p-12 relative overflow-hidden">
+          <div className="bg-[#FE9900] p-5 md:p-10 shadow-xl shadow-black/50 lg:p-12 relative overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute top-[-50px] left-[-50px] w-52 h-52 bg-white/10 rounded-full blur-3xl"></div>
@@ -40,20 +40,20 @@ export default function AussiesSunSolarFinance() {
                 </div>
               </div>
 
-              <h3 className="text-4xl leading-tight font-black text-white mb-6">
+              <h3 className="text-3xl  md:text-4xl leading-tight font-black text-white mb-6">
                 Easy Solar Finance
                 <span className="block text-[#004093]">
                   For Every Aussie Home
                 </span>
               </h3>
 
-              <p className="text-white/90 text-lg leading-relaxed mb-10">
+              <p className="text-white text-md md:text-lg leading-relaxed mb-10">
                 Switch to premium solar with flexible repayment plans,
                 lower electricity bills, and long-term savings.
               </p>
 
               {/* Features */}
-              <div className="space-y-5">
+              <div className="md:space-y-5 space-y-3">
 
                 <div className="flex items-start gap-4">
                   <div className="min-w-[50px] h-[50px] rounded-2xl bg-white/20 flex items-center justify-center">
@@ -107,13 +107,13 @@ export default function AussiesSunSolarFinance() {
           </div>
 
           {/* CENTER SECTION */}
-          <div className="bg-[#004093] p-10 lg:p-12 relative overflow-hidden">
+          <div className="bg-[#004093] p-5 md:p-10 lg:p-12 relative overflow-hidden">
 
             <div className="absolute bottom-[-80px] right-[-80px] w-60 h-60 bg-[#FE9900]/20 rounded-full blur-[120px]"></div>
 
             <div className="relative z-10">
 
-              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 backdrop-blur-md px-5 py-2 rounded-full mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 backdrop-blur-md px-5 py-2 rounded-full md:mb-8 mb-6">
                 <Sun className="text-[#FE9900]" size={18} />
 
                 <span className="text-white text-sm font-semibold">
@@ -121,7 +121,7 @@ export default function AussiesSunSolarFinance() {
                 </span>
               </div>
 
-              <h3 className="text-4xl font-black leading-tight text-white mb-8">
+              <h3 className="text-3xl  md:text-4xl font-black leading-tight text-white mb-8">
                 Why Choose
                 <span className="block text-[#FE9900]">
                   Aussies Sun Solar?
@@ -167,7 +167,7 @@ export default function AussiesSunSolarFinance() {
           </div>
 
           {/* RIGHT FORM SECTION */}
-          <div className="bg-white p-10 lg:p-12 relative">
+          <div className="bg-white p-5 md:p-10 lg:p-12 relative">
 
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#FE9900]/10 rounded-full blur-[100px]"></div>
 

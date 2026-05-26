@@ -124,7 +124,7 @@ export default function BatterySlider() {
   const slide = batteries[current];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-14 px-4">
+    <section className="relative w-full overflow-hidden bg-white md:py-14 py-10 px-4">
 
       <div className="relative z-10 mx-auto max-w-7xl">
 
@@ -164,7 +164,7 @@ export default function BatterySlider() {
           <div className="relative flex items-center justify-center">
 
             {/* Background Glow */}
-            <div className="absolute h-[420px] w-[420px]  blur-[100px]" />
+            <div className="absolute md:h-[420px] h-[300px] w-[300px] md:w-[420px]  blur-[100px]" />
 
             <AnimatePresence mode="wait">
 
@@ -185,7 +185,7 @@ export default function BatterySlider() {
                 <img
                   src={slide.image}
                   alt={slide.name}
-                  className="h-[400px] w-auto object-contain "
+                  className="md:h-[400px] h-[250px] w-auto object-contain "
                 />
 
               </motion.div>
@@ -216,7 +216,7 @@ export default function BatterySlider() {
                 </span>
 
                 {/* TITLE */}
-                <h3 className="mt-4 text-4xl font-black leading-tight text-slate-900 md:text-5xl">
+                <h3 className="mt-4 text-3xl font-black leading-tight text-slate-900 md:text-5xl">
                   {slide.name}
                 </h3>
 
@@ -224,7 +224,7 @@ export default function BatterySlider() {
                 <div className="mt-4 h-1 w-20 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
 
                 {/* DESCRIPTION */}
-                <p className="mt-6 text-lg leading-relaxed text-slate-700">
+                <p className="mt-6 text-md md:text-lg leading-relaxed text-slate-900">
                   {slide.desc}
                 </p>
 

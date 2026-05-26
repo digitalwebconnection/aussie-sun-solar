@@ -70,7 +70,7 @@ export default function StatsSection() {
      
 
                 {/* STATS GRID */}
-                <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+                <div className="grid gap-8 grid-cols-2 xl:grid-cols-4">
 
                     {STATS.map((item, i) => (
                         <motion.div
@@ -98,7 +98,7 @@ export default function StatsSection() {
                             group relative overflow-hidden rounded-lg
                             border border-[#FE9900]/40
                             bg-[#004093]/60 
-                            p-10 text-center
+                            md:p-10 p-5 text-center
                             shadow-[0_25px_60px_rgba(0,0,0,0.25)]
                             transition-all duration-500
                             hover:shadow-[0_35px_90px_rgba(0,64,147,0.35)]
@@ -119,9 +119,9 @@ export default function StatsSection() {
                             </div>
 
                             {/* ICON */}
-                            <div className="relative z-10 mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/15 text-[#FE9900] backdrop-blur-xl">
+                            <div className="relative z-10 mx-auto mb-6 flex h-10 w-10 md:h-20 md:w-20 items-center justify-center rounded-full border border-white/20 bg-white/15 text-[#FE9900] backdrop-blur-xl">
 
-                                <BadgeCheck className="h-8 w-8" />
+                                <BadgeCheck className="h-5 w-5 md:h-8 md:w-8" />
                             </div>
 
                             {/* NUMBER */}
@@ -131,7 +131,7 @@ export default function StatsSection() {
                                     <Counter
                                         value={item.value}
                                         fontSize={54}
-                                        fontWeight={900}
+                                            fontWeight={900}
                                         textColor="#FE9900"
                                         padding={0}
                                         gradientHeight={0}
@@ -152,14 +152,14 @@ export default function StatsSection() {
                                 </div>
 
                                 {item.suffix && (
-                                    <span className="ml-1 text-5xl font-black tracking-[-2px]">
+                                    <span className="ml-1 text-3xl md:text-5xl font-black tracking-[-2px]">
                                         {item.suffix}
                                     </span>
                                 )}
                             </div>
 
                             {/* LABEL */}
-                            <p className="relative z-10 mt-4 text-[13px] font-semibold uppercase tracking-[0.25em] text-[#FE9900]">
+                            <p className="relative z-10 mt-4 text-sm md:text-lg font-semibold uppercase tracking-[0.25em] text-[#FE9900]">
                                 {item.label}
                             </p>
 

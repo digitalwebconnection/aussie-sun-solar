@@ -96,7 +96,7 @@ const ServicesSection = () => {
 
 
     return (
-        <section className="relative py-14 bg-[#ffffff] overflow-hidden">
+        <section className="relative py-7 md:py-14 bg-[#ffffff] overflow-hidden">
 
 
             <div className="max-w-7xl mx-auto flex flex-col  items-center  relative z-10">
@@ -105,7 +105,7 @@ const ServicesSection = () => {
             TOP CONTENT
         ========================================= */}
 
-                <div className="flex flex-col text-center  items-center justify-between gap-10 mb-16">
+                <div className="flex flex-col text-center  items-center justify-between  gap-3 md:gap-10 mb-6 md:mb-16">
 
                     {/* LEFT */}
                     <div className="max-w-7xl">
@@ -120,7 +120,7 @@ const ServicesSection = () => {
 
                         </div>
 
-                        <h2 className="text-5xl leading-[1.1] font-black text-[#111827] mt-4">
+                        <h2 className="text-3xl md:text-5xl  font-black text-[#111827] mt-4">
 
                             Smart Solar
                             <span className="text-[#004093]">
@@ -141,7 +141,7 @@ const ServicesSection = () => {
                     {/* RIGHT */}
                     <div className="max-w-6xl">
 
-                        <p className="text-gray-600 text-lg ">
+                        <p className="text-gray-900 text-md md:text-lg ">
 
                             We provide advanced solar systems, battery
                             storage, EV charging and smart electrical
@@ -161,25 +161,40 @@ const ServicesSection = () => {
             SERVICES SLIDER
         ========================================= */}
 
-                <div className="overflow-hidden">
-
+                <div className="overflow-hidden px-4 sm:px-0">
                     <div
-                        className="flex transition-all duration-700 ease-in-out gap-6 items-stretch"
+                        className="flex transition-all duration-700 ease-in-out gap-4 sm:gap-6 items-stretch"
                         style={{
-                            transform: `translateX(-${currentIndex * 24.5}%)`,
+                            transform: `translateX(-${window.innerWidth < 640
+                                    ? currentIndex * 102
+                                    : window.innerWidth < 1024
+                                        ? currentIndex * 51
+                                        : currentIndex * 24.5
+                                }%)`,
                         }}
                     >
-
                         {services.map((service, index) => {
                             const Icon = service.icon;
 
                             return (
                                 <div
                                     key={index}
-                                    className="min-w-[23%] group relative overflow-hidden rounded-lg h-[460px] shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
+                                    className="
+            min-w-full
+            sm:min-w-[48%]
+            lg:min-w-[23%]
+            group
+            relative
+            overflow-hidden
+            rounded-2xl
+            h-[420px]
+            sm:h-[440px]
+            lg:h-[460px]
+            shadow-[0_20px_60px_rgba(0,0,0,0.15)]
+          "
                                 >
-
                                     {/* IMAGE */}
+
                                     <img
                                         src={service.image}
                                         alt={service.title}
@@ -187,78 +202,138 @@ const ServicesSection = () => {
                                     />
 
                                     {/* DARK OVERLAY */}
+
                                     <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/60 to-black/10"></div>
 
                                     {/* HOVER GLOW */}
+
                                     <div className="absolute inset-0 bg-linear-to-t from-[#004093]/60 via-transparent to-[#FE9900]/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
                                     {/* CONTENT */}
-                                    <div className="absolute inset-0 p-4 flex flex-col">
 
+                                    <div className="absolute inset-0 p-4 sm:p-5 lg:p-6 flex flex-col">
                                         {/* TOP */}
+
                                         <div className="flex items-start justify-between">
-
                                             {/* ICON */}
-                                            <div className="w-15 h-15 rounded-lg bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-[#FE9900] group-hover:rotate-360 transition duration-500 shadow-xl">
 
+                                            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-15 lg:h-15 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center group-hover:bg-[#FE9900] group-hover:rotate-360 transition duration-500 shadow-xl">
                                                 <Icon
-                                                    size={30}
+                                                    size={
+                                                        window.innerWidth < 640
+                                                            ? 24
+                                                            : 30
+                                                    }
                                                     className="text-white group-hover:text-[#111827] transition duration-500"
                                                 />
-
                                             </div>
 
                                             {/* NUMBER */}
-                                            <h2 className="text-white/40 text-6xl font-black">
+
+                                            <h2 className="text-white/40 text-4xl sm:text-5xl lg:text-6xl font-black">
                                                 0{index + 1}
                                             </h2>
-
                                         </div>
 
-                                        {/* BOTTOM CONTENT */}
+                                        {/* BOTTOM */}
+
                                         <div className="mt-auto">
-
                                             {/* TITLE */}
-                                            <h3 className="text-white text-[34px] leading-tight font-black max-w-[280px]">
 
+                                            <h3 className="text-white text-[26px] sm:text-[30px] lg:text-[34px] leading-tight font-black max-w-[280px]">
                                                 {service.title}
-
                                             </h3>
 
                                             {/* LINE */}
-                                            <div className="w-24 h-[4px] bg-[#FE9900] rounded-full mt-5 group-hover:w-40 transition-all duration-500"></div>
+
+                                            <div className="w-20 sm:w-24 h-[4px] bg-[#FE9900] rounded-full mt-4 sm:mt-5 group-hover:w-32 sm:group-hover:w-40 transition-all duration-500"></div>
 
                                             {/* DESCRIPTION */}
-                                            <p className="text-white/80 leading-8 text-[17px] mt-6 min-h-[120px] opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500">
 
+                                            <p
+                                                className="
+                  text-white/80
+                  leading-7
+                  sm:leading-8
+                  text-[15px]
+                  sm:text-[16px]
+                  lg:text-[17px]
+                  mt-5
+                  sm:mt-6
+                  min-h-[100px]
+                  sm:min-h-[120px]
+
+                  opacity-100
+                  translate-y-0
+
+                  lg:opacity-0
+                  lg:translate-y-10
+                  lg:group-hover:opacity-100
+                  lg:group-hover:translate-y-0
+
+                  transition duration-500
+                "
+                                            >
                                                 {service.description}
-
                                             </p>
 
                                             {/* BUTTON */}
-                                            <button className="mt-7 opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 bg-white hover:bg-[#FE9900] text-[#111827] px-7 py-4 rounded-lg font-bold flex items-center justify-center gap-3 w-fit shadow-xl">
 
+                                            <button
+                                                className="
+                  mt-5
+                  sm:mt-7
+
+                  opacity-100
+                  translate-y-0
+
+                  lg:opacity-0
+                  lg:translate-y-10
+                  lg:group-hover:opacity-100
+                  lg:group-hover:translate-y-0
+
+                  transition duration-500
+
+                  bg-white
+                  hover:bg-[#FE9900]
+
+                  text-[#111827]
+
+                  px-5
+                  sm:px-7
+
+                  py-3
+                  sm:py-4
+
+                  rounded-xl
+
+                  font-bold
+
+                  flex
+                  items-center
+                  justify-center
+                  gap-3
+
+                  w-fit
+
+                  shadow-xl
+                "
+                                            >
                                                 Read More
 
-                                                <ArrowRight size={20} />
-
+                                                <ArrowRight size={18} />
                                             </button>
-
                                         </div>
-
                                     </div>
-
                                 </div>
                             );
                         })}
-
                     </div>
-
                 </div>
                 <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(254 153 0 / 0.2)" }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex mt-15 items-center gap-3 bg-[#FE9900] hover:bg-[#004093] text-white px-15 py-3 rounded-lg font-bold text-lg shadow-xl shadow-[#FE9900]/20 transition-all group"
+                    className="flex mt-6 md:mt-15 items-center gap-3 bg-[#FE9900] hover:bg-[#004093] text-white px-15 py-3 rounded-lg font-bold text-lg shadow-xl shadow-[#FE9900]/20 transition-all group"
                 >
                     How we can help you
                     <ArrowRight

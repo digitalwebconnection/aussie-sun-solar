@@ -13,6 +13,9 @@ import SmoothScroll from './Component/SmoothScroll'
 import AboutMain from './Component/Aboutus/AboutMain'
 import ProjectsCTA from './Component/Projects/ProjectsCTA'
 import SolarPowerSystems from './pages/SolarPowerSystems'
+import BatteryStoragePage from './pages/BatteryStoragePage'
+import EVChargersPage from './pages/EVChargersPage'
+import CommercialSolarPage from './pages/CommercialSolarPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
         <Route path="/about" element={<AboutMain/>} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/solar-power-systems" element={<SolarPowerSystems />} />
+        <Route path="/services/battery-storage-solutions" element={<BatteryStoragePage />} />
+        <Route path="/services/ev-chargers" element={<EVChargersPage />} />
+        <Route path="/services/commercial-solar" element={<CommercialSolarPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/:slug" element={<ProductDetailPage />} />
         <Route path="/projects" element={<ProjectsPage />} />

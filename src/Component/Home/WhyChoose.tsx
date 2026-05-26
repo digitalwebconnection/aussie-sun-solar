@@ -11,6 +11,7 @@ import {
     ArrowUpRight,
 } from 'lucide-react';
 
+
 const FEATURES = [
     {
         icon: ShieldCheck,
@@ -63,11 +64,11 @@ export default function WhyChooseSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl font-black tracking-tight text-slate-900 md:text-6xl">
+                        <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-6xl">
                             The <span className="text-[#004093]">Aussie </span> Sun Solr
                         </h2>
                         <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#FE9900]" />
-                        <p className="mx-auto mt-8 max-w-4xl text-lg leading-relaxed text-slate-500">
+                        <p className="mx-auto mt-8 max-w-4xl text-md md:text-lg leading-relaxed text-slate-500">
                             We combine premium Australian standards with world-class solar technology 
                             to deliver energy independence that lasts for decades.
                         </p>
@@ -84,7 +85,7 @@ export default function WhyChooseSection() {
                             transition={{ delay: i * 0.1 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -10 }}
-                            className="group relative h-full min-h-[320px] overflow-hidden rounded-lg border  bg-white p-10 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.9)] border-[#FE9900] transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(254,153,0,0.25)]"
+                            className="group relative h-full min-h-[320px] overflow-hidden rounded-lg border  bg-white p-4 md:p-10 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.9)] border-[#FE9900] transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(254,153,0,0.25)]"
                         >
                             {/* THE INNER CARD COLOR FILL (ANIMATES ON HOVER) */}
                             <div className="absolute inset-0 z-0 translate-y-[102%] bg-linear-to-br from-[#004093] to-[#FE9900] transition-transform duration-500 ease-out group-hover:translate-y-0" />
@@ -106,7 +107,7 @@ export default function WhyChooseSection() {
                                 </div>
 
                                 {/* DECORATIVE ARROW */}
-                                <div className="mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#FE9900] transition-colors duration-500 group-hover:text-white">
+                                <div className="mt-2 md:mt-6 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#FE9900] transition-colors duration-500 group-hover:text-white">
                                     <span>Learn More</span>
                                     <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                                 </div>
@@ -122,9 +123,9 @@ export default function WhyChooseSection() {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className="mt-10 border-t border-slate-100 pt-10 flex flex-wrap justify-center gap-x-12 gap-y-6"
+                    className="mt-4 md:mt-10 border-t border-slate-100 pt-10 flex flex-wrap justify-center gap-x-12 gap-y-6"
                 >
-                    {['CEC APPROVED', '100% IN-HOUSE', 'AUSTRALIA WIDE', 'TIER 1 PANELS'].map((trust, idx) => (
+                    {['CEC APPROVED', '100% IN-HOUSE', 'AUSTRALIA WIDE', 'TIER 1PANELS'].map((trust, idx) => (
                         <div key={idx} className="flex items-center gap-3 text-[11px] font-black tracking-[0.3em] text-slate-900">
                            <div className="h-1.5 w-1.5 rounded-full bg-[#FE9900]" /> {trust}
                         </div>

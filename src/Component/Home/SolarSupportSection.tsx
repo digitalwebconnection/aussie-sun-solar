@@ -45,7 +45,7 @@ export default function SolarSupportSection() {
                     <div className="grid items-center lg:grid-cols-[1.1fr_0.9fr]">
 
                         {/* LEFT SIDE */}
-                        <div className="relative z-10 p-10 md:p-16 lg:p-10">
+                        <div className="relative z-10 p-5 md:p-16 lg:p-10">
 
                             {/* TOP LABEL */}
                             <motion.div
@@ -96,12 +96,11 @@ export default function SolarSupportSection() {
                                     once: true,
                                 }}
                                 className="
-                                mt-8 text-5xl font-black leading-none
+                                mt-4 md:mt-8 text-3xl md:text-5xl  font-black leading-none
                                 tracking-[-3px]
-                                text-white md:text-7xl
+                                text-white  xl:text-7xl
                                 "
                             >
-
                                 Power Your
                                 <br />
 
@@ -133,10 +132,9 @@ export default function SolarSupportSection() {
                                 }}
                                 className="
                                 mt-8 max-w-2xl text-lg leading-loose
-                                text-white/75
+                                text-white/90
                                 "
                             >
-
                                 Whether you're installing solar for the first time
                                 or upgrading your existing energy system, our
                                 in-house experts deliver smarter solutions,
@@ -144,7 +142,7 @@ export default function SolarSupportSection() {
                             </motion.p>
 
                             {/* FEATURES */}
-                            <div className="mt-10 flex flex-wrap gap-5">
+                            <div className="mt-4 md:mt-10 flex flex-wrap gap-5">
 
                                 {[
                                     'CEC Certified Installers',
