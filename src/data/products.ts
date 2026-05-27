@@ -97,9 +97,9 @@ import pdfsolis3 from "../assets/Solis/solis-three-phase-5-20kW.pdf";
 
 // saj
 import saj1 from "../assets/saj/1.jpg";
-import saj2 from "../assets/Saj/2.jpg";
-import pdfsaj1 from "../assets/Saj/SAJ-5kW-1P-datasheet.pdf";
-import pdfsaj2 from "../assets/Saj/SAJ-5-10kW-3P-datasheet.pdf";
+import saj2 from "../assets/saj/2.jpg";
+import pdfsaj1 from "../assets/saj/SAJ-5kW-1P-datasheet.pdf";
+import pdfsaj2 from "../assets/saj/SAJ-5-10kW-3P-datasheet.pdf";
 
 
 // Anker Solix
