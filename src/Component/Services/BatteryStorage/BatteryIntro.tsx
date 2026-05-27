@@ -30,7 +30,7 @@ const BatteryIntro = () => {
             during peak periods, or when the grid goes down — giving you total energy control.
           </p>
 
-          <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="mt-8 md:mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { number: "5K+", label: "Batteries Installed" },
               { number: "10 Years", label: "Battery Warranty" },

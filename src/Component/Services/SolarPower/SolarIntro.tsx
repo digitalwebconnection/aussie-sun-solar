@@ -32,7 +32,7 @@ const SolarIntro = () => {
           <div className="mb-6 flex items-center justify-center gap-4">
             <div className="h-[2px] w-14 bg-[#FE9900]" />
 
-            <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">
+            <span className="text-sm md:text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">
               Renewable Energy
             </span>
 
@@ -40,7 +40,7 @@ const SolarIntro = () => {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-4xl font-black font-serif leading-tight text-[#111827] md:text-6xl">
+          <h2 className="text-3xl md:text-5xl font-black font-serif leading-tight text-[#111827] ">
             Australia's Trusted Partner In
             <span className="mt-2 block text-[#004093]">
               Renewable Energy
@@ -57,7 +57,7 @@ const SolarIntro = () => {
           </p>
 
           {/* Stats */}
-          <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="mt-8 md:mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
 
             {[
               {
@@ -132,7 +132,7 @@ const SolarIntro = () => {
                 bg-[#FE9900]
                 px-10
                 py-2
-                text-lg
+                text-md md:text-lg
                 font-black
                 uppercase
                 tracking-[0.15em]

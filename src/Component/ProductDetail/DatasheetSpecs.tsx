@@ -49,13 +49,13 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
   const hasPdfs = product.pdfUrls && product.pdfUrls.length > 0;
 
   return (
-    <div className="bg-white mx-auto max-w-7xl py-16" id="datasheet-section py-2">
+    <div className="bg-white mx-auto max-w-7xl py-4 md:py-16" id="datasheet-section py-2">
       <h3 className="text-3xl md:text-5xl font-black text-[#004093] mb-6 flex items-center gap-2">
         <span className="w-1.5 h-10 bg-[#FE9900] rounded-full inline-block" />
         Technical Datasheet & Specifications
       </h3>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4 md:mb-8">
         {/* Technical Param List */}
         <div className={hasPdfs ? "lg:col-span-7" : "lg:col-span-12"}>
           <h4 className="text-sm font-black text-[#004093] uppercase tracking-wider mb-4">
@@ -130,10 +130,10 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
         <h4 className="text-sm font-black text-[#004093] uppercase tracking-wider mb-4">
           Available Product Models
         </h4>
-        <div className="overflow-x-auto border border-slate-100 rounded-2xl shadow-sm">
+        <div className="overflow-x-auto border border-slate-100 rounded-lg shadow-sm">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-slate-50 border-b border-slate-100">
+              <tr className="bg-slate-2000 border-b border-slate-300">
                 <th className="p-4 text-xs font-black text-[#004093] uppercase tracking-wider">Model Name</th>
                 <th className="p-4 text-xs font-black text-[#004093] uppercase tracking-wider">Power Output / Capacity</th>
                 <th className="p-4 text-xs font-black text-[#004093] uppercase tracking-wider">Efficiency Rating</th>

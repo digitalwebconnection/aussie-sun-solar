@@ -16,19 +16,19 @@ const rebatePoints = [
 
 const SolarBatterySection = () => {
   return (
-    <section className="relative md:py-24 py-10 bg-white overflow-hidden">
-      
+    <section className="relative md:py-24 py-10 bg-white overflow-hidden" aria-label="Solar battery rebates and savings">
+
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FE9900]/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#004093]/10 blur-[120px] rounded-full" />
 
       <div className="max-w-7xl mx-auto px-5 md:px-0 relative z-10">
-        
+
         <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
-          
+
           {/* LEFT SIDE */}
           <div>
-            
+
             {/* Small Tag */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const SolarBatterySection = () => {
               <SunMedium size={16} className="text-[#FE9900]" />
 
               <span className="text-[#004093] text-xs font-bold uppercase tracking-[0.2em]">
-                Solar Battery Program
+
               </span>
             </motion.div>
 
@@ -48,10 +48,10 @@ const SolarBatterySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-3xl md:text-6xl font-black leading-[1.1] text-[#004093]"
             >
-              Save More With <br />
+               Save More with Smart Solar {" "}
 
               <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]">
-                Solar Battery Rebates
+                 Battery Storage Systems
               </span>
             </motion.h2>
 
@@ -92,8 +92,8 @@ const SolarBatterySection = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 mt-8">
-              
-              <button className="group px-10 py-3 rounded-2xl bg-[#004093] text-white font-bold uppercase tracking-wider text-sm flex items-center gap-3 hover:bg-[#FE9900] transition-all duration-300 shadow-xl">
+
+              <button className="group w-full sm:w-auto px-10 py-3 rounded-2xl bg-[#004093] text-white font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-3 hover:bg-[#FE9900] transition-all duration-300 shadow-xl">
                 Get Free Quote
 
                 <ArrowRight
@@ -102,7 +102,7 @@ const SolarBatterySection = () => {
                 />
               </button>
 
-              <button className="px-10 py-3 rounded-2xl border border-slate-200 text-[#004093] font-bold uppercase tracking-wider text-sm hover:border-[#004093] transition-all">
+              <button className="w-full sm:w-auto px-10 py-3 rounded-2xl border border-slate-200 text-[#004093] font-bold uppercase tracking-wider text-sm hover:border-[#004093] transition-all">
                 Learn More
               </button>
             </div>
@@ -114,10 +114,10 @@ const SolarBatterySection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             className="relative"
           >
-            
+
             {/* Main Card */}
             <div className="relative bg-[#f8fafc]  md:p-10 p-5 border border-slate-300 shadow-black shadow-2xl overflow-hidden">
-              
+
               {/* Glow */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#FE9900]/10 blur-[80px] rounded-full" />
 
@@ -139,7 +139,7 @@ const SolarBatterySection = () => {
 
               {/* Small Cards */}
               <div className="grid grid-cols-2 gap-5 mt-5 md:mt-10">
-                
+
                 <div className="bg-white rounded-lg p-6 border border-slate-400">
                   <Zap className="text-[#FE9900] mb-4" size={28} />
 
@@ -170,7 +170,7 @@ const SolarBatterySection = () => {
 
               {/* Bottom Box */}
               <div className="mt-8 bg-linear-to-r from-[#004093] to-[#0f5bc7] rounded-lg  md:p-6 p-3 flex items-center justify-between">
-                
+
                 <div>
                   <p className="text-white/90 text-sm uppercase tracking-wider">
                     Free Consultation

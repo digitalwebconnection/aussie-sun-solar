@@ -96,10 +96,10 @@ const ServicesSection = () => {
 
 
     return (
-        <section className="relative py-7 md:py-14 bg-[#ffffff] overflow-hidden">
+        <section className="relative py-7 md:py-14 bg-[#ffffff] overflow-hidden" aria-label="Our Services">
 
 
-            <div className="max-w-7xl mx-auto flex flex-col  items-center  relative z-10">
+            <div className="max-w-7xl mx-auto flex flex-col items-center relative z-10 px-4 md:px-6">
 
                 {/* =========================================
             TOP CONTENT
@@ -139,16 +139,13 @@ const ServicesSection = () => {
                     </div>
 
                     {/* RIGHT */}
-                    <div className="max-w-6xl">
+                    <div className="max-w-6xl space-y-4">
 
-                        <p className="text-gray-900 text-md md:text-lg ">
-
-                            We provide advanced solar systems, battery
-                            storage, EV charging and smart electrical
-                            solutions engineered to maximize energy
-                            efficiency, lower electricity costs and
-                            power a sustainable future.
-
+                        <p className="text-gray-900 text-md md:text-lg">
+                            We provide advanced solar solutions including solar panels, battery storage, and EV charging systems designed to reduce electricity costs and improve energy efficiency.
+                        </p>
+                        <p className="text-gray-900 text-md md:text-lg">
+                            Aussie Sun Solar helps Australian homes and businesses switch to smarter, cleaner, and more sustainable energy solutions for long-term savings.
                         </p>
 
                     </div>
@@ -230,9 +227,9 @@ const ServicesSection = () => {
 
                                             {/* NUMBER */}
 
-                                            <h2 className="text-white/40 text-4xl sm:text-5xl lg:text-6xl font-black">
+                                            <span className="text-white/40 text-4xl sm:text-5xl lg:text-6xl font-black">
                                                 0{index + 1}
-                                            </h2>
+                                            </span>
                                         </div>
 
                                         {/* BOTTOM */}

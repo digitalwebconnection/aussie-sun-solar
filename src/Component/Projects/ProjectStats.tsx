@@ -98,7 +98,7 @@ const ProjectStats: React.FC = () => {
             Our Achievements
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold text-[#111827] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-5xl">
             Numbers That Reflect
             <span className="block text-[#FE9900]">
               Our Solar Excellence
@@ -142,7 +142,7 @@ const ProjectStats: React.FC = () => {
                   border
                   border-gray-500/50
                   bg-white
-                  p-8
+                  p-4 md:p-8
                   shadow-[0_20px_50px_rgba(0,0,0,0.34)]
                   hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)]
                   transition-all

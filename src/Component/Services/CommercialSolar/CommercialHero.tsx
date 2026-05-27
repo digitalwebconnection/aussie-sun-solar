@@ -16,14 +16,14 @@ const CommercialHero = () => {
       <div className="absolute bottom-0 right-[-10%] h-80 w-80 rounded-full bg-white/10 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-14 lg:grid-cols-[60%_40%]">
+        <div className="grid items-center gap-8 md:gap-14 lg:grid-cols-[60%_40%]">
           <div>
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="mb-12">
               <div className="mb-5 flex items-center gap-4">
                 <div className="h-[2px] w-14 bg-[#FE9900]" />
                 <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">Our Services</span>
               </div>
-              <h2 className="text-5xl font-serif font-bold leading-tight text-white md:text-7xl">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl  font-serif font-bold leading-tight text-white">
                 Commercial
                 <span className="block text-[#FE9900]">solar solutions</span>
               </h2>

@@ -25,10 +25,10 @@ const ContactFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" aria-label="Frequently asked questions">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-[#004093]">
+          <h2 className="text-3xl md:text-5xl font-black text-[#004093]">
             Common Questions
           </h2>
           <p className="mt-4 text-gray-500 font-medium">

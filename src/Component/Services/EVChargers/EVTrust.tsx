@@ -17,13 +17,13 @@ const EVTrust = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-10 py-2 rounded-full bg-[#FE9900]/10 text-black border border-[#FE9900]/80 font-bold uppercase tracking-[3px] text-xs mb-6">
             <Sparkles size={15} /> Trusted EV Installation
           </motion.div>
-          <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-5xl md:text-7xl font-black text-[#0B1220] leading-tight">
+          <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-3xl md:text-5xl font-black text-[#0B1220] leading-tight">
             What Makes Us <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-500">Different</span>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {deliveries.map((item, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.15 }} whileHover={{ y: -14 }} className="group relative overflow-hidden rounded-lg border border-gray-300 bg-white p-10 shadow-[0_10px_40px_rgba(0,0,0,0.24)] transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+            <motion.div key={i} initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.15 }} whileHover={{ y: -14 }} className="group relative overflow-hidden rounded-lg border border-gray-300 bg-white md:p-10 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.24)] transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
               <div className={`absolute inset-0 bg-linear-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-700`} />
               <div className="relative z-10 flex items-center justify-between mb-10">
                 <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }} className={`w-20 h-20 rounded-lg bg-linear-to-br ${item.gradient} flex items-center justify-center shadow-2xl`}>

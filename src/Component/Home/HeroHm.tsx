@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-25 overflow-hidden">
+    <section className="relative w-full py-25 overflow-hidden" aria-label="Hero banner">
 
       {/* ================================
           BACKGROUND SLIDER
@@ -50,7 +50,7 @@ const HeroSection = () => {
           >
             <img
               src={image}
-              alt={`slide-${index}`}
+              alt={`Aussie Sun Solar hero background slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
           </div>
@@ -83,35 +83,31 @@ const HeroSection = () => {
           </div>
 
           {/* MAIN HEADING */}
-          <h1 className="text-3xl md:text-6xl  font-black text-white drop-shadow-2xl">
-
-            Save More
+          <h1 className="text-4xl md:text-6xl font-black text-white drop-shadow-2xl leading-tight">
+            One of Australia’s Largest
             <br />
-
-            Power Smarter
-            <br />
-
             <span className="text-[#FE9900]">
-              Live Greener
+              Smart Solar Energy
             </span>
-
+            <br />
+            Providers
           </h1>
 
           {/* DESCRIPTION */}
-          <p className="mt-8 text-white/80 text-md md:text-lg leading-[1.8] max-w-7xl">
-
-            Upgrade your home with premium solar panels,
-            advanced battery storage, EV charging and
-            energy-efficient solutions designed to reduce
-            electricity bills and maximize long-term savings.
-
-          </p>
+          <div className="mt-8 text-white/80 text-md md:text-lg leading-[1.8] max-w-7xl space-y-4">
+            <p>
+              Power your home or business with premium renewable energy solutions designed for long-term savings and energy independence.
+            </p>
+            <p>
+              Experts in solar installation Australia, delivering advanced solar panels, battery storage, and EV charging solutions nationwide.
+            </p>
+          </div>
 
           {/* BUTTONS */}
           <div className="flex flex-wrap items-center gap-5   mt-5 md:mt-12">
 
             {/* BUTTON */}
-            <button className="group bg-[#FE9900] hover:bg-[#ffae2b] text-white  px-10 py-2 rounded-2xl text-lg font-bold flex items-center gap-4 shadow-[0_10px_40px_rgba(254,153,0,0.45)] transition-all duration-300 hover:scale-105">
+            <button className="group bg-[#FE9900] hover:bg-[#ffae2b] text-white w-full md:w-auto px-10 py-2 rounded-2xl text-lg font-bold flex items-center justify-center gap-4 shadow-[0_10px_40px_rgba(254,153,0,0.45)] transition-all duration-300 hover:scale-105">
 
               Get Free Quote
 
@@ -180,6 +176,7 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
             className={`transition-all duration-500 rounded-full ${
               currentSlide === index
                 ? "w-14 h-3 bg-[#FE9900]"

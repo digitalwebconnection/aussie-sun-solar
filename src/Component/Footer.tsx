@@ -299,7 +299,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center gap-5">
             <img
               src="https://arisesolar.com.au/wp-content/themes/arise-solar/assets/images/sec-logo.svg"
-              alt="Smart Energy Council"
+              alt="Smart Energy Council accreditation logo"
               className="h-16 sm:h-20 md:h-24 object-contain"
             />
 
@@ -307,13 +307,14 @@ const Footer = () => {
 
             <div className="flex items-center gap-4">
               {[
-                FaFacebookF,
-                FaInstagram,
-                FaLinkedinIn,
-              ].map((Icon, i) => (
+                { Icon: FaFacebookF, label: "Follow us on Facebook" },
+                { Icon: FaInstagram, label: "Follow us on Instagram" },
+                { Icon: FaLinkedinIn, label: "Connect with us on LinkedIn" },
+              ].map(({ Icon, label }, i) => (
                 <a
                   key={i}
                   href="#"
+                  aria-label={label}
                   className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-300 flex items-center justify-center text-[#004093] hover:bg-[#FE9900] hover:text-white hover:border-[#FE9900] transition-all duration-300"
                 >
                   <Icon size={18} />
@@ -324,6 +325,7 @@ const Footer = () => {
 
               <a
                 href="#"
+                aria-label="Watch us on YouTube"
                 className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-300 flex items-center justify-center text-[#004093] hover:bg-[#FE9900] hover:text-white hover:border-[#FE9900] transition-all duration-300"
               >
                 ▶

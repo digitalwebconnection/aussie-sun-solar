@@ -74,7 +74,7 @@ const ProjectProcess: React.FC = () => {
               />
               How It Works
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#004093] leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-[#004093] leading-tight">
               From Quote to{' '}
               <span className="text-[#FE9900]">Power-On</span>
               <br /> in 4 Easy Steps

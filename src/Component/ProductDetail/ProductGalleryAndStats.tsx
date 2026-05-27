@@ -97,7 +97,7 @@ export const ProductGalleryAndStats: React.FC<ProductGalleryAndStatsProps> = ({
             </div>
 
             {/* Title & Tagline */}
-            <h2 className="text-2xl md:text-4xl font-black text-slate-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
               {product.brand} — {product.tagline}
             </h2>
             <p className="text-slate-700 text-xs font-bold uppercase tracking-wider mt-1 mb-4">

@@ -61,7 +61,7 @@ export default function WellnessExpertsSection() {
 
     return (
         <>
-            <section className="relative overflow-hidden bg-[#ffffff] py-14">
+            <section className="relative overflow-hidden bg-[#ffffff] py-14" aria-label="Why choose Aussie Sun Solar">
 
                 {/* BACKGROUND */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,196,0,0.12),transparent_30%)]" />
@@ -164,7 +164,7 @@ export default function WellnessExpertsSection() {
                                                 }`} />
                                         </div>
 
-                                        <h3 className="text-2xl font-black tracking-[-1px] text-[#111]">
+                                        <h3 className="text-xl md:text-2xl font-black tracking-[-1px] text-[#111]">
                                             {item.title}
                                         </h3>
 
@@ -211,7 +211,7 @@ export default function WellnessExpertsSection() {
                                 <motion.img
                                     key={FEATURES[activeIndex].image}
                                     src={FEATURES[activeIndex].image}
-                                    alt=""
+                                    alt={FEATURES[activeIndex].title}
                                     initial={{
                                         opacity: 0,
                                         scale: 1.1,

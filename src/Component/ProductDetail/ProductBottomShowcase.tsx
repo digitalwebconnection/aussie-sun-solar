@@ -66,7 +66,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
           <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-4 flex items-center gap-4 hover:border-white/10 transition group">
             <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 border border-white/10">
               <img
-                src="https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=2000&auto=format&fit=crop"
+                src="https://cdn.britannica.com/91/222691-050-E8BDF226/installing-solar-panels.jpg"
                 alt="Solar Panel Close Up"
                 className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
               />

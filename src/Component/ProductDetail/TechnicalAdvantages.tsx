@@ -48,7 +48,7 @@ export const TechnicalAdvantages: React.FC<TechnicalAdvantagesProps> = ({
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-100 rounded-full blur-3xl opacity-40" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-0">
         
         {/* Heading */}
         <div className="max-w-5xl mx-auto text-center mb-6">

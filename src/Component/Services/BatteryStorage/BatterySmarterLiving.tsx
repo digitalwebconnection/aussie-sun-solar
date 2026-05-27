@@ -43,7 +43,7 @@ const BatterySmarterLiving = () => {
               Smart Battery Living
             </motion.span>
 
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-5xl md:text-6xl font-black leading-tight text-[#004093]">
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-3xl md:text-5xl font-black leading-tight text-[#004093]">
               Store Energy, <br />
               Save More
             </motion.h2>

@@ -30,7 +30,7 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
               BRAND ADVANTAGES
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-black leading-tight text-[#004093]">
+            <h2 className="text-3xl md:text-5xl font-black leading-tight text-[#004093]">
               Why Choose
               <span className="text-[#FE9900]">
                 {" "}

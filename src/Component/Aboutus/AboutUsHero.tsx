@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function SolarAboutHero() {
   return (
-    <section className="relative min-h-[70vh] lg:min-h-[85vh] overflow-hidden bg-black flex items-center">
+    <section className="relative min-h-[70vh] lg:min-h-[85vh] overflow-hidden bg-black flex items-center" aria-label="About Aussie Sun Solar">
       
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -71,12 +71,12 @@ export default function SolarAboutHero() {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="flex flex-wrap gap-6 mt-12"
           >
-            <button className="group relative overflow-hidden px-10 py-4 rounded-2xl bg-[#FE9900] text-black font-black text-xl transition-all duration-300 hover:scale-105 shadow-[0_20px_40px_-10px_rgba(254,153,0,0.4)]">
+            <button className="group relative overflow-hidden w-full sm:w-auto px-10 py-4 rounded-2xl bg-[#FE9900] text-black font-black text-xl transition-all duration-300 hover:scale-105 shadow-[0_20px_40px_-10px_rgba(254,153,0,0.4)]">
               <span className="relative z-10">Explore More</span>
               <div className="absolute inset-0 bg-white/30 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
             </button>
 
-            <button className="px-10 py-4 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-xl text-white font-bold text-xl hover:bg-white/10 hover:border-[#FE9900] transition-all duration-300">
+            <button className="w-full sm:w-auto px-10 py-4 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-xl text-white font-bold text-xl hover:bg-white/10 hover:border-[#FE9900] transition-all duration-300">
               Contact Us
             </button>
           </motion.div>

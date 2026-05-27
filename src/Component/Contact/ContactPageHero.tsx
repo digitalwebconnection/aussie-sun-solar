@@ -8,7 +8,7 @@ const ContactPageHero = () => {
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop"
-          alt="Solar Background"
+          alt="Solar panels on rooftop background"
           className="h-full w-full object-cover"
         />
 
@@ -47,7 +47,7 @@ const ContactPageHero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl font-bold leading-tight text-white md:text-7xl"
+            className="text-4xl font-bold leading-tight text-white md:text-6xl"
           >
             Power Your Future
             <span className="block text-[#FE9900]">

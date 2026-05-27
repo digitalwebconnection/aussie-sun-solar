@@ -39,7 +39,7 @@ export default function SolarExpertiseSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-8 lg:py-12">
+    <section className="relative overflow-hidden bg-white py-8 lg:py-12" aria-label="Solar expertise and services">
 
 
       <div className="container relative z-10 mx-auto px-6 lg:px-0">
@@ -59,7 +59,7 @@ export default function SolarExpertiseSection() {
             </p>
           </motion.div>
 
-                <h2 className="text-5xl font-black tracking-tight text-slate-900 md:text-7xl leading-[1.2]">
+                <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-5xl leading-[1.2]">
                            Complete Solar
                         <span className="block bg-[#004093] bg-clip-text text-transparent py-2 pb-4">
                                Energy Solutions
@@ -76,7 +76,7 @@ export default function SolarExpertiseSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
 
           {locations.map((item, index) => (
             <motion.div
@@ -109,7 +109,7 @@ export default function SolarExpertiseSection() {
               {/* Content */}
               <div className="p-10 flex flex-col flex-1">
 
-                <h3 className="text-3xl font-black text-[#004093] leading-tight group-hover:text-[#FE9900] transition-all duration-300">
+                <h3 className="text-xl md:text-3xl font-black text-[#004093] leading-tight group-hover:text-[#FE9900] transition-all duration-300">
                   {item.title}
                 </h3>
 

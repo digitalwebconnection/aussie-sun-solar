@@ -98,7 +98,7 @@ export default function AboutFeatures() {
   };
 
   return (
-    <section ref={containerRef} className="bg-white overflow-hidden selection:bg-[#FE9900] selection:text-white">
+    <section ref={containerRef} className="bg-white overflow-hidden selection:bg-[#FE9900] selection:text-white" aria-label="Our philosophy and what sets us apart">
       <div className="grid lg:grid-cols-2">
         
         {/* TOP LEFT: IMAGE & STATS */}
@@ -110,7 +110,7 @@ export default function AboutFeatures() {
         >
           <img
             src="https://etimg.etb2bimg.com/photo/111210277.cms"
-            alt="Solar Panels"
+            alt="Solar panel installation crew on rooftop"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-linear-to-b from-[#004093]/40 to-[#004093]/10"></div>
@@ -120,7 +120,7 @@ export default function AboutFeatures() {
             ref={card1Ref}
             onMouseMove={(e) => handleMouseMove(e, card1Ref)}
             onMouseLeave={() => handleMouseLeave(card1Ref)}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#004093] flex flex-col items-center justify-center text-white p-6 shadow-[0_50px_100px_-20px_rgba(0,64,147,0.5)] border-b-8 border-[#FE9900] z-20 cursor-pointer rounded-2xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-50 h-50 md:w-64 md:h-64 bg-[#004093] flex flex-col items-center justify-center text-white p-6 shadow-[0_50px_100px_-20px_rgba(0,64,147,0.5)] border-b-8 border-[#FE9900] z-20 cursor-pointer rounded-2xl"
           >
             <motion.div
               animate={{ y: [0, -15, 0] }}
@@ -128,9 +128,9 @@ export default function AboutFeatures() {
               className="relative"
             >
                <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
-              <Award size={64} className="mb-4 text-[#FE9900] relative z-10" />
+              <Award size={54} className="mb-4  text-[#FE9900] relative z-10" />
             </motion.div>
-            <h3 className="text-6xl font-black tracking-tighter">7 +</h3>
+            <h3 className="text-4xl md:text-6xl font-black tracking-tighter">7 +</h3>
             <p className="text-xs uppercase tracking-[0.4em] mt-4 font-black text-center text-white/80">
               Years Of Experience
             </p>
@@ -150,7 +150,7 @@ export default function AboutFeatures() {
               <span className="text-[#FE9900] font-black tracking-[0.3em] uppercase text-xs px-8 py-2 bg-white/5 rounded-full border border-white/10">
                 Our Philosophy
               </span>
-              <h2 className="text-5xl lg:text-6xl font-black mt-8 mb-12 leading-[0.9] tracking-tighter">
+              <h2 className="text-3xl lg:text-5xl font-black mt-8 mb-12 leading-[0.9] tracking-tighter">
                 We believe <br />
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">In Excellence</span>
               </h2>
@@ -176,7 +176,7 @@ export default function AboutFeatures() {
                   <div className="shrink-0 w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center group-hover/item:bg-[#FE9900] group-hover/item:scale-110 transition-all duration-300">
                     <CheckCircle2 size={24} className="text-[#FE9900] group-hover/item:text-white" />
                   </div>
-                  <span className="text-xl font-bold text-white/70 group-hover/item:text-white transition-colors duration-300">
+                  <span className="text-base md:text-xl font-bold text-white/70 group-hover/item:text-white transition-colors duration-300">
                     {item}
                   </span>
                 </motion.li>
@@ -198,7 +198,7 @@ export default function AboutFeatures() {
               <span className="text-[#004093] font-black tracking-[0.3em] uppercase text-xs px-4 py-2 bg-black/5 rounded-full border border-black/10">
                 Our Edge
               </span>
-              <h2 className="text-5xl lg:text-6xl font-black mt-8 mb-8 leading-[0.9] tracking-tighter">
+              <h2 className="text-3xl lg:text-5xl font-black mt-8 mb-8 leading-[0.9] tracking-tighter">
                 What sets <br />
                 <span className="text-white">Us Apart</span>
               </h2>
@@ -224,7 +224,7 @@ export default function AboutFeatures() {
                   <div className="shrink-0 w-12 h-12 bg-[#004093] rounded-2xl flex items-center justify-center group-hover/item:bg-white group-hover/item:scale-110 transition-all duration-300">
                     <CheckCircle2 size={24} className="text-[#FE9900] group-hover/item:text-[#004093]" />
                   </div>
-                  <span className="text-xl font-black text-[#004093]/70 group-hover/item:text-[#004093] transition-colors duration-300">
+                  <span className="text-base md:text-xl font-black text-[#004093]/70 group-hover/item:text-[#004093] transition-colors duration-300">
                     {item}
                   </span>
                 </motion.li>
@@ -242,7 +242,7 @@ export default function AboutFeatures() {
         >
           <img
             src="https://insolationenergy.in/public/upload/blog/mobilebanner/20240305151028.jpg"
-            alt="Workplace"
+            alt="Solar installation workplace team"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
@@ -252,7 +252,7 @@ export default function AboutFeatures() {
             ref={card2Ref}
             onMouseMove={(e) => handleMouseMove(e, card2Ref)}
             onMouseLeave={() => handleMouseLeave(card2Ref)}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#004093] flex flex-col items-center justify-center text-white p-6 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border-t-8 border-[#FE9900] z-20 cursor-pointer rounded-2xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-64 md:h-64 w-50 h-50 bg-[#004093] flex flex-col items-center justify-center text-white p-6 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border-t-8 border-[#FE9900] z-20 cursor-pointer rounded-2xl"
           >
             <motion.div
               animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] }}
@@ -260,9 +260,10 @@ export default function AboutFeatures() {
               className="relative"
             >
               <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
-              <Zap size={64} className="mb-4 text-[#FE9900] relative z-10" />
+              <Zap size={54} className="mb-4 text-[#FE9900] relative z-10" />
             </motion.div>
-            <h3 className="text-6xl font-black tracking-tighter">400 +</h3>
+            <h3 className="text-4xl md:text-6xl font-black tracking-tighter">400 +
+            </h3>
             <p className="text-xs uppercase tracking-[0.4em] mt-4 font-black text-center text-white/80">
               Level 2 ASP Jobs
             </p>

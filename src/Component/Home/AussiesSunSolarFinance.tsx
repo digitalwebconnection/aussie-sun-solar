@@ -9,7 +9,7 @@ import {
 
 export default function AussiesSunSolarFinance() {
   return (
-    <section className="w-full bg-[#f4f8ff] py-10 md:py-16  overflow-hidden">
+    <section className="w-full bg-[#f4f8ff] py-10 md:py-16 overflow-hidden" aria-label="Solar finance options">
       <div className="max-w-7xl mx-auto">
 
         {/* MAIN CARD */}

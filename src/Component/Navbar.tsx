@@ -173,6 +173,17 @@ const SolarNavbar = () => {
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#FE9900] rounded-full" />
                 )}
               </Link>
+  {/* About Us */}
+              <Link
+                to="/about"
+                className={`transition duration-300 ${
+                  isActive("/about")
+                    ? "text-[#FE9900]"
+                    : "text-[#004093] hover:text-[#FE9900]"
+                }`}
+              >
+                About Us
+              </Link>
 
               {/* Services dropdown */}
               <div
@@ -304,17 +315,7 @@ const SolarNavbar = () => {
                 </AnimatePresence>
               </div>
 
-              {/* About Us */}
-              <Link
-                to="/about"
-                className={`transition duration-300 ${
-                  isActive("/about")
-                    ? "text-[#FE9900]"
-                    : "text-[#004093] hover:text-[#FE9900]"
-                }`}
-              >
-                About Us
-              </Link>
+            
 
               {/* Our Projects */}
               <Link
@@ -415,7 +416,7 @@ const SolarNavbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] lg:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-60 lg:hidden"
               onClick={() => setMobileOpen(false)}
             />
 
@@ -426,7 +427,7 @@ const SolarNavbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 right-0 h-screen w-[85%] max-w-[360px] bg-white z-[70] shadow-2xl lg:hidden flex flex-col"
+              className="fixed top-0 right-0 h-screen w-[85%] max-w-[360px] bg-white z-70 shadow-2xl lg:hidden flex flex-col"
             >
               {/* Drawer Header */}
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 bg-white sticky top-0 z-10">
@@ -533,7 +534,7 @@ const SolarNavbar = () => {
                 <MobileLink to="/contact" label="Contact Us" active={isActive("/contact")} />
 
                 {/* CTA Card */}
-                <div className="mt-6 bg-gradient-to-br from-[#004093] to-[#0056c4] rounded-2xl p-5 text-white shadow-xl shadow-blue-200">
+                <div className="mt-6 bg-linear-to-br from-[#004093] to-[#0056c4] rounded-2xl p-5 text-white shadow-xl shadow-blue-200">
                   <p className="text-xs font-medium opacity-75 mb-1">Need Solar Help?</p>
                   <h3 className="text-xl font-bold mb-4">Call Us Today</h3>
                   <a

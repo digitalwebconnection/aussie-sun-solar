@@ -73,7 +73,7 @@ const SolarWhyChoose = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-black text-[#0B1220] leading-tight"
+            className="text-3xl md:text-5xl font-black text-[#0B1220] leading-tight"
           >
             Trusted Solar
             <span className="block text-[#FE9900]">
@@ -104,7 +104,7 @@ const SolarWhyChoose = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-[#e8ecf0] border border-gray-300 rounded-lg p-10 transition-all duration-500 hover:shadow-2xl group"
+              className="bg-[#e8ecf0] border border-gray-300 rounded-lg p-5 md:p-10 transition-all duration-500 hover:shadow-2xl group"
             >
 
               {/* Icon */}
@@ -129,7 +129,7 @@ const SolarWhyChoose = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6   mt-10 md:mt-20">
 
           {[
             ['10K+', 'Panels Installed'],
@@ -143,7 +143,7 @@ const SolarWhyChoose = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 + i * 0.1 }}
-              className="bg-[#F8FAFC] border border-gray-100 rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-500"
+              className="bg-[#F8FAFC] border border-gray-100 rounded-lg p-4 md:p-8 text-center shadow-black/50 shadow-lg hover:shadow-xl transition-all duration-500"
             >
               <div className="text-4xl font-black text-[#FE9900] mb-2">
                 {item[0]}

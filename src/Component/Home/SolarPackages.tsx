@@ -49,7 +49,7 @@ const PremiumSolarPackages = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section className="relative py-14 bg-[#05070a] overflow-hidden font-sans">
+    <section className="relative py-14 bg-[#05070a] overflow-hidden font-sans" aria-label="Solar system packages and pricing">
 
 
       <div className="max-w-7xl mx-auto px-5 md:px-0 relative z-10">
@@ -66,7 +66,7 @@ const PremiumSolarPackages = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-7xl font-bold text-white tracking-tight leading-[0.9]"
+              className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-[0.9]"
             >
               Future-Proof <br />
               <span className="text-[#FE9900]">Energy Portfolios.</span>
@@ -99,7 +99,7 @@ const PremiumSolarPackages = () => {
               <div className={`absolute inset-0 ${pkg.popular ? "bg-linear-to-b from-[#FE9900]/50 to-transparent" : "bg-white/10"
                 }`} />
 
-              <div className="relative z-10 h-full bg-[#0a0d14] rounded-lg p-8 overflow-hidden flex flex-col">
+              <div className="relative z-10 h-full bg-[#0a0d14] rounded-lg p-4 md:p-8 overflow-hidden flex flex-col">
 
                 {/* Popular Badge */}
                 {pkg.popular && (
@@ -203,7 +203,7 @@ const PremiumSolarPackages = () => {
             <span className="text-xs font-bold tracking-widest text-white">ISO 9001</span>
             <span className="text-xs font-bold tracking-widest text-white">NET ZERO 2050</span>
           </div>
-          <p className="text-xs md:text-sm text-white uppercase tracking-[0.3em] text-center max-w-4xl leading-loose">
+          <p className="text-xs md:text-sm text-white uppercase tracking-[0.3em] md:text-center text-justify max-w-4xl leading-loose">
             Pricing estimates are based on standard metro installation criteria and current STC market values.
             Official quotations subject to technical roof assessment and orientation analysis.
           </p>

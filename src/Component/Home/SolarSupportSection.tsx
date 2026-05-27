@@ -10,7 +10,7 @@ import {
 
 export default function SolarSupportSection() {
     return (
-        <section className="relative overflow-hidden ">
+        <section className="relative overflow-hidden" aria-label="Solar support and consultation">
 
 
             <div className=" relative z-10 mx-auto ">
@@ -96,25 +96,22 @@ export default function SolarSupportSection() {
                                     once: true,
                                 }}
                                 className="
-                                mt-4 md:mt-8 text-3xl md:text-5xl  font-black leading-none
-                                tracking-[-3px]
-                                text-white  xl:text-7xl
+                                mt-4 md:mt-8 text-3xl md:text-5xl font-black leading-tight
+                                tracking-[-2px]
+                                text-white xl:text-6xl
                                 "
                             >
-                                Power Your
+                                Affordable Solar
                                 <br />
-
                                 <span className="bg-linear-to-r from-white to-[#FE9900] bg-clip-text text-transparent">
-                                    Home With
+                                    Installation for
                                 </span>
-
                                 <br />
-
-                                Confidence
+                                Smarter Energy Savings
                             </motion.h2>
 
                             {/* DESCRIPTION */}
-                            <motion.p
+                            <motion.div
                                 initial={{
                                     opacity: 0,
                                     y: 20,
@@ -132,14 +129,16 @@ export default function SolarSupportSection() {
                                 }}
                                 className="
                                 mt-8 max-w-2xl text-lg leading-loose
-                                text-white/90
+                                text-white/90 space-y-4
                                 "
                             >
-                                Whether you're installing solar for the first time
-                                or upgrading your existing energy system, our
-                                in-house experts deliver smarter solutions,
-                                premium technology, and long-term savings.
-                            </motion.p>
+                                <p>
+                                    Aussie Sun Solar delivers reliable and affordable solar installation solutions designed to reduce electricity bills and maximize long-term energy savings for Australian homes and businesses.
+                                </p>
+                                <p>
+                                    With premium solar technology and smart solar solutions, we help you switch to cleaner, more efficient, and sustainable energy.
+                                </p>
+                            </motion.div>
 
                             {/* FEATURES */}
                             <div className="mt-4 md:mt-10 flex flex-wrap gap-5">
@@ -270,7 +269,7 @@ export default function SolarSupportSection() {
                         </div>
 
                         {/* RIGHT SIDE IMAGE */}
-                        <div className="relative h-185  overflow-hidden">
+                        <div className="relative min-h-[400px] lg:h-[700px] overflow-hidden">
 
                             {/* IMAGE */}
                             <motion.img
@@ -289,7 +288,7 @@ export default function SolarSupportSection() {
                                     once: true,
                                 }}
                                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop"
-                                alt=""
+                                alt="Solar support team specialist"
                                 className="h-full w-full object-cover"
                             />
 

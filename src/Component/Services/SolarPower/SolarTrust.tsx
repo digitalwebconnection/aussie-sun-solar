@@ -62,7 +62,7 @@ const SolarTrust = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-5xl md:text-7xl font-black text-[#0B1220] leading-tight"
+            className="text-4xl md:text-6xl font-black text-[#0B1220] leading-tight"
           >
             What Makes Us
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-500">
@@ -98,7 +98,7 @@ const SolarTrust = () => {
               whileHover={{
                 y: -14
               }}
-              className="group relative overflow-hidden rounded-lg border border-gray-300 bg-white p-10 shadow-[0_10px_40px_rgba(0,0,0,0.24)] transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
+              className="group relative overflow-hidden rounded-lg border border-gray-300 bg-white p-5 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.24)] transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
             >
 
               {/* HOVER GLOW */}

@@ -45,6 +45,7 @@ export default function StatsSection() {
                 once: true,
             }}
             className="relative  overflow-hidden py-10"
+            aria-label="Our achievements in numbers"
         >
 
             {/* BACKGROUND IMAGE */}

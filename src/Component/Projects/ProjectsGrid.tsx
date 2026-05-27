@@ -55,7 +55,7 @@ const projects = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-10 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Heading */}
@@ -70,7 +70,7 @@ const ProjectsSection: React.FC = () => {
             Our Projects
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold text-[#111827] md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-5xl">
             Recent Solar
             <span className="block text-[#FE9900]">
               Installations

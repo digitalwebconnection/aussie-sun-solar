@@ -12,7 +12,7 @@ export default function DirectorMessage() {
   const imgY = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
   return (
-    <section ref={containerRef} className="relative py-12 lg:py-20 bg-white overflow-hidden">
+    <section ref={containerRef} className="relative py-12 lg:py-20 bg-white overflow-hidden" aria-label="Message from our director">
       {/* Subtle Background Accents Restored for Depth */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FE9900]/5 blur-[100px] rounded-full -translate-y-1/2"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#004093]/5 blur-[80px] rounded-full translate-y-1/4"></div>
@@ -34,7 +34,7 @@ export default function DirectorMessage() {
                 <motion.img 
                   style={{ y: imgY }}
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
-                  alt="Director" 
+                  alt="Director and Founder of Aussie Sun Solar" 
                   className="w-full aspect-4/5 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#004093]/20 via-transparent to-transparent"></div>
@@ -61,7 +61,7 @@ export default function DirectorMessage() {
                    <p className="text-[#FE9900] text-xs font-black tracking-[0.2em] uppercase">Leadership Message</p>
                 </div>
 
-                <h2 className="text-4xl lg:text-6xl font-black text-[#004093] leading-tight mb-8">
+                <h2 className="text-3xl lg:text-5xl font-black text-[#004093] leading-tight mb-8">
                   A Message <br />
                   <span className="text-[#FE9900]">From Our Director</span>
                 </h2>
@@ -88,7 +88,7 @@ export default function DirectorMessage() {
                     <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#FE9900] shadow-lg">
                       <img 
                         src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" 
-                        alt="Director Avatar" 
+                        alt="Director avatar portrait" 
                         className="w-full h-full object-cover"
                       />
                     </div>

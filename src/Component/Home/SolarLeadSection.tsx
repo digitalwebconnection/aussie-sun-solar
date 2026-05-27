@@ -60,7 +60,7 @@ const SolarLeadSection = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section className="relative py-6 md:py-14 bg-white overflow-hidden text-[#004093] font-sans">
+        <section className="relative py-6 md:py-14 bg-white overflow-hidden text-[#004093] font-sans" aria-label="Build your smart solar ecosystem">
 
             <div className="max-w-7xl mx-auto px-6  relative z-10">
                 {/* Simple Header */}
@@ -81,7 +81,7 @@ const SolarLeadSection = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-7xl font-bold tracking-tight text-[#004093] relative z-10">
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#004093] relative z-10">
                         Build Your{" "}
 
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900] drop-shadow-[4px_4px_12px_rgba(254,153,0,0.35)]">
@@ -96,12 +96,12 @@ const SolarLeadSection = () => {
                     </h2>
                 </div>
                 {/* Minimalist Tabs */}
-                <div className="flex flex-wrap gap-2 justify-center items-center max-w-7xl mx-auto mb-4 md:mb-8 py-0 md:p-1.5 bg-slate-50 rounded-2xl w-fit">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-2 justify-center items-center max-w-7xl mx-auto mb-4 md:mb-8 py-0 md:p-1.5 bg-slate-50 rounded-2xl">
                     {solarOptions.map((item, index) => (
                         <button
                             key={item.id}
                             onClick={() => setActiveTab(index)}
-                            className={`flex items-center gap-2 px-10 py-3 rounded-lg shadow-xl font-bold text-sm transition-all duration-300 ${activeTab === index
+                            className={`flex items-center gap-2 px-6 md:px-10 py-3 rounded-lg shadow-xl font-bold text-sm transition-all duration-300 w-full sm:w-auto justify-center ${activeTab === index
                                 ? "bg-[#004093] text-white shadow-lg"
                                 : "text-slate-900 border border-slate-400  hover:text-[#004093] hover:bg-white"
                                 }`}
@@ -187,7 +187,7 @@ const SolarLeadSection = () => {
                                     </motion.div>
                                     <span className="text-xs font-black uppercase tracking-[0.2em]">Priority Access</span>
                                 </div>
-                                <h3 className="text-4xl font-black text-[#004093] tracking-tight">Instant Quote</h3>
+                                <h3 className="text-xl md:text-4xl font-black text-[#004093] tracking-tight">Instant Quote</h3>
                                 <p className="text-slate-500 text-sm mt-3 font-medium leading-relaxed">
                                     Fill in your details below. Our AI-driven system will calculate your estimated savings instantly.
                                 </p>

@@ -31,12 +31,12 @@ const BatteryProcess = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-64 -mt-64" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] -ml-64 -mb-64" />
 
-      <div className="max-w-7xl mx-auto text-center px-6 relative z-10">
-        <motion.div variants={itemVariants} className="mb-12">
+      <div className="max-w-7xl mx-auto  px-6 relative z-10">
+        <motion.div variants={itemVariants} className="mb-12 text-center">
           <span className="flex items-center gap-2 text-[#FE9900] font-bold justify-center uppercase tracking-[3px] text-sm mb-5">
             <ShieldCheck size={18} /> Smart Battery Technology
           </span>
-          <h2 className="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-6">
             Battery Storage
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">Made Simple</span>
           </h2>

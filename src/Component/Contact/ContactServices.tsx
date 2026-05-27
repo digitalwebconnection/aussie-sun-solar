@@ -49,7 +49,7 @@ const ContactServices = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
 
         {/* Heading */}
         <motion.div
@@ -69,7 +69,7 @@ const ContactServices = () => {
             <div className="h-[2px] w-12 bg-[#FE9900]" />
           </div>
 
-          <h2 className="text-4xl font-black leading-tight text-[#111827] md:text-5xl">
+          <h2 className="text-3xl font-black leading-tight text-[#111827] md:text-5xl">
             Smart Energy
             <span className="block text-[#004093]">
               Solutions For You
@@ -195,7 +195,7 @@ const ContactServices = () => {
                       "
                     />
 
-                    <h3 className="text-2xl font-black leading-tight text-white">
+                    <h3 className="text-xl md:text-2xl font-black leading-tight text-white">
                       {service.title}
                     </h3>
 
@@ -240,10 +240,13 @@ const ContactServices = () => {
           className="mt-10 text-center"
         >
           <button
-            className="
+           className="
               group
               inline-flex
+              w-full
+              sm:w-auto
               items-center
+              justify-center
               gap-4
               rounded-2xl
               bg-[#004093]

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative h-180 overflow-hidden">
+    <section className="relative h-150 md:h-180 overflow-hidden">
       
       {/* Background Image */}
       <div

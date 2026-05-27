@@ -16,7 +16,7 @@ export default function PremiumSolarAbout() {
 
       <div className="container relative z-10 mx-auto px-6 lg:px-16">
         
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
 
           {/* LEFT IMAGE DESIGN */}
           <div className="relative flex justify-center">
@@ -33,8 +33,8 @@ export default function PremiumSolarAbout() {
                 
                 <img
                   src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop"
-                  alt="Solar Installation"
-                  className="w-[420px] h-[520px] object-cover group-hover:scale-105 transition-all duration-700"
+                  alt="Solar panel installation by Aussie Sun Solar"
+                  className="w-full h-[320px] sm:h-[420px] lg:h-[520px] object-cover group-hover:scale-105 transition-all duration-700"
                 />
 
                 {/* Overlay */}
@@ -104,7 +104,7 @@ export default function PremiumSolarAbout() {
             {/* CTA */}
             <div className="flex flex-wrap gap-5 mt-14">
 
-              <button className="group relative overflow-hidden bg-[#004093] hover:bg-[#00306e] text-white px-10 py-2 rounded-2xl text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105">
+              <button className="group relative overflow-hidden w-full sm:w-auto bg-[#004093] hover:bg-[#00306e] text-white px-10 py-2 rounded-2xl text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105">
                 
                 <span className="relative z-10">
                   Get Free Consultation
@@ -112,7 +112,7 @@ export default function PremiumSolarAbout() {
 
               </button>
 
-              <button className="px-10 py-2 rounded-2xl border border-gray-300 hover:border-[#004093] text-black hover:text-[#004093] text-lg font-semibold transition-all duration-300">
+              <button className="w-full sm:w-auto px-10 py-2 rounded-2xl border border-gray-300 hover:border-[#004093] text-black hover:text-[#004093] text-lg font-semibold transition-all duration-300">
                 Explore Services
               </button>
 
@@ -145,7 +145,7 @@ export default function PremiumSolarAbout() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
             Creating A
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]">
               {" "}Smarter Solar Future{" "}
@@ -170,7 +170,7 @@ export default function PremiumSolarAbout() {
                 ☀️
               </div>
 
-              <h3 className="text-2xl font-bold mt-6 text-black">
+              <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
                 Clean Energy
               </h3>
 
@@ -186,7 +186,7 @@ export default function PremiumSolarAbout() {
                 ⚡
               </div>
 
-              <h3 className="text-2xl font-bold mt-6 text-black">
+              <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
                 Smart Savings
               </h3>
 
@@ -202,7 +202,7 @@ export default function PremiumSolarAbout() {
                 🌱
               </div>
 
-              <h3 className="text-2xl font-bold mt-6 text-black">
+              <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
                 Sustainable Future
               </h3>
 

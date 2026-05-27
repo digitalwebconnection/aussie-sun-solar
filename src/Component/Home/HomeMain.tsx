@@ -26,7 +26,6 @@ const HomeMain = () => {
       <SolarPackages />
       <SolarLeadSection />
        <SolarSavingsCalculator/>
-      
       <SolarRebateSection />
       <StatsSection />
       <WellnessExpertsSection />

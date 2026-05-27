@@ -50,7 +50,7 @@ const ContactOffices = () => {
             <div className="h-[2px] w-12 bg-[#FE9900]" />
           </div>
 
-          <h2 className="text-4xl font-black text-[#111827] md:text-5xl">
+          <h2 className="text-3xl font-black text-[#111827] md:text-5xl">
             Visit Our
             <span className="block text-[#004093]">
               Office Locations
@@ -86,7 +86,7 @@ const ContactOffices = () => {
                 border
                 border-gray-300
                 bg-white
-                p-10
+                p-5 md:p-10
                 text-center
                 shadow-[0_10px_40px_rgba(0,0,0,0.35)]
                 transition-all

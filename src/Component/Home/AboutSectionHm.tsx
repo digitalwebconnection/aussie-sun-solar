@@ -9,7 +9,7 @@ import Stack from "../Stack";
 
 const AboutSection = () => {
   return (
-    <section className="relative py-12 md:py-24 bg-white overflow-hidden">
+    <section className="relative py-12 md:py-24 bg-white overflow-hidden" aria-label="About Aussie Sun Solar">
       {/* SUBTLE BACKGROUND TEXTURE */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +22,7 @@ const AboutSection = () => {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
         
         {/* =====================================
             LEFT SIDE: PREMIUM IMAGE STACK
@@ -90,28 +90,38 @@ const AboutSection = () => {
               direction="bottom"
             />
             <BlurText
-              text="Power Your Future"
+              text="Smarter Renewable"
               delay={50}
               animateBy="words"
               direction="bottom"
               className="text-[#004093]"
             />
-            <span className="relative inline-block text-[#FE9900]">
-              With The Sun
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" fill="none">
-                <path d="M0 6C50 2 150 2 200 6" stroke="#FE9900" strokeWidth="4" strokeLinecap="round" />
-              </svg>
-            </span>
+            <div className="flex flex-wrap gap-x-2">
+              <span className="relative inline-block text-[#FE9900]">
+                Energy Solutions
+                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" fill="none">
+                  <path d="M0 6C50 2 150 2 200 6" stroke="#FE9900" strokeWidth="4" strokeLinecap="round" />
+                </svg>
+              </span>
+              <span className="text-[#111827]">for Australia</span>
+            </div>
           </h2>
 
           {/* DESCRIPTION */}
-          <div className="mt-5 md:mt-10">
+          <div className="mt-5 md:mt-10 space-y-4">
             <BlurText
-              text="Aussie Sun Solar is committed to making sustainable energy accessible for everyone. We provide customized solar solutions that combine cutting-edge technology with local expertise, ensuring maximum efficiency for your home or business."
+              text="Aussie Sun Solar delivers advanced renewable energy solutions designed to help homes and businesses reduce electricity costs while embracing a cleaner, more sustainable future. From premium solar panels and battery storage to energy-efficient systems, we provide customized solar solutions built for maximum performance and long-term savings."
               delay={20}
               animateBy="words"
               direction="top"
-              className="text-gray-900 text-lg leading-relaxed"
+              className="text-gray-900 text-lg leading-relaxed block"
+            />
+            <BlurText
+              text="With CEC-certified installers, Tier-1 solar technology, zero upfront cost options, and trusted local support, we make switching to smart solar energy simple, reliable, and affordable across Australia."
+              delay={20}
+              animateBy="words"
+              direction="top"
+              className="text-gray-900 text-lg leading-relaxed mt-4 block"
             />
           </div>
 

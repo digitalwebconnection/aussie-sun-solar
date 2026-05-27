@@ -26,7 +26,7 @@ const ContactServices = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
 
-        <div className="grid items-center gap-14 lg:grid-cols-[60%_40%]">
+        <div className="grid items-center gap-4 md:gap-14 lg:grid-cols-[60%_40%]">
 
           {/* LEFT SIDE */}
           <div>
@@ -47,7 +47,7 @@ const ContactServices = () => {
                 </span>
               </div>
 
-              <h2 className="text-5xl font-serif font-bold leading-tight text-white md:text-7xl">
+              <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
                 Smart solar
                 <span className="block text-[#FE9900]">
                   power systems
@@ -86,12 +86,12 @@ const ContactServices = () => {
                 Get In Touch
               </p>
 
-              <h3 className="mt-1 text-3xl font-black leading-tight text-white">
+              <h3 className="mt-1 text-2xl md:text-3xl font-black leading-tight text-white">
                 Request A Free
                 Consultation
               </h3>
 
-              <p className="mt-1 leading-relaxed text-white/70">
+              <p className="mt-1 leading-relaxed text-white/90">
                 Fill out the form and our team will contact you shortly.
               </p>
 

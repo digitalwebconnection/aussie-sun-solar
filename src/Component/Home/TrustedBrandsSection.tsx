@@ -46,7 +46,7 @@ const BRANDS = [
 
 export default function TrustedBrandsSection() {
     return (
-        <section className="relative overflow-hidden bg-[#f8fafc] py-10 md:py-16">
+        <section className="relative overflow-hidden bg-[#f8fafc] py-10 md:py-16" aria-label="Trusted technology partners">
 
             {/* BACKGROUND EFFECTS */}
             <div className="absolute inset-0">
@@ -86,7 +86,7 @@ export default function TrustedBrandsSection() {
                         Trusted Technology Partners
                     </p>
 
-                    <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-7xl leading-[1.2]">
+                    <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-5xl leading-[1.2]">
                         Powered By
                         <span className="block bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent py-2 pb-4">
                             Leading Solar Brands
@@ -194,7 +194,7 @@ export default function TrustedBrandsSection() {
                                                         delay: idx * 0.2,
                                                     }}
                                                     src={logo}
-                                                    alt=""
+                                                    alt={`${item.category} partner brand logo ${idx + 1}`}
                                                     className="
                                                     relative z-10
                                                     max-h-16 w-auto

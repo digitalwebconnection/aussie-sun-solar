@@ -59,7 +59,7 @@ const ContactHero = () => {
         className="absolute right-20 top-20 h-40 w-40 rounded-full border border-[#FE9900]/20"
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8">
 
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
@@ -86,7 +86,7 @@ const ContactHero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl font-black leading-[1.1] text-[#111827] md:text-6xl">
+            <h1 className="text-4xl font-black leading-[1.1] text-[#111827] md:text-6xl">
               Let’s Discuss Your
               <span className="block text-[#004093]">
                 Solar Project
@@ -101,7 +101,7 @@ const ContactHero = () => {
             </p>
 
             {/* Contact Cards */}
-            <div className="mt-12 space-y-5">
+            <div className="mt-12  space-y-5">
 
               {[
                 {
@@ -197,7 +197,7 @@ const ContactHero = () => {
 
             {/* Heading */}
             <div className="relative z-10 mb-8">
-              <h2 className="text-3xl font-black text-white">
+              <h2 className="text-xl md:text-3xl font-black text-white">
                 Send Us A Message
               </h2>
 

@@ -10,6 +10,7 @@ import './App.css'
 import WhatsAppChatWidget from './Component/WhatsAppChatWidget'
 import Preloader from './Component/Home/Preloader'
 import SmoothScroll from './Component/SmoothScroll'
+import ScrollToTop from './Component/ScrollToTop'
 import AboutMain from './Component/Aboutus/AboutMain'
 import ProjectsCTA from './Component/Projects/ProjectsCTA'
 import SolarPowerSystems from './pages/SolarPowerSystems'
@@ -22,26 +23,31 @@ function App() {
   return (
     <BrowserRouter>
       <SmoothScroll />
+      <ScrollToTop />
       <Preloader />
       {/* Fixed Navbar — sits above all pages */}
-      <SolarNavbar />
+      <header>
+        <SolarNavbar />
+      </header>
 
       {/* Page content rendered based on route */}
-      <Routes>
-        <Route path="/" element={<HomeMain />} />
-        <Route path="/about" element={<AboutMain/>} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/services/solar-power-systems" element={<SolarPowerSystems />} />
-        <Route path="/services/battery-storage-solutions" element={<BatteryStoragePage />} />
-        <Route path="/services/ev-chargers" element={<EVChargersPage />} />
-        <Route path="/services/commercial-solar" element={<CommercialSolarPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/products/:slug" element={<ProductDetailPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-<WhatsAppChatWidget/>
- <ProjectsCTA />
+      <main className="overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<HomeMain />} />
+          <Route path="/about" element={<AboutMain/>} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/solar-power-systems" element={<SolarPowerSystems />} />
+          <Route path="/services/battery-storage-solutions" element={<BatteryStoragePage />} />
+          <Route path="/services/ev-chargers" element={<EVChargersPage />} />
+          <Route path="/services/commercial-solar" element={<CommercialSolarPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:slug" element={<ProductDetailPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </main>
+      <WhatsAppChatWidget/>
+      <ProjectsCTA />
       {/* Footer — shown on every page */}
       <Footer />
     </BrowserRouter>

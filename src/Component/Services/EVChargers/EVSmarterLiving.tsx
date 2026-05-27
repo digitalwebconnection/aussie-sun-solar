@@ -8,14 +8,14 @@ const EVSmarterLiving = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-10 md:py-24">
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#004093]/10 rounded-full blur-3xl" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -80 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
-              <img src="https://images.unsplash.com/photo-1647166545674-f4af6d3e71d9?q=80&w=1200&auto=format&fit=crop" alt="EV Charger" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
+              <img src="https://img.magnific.com/free-photo/ev-charging-station-clean-energy-filling-technology-electric-car-charging_35913-2573.jpg?semt=ais_hybrid&w=740&q=80" alt="EV Charger" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
               <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }} className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 rounded-lg shadow-xl max-w-xs">
                 <h3 className="text-4xl font-black text-[#FE9900] leading-none">1K+</h3>
@@ -27,7 +27,7 @@ const EVSmarterLiving = () => {
 
           <div>
             <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block px-10 py-1 border-[#FE9900]/80 rounded-lg bg-[#FE9900]/80 text-black font-bold uppercase tracking-[0.2em] text-sm">Smart EV Charging</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-5xl md:text-6xl font-black leading-tight text-[#004093]">
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-3xl md:text-5xl font-black leading-tight text-[#004093]">
               Drive Clean, <br /> Charge Smart
             </motion.h2>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="mt-4 text-gray-900 text-lg leading-relaxed max-w-xl">

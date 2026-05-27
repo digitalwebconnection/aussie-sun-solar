@@ -18,13 +18,13 @@ const CommercialWhyChoose = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-10">
           <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block text-[#FE9900] font-bold uppercase tracking-[3px] text-sm mb-4">Why Choose Us</motion.span>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-5xl md:text-6xl font-black text-[#0B1220] leading-tight">
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black text-[#0B1220] leading-tight">
             Trusted Commercial <span className="block text-[#FE9900]">Solar Experts</span>
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((item, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ y: -8 }} className="bg-[#e8ecf0] border border-gray-300 rounded-lg p-10 transition-all duration-500 hover:shadow-2xl group">
+            <motion.div key={i} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ y: -8 }} className="bg-[#e8ecf0] border border-gray-300 rounded-lg p-5 md:p-10 transition-all duration-500 hover:shadow-2xl group">
               <div className={`w-20 h-20 rounded-3xl ${item.color} flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110`}>
                 <item.icon size={38} strokeWidth={1.8} />
               </div>
@@ -36,7 +36,7 @@ const CommercialWhyChoose = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
           {[['500+', 'Commercial Installs'], ['100kW+', 'Largest System'], ['25 Years', 'Panel Warranty'], ['5-Star', 'Reviews']].map((item, i) => (
-            <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.1 }} className="bg-[#F8FAFC] border border-gray-100 rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-500">
+            <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.1 }} className="bg-[#F8FAFC] border border-gray-300 rounded-lg p-5 md:p-8 text-center shadow-lg shadow-black/50 hover:shadow-xl transition-all duration-500">
               <div className="text-4xl font-black text-[#FE9900] mb-2">{item[0]}</div>
               <div className="text-gray-500 font-semibold">{item[1]}</div>
             </motion.div>

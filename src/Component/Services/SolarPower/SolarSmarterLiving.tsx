@@ -40,7 +40,7 @@ const SolarSmarterLiving = () => {
             {/* Main Image */}
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
               <img
-                src="https://ceb8596f236225acd007-8e95328c173a04ed694af83ee4e24c15.ssl.cf5.rackcdn.com/images/blog/_blog/components-used-in-an-off-grid-solar-power-systems.jpg"
+                src="https://www.sigenergy.com/uploads/en_content/1741156288490534.webp"
                 alt="Solar Home"
                 className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -85,7 +85,7 @@ const SolarSmarterLiving = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mt-4 text-5xl md:text-6xl font-black leading-tight text-[#004093]"
+              className="mt-4 text-3xl md:text-5xl font-black leading-tight text-[#004093]"
             >
               Power Your Home <br />
               The Smarter Way

@@ -15,7 +15,7 @@ const CommercialIntro = () => {
             <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">Commercial Energy</span>
             <div className="h-[2px] w-14 bg-[#FE9900]" />
           </div>
-          <h2 className="text-4xl font-black font-serif leading-tight text-[#111827] md:text-6xl">
+          <h2 className="text-3xl font-black font-serif leading-tight text-[#111827] md:text-5xl">
             Australia's Trusted Partner In
             <span className="mt-2 block text-[#004093]">Commercial Solar</span>
           </h2>
@@ -23,7 +23,7 @@ const CommercialIntro = () => {
             Aussie Sun Solar designs and installs large-scale solar systems for commercial and industrial properties across Australia. Cut your energy overheads, increase sustainability, and benefit from government incentives.
           </p>
 
-          <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="mt-8 md:mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[{ number: "500+", label: "Commercial Installs" }, { number: "100kW+", label: "Largest System" }, { number: "100%", label: "Australian Support" }, { number: "25 Years", label: "Panel Warranty" }].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} whileHover={{ y: -8 }} className="rounded-lg border border-gray-300 bg-white p-6 shadow-[0_10px_50px_rgba(0,0,0,0.55)] transition-all duration-300 hover:border-[#FE9900]/60 hover:shadow-[0_20px_60px_rgba(0,64,147,0.58)]">
                 <h3 className="text-3xl font-black text-[#004093]">{item.number}</h3>

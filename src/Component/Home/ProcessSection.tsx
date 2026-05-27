@@ -51,7 +51,7 @@ const PROCESS = [
 
 export default function ProcessTimelineSection() {
     return (
-        <section className="relative overflow-hidden bg-white py-8 md:py-32">
+        <section className="relative overflow-hidden bg-white py-8 md:py-32" aria-label="Our solar installation process">
 
             <div className="container relative z-10 mx-auto px-5">
 
@@ -216,7 +216,7 @@ export default function ProcessTimelineSection() {
                                     <div className="relative z-10 mt-10">
 
                                         {/* TITLE */}
-                                        <h3 className="text-2xl font-black leading-tight tracking-[-1px] text-slate-900">
+                                        <h3 className="text-xl md:text-2xl font-black leading-tight tracking-[-1px] text-slate-900">
                                             {item.title}
                                         </h3>
 

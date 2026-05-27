@@ -20,7 +20,7 @@ const BatteryHero = () => {
       <div className="absolute bottom-0 right-[-10%] h-80 w-80 rounded-full bg-white/10 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-14 lg:grid-cols-[60%_40%]">
+        <div className="grid items-center gap-4 md:gap-14 lg:grid-cols-[60%_40%]">
 
           {/* LEFT SIDE */}
           <div>
@@ -38,7 +38,7 @@ const BatteryHero = () => {
                 </span>
               </div>
 
-              <h2 className="text-5xl font-serif font-bold leading-tight text-white md:text-7xl">
+              <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
                 Battery storage
                 <span className="block text-[#FE9900]">
                   solutions
