@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {  Zap, Shield, ArrowRight } from "lucide-react";
 import type { ProductData } from "../../data/products";
 
@@ -9,16 +9,17 @@ interface ProductGalleryAndStatsProps {
 export const ProductGalleryAndStats: React.FC<ProductGalleryAndStatsProps> = ({
   product,
 }) => {
-  const defaultImages = [
-    "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop"
-  ];
+  const images = product.productImages || [];
 
-  const images = product.productImages && product.productImages.length > 0
-    ? product.productImages
-    : defaultImages;
+  const [activeImage, setActiveImage] = useState(images[0] || "");
 
-  const [activeImage, setActiveImage] = useState(images[0]);
+  useEffect(() => {
+    if (images.length > 0) {
+      setActiveImage(images[0]);
+    } else {
+      setActiveImage("");
+    }
+  }, [product.productImages]);
 
   // Fallback PDF datasheet
   // const pdfLink = extra?.pdfUrl || "https://www.cleanenergycouncil.org.au/";

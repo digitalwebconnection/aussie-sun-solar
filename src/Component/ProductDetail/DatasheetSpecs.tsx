@@ -46,10 +46,10 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
     ? product.models
     : fallbackModels;
 
-  const pdfUrl = product.pdfUrl || "https://www.cleanenergycouncil.org.au/";
+  const hasPdfs = product.pdfUrls && product.pdfUrls.length > 0;
 
   return (
-    <div className="bg-white mx-auto max-w-7xl " id="datasheet-section">
+    <div className="bg-white mx-auto max-w-7xl py-16" id="datasheet-section py-2">
       <h3 className="text-3xl md:text-5xl font-black text-[#004093] mb-6 flex items-center gap-2">
         <span className="w-1.5 h-10 bg-[#FE9900] rounded-full inline-block" />
         Technical Datasheet & Specifications
@@ -57,7 +57,7 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
         {/* Technical Param List */}
-        <div className="lg:col-span-7">
+        <div className={hasPdfs ? "lg:col-span-7" : "lg:col-span-12"}>
           <h4 className="text-sm font-black text-[#004093] uppercase tracking-wider mb-4">
             Technical Parameters
           </h4>
@@ -76,38 +76,38 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
         </div>
 
         {/* PDF Datasheet Download Box */}
-        <div className="lg:col-span-5 flex flex-col">
-          <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col justify-between h-full">
-            <div>
-              <div className="w-12 h-12 rounded-lg bg-[#004093] flex items-center justify-center text-white mb-4">
-                <FileText size={24} />
-              </div>
-              <h4 className="text-2xl font-black text-[#004093] mb-2">
-                Download Official PDF
-              </h4>
-              <p className="text-slate-900 text-xs font-semibold leading-relaxed mb-6">
-                Get the full technical specifications sheet, safety guides, and installation standards directly from the manufacturer.
-              </p>
+        {hasPdfs && (
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col justify-between h-full">
+              <div>
+                <div className="w-12 h-12 rounded-lg bg-[#004093] flex items-center justify-center text-white mb-4">
+                  <FileText size={24} />
+                </div>
+                <h4 className="text-2xl font-black text-[#004093] mb-2">
+                  Download Official PDF
+                </h4>
+                <p className="text-slate-900 text-xs font-semibold leading-relaxed mb-6">
+                  Get the full technical specifications sheet, safety guides, and installation standards directly from the manufacturer.
+                </p>
 
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
-                  <Check size={16} className="text-green-500 shrink-0" />
-                  <span>Verified CEC Specifications</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
-                  <Check size={16} className="text-green-500 shrink-0" />
-                  <span>Installation dimensions included</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-00">
-                  <Check size={16} className="text-green-500 shrink-0" />
-                  <span>Warranty claim details</span>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
+                    <Check size={16} className="text-green-500 shrink-0" />
+                    <span>Verified CEC Specifications</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
+                    <Check size={16} className="text-green-500 shrink-0" />
+                    <span>Installation dimensions included</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
+                    <Check size={16} className="text-green-500 shrink-0" />
+                    <span>Warranty claim details</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {product.pdfUrls && product.pdfUrls.length > 0 ? (
               <div className="flex flex-col gap-3">
-                {product.pdfUrls.map((item, idx) => (
+                {product.pdfUrls?.map((item, idx) => (
                   <a
                     key={idx}
                     href={item.url}
@@ -120,19 +120,9 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
                   </a>
                 ))}
               </div>
-            ) : (
-              <a
-                href={pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#FE9900] hover:bg-[#e08600] text-white px-6 py-4 rounded-xl font-black transition duration-300 shadow-md shadow-[#FE9900]/15"
-              >
-                <Download size={18} />
-                Download PDF Technical Sheet
-              </a>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Available Models Options */}

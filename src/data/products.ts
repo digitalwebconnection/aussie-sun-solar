@@ -1,24 +1,161 @@
-import battery1 from '../assets/Battery Partners/1.webp';
-import battery2 from '../assets/Battery Partners/2.webp';
-import battery3 from '../assets/Battery Partners/3.webp';
-import battery4 from '../assets/Battery Partners/4.webp';
-import battery5 from '../assets/Battery Partners/5.webp';
-import inverter1 from '../assets/Inverters/1.webp';
-import inverter2 from '../assets/Inverters/2.webp';
-import inverter3 from '../assets/Inverters/3.webp';
-import inverter4 from '../assets/Inverters/4.webp';
-import inverter5 from '../assets/Inverters/5.webp';
+// solar panel logoes
 import panel1 from '../assets/Panel/1.webp';
 import panel2 from '../assets/Panel/2.webp';
 import panel3 from '../assets/Panel/3.webp';
 import panel4 from '../assets/Panel/4.webp';
 import panel5 from '../assets/Panel/5.webp';
+import panel6 from "../assets/Panel/6.webp";
+import panel7 from "../assets/Panel/7.webp";
+import panel8 from "../assets/Panel/8.webp";
+import panel9 from "../assets/Panel/9.webp";
+import panel10 from "../assets/Panel/10.webp"
 
-// Jinko Solar section
+// Jinko Solar page
 import j1 from "../assets/Jinko Solar/1.jpg";
 import j2 from "../assets/Jinko Solar/2.jpg";
 import pdf330 from "../assets/Jinko Solar/Jinko-330-cheetah-mono-perc.pdf";
 import pdf390 from "../assets/Jinko Solar/Jinko-Tiger-390W-Datasheet.pdf"
+
+// ja solar page
+import ja1 from "../assets/ja solar/JA-solar-panel-600-watt.jpg";
+import ja2 from "../assets/ja solar/2.webp";
+
+// AIKO Solar page
+import ai1 from "../assets/AIKO Solar/1.avif";
+import ai2 from "../assets/AIKO Solar/2.jpg";
+
+// Canadian Solar page
+import ca1 from "../assets/Canadian Solar/canadian-665watt-solar-panel.jpg";
+import ca2 from "../assets/Canadian Solar/BiHiKu-BiKu.png";
+import pdf1 from "../assets/Canadian Solar/Canadian-Hiku-330W-poly.pdf";
+
+// das-solar page
+import da1 from "../assets/das-solar/1.jfif";
+import da2 from "../assets/das-solar/2.png";
+import pdf440 from "../assets/das-solar/Datasheet-DAS-DH108ND-440.pdf";
+
+// DMEGC Solar  page
+import dm1 from "../assets/DMEGC Solar/1.webp";
+import dm2 from "../assets/DMEGC Solar/2.webp";
+import pdfB54 from "../assets/DMEGC Solar/EN-DMxxxM10RT-B54HBT-HST.pdf";
+
+// EGing PV solar page
+import eg1 from "../assets/EGing PV/1.png";
+import eg2 from "../assets/EGing PV/2.webp";
+import pdfeg1 from "../assets/EGing PV/EG-440N-Bifacial-DG.pdf";
+import pdfeg2 from "../assets/EGing PV/Eging-Datasheet-EG-440NT54-HLV_30-.pdf";
+
+// risen-solar page
+import ri1 from "../assets/risen-solar/1.avif";
+import ri2 from "../assets/risen-solar/2.jfif";
+import pdfri from "../assets/risen-solar/Risen-370W-Silver-Frame.pdf";
+
+// Trina Solar page
+import tr1 from "../assets/Trina Solar/1.jpg";
+import tr2 from "../assets/Trina Solar/2.webp";
+import pdftr from "../assets/Trina Solar/Trina-Mono-perc-330w-HC.pdf"
+
+// Longi Solar page
+import lo1 from "../assets/Longi Solar/1.jpg";
+import lo2 from "../assets/Longi Solar/2.jfif";
+import pdflo from "../assets/Longi Solar/Longi-370W-Technical-Datasheet.pdf";
+
+
+
+// Solar Inverters logoes
+
+import inverter1 from '../assets/Inverters/2.webp';
+import inverter2 from '../assets/Inverters/3.webp';
+import inverter3 from '../assets/Inverters/4.webp';
+import inverter4 from '../assets/Inverters/1.webp';
+import inverter5 from '../assets/Inverters/5.webp';
+import inverter6 from '../assets/Inverters/6.webp';
+
+// GoodWe Inverters
+import go1 from "../assets/GoodWe Inverters/goodwe-grid-tie-5kw-inverter.jpg";
+import go2 from "../assets/GoodWe Inverters/2.webp";
+
+
+// Sungrow
+import sungrow1 from "../assets/Sungrow/1.jpg";
+import sungrow2 from "../assets/Sungrow/2.webp";
+import pdfsg1 from "../assets/Sungrow/sungrow-5kW-single-phase.pdf";
+import pdfsg2 from "../assets/Sungrow/sungrow-5kw-three-phase.pdf";
+
+// Growatt Inverters
+import grow1 from "../assets/Growatt Inverters/1.jpg";
+import grow2 from "../assets/Growatt Inverters/2.jpg";
+import pdfgr1 from "../assets/Growatt Inverters/growatt-3-phase-inverter-3-6kw-TL3-latest-model.pdf";
+import pdfgr2 from "../assets/Growatt Inverters/growatt-3kW-single-phase-Inverter.pdf";
+
+// Solis
+import solis1 from "../assets/Solis/1.jpg";
+import solis2 from "../assets/Solis/2.jpg";
+import solis3 from "../assets/Solis/3.jpg";
+import pdfsolis1 from "../assets/Solis/solis-hybrid-5kw-inverter.pdf";
+import pdfsolis2 from "../assets/Solis/solis-single-phase.pdf";
+import pdfsolis3 from "../assets/Solis/solis-three-phase-5-20kW.pdf";
+
+// saj
+import saj1 from "../assets/Saj/1.jpg";
+import saj2 from "../assets/Saj/2.jpg";
+import pdfsaj1 from "../assets/Saj/SAJ-5kW-1P-datasheet.pdf";
+import pdfsaj2 from "../assets/Saj/SAJ-5-10kW-3P-datasheet.pdf";
+
+
+// Anker Solix
+
+import s1 from "../assets/Anker Solix/1.png";
+import s2 from "../assets/Anker Solix/2.jfif";
+
+
+//  ==================== SOLAR BATTERIES ====================
+
+// logoes
+import battery1 from '../assets/Battery Partners/1.webp';
+import battery2 from '../assets/Battery Partners/3.webp';
+import battery3 from '../assets/Battery Partners/2.webp';
+import battery6 from '../assets/Battery Partners/6.webp';
+import battery7 from '../assets/Battery Partners/7.webp';
+import battery8 from "../assets/Battery Partners/8.webp";
+import battery4 from "../assets/Battery Partners/4.webp";
+import battery5 from "../assets/Battery Partners/5.webp";
+
+
+// FoxESS
+import fox1 from "../assets/FoxESS/1.jpg";
+import fox2 from "../assets/FoxESS/2.png";
+
+// growatt-battery-systems
+import growatt1 from "../assets/growatt bettry/1.png";
+import growatt2 from "../assets/growatt bettry/2.jfif";
+
+// saj-battery
+import sajo1 from "../assets/saj-battery/saj-battery.webp"
+import sajo2 from "../assets/saj-battery/1.webp"
+
+// anker-solix-battery-systems
+import ank1 from "../assets/anker-solix-battery/1.webp"
+import ank2 from "../assets/anker-solix-battery/2.webp"
+
+// sungrow-battery-systems
+import sun1 from "../assets/sungrow-battery/1.webp"
+import sun2 from "../assets/sungrow-battery/2.png"
+
+// alpha-ess-battery-systems
+import alpha1 from "../assets/alpha-ess-battery/1.webp"
+import alpha2 from "../assets/alpha-ess-battery/2.jpg"
+
+// neovolt-battery-systems
+import neo1 from "../assets/neovolt-battery/1.webp"
+import neo2 from "../assets/neovolt-battery/2.jpg"
+
+
+// sigenergy-battery-systems
+import sig1 from "../assets/sigenergy-battery/1.webp";
+import sig2 from "../assets/sigenergy-battery/2.webp"
+
+
 
 export interface ProductData {
   slug: string;
@@ -42,7 +179,6 @@ export interface ProductData {
   brandColor: string;
   logoUrl?: string;
   productImages?: string[];
-  pdfUrl?: string;
   pdfUrls?: { label: string; url: string }[];
   datasheetSpecs?: { label: string; value: string }[];
   models?: { name: string; watts: string; efficiency: string; type: string }[];
@@ -99,13 +235,13 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Jinko Solar Panels are highly recommended for those looking for a brand that is a household name in the solar industry, offering cutting-edge TOPCon technology with excellent local warranty support.",
     logoText: "JinkoSolar",
     brandColor: "#5CB85C"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: panel1,
     productImages: [
-      j1,j2
+      j1, j2
     ],
-    pdfUrl: "https://www.jinkosolar.com/uploads/Tiger%20Neo%20N-type%2054HL4-(V)-A3-EN.pdf",
+
     pdfUrls: [
       { label: "Jinko Cheetah 330W", url: pdf330 },
       { label: "Jinko Tiger 370W", url: pdf390 }
@@ -175,14 +311,12 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "JA Solar offers a perfect balance of reliability, premium technology, and cost efficiency, making it one of the most popular choices for Australian homes.",
     logoText: "JASOLAR",
     brandColor: "#0055A5"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: panel2,
     productImages: [
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop"
+      ja1, ja2
     ],
-    pdfUrl: "http://www.jasolar.com.cn/uploadfile/2022/0329/20220329040356514.pdf",
     datasheetSpecs: [
       { label: "Cell Type", value: "PERC Half-Cell / N-type Mono" },
       { label: "Module Efficiency", value: "Up to 22.0%" },
@@ -248,14 +382,12 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "AIKO ABC panels are the premium choice for homeowners who want the absolute best efficiency and a modern, high-end look on their roofs.",
     logoText: "AIKO",
     brandColor: "#E30613"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: panel3,
     productImages: [
-      "https://images.unsplash.com/photo-1548613053-220cdb5e36cc?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+      ai1, ai2
     ],
-    pdfUrl: "https://aikosolar.com/wp-content/uploads/2023/11/AIKO-A-MAH54Db-Datasheet-EN-202311.pdf",
     datasheetSpecs: [
       { label: "Cell Type", value: "ABC (All-Back-Contact) N-type" },
       { label: "Module Efficiency", value: "Up to 24.0%" },
@@ -321,14 +453,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Canadian Solar is a safe, reliable, and solid investment for any homeowner, offering proven performance from one of the oldest names in the solar industry.",
     logoText: "CanadianSolar",
     brandColor: "#CC3333"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: panel4,
     productImages: [
-      "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop"
+      ca1, ca2
     ],
-    pdfUrl: "https://www.canadiansolar.com/wp-content/uploads/2020/12/Canadian_Solar-Datasheet-HiKu6_CS6R-MS_EN.pdf",
+    pdfUrls: [
+      { label: "Canadian Solar HiKu 330W", url: pdf1 }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "Monocrystalline Half-Cell" },
       { label: "Module Efficiency", value: "Up to 21.5%" },
@@ -394,13 +527,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "DAS Solar is a fantastic choice for those looking to invest in next-gen N-type TOPCon technology without paying a massive brand premium.",
     logoText: "DASSOLAR",
     brandColor: "#0088CE"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: panel5,
     productImages: [
-      "https://images.unsplash.com/photo-1548613053-220cdb5e36cc?q=80&w=600&auto=format&fit=crop"
+      da1, da2
     ],
-    pdfUrl: "https://www.das-solar.com/upload/file/20230526/DAS-dh54na-EN.pdf",
+    pdfUrls: [
+      { label: "DAS-DH108ND-440", url: pdf440 }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "N-type TOPCon Mono" },
       { label: "Module Efficiency", value: "Up to 22.3%" },
@@ -466,13 +601,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "DMEGC Solar panels are highly recommended for customers who prioritize manufacturing precision, environmental standards, and robust product build quality.",
     logoText: "DMEGC",
     brandColor: "#0F7C3E"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: panel1,
+    logoUrl: panel6,
     productImages: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+      dm1, dm2
     ],
-    pdfUrl: "https://www.dmegcsolar.com/upload/file/datasheet-dmegc-n-type-en.pdf",
+    pdfUrls: [
+      { label: "DMEGCM10RT-B54HBT-HST", url: pdfB54 }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "N-type TOPCon Monocrystalline" },
       { label: "Module Efficiency", value: "Up to 22.3%" },
@@ -538,13 +675,16 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "EGing PV panels are a great fit for users looking for a reliable, time-tested brand that offers outstanding value for money.",
     logoText: "EGingPV",
     brandColor: "#0D4F90"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: panel2,
+    logoUrl: panel7,
     productImages: [
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600&auto=format&fit=crop"
+      eg1, eg2
     ],
-    pdfUrl: "https://www.egingpv.com/upload/file/eging-star-series-datasheet.pdf",
+    pdfUrls: [
+      { label: "EG-440N-Bifacial-DG", url: pdfeg1 },
+      { label: "Eging-Datasheet-EG-440NT54-HLV_30-", url: pdfeg2 }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "N-type TOPCon Monocrystalline" },
       { label: "Module Efficiency", value: "Up to 22.0%" },
@@ -610,13 +750,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Risen Solar is a highly reliable option for users looking for high-capacity, heavy-duty solar panels engineered to withstand hot conditions.",
     logoText: "risen",
     brandColor: "#0D5CA4"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: panel3,
+    logoUrl: panel8,
     productImages: [
-      "https://images.unsplash.com/photo-1620027131499-0675903b637a?q=80&w=600&auto=format&fit=crop"
+      ri1,ri2
     ],
-    pdfUrl: "https://www.risenenergy.com.au/wp-content/uploads/2021/08/Risen-Titan-400W-420W-Datasheet.pdf",
+     pdfUrls: [
+      { label: "Risen-370W-Silver-Frame", url: pdfri }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "Mono PERC / Heterojunction (HJT)" },
       { label: "Module Efficiency", value: "Up to 22.5%" },
@@ -682,13 +824,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Trina Vertex S+ is one of the best residential panels on the market today, combining N-type TOPCon efficiency with the ultimate protection of dual-glass construction.",
     logoText: "Trinasolar",
     brandColor: "#0D6EB5"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: panel4,
+    logoUrl: panel9,
     productImages: [
-      "https://images.unsplash.com/photo-1548613053-220cdb5e36cc?q=80&w=600&auto=format&fit=crop"
+ tr1,tr2
     ],
-    pdfUrl: "https://www.trinasolar.com/download/Vertex_S_Plus_NEG9R.28_EN.pdf",
+     pdfUrls: [
+      { label: "Trina-Mono-perc-330w-HC", url: pdftr }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "N-type i-TOPCon Double-Glass" },
       { label: "Module Efficiency", value: "Up to 22.3%" },
@@ -754,13 +898,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "LONGi's Hi-MO 6 panels are a top-tier choice, offering a unique grid-free look, excellent dirt tolerance, and the financial backing of the world's largest wafer manufacturer.",
     logoText: "LONGi",
     brandColor: "#D1121A"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: panel5,
+    logoUrl: panel10,
     productImages: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=600&auto=format&fit=crop"
+     lo1,lo2
     ],
-    pdfUrl: "https://www.longi.com/files/datasheet-himo6-explorer.pdf",
+     pdfUrls: [
+      { label: "Longi-370W-Technical-Datasheet", url: pdflo }
+    ],
     datasheetSpecs: [
       { label: "Cell Type", value: "HPBC Monocrystalline (Back Contact)" },
       { label: "Module Efficiency", value: "Up to 22.8%" },
@@ -778,6 +924,9 @@ export const productsData: Record<string, ProductData> = {
       { name: "Hi-MO 6 Explorer 440W", watts: "440W", efficiency: "22.5%", type: "HPBC Mono" }
     ],
   },
+
+
+
 
   // ==================== SOLAR INVERTERS ====================
   "goodwe-inverters": {
@@ -828,13 +977,13 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "GoodWe hybrid inverters are highly recommended for homeowners who want a smart, quiet, battery-ready solar system with robust backup power capabilities.",
     logoText: "GOODWE",
     brandColor: "#E30613"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: inverter1,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      go1,go2
     ],
-    pdfUrl: "https://en.goodwe.com/Ftp/Downlods/Datasheet/GW_ES_Datasheet-EN.pdf",
+
     datasheetSpecs: [
       { label: "Max Efficiency", value: "98.2%" },
       { label: "Euro Efficiency", value: "97.5%" },
@@ -899,13 +1048,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Sungrow inverters are the gold standard for Australian solar installations, combining premium performance, long warranties, and outstanding app monitoring.",
     logoText: "SUNGROW",
     brandColor: "#FE9900"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: inverter2,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+   sungrow1,sungrow2 ],
+       pdfUrls: [
+      { label: "sungrow-5kW-single-phase", url: pdfsg1 },
+      { label: "sungrow-5kw-three-phase", url: pdfsg2 },
     ],
-    pdfUrl: "https://www.sungrowpower.com.au/wp-content/uploads/2021/06/SG5.0-10RS-Datasheet.pdf",
     datasheetSpecs: [
       { label: "Max Efficiency", value: "98.4%" },
       { label: "Euro Efficiency", value: "97.9%" },
@@ -971,13 +1122,15 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Growatt is a highly recommended, cost-effective option that doesn't compromise on features, offering a sleek look, user-friendly screen, and reliable performance.",
     logoText: "Growatt",
     brandColor: "#A6CE39"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: inverter3,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    grow1,grow2 ],
+        pdfUrls: [
+      { label: "growatt-3-phase-inverter-3-6kw-TL3-latest-model", url: pdfgr1 },
+      { label: "growatt-3kW-single-phase-Inverter", url: pdfgr2 }
     ],
-    pdfUrl: "https://www.ginlong.com/uploads/2022/11/Solis_Datasheet_S6-GR1P-K-US_EN.pdf",
     datasheetSpecs: [
       { label: "Max Efficiency", value: "98.4%" },
       { label: "Display Screen", value: "OLED display with touch key" },
@@ -1043,13 +1196,19 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Solis inverters are an excellent choice for complex roof layouts, providing top-tier safety features and multi-MPPT capabilities at a very competitive price.",
     logoText: "solis",
     brandColor: "#F4911E"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: inverter4,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      solis1,
+      solis2,
+      solis3,
     ],
-    pdfUrl: "https://www.solisinverters.com.au/downloads/solis-s6-hybrid-datasheet.pdf",
+    pdfUrls: [
+      { label: "solis-hybrid-5kw-inverter", url: pdfsolis1 },
+      { label: "solis-single-phase", url: pdfsolis2 },
+      { label: "solis-three-phase-5-20kW", url: pdfsolis3 },
+    ],
     datasheetSpecs: [
       { label: "Max Efficiency", value: "98.1%" },
       { label: "Safety Protections", value: "Integrated AFCI arc fault protection" },
@@ -1114,13 +1273,17 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "SAJ inverters are an ideal choice for residential homes looking for a silent, stylish, and smart-home integrated inverter with excellent software monitoring.",
     logoText: "SAJ",
     brandColor: "#009140"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: inverter5,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      saj1,
+      saj2
     ],
-    pdfUrl: "https://www.saj-electric.com/upload/file/saj-r5-series-datasheet.pdf",
+    pdfUrls: [
+      { label: "SAJ-5kW-1P-datasheet", url: pdfsaj1 },
+      { label: "SAJ-5-10kW-3P-datasheet", url: pdfsaj2 },
+    ],
     datasheetSpecs: [
       { label: "Max Efficiency", value: "98.2%" },
       { label: "Euro Efficiency", value: "97.8%" },
@@ -1185,13 +1348,13 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Anker Solix microinverters are the ultimate choice for shaded roofs, offering panel-level optimization, modular growth, and the reliability of a global charging giant.",
     logoText: "ANKERSOLIX",
     brandColor: "#000000"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: inverter1,
+    logoUrl: inverter6,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      s1,
+      s2
     ],
-    pdfUrl: "https://www.ankersolix.com/files/anker-solix-mi800-datasheet.pdf",
     datasheetSpecs: [
       { label: "Peak Efficiency", value: "97.3%" },
       { label: "CEC Efficiency", value: "96.7%" },
@@ -1207,6 +1370,7 @@ export const productsData: Record<string, ProductData> = {
       { name: "Solix MI800 Microinverter", watts: "800W", efficiency: "96.7%", type: "Microinverter" }
     ],
   },
+
 
   // ==================== SOLAR BATTERIES ====================
   "foxess-battery": {
@@ -1257,13 +1421,13 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "FoxESS batteries are an excellent, high-performance storage solution for those wanting a safe, modular, and easily expandable battery backed by a global industrial giant.",
     logoText: "FoxESS",
     brandColor: "#FF6200"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: battery1,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+     fox1,
+     fox2
     ],
-    pdfUrl: "https://www.fox-ess.com.au/wp-content/uploads/2021/03/FoxESS-ECS-Datasheet.pdf",
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "LiFePO4 (Lithium Iron Phosphate)" },
       { label: "Module Capacity", value: "2.88 kWh / block" },
@@ -1329,13 +1493,11 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Growatt battery systems are the natural choice for anyone running a Growatt inverter, offering modular expansion, maximum usable storage, and single-app control.",
     logoText: "Growatt",
     brandColor: "#A6CE39"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: battery2,
+    logoUrl: battery6,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
-    ],
-    pdfUrl: "https://www.growatt.com/upload/file/ARK_2.5H-A1_Datasheet.pdf",
+    growatt1,growatt2 ],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
       { label: "Module Energy", value: "2.56 kWh" },
@@ -1401,13 +1563,12 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "SAJ batteries are highly recommended for homes seeking a beautiful, quiet, cable-free storage setup with smart automation to slash power bills.",
     logoText: "SAJ",
     brandColor: "#009140"
-  ,
+    ,
     // Extra fields dynamically merged
     logoUrl: battery3,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+sajo1,sajo2
     ],
-    pdfUrl: "https://www.saj-electric.com/upload/file/saj-b2-battery-datasheet.pdf",
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
       { label: "Module Capacity", value: "5.0 kWh" },
@@ -1472,13 +1633,13 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Anker Solix X1 is a top-tier home battery, offering an ultra-thin design, modular cell optimization, and outstanding app features from a brand known for battery reliability.",
     logoText: "ANKERSOLIX",
     brandColor: "#000000"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: battery4,
+    logoUrl: battery7,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      ank1,
+      ank2
     ],
-    pdfUrl: "https://www.ankersolix.com/files/anker-solix-x1-datasheet.pdf",
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Automotive-Grade LiFePO4" },
       { label: "Module Energy", value: "5.0 kWh" },
@@ -1544,13 +1705,11 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "The Sungrow SBR battery is one of the best high-voltage residential batteries available, offering outstanding power output, modular stacking, and perfect Sungrow integration.",
     logoText: "SUNGROW",
     brandColor: "#FE9900"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: battery5,
+    logoUrl: battery8,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
-    ],
-    pdfUrl: "https://www.sungrowpower.com.au/wp-content/uploads/2021/06/SBR096-256-Datasheet.pdf",
+   sun1,sun2  ],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
       { label: "Module Energy Capacity", value: "3.2 kWh per block" },
@@ -1616,13 +1775,12 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Alpha ESS is a top-tier storage pioneer, offering robust cabinet installations, long cycle lives, and easy integration into Australian VPP networks.",
     logoText: "AlphaESS",
     brandColor: "#006FA6"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: battery1,
+    logoUrl: battery2,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+    alpha1,alpha2
     ],
-    pdfUrl: "https://www.alphaess.com/Uploads/Products/Smile5-datasheet.pdf",
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
       { label: "Module Capacity", value: "5.04 kWh" },
@@ -1687,13 +1845,12 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Neovolt is a great choice for Australian homes looking for high-power, thermally resilient battery storage that offers excellent value and localized support.",
     logoText: "Neovolt",
     brandColor: "#00A896"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: battery2,
+    logoUrl: battery4,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      neo1,neo2
     ],
-    pdfUrl: "https://www.neovolt.com.au/files/neovolt-powerstack-datasheet.pdf",
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
       { label: "Module energy", value: "5.12 kWh" },
@@ -1758,13 +1915,13 @@ export const productsData: Record<string, ProductData> = {
     recommendation: "Sigenergy SigenStor is the most advanced energy storage system available, offering an AI-powered 5-in-1 vertical design that is perfect for forward-thinking smart homes.",
     logoText: "SIGENERGY",
     brandColor: "#000000"
-  ,
+    ,
     // Extra fields dynamically merged
-    logoUrl: battery3,
+    logoUrl: battery5,
     productImages: [
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop"
+      sig1,
+      sig2
     ],
-    pdfUrl: "https://www.sigenergy.com/download/SigenStor-datasheet-EN.pdf",
     datasheetSpecs: [
       { label: "System Integration", value: "5-in-1: Inverter, Battery, EV Charger, PCS, EMS" },
       { label: "Battery Capacity Block", value: "5.0 kWh or 8.0 kWh" },
