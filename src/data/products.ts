@@ -61,7 +61,6 @@ import lo2 from "../assets/Longi Solar/2.jfif";
 import pdflo from "../assets/Longi Solar/Longi-370W-Technical-Datasheet.pdf";
 
 
-
 // Solar Inverters logoes
 
 import inverter1 from '../assets/Inverters/2.webp';
@@ -97,7 +96,7 @@ import pdfsolis2 from "../assets/Solis/solis-single-phase.pdf";
 import pdfsolis3 from "../assets/Solis/solis-three-phase-5-20kW.pdf";
 
 // saj
-import saj1 from "../assets/Saj/1.jpg";
+import saj1 from "../assets/saj/1.jpg";
 import saj2 from "../assets/Saj/2.jpg";
 import pdfsaj1 from "../assets/Saj/SAJ-5kW-1P-datasheet.pdf";
 import pdfsaj2 from "../assets/Saj/SAJ-5-10kW-3P-datasheet.pdf";
