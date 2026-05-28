@@ -51,7 +51,7 @@ export default function PremiumSolarAbout() {
                       </h3>
 
                       <p className="text-white/80 mt-1">
-                        Successful Solar Installations
+                        Successful Solar Installations Across Queensland
                       </p>
                     </div>
 
@@ -78,42 +78,39 @@ export default function PremiumSolarAbout() {
               <div className="w-2.5 h-2.5 rounded-full bg-[#004093] animate-pulse"></div>
 
               <p className="text-[#004093] uppercase tracking-[0.2em] text-xs font-bold">
-                About Our Company
+                ☀️ ABOUT OUR SOLAR COMPANY
               </p>
 
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl lg:text-6xl font-black text-[#FE9900] leading-[1.05] tracking-tight">
-              Powering
+            <h2 className="text-3xl lg:text-5xl font-black text-[#FE9900] leading-[1.1] tracking-tight">
+              Leading Solar Company in Queensland <br />
               <span className="block text-transparent bg-clip-text bg-[#004093] ">
-                Australia’s Future
+                Powering Australia’s Sustainable Future
               </span>
-              With Solar Energy
             </h2>
 
             {/* Subtitle */}
             <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-3xl">
-              We provide advanced solar energy solutions for homes, 
-              businesses, and industries with a focus on savings, 
-              sustainability, and long-term energy independence.
+              We deliver high-quality solar energy solutions for homes, businesses, and industrial projects across Queensland and Australia. As a trusted solar company in Queensland, we specialise in premium solar panel installation, energy-efficient systems, and long-term power savings designed for Australian conditions.
             </p>
 
         
 
             {/* CTA */}
-            <div className="flex flex-wrap gap-5 mt-14">
+            <div className="flex  gap-5 mt-14">
 
               <button className="group relative overflow-hidden w-full sm:w-auto bg-[#004093] hover:bg-[#00306e] text-white px-10 py-2 rounded-2xl text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105">
                 
                 <span className="relative z-10">
-                  Get Free Consultation
+                  Get Free Solar Quote
                 </span>
 
               </button>
 
               <button className="w-full sm:w-auto px-10 py-2 rounded-2xl border border-gray-300 hover:border-[#004093] text-black hover:text-[#004093] text-lg font-semibold transition-all duration-300">
-                Explore Services
+                Explore Solar Solutions
               </button>
 
             </div>
@@ -139,26 +136,23 @@ export default function PremiumSolarAbout() {
             <div className="w-2.5 h-2.5 rounded-full bg-[#004093] animate-pulse"></div>
 
             <p className="text-[#004093] uppercase tracking-[0.2em] text-xs font-bold">
-              Our Mission
+              ☀️ OUR SOLAR MISSION
             </p>
 
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
-            Creating A
+          <h2 className="text-3xl md:text-5xl  font-black text-black leading-tight tracking-tight">
+            Creating
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]">
-              {" "}Smarter Solar Future{" "}
+              {" "}Smarter Solar Energy Solutions{" "}
             </span>
-            For Every Home & Business
+            for Homes & Businesses Across Queensland
           </h2>
 
           {/* Description */}
           <p className="mt-10 text-lg md:text-xl leading-relaxed text-gray-600 max-w-7xl mx-auto">
-            Our mission is to deliver reliable and high-performance solar 
-            energy solutions that help families and businesses reduce 
-            electricity costs, achieve energy independence, and build a 
-            cleaner, more sustainable future for generations to come.
+            Our mission is to provide reliable, high-performance solar energy solutions that help Australian homes and businesses reduce electricity costs, increase energy independence, and contribute to a cleaner, more sustainable future. As a trusted solar company in Queensland, we focus on efficient solar panel systems built for long-term performance and savings.
           </p>
 
           {/* Bottom Features */}
@@ -171,11 +165,11 @@ export default function PremiumSolarAbout() {
               </div>
 
               <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
-                Clean Energy
+                Clean Renewable Energy
               </h3>
 
               <p className="text-gray-600 mt-4 leading-relaxed">
-                Helping reduce carbon emissions with renewable solar power.
+                Reduce carbon emissions with advanced solar power systems designed for sustainable living and greener communities across Australia.
               </p>
 
             </div>
@@ -187,11 +181,11 @@ export default function PremiumSolarAbout() {
               </div>
 
               <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
-                Smart Savings
+                Lower Energy Costs
               </h3>
 
               <p className="text-gray-600 mt-4 leading-relaxed">
-                Lower electricity bills with efficient solar technology.
+                Save more on electricity bills with energy-efficient solar panel solutions tailored for residential and commercial properties.
               </p>
 
             </div>
@@ -207,7 +201,7 @@ export default function PremiumSolarAbout() {
               </h3>
 
               <p className="text-gray-600 mt-4 leading-relaxed">
-                Building a greener tomorrow with advanced energy solutions.
+                Build a smarter and eco-friendly future with reliable solar technology and long-term renewable energy solutions.
               </p>
 
             </div>

@@ -13,16 +13,16 @@ const SolarProcess = () => {
   const steps = [
     {
       id: '01',
-      title: 'Harnessing the Sun',
-      desc: 'High-efficiency solar panels capture sunlight and convert it into clean renewable energy for your property.',
+      title: 'High-Performance Solar Panels',
+      desc: 'Capture maximum sunlight with efficient solar panel systems designed for Australian weather conditions.',
       icon: Sun,
       color: 'from-amber-400 to-orange-500',
       glow: 'shadow-orange-500/20'
     },
     {
       id: '02',
-      title: 'Smart Energy Conversion',
-      desc: 'Advanced inverter systems transform solar power into usable electricity for daily operations.',
+      title: 'Smart Energy Management',
+      desc: 'Convert solar power into reliable electricity with advanced energy-efficient solar technology.',
       icon: Zap,
       color: 'from-blue-400 to-indigo-600',
       glow: 'shadow-blue-500/20'
@@ -30,7 +30,7 @@ const SolarProcess = () => {
     {
       id: '03',
       title: 'Battery Backup Storage',
-      desc: 'Store extra electricity for nighttime usage and uninterrupted backup during outages.',
+      desc: 'Store excess solar energy for night-time usage and uninterrupted backup power during outages.',
       icon: Battery,
       color: 'from-emerald-400 to-teal-600',
       glow: 'shadow-emerald-500/20'
@@ -38,7 +38,7 @@ const SolarProcess = () => {
     {
       id: '04',
       title: 'Energy Independence',
-      desc: 'Reduce dependency on expensive electricity and enjoy long-term energy savings.',
+      desc: 'Reduce dependence on the grid and enjoy sustainable, long-term savings for your home or business.',
       icon: Home,
       color: 'from-purple-400 to-pink-600',
       glow: 'shadow-purple-500/20'
@@ -47,32 +47,20 @@ const SolarProcess = () => {
 
   const rightContent = [
     {
-      title: 'Smart Solar Monitoring',
-      subtitle: 'Track Energy Live',
-      value: '24/7',
-      desc: 'Monitor your solar production and electricity savings in real-time using smart monitoring systems.',
-      color: 'from-orange-400 to-yellow-500'
-    },
-    {
-      title: 'Battery Backup System',
-      subtitle: 'Power During Outage',
-      value: '100%',
-      desc: 'Store extra solar energy and use it anytime during power cuts or nighttime usage.',
-      color: 'from-emerald-400 to-teal-500'
-    },
-    {
-      title: 'Lower Electricity Bills',
+      badge: 'SOLAR TECHNOLOGY',
+      title: 'Save Up To 70% on Electricity Bills',
       subtitle: 'Monthly Savings',
       value: '70%',
-      desc: 'Reduce your electricity expenses significantly with efficient solar power generation.',
+      desc: 'Lower monthly energy costs with smart solar power systems and efficient battery storage solutions built for Australian homes and businesses.',
       color: 'from-blue-400 to-indigo-500'
     },
     {
-      title: 'Clean Green Energy',
-      subtitle: 'Eco Friendly Future',
-      value: '0 CO₂',
-      desc: 'Switch to sustainable energy and contribute toward a greener environment.',
-      color: 'from-purple-400 to-pink-500'
+      badge: 'BATTERY BACKUP SYSTEM',
+      title: '24/7 Reliable Solar Energy Storage',
+      subtitle: 'Power During Outage',
+      value: '24/7',
+      desc: 'Store extra solar power and use it anytime during power outages, peak electricity hours, or nighttime consumption.',
+      color: 'from-emerald-400 to-teal-500'
     }
   ];
 
@@ -118,19 +106,18 @@ const SolarProcess = () => {
         <motion.div variants={itemVariants} className="mb-12 ">
           <span className="flex items-center gap-2 text-[#FE9900] font-bold  justify-center uppercase tracking-[3px] text-sm mb-5">
             <ShieldCheck size={18} />
-            Smart Solar Technology
+            ☀️ SMART SOLAR TECHNOLOGY
           </span>
 
           <h2 className="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
-            Solar Energy
+            Smart Solar Energy
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">
-              Made Simple
+              Solutions for Australian Homes & Businesses
             </span>
           </h2>
 
           <p className="text-slate-100 text-lg mx-auto text-center leading-relaxed max-w-6xl">
-            Power your home or business with advanced solar solutions designed
-            for maximum savings, efficiency, and long-term energy independence.
+            Power your property with advanced solar energy solutions designed to reduce electricity costs, improve energy efficiency, and deliver long-term energy independence. Our solar power systems in Australia combine premium solar panels, battery storage, and smart energy technology for maximum performance and savings.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -223,7 +210,7 @@ const SolarProcess = () => {
 
                   {/* Small Top Badge */}
                   <div className="relative z-10 inline-flex items-center gap-2 px-10 py-2 rounded-full border border-[#FE9900]/90 bg-white/5 text-xs uppercase tracking-[2px] text-[#FE9900] mb-8">
-                    Solar Technology
+                    {rightContent[activeIndex].badge}
                   </div>
 
                   {/* Value */}

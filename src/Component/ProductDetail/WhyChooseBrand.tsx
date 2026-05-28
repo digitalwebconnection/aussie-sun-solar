@@ -3,8 +3,7 @@ import {
   CheckCircle2,
   ShieldCheck,
   Zap,
-  BadgeCheck,
-  Sparkles,
+  BadgeCheck,   
 } from "lucide-react";
 
 import type { ProductData } from "../../data/products";
@@ -35,8 +34,9 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
               <span className="text-[#FE9900]">
                 {" "}
                 {product.brand}
+                 {" "}
               </span>
-              ?
+              Panels Australia?
             </h2>
 
             <p className="text-slate-900 mt-4 max-w-2xl text-base leading-relaxed">
@@ -80,24 +80,18 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#FE9900]/20 rounded-full blur-3xl" />
 
             <div className="relative z-10">
-              <div className="w-20 h-20 rounded-[28px] bg-white/10 backdrop-blur-md flex items-center justify-center mb-8">
-                <Sparkles size={38} className="text-[#FE9900]" />
-              </div>
+              
 
               <span className="inline-flex items-center gap-2 bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-black tracking-wide mb-6">
-                PREMIUM QUALITY
+                {product.featuredCard?.badge ?? "PREMIUM QUALITY"}
               </span>
 
-              <h3 className="text-3xl font-black leading-tight mb-5">
-                Engineered For
-                <br />
-                Maximum Performance
+              <h3 className="text-2xl font-black leading-tight mb-5">
+                {product.featuredCard?.heading ?? "Engineered for Maximum Solar Performance"}
               </h3>
 
-              <p className="text-white/90 text-sm leading-relaxed mb-8">
-                {product.brand} products are built using advanced
-                technology, strict quality control, and high-efficiency
-                components for superior energy performance.
+              <p className="text-white/90 text-sm leading-relaxed mb-4">
+                {product.featuredCard?.description ?? `${product.brand} products are built using advanced technology, strict quality control, and high-efficiency components for superior energy performance.`}
               </p>
 
               {/* FEATURES */}
@@ -112,11 +106,11 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
 
                   <div>
                     <h5 className="font-black text-sm">
-                      Long-Term Reliability
+                      {product.featuredCard?.feature1Title ?? "Long-Term Reliability"}
                     </h5>
 
                     <p className="text-white/60 text-xs mt-1">
-                      Built for consistent high-performance output
+                      {product.featuredCard?.feature1Desc ?? "Built for consistent high-performance output"}
                     </p>
                   </div>
                 </div>
@@ -131,11 +125,29 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
 
                   <div>
                     <h5 className="font-black text-sm">
-                      High Efficiency Technology
+                      {product.featuredCard?.feature2Title ?? "High Efficiency Technology"}
                     </h5>
 
                     <p className="text-white/60 text-xs mt-1">
-                      Optimized energy generation & smart design
+                      {product.featuredCard?.feature2Desc ?? "Optimized energy generation & smart design"}
+                    </p>
+                  </div>
+                </div>
+                 <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
+                    <Zap
+                      size={20}
+                      className="text-[#FE9900]"
+                    />
+                  </div>
+
+                  <div>
+                    <h5 className="font-black text-sm">
+                      {product.featuredCard?.feature3Title ?? "High Efficiency Technology"}
+                    </h5>
+
+                    <p className="text-white/60 text-xs mt-1">
+                      {product.featuredCard?.feature3Desc ?? "Optimized energy generation & smart design"}
                     </p>
                   </div>
                 </div>
@@ -188,12 +200,12 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
                 {/* CONTENT */}
                 <div className="relative z-10">
                   <h4 className="text-lg font-black text-[#004093] mb-4 leading-snug">
-                    {point.split(" ").slice(0, 3).join(" ")}
+                    {point.title}
                   </h4>
 
                   <p className="text-slate-600 text-sm font-semibold leading-relaxed">
-                    {point}
-                  </p>
+                    {point.desc}
+0                  </p>
                 </div>
 
                 {/* HOVER EFFECT */}

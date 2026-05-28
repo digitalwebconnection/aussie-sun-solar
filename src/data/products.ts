@@ -164,7 +164,7 @@ export interface ProductData {
   tagline: string;
   subtitle: string;
   intro: string;
-  whyChoose: string[];
+  whyChoose: { title: string; desc: string }[];
   rangeTitle: string;
   rangeIntro: string;
   rangeSpecs: string[];
@@ -181,57 +181,77 @@ export interface ProductData {
   pdfUrls?: { label: string; url: string }[];
   datasheetSpecs?: { label: string; value: string }[];
   models?: { name: string; watts: string; efficiency: string; type: string }[];
+  featuredCard?: {
+    badge?: string;
+    heading: string;
+    description: string;
+    feature1Title: string;
+    feature1Desc: string;
+    feature2Title: string;
+    feature2Desc: string;
+    feature3Title: string;
+    feature3Desc: string;
+  };
 }
 
 export const productsData: Record<string, ProductData> = {
   // ==================== SOLAR PANELS ====================
+  //DONE 
   "jinko-solar-panels": {
-    slug: "jinko-solar-panels",
-    name: "Jinko Solar Panels",
+    slug: "Jinko Solar Panels Australia",
+    name: "Jinko Solar Panels Australia",
     category: "Solar Panels",
     brand: "Jinko Solar",
-    tagline: "Powering Millions, Trusted Worldwide",
+    tagline: "Premium Tier-1 Solar Panel Solutions for Australian Homes & Businesses",
     subtitle: "Building Your Trust in Solar",
-    intro: "Jinko Solar is one of the global leaders in the solar industry, known for its high-efficiency solar modules and innovative N-type cell technology. With a massive global footprint and record-breaking performance, Jinko panels are trusted by millions of residential and commercial users worldwide.",
+    intro: "Jinko Solar Panels Australia is among the world’s most trusted and widely installed solar energy solutions, known for advanced N-Type technology, high efficiency, and exceptional long-term reliability. As a global Tier-1 solar panel manufacturer, Jinko Solar delivers premium photovoltaic technology designed for Australian weather conditions, helping homeowners and businesses maximize energy savings and long-term solar performance. \n\n Jinko Solar Panel Installation solutions are ideal for residential, commercial, and large-scale solar projects seeking high power output, low degradation, and dependable renewable energy generation. ",
     whyChoose: [
-      "Global leader in solar module shipments with proven field reliability.",
-      "Innovative Tiger Neo series featuring advanced N-type TOPCon technology.",
-      "Outstanding low-light performance and high energy yield over time.",
-      "Enhanced durability with high wind and heavy snow load resistance.",
-      "Industry-leading 25-year product and 30-year linear power warranty."
+      { title: "Tier-1 Global Solar Brand", desc: "Jinko Solar is recognised worldwide for advanced solar panel manufacturing, premium quality standards, and reliable long-term solar energy performance." },
+      { title: "Advanced N-Type TOPCon Technology", desc: "Modern Jinko Solar Panels use high-efficiency N-Type TOPCon cell technology for improved energy generation and lower long-term degradation." },
+      { title: "Excellent Australian Climate Performance", desc: "Designed to perform efficiently in hot Australian weather conditions with improved temperature coefficients and stable power output." },
+      { title: "High Efficiency & Better Energy Yield", desc: "Jinko solar modules deliver strong energy production, helping homeowners maximise rooftop solar generation and electricity savings." },
+      { title: "Reliable Warranty & Long Lifespan", desc: "Jinko Solar Panel Installation systems include robust product and performance warranties for long-term renewable energy confidence." }
     ],
-    rangeTitle: "Jinko Tiger Neo N-Type Series",
-    rangeIntro: "The Tiger Neo series is Jinko Solar's flagship range, utilizing N-type TOPCon technology to deliver exceptional performance, minimal degradation, and higher efficiency.",
+    rangeTitle: "Jinko Tiger Neo N-Type Solar Panels",
+    rangeIntro: "The Jinko Tiger Neo Series is one of the most advanced solar panel ranges available in Australia, featuring high-efficiency N-Type TOPCon technology designed for superior energy generation and long-term reliability.",
     rangeSpecs: [
-      "Up to 22.5% module efficiency for maximum output in limited roof space.",
-      "N-type TOPCon technology leads to lower temperature coefficients (-0.29%/°C).",
-      "Optimized performance in shading and overcast conditions.",
-      "Zero Light Induced Degradation (LID) for long-term power stability.",
-      "Bifacial option available for maximum energy absorption from both sides."
+      "High-efficiency cell technology improves solar conversion rates and reduces long-term degradation.",
+
+      "Improved thermal performance delivers more stable solar generation in hot Australian climates.",
+
+      "Jinko Tiger Neo solar modules provide strong residential and commercial power generation capability.",
+
+      "Enhanced low-light response maximises daily solar energy production across varying weather conditions.",
+
+      "Advanced busbar technology improves electrical conductivity and overall solar panel efficiency."
     ],
     betterTitle: "What Makes Jinko Tiger Neo Better?",
     betterList: [
-      "N-Type TOPCon Cell Architecture: Provides higher power output per square meter.",
-      "Better High-Temperature Coefficient: Maintains higher efficiency even on hot Australian summer days.",
-      "Lower Annual Power Degradation: Only 0.4% annual degradation after year one, ensuring higher power output in year 25+.",
-      "Superior Mechanical Load Strength: Built to withstand harsh weather conditions including extreme wind and hail."
+      "N-Type TOPCon Cell Technology: Jinko Solar Panels Australia utilizes next-generation N-Type TOPCon technology for higher energy efficiency, improved bifacial performance, and lower power degradation.",
+
+      "Better High-Temperature Performance: Optimised thermal management helps maintain stable energy generation during high Australian summer temperatures.",
+
+      "Lower Annual Degradation Rate: Advanced cell engineering ensures long-term solar performance and improved energy yield over the system lifespan.",
+
     ],
     installation: [
-      "Fully compatible with premium solar inverters including Sungrow, Growatt, and GoodWe.",
-      "Standard dimensions make mounting quick and efficient for professional installers.",
-      "Certified under all major clean energy standards (CEC approved, TUV, CE)."
+      "Jinko Solar Panel Installation systems are compatible with major Australian inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
+
+      "Lightweight solar module design allows faster rooftop installation and simplified mounting integration.",
+
+      "Fully Clean Energy Council (CEC) approved for Australian solar rebate eligibility and residential installations."
     ],
     bestFor: [
-      "Homeowners seeking a premium, globally recognized brand with top-tier technology.",
-      "Installations with limited roof space that require high-power density panels.",
-      "Commercial solar projects seeking optimized ROI through long-term energy yields."
+      "Ideal for homeowners seeking high-efficiency rooftop solar panels with strong long-term energy savings.",
+      "Suitable for businesses wanting reliable large-scale solar energy generation and lower operational electricity costs.",
+      "Suitable for businesses wanting reliable large-scale solar energy generation and lower operational electricity costs."
     ],
     warranty: [
-      "25-Year Product Warranty for peace of mind.",
-      "30-Year Linear Power Performance Warranty at 87.4% output.",
-      "Local support centers in Australia to ensure prompt claims and technical assistance."
+      "Jinko Solar Panels Australia include strong long-term product warranty coverage for dependable solar investment protection.",
+      "Advanced N-Type technology supports excellent long-term power retention and solar energy production.",
+      "Professional Jinko Solar Panel Installation services available across Australia with local technical support and warranty assistance."
     ],
-    recommendation: "Jinko Solar Panels are highly recommended for those looking for a brand that is a household name in the solar industry, offering cutting-edge TOPCon technology with excellent local warranty support.",
+    recommendation: "Jinko Solar Panels Australia continues to be one of the top choices for homeowners because of their balance of affordability, premium technology, strong warranties, and excellent real-world performance. Whether for residential rooftops or commercial solar systems, Jinko Solar Panel Installation provides reliable clean energy generation designed for Australian conditions.",
     logoText: "JinkoSolar",
     brandColor: "#5CB85C"
     ,
@@ -246,66 +266,94 @@ export const productsData: Record<string, ProductData> = {
       { label: "Jinko Tiger 370W", url: pdf390 }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "N-type Mono-crystalline" },
-      { label: "Module Efficiency", value: "Up to 22.5%" },
-      { label: "Max Power Output", value: "440W" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "22.0 kg" },
-      { label: "Front Glass", value: "3.2mm Anti-Reflection Coated" },
-      { label: "Frame", value: "Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68 Rated (3 bypass diodes)" },
-      { label: "Connector", value: "MC4 Compatible" }
+      { label: "Solar Cell Type", value: "N-Type TOPCon" },
+      { label: "Panel Efficiency", value: "Up to 22%+" },
+      { label: "Temperature Performance", value: "Excellent" },
+      { label: "Degradation Rate", value: "Low Annual Degradation" },
+      { label: "Application", value: "Residential & Commercial" },
+      { label: "Warranty Support", value: "Long-Term Performance Coverage" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "Tiger Neo 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
       { name: "Tiger Neo 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" },
       { name: "Tiger Neo 440W", watts: "440W", efficiency: "22.5%", type: "N-Type TOPCon" }
     ],
+    featuredCard: {
+      badge: "PREMIUM QUALITY",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Jinko Solar Panels Australia are engineered with advanced N-Type TOPCon photovoltaic technology to deliver maximum energy generation, improved low-light performance, and long-lasting reliability for Australian residential and commercial solar installations.",
+      feature1Title: "High Module Efficiency",
+      feature1Desc: "Advanced solar cell architecture delivers high conversion efficiency for improved rooftop energy generation.",
+      feature2Title: "Superior Low-Light Performance",
+      feature2Desc: "Jinko Solar Panels maintain stable power generation during cloudy conditions, early mornings, and late afternoons.",
+      feature3Title: "Lower Annual Power Degradation",
+      feature3Desc: "Advanced N-Type technology helps minimise long-term power loss and improves lifetime solar energy production.",
+    },
   },
+  // done 
   "ja-solar-panels": {
     slug: "ja-solar-panels",
-    name: "JA Solar Panels",
+    name: "JA Solar Panels Australia",
     category: "Solar Panels",
     brand: "JA Solar",
     tagline: "High Efficiency & High Reliability",
-    subtitle: "Harvesting Sun for a Greener Tomorrow",
-    intro: "JA Solar is a top-tier global manufacturer of high-performance photovoltaic products. With 12 manufacturing bases and more than 20 branches globally, the company's business covers silicon wafers, cells, modules, and photovoltaic power stations, delivering excellent value to clients worldwide.",
+    subtitle: "Best Solar Panels Australia for High Efficiency & Long-Term Reliability",
+    intro: "JA Solar Panels Australia are recognised as some of the best solar panels Australia homeowners and businesses can choose for high efficiency, advanced N-Type technology, and dependable long-term performance. As a global Tier-1 solar panel manufacturer, JA Solar delivers premium photovoltaic solutions designed to perform exceptionally well in Australian weather conditions, helping maximise solar savings and energy independence.\n\n JA Solar panel systems are widely trusted for residential, commercial, and large-scale solar installations because of their superior energy generation, low degradation rates, and excellent warranty support.",
     whyChoose: [
-      "Tier 1 manufacturer with an excellent reputation for quality control.",
-      "Highly efficient PERC and N-type cell structures designed for high energy yield.",
-      "Excellent resistance to PID (Potential Induced Degradation).",
-      "Strong performance under weak light conditions.",
-      "Solid warranty backing with local representation."
+      {
+        title: "Tier-1 Global Solar Manufacturer",
+        desc: "JA Solar is recognised worldwide for premium solar panel engineering, advanced manufacturing standards, and reliable renewable energy performance."
+      },
+      {
+        title: "Highly Efficient N-Type Technology",
+        desc: "Advanced TOPCon solar cell technology improves energy conversion efficiency and long-term solar generation stability."
+      },
+      {
+        title: "Excellent Temperature Performance",
+        desc: "JA Solar panels maintain strong solar output in extreme Australian summer conditions with lower heat-related efficiency losses."
+      },
+      {
+        title: "Strong Warranty Protection",
+        desc: "Long-term product and performance warranties provide confidence for residential and commercial solar investments."
+      },
+      {
+        title: "Trusted Across Australia",
+        desc: "JA Solar Panels Australia are widely installed by professional solar installers due to their reliability, efficiency, and proven field performance."
+      }
     ],
     rangeTitle: "JA Solar DeepBlue 3.0 & 4.0 Series",
-    rangeIntro: "The DeepBlue series combines multi-busbar (MBB) and half-cell technologies to lower hot spot risks and improve efficiency under partially shaded conditions.",
+    rangeIntro: "The JA Solar DeepBlue Series combines premium N-Type solar technology with high-efficiency module engineering designed for Australian residential and commercial solar installations.",
     rangeSpecs: [
-      "Module efficiency reaching up to 22.0% with multi-busbar technology.",
-      "Lower risk of micro-cracks and hot spots due to half-cut design.",
-      "Low temperature coefficient ensures stable generation in peak heat.",
-      "Superior durability against sand, salt mist, and ammonia corrosion.",
-      "Certified for wind loads of up to 2400 Pa and snow loads of 5400 Pa."
+      "Improved photovoltaic efficiency and lower annual degradation rates for better lifetime solar production.",
+      "Optimised solar conversion technology helps maximise rooftop energy generation.",
+      "Dual-glass panel options improve rear-side energy capture and overall system output.",
+      "Enhanced structural design supports long-term durability in Australian weather conditions.",
+      "Premium panel engineering ensures dependable renewable energy production over decades."
     ],
     betterTitle: "What Makes JA Solar DeepBlue Better?",
     betterList: [
-      "Gallium-doped Technology: Reduces Light-Induced Degradation (LID) significantly compared to standard boron-doped panels.",
-      "Optimized Ribbon Design: MBB layout reduces resistance losses and maximizes sunlight utilization.",
-      "Outstanding Yield: Higher power generation in real-world scenarios due to low resistance losses and optimized shade tolerance."
+      "Gallium-Doped Cell Technology: Advanced gallium-doped solar cells improve long-term panel stability and reduce performance degradation.",
+
+      "Optimised Ribbon Design: Innovative ribbon technology minimises electrical losses while improving energy transmission efficiency.",
+
+      "Outstanding Energy Yield: High-efficiency JA Solar Panels Australia deliver excellent annual energy production and long-term electricity savings."
     ],
     installation: [
-      "Seamless integration with major string and hybrid inverter brands.",
-      "Flexible mounting options supporting portrait and landscape configurations.",
-      "Clean Energy Council (CEC) listed for Australian rebate compliance."
+      "JA Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
+      "Lightweight module construction enables faster rooftop solar installation and simplified mounting integration.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Mid-to-high budget residential installations demanding long-term stability.",
-      "Coastal regions where salt-mist resistance is essential.",
-      "Utility-scale solar installations aiming for minimal Levelized Cost of Energy (LCOE)."
+      "Ideal for homeowners searching for the best solar panels Australia for long-term electricity savings and energy independence.",
+      "Perfect for businesses requiring reliable, high-output renewable energy systems and lower operating costs.",
+      "Excellent for homes and commercial sites exposed to extreme summer temperatures and intense sunlight."
     ],
     warranty: [
-      "15 to 25-Year Product Warranty (dependent on specific module selection).",
-      "25-Year Linear Power Warranty ensuring at least 84.8% output in year 25.",
-      "Responsive customer service and claims handling through Australian offices."
+      "JA Solar Panels Australia include strong product warranty protection for dependable long-term solar investment security.",
+      "Advanced N-Type solar technology supports stable long-term power retention and energy generation.",
+      "Professional installation assistance and technical support available for residential and commercial solar projects across Australia."
     ],
     recommendation: "JA Solar offers a perfect balance of reliability, premium technology, and cost efficiency, making it one of the most popular choices for Australian homes.",
     logoText: "JASOLAR",
@@ -317,66 +365,109 @@ export const productsData: Record<string, ProductData> = {
       ja1, ja2
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "PERC Half-Cell / N-type Mono" },
-      { label: "Module Efficiency", value: "Up to 22.0%" },
-      { label: "Max Power Output", value: "440W" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "21.5 kg" },
-      { label: "Front Glass", value: "3.2mm High Transmission tempered glass" },
-      { label: "Frame", value: "Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68, 3 diodes" },
-      { label: "Mechanical Load", value: "Wind 2400Pa / Snow 5400Pa" }
+      { label: "Solar Cell Type", value: "N-Type TOPCon" },
+      { label: "Panel Efficiency", value: "Up to 22%+" },
+      { label: "Temperature Performance", value: "Excellent" },
+      { label: "Degradation Rate", value: "Low Annual Degradation" },
+      { label: "Application", value: "Residential & Commercial" },
+      { label: "Warranty Support", value: "Long-Term Performance Coverage" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
-      { name: "DeepBlue 3.0 415W", watts: "415W", efficiency: "21.3%", type: "PERC Mono" },
-      { name: "DeepBlue 4.0 Pro 435W", watts: "435W", efficiency: "22.3%", type: "N-Type TOPCon" },
-      { name: "DeepBlue 4.0 Pro 440W", watts: "440W", efficiency: "22.5%", type: "N-Type TOPCon" }
+      {
+        name: "DeepBlue 3.0 415W",
+        watts: "415W",
+        efficiency: "21.3%",
+        type: "PERC Mono",
+      },
+      {
+        name: "DeepBlue 4.0 Pro 435W",
+        watts: "435W",
+        efficiency: "22.3%",
+        type: "N-Type TOPCon",
+      },
+      {
+        name: "DeepBlue 4.0 Pro 440W",
+        watts: "440W",
+        efficiency: "22.5%",
+        type: "N-Type TOPCon",
+      }
     ],
+    featuredCard: {
+      badge: "PREMIUM QUALITY",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "JA Solar Panels Australia deliver advanced DeepBlue technology for high-efficiency, high-reliability solar energy generation designed for Australian homes and commercial installations.",
+      feature1Title: "Long-Term Reliability",
+      feature1Desc: "25-year linear power warranty with proven low degradation and stable energy production across Australian climates.",
+      feature2Title: "High Efficiency PERC & N-Type Technology",
+      feature2Desc: "Up to 22.5% module efficiency with superior resistance to PID and strong performance in low-light conditions.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
+  // done 
   "aiko-solar-panels": {
     slug: "aiko-solar-panels",
     name: "AIKO Solar Panels",
     category: "Solar Panels",
     brand: "AIKO Solar",
-    tagline: "World Record Efficiency with ABC Technology",
+    tagline: "AIKO Solar Panels Australia with Industry-Leading Solar Panel Efficiency",
     subtitle: "Redefining Solar Power Limits",
-    intro: "AIKO Solar is a pioneering technology company specializing in clean energy generation. AIKO is world-renowned for its revolutionary All-Back-Contact (ABC) technology, which eliminates grid lines on the front of the cell, setting new world records for commercial module efficiency.",
+    intro: "AIKO Solar Panels are redefining premium solar technology with breakthrough ABC (All Back Contact) cell innovation, delivering some of the highest solar panel efficiency levels available in the Australian market. Designed for homeowners and businesses seeking maximum energy generation, AIKO solar modules combine sleek aesthetics, advanced photovoltaic engineering, and outstanding long-term performance.\n\n Known for cutting-edge N-Type ABC technology, AIKO Solar Panels Australia are ideal for high-performance residential and commercial solar installations requiring superior efficiency, lower degradation, and exceptional rooftop energy output.",
     whyChoose: [
-      "Industry-leading module efficiency of up to 24.0%+",
-      "All-Back-Contact (ABC) design provides a sleek, fully black aesthetic.",
-      "No front metal grid lines, maximizing the light-absorbing surface area.",
-      "Outstanding temperature coefficient of -0.29%/°C.",
-      "Superior micro-crack and shade tolerance algorithms built into the cell design."
+      {
+        title: "Record-Breaking Solar Panel Efficiency",
+        desc: "AIKO Solar Panels deliver industry-leading solar conversion performance, helping maximise rooftop energy generation and long-term electricity savings."
+      },
+      {
+        title: "Advanced ABC Cell Technology",
+        desc: "AIKO’s All Back Contact (ABC) technology improves light absorption, reduces electrical resistance, and enhances overall photovoltaic efficiency."
+      },
+      {
+        title: "Premium All-Black Design",
+        desc: "Modern full-black solar panel aesthetics create a clean and premium rooftop appearance for contemporary Australian homes."
+      },
+      {
+        title: "Superior Australian Climate Performance",
+        desc: "AIKO Solar Panels maintain stable solar output during high Australian summer temperatures with improved thermal efficiency."
+      },
+      {
+        title: "Trusted High-End Solar Technology",
+        desc: "AIKO is rapidly becoming a preferred premium solar panel choice for energy-conscious homeowners and advanced solar installations."
+      }
     ],
     rangeTitle: "AIKO ABC White Hole & Black Hole Series",
-    rangeIntro: "The ABC series represents a major technological leap, providing not only unparalleled power output but also a sleek, high-end design that elevates roof aesthetics.",
+    rangeIntro: "The AIKO ABC White Hole and Black Hole Series represent premium next-generation solar panels engineered for ultra-high efficiency and maximum residential solar performance.",
     rangeSpecs: [
-      "Unprecedented efficiency up to 24% for maximum power generation per panel.",
-      "Sleek full-black appearance perfect for premium architectural projects.",
-      "Lower thermal loss coefficient ensures performance remains high in hot climates.",
-      "Innovative micro-crack mitigation technology prevents hotspots.",
-      "Minimized degradation: Under 1% in the first year, under 0.35% annually thereafter."
+      "Improves photovoltaic conversion efficiency and long-term panel reliability.",
+      "AIKO solar modules achieve some of the highest efficiency ratings available for residential solar installations.",
+      "Excellent thermal performance supports reliable power generation during Australian summers.",
+      "Modern aesthetic appearance ideal for luxury homes and premium rooftop solar systems.",
+      "Improved energy generation during cloudy conditions and early morning sunlight."
     ],
     betterTitle: "What Makes AIKO ABC Technology Better?",
     betterList: [
-      "Front-Free Electrodes: 100% of the front surface is dedicated to capturing light, rather than being covered by silver grid lines.",
-      "Stunning Premium Aesthetics: A pure black, clean look that blends seamlessly with any modern roof design.",
-      "Exceptional Shade Tolerance: Features advanced bypass diode logic that keeps the panel operating even when partially shaded."
+      "Front-Free Electrode Technology: AIKO’s advanced back-contact architecture removes front gridlines, improving light absorption and increasing energy generation efficiency.",
+
+      "Stunning Premium Aesthetics: Clean all-black solar panel design enhances rooftop appearance while maintaining premium photovoltaic performance.",
+
+      "Exceptional Shade Tolerance: Optimised cell design improves solar generation stability under partial shading and varying sunlight conditions."
     ],
     installation: [
-      "Perfect match for advanced smart inverters and optimizer-based systems.",
-      "Premium black anodized frames match modern roof tiles and metal sheets.",
-      "CEC approved and fully compliant with all local Australian grid requirements."
+      "AIKO Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
+      "Lightweight premium module construction enables simplified rooftop solar installation and faster commissioning.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Premium residential homes looking for the absolute highest efficiency available.",
-      "Architecturally sensitive roofs where style and look are as important as power.",
-      "Tight roof layouts where space is limited but power needs are high."
+      "Ideal for homeowners wanting high-efficiency solar technology with premium rooftop aesthetics.",
+      "Perfect for properties requiring maximum solar output from smaller rooftop areas.",
+      "Excellent for modern energy-efficient homes seeking premium renewable energy solutions.",
     ],
     warranty: [
-      "25-Year Product Warranty for materials and workmanship.",
-      "30-Year Linear Power Warranty maintaining over 88.85% efficiency.",
-      "Australian local warranty support for fast claims process."
+      "AIKO Solar Panels include premium warranty protection for dependable solar investment security.",
+      "Advanced N-Type ABC technology supports strong long-term energy retention and stable solar output.",
+      "Professional installation support and technical assistance available for Australian solar projects."
     ],
     recommendation: "AIKO ABC panels are the premium choice for homeowners who want the absolute best efficiency and a modern, high-end look on their roofs.",
     logoText: "AIKO",
@@ -388,66 +479,98 @@ export const productsData: Record<string, ProductData> = {
       ai1, ai2
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "ABC (All-Back-Contact) N-type" },
-      { label: "Module Efficiency", value: "Up to 24.0%" },
-      { label: "Max Power Output", value: "450W" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "20.5 kg" },
-      { label: "Aesthetic Design", value: "Full-Black Gridless Front" },
-      { label: "Frame", value: "Black Anodized Aluminium" },
-      { label: "Junction Box", value: "IP68 Rated, 3 diodes" },
-      { label: "Temp. Coefficient", value: "-0.29% / °C" }
+      { label: "Solar Cell Technology", value: "N-Type ABC Cells" },
+      { label: "Panel Efficiency", value: "Up to 24%+" },
+      { label: "Power Range", value: "Residential & Commercial" },
+      { label: "Temperature Coefficient", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "All-Black Premium Modules" },
+      { label: "Warranty", value: "Long-Term Product & Performance" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "ABC Black Hole 440W", watts: "440W", efficiency: "22.5%", type: "All-Back-Contact" },
       { name: "ABC White Hole 450W", watts: "450W", efficiency: "23.0%", type: "All-Back-Contact" },
       { name: "ABC White Hole 460W", watts: "460W", efficiency: "23.6%", type: "All-Back-Contact" }
     ],
+    featuredCard: {
+      badge: "WORLD RECORD EFFICIENCY",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "AIKO Solar Panels Australia are designed using next-generation photovoltaic engineering to deliver superior energy output, exceptional efficiency, and long-term renewable energy reliability.",
+      feature1Title: "Industry-Leading Module Efficiency",
+      feature1Desc: "Advanced ABC technology maximises solar energy conversion and rooftop power generation.",
+
+      feature2Title: "All-Back Contact (ABC) Design",
+      feature2Desc: "Eliminates front-side busbars for improved light capture, cleaner aesthetics, and enhanced performance.",
+
+      feature3Title: "No Front Metal Gridlines",
+      feature3Desc: "Increased active solar absorption area improves efficiency and optimises panel appearance."
+    },
   },
+  // done
   "canadian-solar-panels": {
     slug: "canadian-solar-panels",
-    name: "Canadian Solar Panels",
+    name: "Canadian Solar Panels Australia",
     category: "Solar Panels",
     brand: "Canadian Solar",
-    tagline: "Global Powerhouse in Solar Technology",
+    tagline: "Canadian Solar Panels — Trusted Tier-1 Solar Technology for Australian Homes",
     subtitle: "Make The Difference",
-    intro: "Canadian Solar is one of the world's largest solar technology and renewable energy companies. Founded in 2001, Canadian Solar has delivered over 100 GW of premium-quality solar modules to customers in over 160 countries, making them a highly recognized and bankable brand.",
+    intro: "Canadian Solar Panels Australia are among the most trusted and widely installed solar panel solutions for residential and commercial solar systems across the country. As a globally recognised Tier-1 solar manufacturer, Canadian Solar delivers high-efficiency photovoltaic technology engineered for Australian weather conditions, helping homeowners maximise energy savings, solar performance, and long-term reliability.\n\nCanadian Solar Panels combine advanced cell technology, durable engineering, and excellent value, making them one of the best choices for Australian rooftop solar installations and renewable energy projects.",
     whyChoose: [
-      "Globally recognized tier-1 brand with a strong 20+ year track record.",
-      "High power dual-cell modules (HiKu series) optimizing energy output.",
-      "Advanced cell technology minimizing micro-crack impacts.",
-      "Excellent performance at low irradiance and high temperatures.",
-      "Highly bankable company ensuring reliable long-term warranty support."
+      {
+        title: "Globally Recognised Tier-1 Solar Brand",
+        desc: "Canadian Solar is one of the world’s leading solar manufacturers, trusted for premium photovoltaic engineering and dependable renewable energy performance."
+      },
+      {
+        title: "High Power Solar Output",
+        desc: "Advanced solar cell technology helps maximise rooftop energy production and long-term electricity savings."
+      },
+      {
+        title: "Proven Australian Climate Performance",
+        desc: "Canadian Solar Panels Australia are designed to perform reliably in harsh Australian weather conditions, including extreme heat and strong UV exposure."
+      },
+      {
+        title: "Excellent Warranty & Reliability",
+        desc: "Long-term product and performance warranties provide confidence for residential and commercial solar investments."
+      },
+      {
+        title: "Trusted Across Australia",
+        desc: "Widely installed by Australian solar professionals because of their balance of affordability, efficiency, and long-term reliability."
+      }
     ],
     rangeTitle: "Canadian Solar HiKu6 & HiKu7 Series",
-    rangeIntro: "The HiKu range represents Canadian Solar's commitment to high power output and reliability, featuring half-cut cells and multi-busbar technology.",
+    rangeIntro: "The Canadian Solar HiKu Series is engineered for high-efficiency residential and commercial solar installations, combining powerful energy generation with advanced panel durability.",
     rangeSpecs: [
-      "Module efficiency up to 21.5% for high-density power generation.",
-      "Half-cell design reduces internal current and operating temperature.",
-      "Minimized power losses in shade due to split module design.",
-      "Heavy load durability: certified for snow loads up to 5400 Pa.",
-      "Enhanced durability with high wind resistance."
+      "Improved photovoltaic conversion technology increases rooftop energy production and system efficiency.",
+      "Enhanced energy capture during varying weather conditions improves daily solar generation.",
+      "Advanced busbar design improves electrical conductivity and long-term solar reliability.",
+      "Built to withstand harsh outdoor conditions including wind pressure and heavy weather exposure.",
+      "Advanced panel engineering helps maintain stable solar energy output over decades of operation."
     ],
     betterTitle: "What Makes Canadian Solar HiKu Better?",
     betterList: [
-      "Low NMOT (Nominal Module Operating Temperature): Operates at cooler temperatures, increasing efficiency and slowing degradation.",
-      "Dual-Cell Design: Ensures that even if the top half of the panel is shaded, the bottom half continues to produce power at 100% capacity.",
-      "Comprehensive Testing: Subjected to rigorous quality controls exceeding international standard requirements."
+      "Low NMOT (Nominal Module Operating Temperature): Optimised thermal performance improves solar generation efficiency in hot Australian climates.",
+
+      "Advanced Dual-Cell Technology: Innovative dual-cell architecture reduces power loss while improving energy generation stability.",
+
+      "Comprehensive Quality Testing: Canadian Solar Panels undergo strict durability and reliability testing for dependable long-term field performance."
     ],
     installation: [
-      "Compatible with all standard residential and commercial string inverters.",
-      "Robust frame design compatible with generic racking systems for quick installs.",
-      "CEC certified and approved for all Australian state rebates."
+      "Canadian Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
+      "Lightweight module construction supports faster rooftop installation and simplified mounting integration.",
+      "Fully Clean Energy Council (CEC) approved for Australian solar rebate eligibility and residential installations."
     ],
+
     bestFor: [
-      "Value-conscious homeowners seeking a highly reliable tier-1 brand.",
-      "Commercial roofs requiring solid structural performance and dependable yield.",
-      "Regions prone to partial shading during the day."
+      "Ideal for homeowners seeking reliable and efficient solar panels with strong long-term value.",
+      "Perfect for businesses wanting dependable renewable energy generation and lower electricity costs.",
+      "Excellent for homes and commercial sites exposed to intense sunlight and extreme summer conditions."
     ],
     warranty: [
-      "12 to 25-Year Product Warranty (depending on specific module type).",
-      "25-Year Performance Warranty guaranteeing 84.8% of original output.",
-      "Dedicated Australian customer service team for local warranty validation."
+      "Canadian Solar Panels Australia include strong long-term product warranty coverage for reliable solar investment protection.",
+
+      "Advanced solar technology supports stable long-term power retention and dependable energy generation.",
+
+      "Professional installation assistance and technical support available for solar projects across Australia."
     ],
     recommendation: "Canadian Solar is a safe, reliable, and solid investment for any homeowner, offering proven performance from one of the oldest names in the solar industry.",
     logoText: "CanadianSolar",
@@ -462,66 +585,108 @@ export const productsData: Record<string, ProductData> = {
       { label: "Canadian Solar HiKu 330W", url: pdf1 }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "Monocrystalline Half-Cell" },
-      { label: "Module Efficiency", value: "Up to 21.5%" },
-      { label: "Max Power Output", value: "420W" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "21.3 kg" },
-      { label: "Front Glass", value: "3.2mm tempered glass with ARC" },
-      { label: "Frame", value: "Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68, 3 bypass diodes" },
-      { label: "Warranty Support", value: "Australian Direct Support" }
+      { label: "Solar Cell Technology", value: "Mono PERC / N-Type" },
+      { label: "Module Efficiency", value: "Up to 22%+" },
+      { label: "Power Range", value: "Residential & Commercial" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "Mono & Dual-Glass Options" },
+      { label: "Warranty", value: "Long-Term Product & Performance" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "HiKu6 Mono 410W", watts: "410W", efficiency: "21.0%", type: "Half-Cell Mono" },
       { name: "HiKu6 Mono 415W", watts: "415W", efficiency: "21.3%", type: "Half-Cell Mono" },
       { name: "HiKu6 Mono 420W", watts: "420W", efficiency: "21.5%", type: "Half-Cell Mono" }
     ],
+    featuredCard: {
+      badge: "GLOBAL TIER-1 BRAND",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Canadian Solar Panels are built using advanced photovoltaic engineering to deliver reliable energy generation, improved durability, and stable long-term solar efficiency.",
+      feature1Title: "Globally Trusted Solar Technology",
+      feature1Desc: "Canadian Solar has a strong international reputation for manufacturing reliable high-performance solar panels.",
+
+      feature2Title: "High Power Output",
+      feature2Desc: "Advanced module engineering supports higher solar generation and improved rooftop efficiency.",
+
+      feature3Title: "Enhanced Mechanical Strength",
+      feature3Desc: "Panels are designed to withstand wind, rain, dust, and harsh Australian environmental conditions."
+    },
   },
+  // Done 
   "das-solar-panels": {
     slug: "das-solar-panels",
-    name: "DAS Solar Panels",
+    name: "DAS Solar Panels Australia",
+
     category: "Solar Panels",
+
     brand: "DAS Solar",
-    tagline: "N-Type Technology Specialist",
+
+    tagline: "DAS Solar Panels — Advanced N-Type Solar Technology for Australian Energy Performance",
+
     subtitle: "Leading the N-type Solar Era",
-    intro: "DAS Solar is a high-tech new energy enterprise specializing in the R&D and manufacture of high-efficiency solar cells and modules. As an early adopter and leader of N-type TOPCon technology, DAS Solar provides high-efficiency, reliable, and cost-effective solar solutions worldwide.",
+
+    intro: "DAS Solar Panels Australia are rapidly becoming a preferred choice for high-efficiency residential and commercial solar installations thanks to their advanced N-Type TOPCon technology, superior low-light performance, and exceptional long-term reliability. Designed for Australian climate conditions, DAS Solar Panels deliver strong energy generation, lower annual degradation, and improved solar efficiency for homeowners and businesses seeking premium renewable energy solutions.\n\nAs an innovative photovoltaic manufacturer, DAS Solar combines cutting-edge cell engineering with durable panel construction to provide reliable rooftop solar performance and long-term electricity savings",
+
     whyChoose: [
-      "Dedicated focus on N-type TOPCon high-efficiency modules.",
-      "Excellent low-light performance and low-temperature coefficients.",
-      "Sleek design with high-quality materials and strict quality checks.",
-      "Enhanced resistance to Potential Induced Degradation (PID).",
-      "High bifaciality rate for double-sided power generation projects."
+      {
+        title: "Advanced N-Type Solar Technology",
+        desc: "DAS Solar Panels use premium N-Type TOPCon technology for improved solar efficiency, lower degradation, and enhanced long-term energy generation."
+      },
+
+      {
+        title: "Excellent Australian Heat Performance",
+        desc: "Optimised temperature coefficient helps maintain stable rooftop solar output during extreme Australian summer temperatures."
+      },
+
+      {
+        title: "Reliable Low-Light Energy Production",
+        desc: "Advanced photovoltaic engineering improves power generation during cloudy conditions, mornings, and evenings."
+      },
+
+      {
+        title: "Strong Warranty & Reliability",
+        desc: "Long-term product and performance warranties provide dependable renewable energy investment protection."
+      },
+
+      {
+        title: "Trusted High-Efficiency Solar Solution",
+        desc: "DAS Solar Panels Australia are becoming increasingly popular for modern residential and commercial solar projects focused on efficiency and value."
+      }
     ],
     rangeTitle: "DAS Solar N-type TOPCon Series",
-    rangeIntro: "DAS Solar's N-type TOPCon modules offer higher efficiency, lower degradation, and better performance in hot climates than traditional P-type modules.",
+    rangeIntro: "The DAS Solar N-Type TOPCon Series is engineered for premium residential and commercial solar systems requiring high efficiency, excellent durability, and reliable long-term energy generation.",
     rangeSpecs: [
-      "Module efficiency up to 22.3% for excellent power output.",
-      "Temperature coefficient of -0.30%/°C for stable hot-weather performance.",
-      "High bifaciality up to 80% on double-glass modules.",
-      "First-year degradation < 1%, annual degradation < 0.4%.",
-      "Superb resistance to PID under humid and high-heat environments."
+      "Improved photovoltaic efficiency and lower degradation rates for better lifetime solar performance.",
+      "Optimised panel engineering increases solar energy conversion and rooftop power generation.",
+      "Enhanced energy capture during cloudy weather and early morning sunlight improves daily solar output.",
+      "Stable solar generation performance during high-temperature Australian climate conditions.",
+      "Strong module construction ensures dependable operation for residential and commercial installations."
     ],
     betterTitle: "What Makes DAS Solar N-type Better?",
     betterList: [
-      "Advanced TOPCon Technology: Utilizes ultra-thin tunnel oxide layers to reduce recombination and boost cell efficiency.",
-      "Outstanding Low-Light Response: Generates electricity earlier in the morning and later in the evening compared to traditional panels.",
-      "Zero LID (Light-Induced Degradation): Prevents initial drop in performance, maximizing solar output from day one."
+      "Advanced TOPCon Technology: DAS Solar Panels Australia use advanced TOPCon cell architecture for higher efficiency, improved bifacial capability, and enhanced long-term reliability.",
+
+      "Outstanding Low-Light Response: Optimised photovoltaic engineering improves solar generation during varying sunlight and cloudy conditions.",
+
+      "Zero LID (Light-Induced Degradation) Reduction: Advanced N-Type technology minimises performance loss over time, improving long-term solar energy output."
     ],
     installation: [
-      "Easily integrated with modern string and hybrid inverters.",
-      "Standard and lightweight layouts for ease of residential rooftop installations.",
-      "CEC approved for the Australian market."
+      "DAS Solar Panels Australia are compatible with leading inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
+      "Lightweight module construction enables simplified rooftop installation and faster commissioning.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Rooftops that get early morning or late afternoon sun.",
-      "Hot Australian environments where temperature-related losses are high.",
-      "Homeowners seeking N-type technology at competitive price points."
+      "Ideal for homeowners seeking high-efficiency rooftop solar panels with long-term electricity savings.",
+      "Suitable for businesses requiring dependable renewable energy generation and lower operating costs.",
+      "Excellent for homes and commercial properties exposed to intense heat and strong sunlight."
     ],
     warranty: [
-      "15 to 25-Year Product Warranty.",
-      "30-Year Linear Power Warranty for double-glass modules.",
-      "Local support channels in Australia to manage technical requests."
+      "DAS Solar Panels Australia include dependable long-term warranty protection for residential and commercial solar investments.",
+
+      "Advanced N-Type solar technology supports stable long-term power retention and energy generation.",
+
+      "Professional solar installation assistance and technical support available across Australia."
     ],
     recommendation: "DAS Solar is a fantastic choice for those looking to invest in next-gen N-type TOPCon technology without paying a massive brand premium.",
     logoText: "DASSOLAR",
@@ -536,66 +701,102 @@ export const productsData: Record<string, ProductData> = {
       { label: "DAS-DH108ND-440", url: pdf440 }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "N-type TOPCon Mono" },
-      { label: "Module Efficiency", value: "Up to 22.3%" },
-      { label: "Max Power Output", value: "440W" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "22.0 kg" },
-      { label: "Temp. Coefficient", value: "-0.30% / °C" },
-      { label: "First Year Degradation", value: "Less than 1.0%" },
-      { label: "Bifaciality", value: "Up to 80% (Double-Glass)" },
-      { label: "Mechanical Load", value: "Wind 2400Pa / Snow 5400Pa" }
+      { label: "Solar Cell Technology", value: "N-Type TOPCon" },
+      { label: "Module Efficiency", value: "Up to 22%+" },
+      { label: "Power Range", value: "Residential & Commercial" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "Mono & N-Type Modules" },
+      { label: "Warranty", value: "Long-Term Product & Performance" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "TOPCon Mono 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
       { name: "TOPCon Mono 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" },
       { name: "TOPCon Mono 440W", watts: "440W", efficiency: "22.3%", type: "N-Type TOPCon" }
     ],
+    featuredCard: {
+      badge: "N-TYPE SPECIALIST",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "DAS Solar Panels are designed with advanced photovoltaic technology to maximise solar energy generation, improve durability, and support long-term renewable energy performance.",
+      feature1Title: "Excellent Low-Light Response",
+      feature1Desc: "Efficient solar generation during overcast weather and lower sunlight conditions.",
+
+      feature2Title: "Superior Temperature Performance",
+      feature2Desc: "Optimised thermal management supports stable power output during hot Australian summers.",
+
+      feature3Title: "Reduced Annual Power Degradation",
+      feature3Desc: "N-Type solar technology helps maintain higher long-term energy production and panel stability."
+    },
   },
+  // Done 
   "dmegc-solar-panels": {
     slug: "dmegc-solar-panels",
-    name: "DMEGC Solar Panels",
+    name: "DMEGC Solar Panels Australia",
     category: "Solar Panels",
     brand: "DMEGC Solar",
-    tagline: "European Favorite with Premium Build Quality",
+    tagline: "DMEGC Solar Panels — Premium European-Backed Solar Technology for Australian Homes",
     subtitle: "Innovation for Green Living",
-    intro: "DMEGC Solar is the solar division of DMEGC Magnetics, a massive manufacturer with a history dating back to 1980. Renowned for its industrial manufacturing precision, DMEGC Solar is a key player in Europe and is gaining rapid popularity in Australia for its high-quality construction and durability.",
+    intro: "DMEGC Solar Panels Australia are becoming one of the fastest-growing choices for homeowners and businesses seeking high-efficiency solar technology, premium build quality, and dependable long-term energy generation. Backed by advanced photovoltaic manufacturing and strong European quality standards, DMEGC Solar Panels deliver exceptional reliability, low degradation, and outstanding performance in Australian climate conditions\n\nDesigned for residential and commercial solar installations, DMEGC Solar Panels combine N-Type technology, durable construction, and high energy efficiency to maximise solar savings and long-term renewable energy output.",
     whyChoose: [
-      "Backed by a multi-billion dollar manufacturing group with 40+ years experience.",
-      "Highly popular in Europe for meeting strict quality and environmental standards.",
-      "Excellent PID resistance and low hot spot risk due to precision manufacturing.",
-      "Full range of aesthetic black modules for residential properties.",
-      "Strong financial stability ensuring secure warranty support."
+      {
+        title: "European-Backed Manufacturing Standards",
+        desc: "DMEGC Solar Panels are produced using premium manufacturing processes and strict international quality standards for long-term solar reliability."
+      },
+
+      {
+        title: "High-Efficiency Solar Technology",
+        desc: "Advanced N-Type photovoltaic technology improves solar conversion efficiency and rooftop energy generation."
+      },
+
+      {
+        title: "Excellent Australian Climate Performance",
+        desc: "DMEGC Solar Panels Australia are designed to perform reliably in harsh Australian weather conditions including high heat and strong UV exposure."
+      },
+
+      {
+        title: "Strong Warranty & Reliability",
+        desc: "Long-term product and performance warranties provide dependable solar investment protection."
+      },
+
+      {
+        title: "Trusted Residential & Commercial Solution",
+        desc: "DMEGC Solar Panels are increasingly preferred for modern residential and commercial renewable energy installations."
+      }
     ],
     rangeTitle: "DMEGC N-Type & All-Black Series",
-    rangeIntro: "DMEGC N-Type modules combine N-type TOPCon technology with double-glass construction to offer extreme reliability and long-term yield.",
+    rangeIntro: "The DMEGC N-Type Series combines premium photovoltaic engineering with elegant all-black aesthetics, delivering high-performance solar solutions for Australian homes and businesses.",
     rangeSpecs: [
-      "Efficiency up to 22.3% with advanced N-type cell architecture.",
-      "Stunning full-black aesthetics for high-end residential projects.",
-      "High fire safety ratings due to double-glass structure.",
-      "Lower operating temperature due to optimized half-cell layouts.",
-      "Certified to withstand harsh environments (salt, ammonia, sand)."
+      "Improves photovoltaic conversion efficiency and long-term solar panel stability.",
+      "Modern aesthetic appearance ideal for premium residential rooftop installations.",
+      "Optimised thermal performance supports stable energy generation in Australian summers.",
+      "Enhanced durability protects against extreme outdoor weather exposure and environmental stress.",
+      "Lower annual degradation rates help maintain strong lifetime solar energy generation."
     ],
     betterTitle: "What Makes DMEGC Solar Better?",
     betterList: [
-      "Precision Magnetics Heritage: DMEGC applies rigorous, automotive-grade quality standards to solar panel assembly.",
-      "Eco-Vadis Sustainability Rated: Recognized globally for low-carbon manufacturing processes and high social responsibility.",
-      "Excellent Mechanical Resilience: High resistance to mechanical stresses, keeping micro-cracks at a minimum."
+      "Precision Photovoltaic Engineering: DMEGC Solar Panels use advanced cell architecture and premium manufacturing processes to maximise energy conversion efficiency and long-term reliability.",
+
+      "Eco-Friendly Sustainable Production: Manufactured using environmentally responsible production methods supporting cleaner renewable energy solutions.",
+
+      "Excellent Mechanical Resilience: Strong module durability improves resistance against wind loads, dust, moisture, and harsh Australian climate conditions."
     ],
     installation: [
-      "Compatible with all major inverter systems including Growatt, Solis, and GoodWe.",
-      "Lightweight double-glass configurations make installation secure and straightforward.",
-      "Approved by the Clean Energy Council for rebates across Australia."
+      "DMEGC Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
+      "Lightweight module construction supports faster rooftop installation and simplified mounting integration.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Eco-conscious buyers looking for low-carbon, ethically manufactured panels.",
-      "Homes in harsh climates needing extra durability (heavy wind, coastal spray).",
-      "Homeowners seeking premium full-black panels with excellent European reputations."
+      "Ideal for homeowners wanting premium solar panels with excellent efficiency and long-term reliability.",
+      "Perfect for businesses seeking stable renewable energy generation and lower electricity operating costs.",
+      "Excellent for homes and commercial sites exposed to strong sunlight and extreme summer temperatures.",
+
     ],
+
     warranty: [
-      "25-Year Product Warranty for peace of mind.",
-      "30-Year Performance Warranty securing stable long-term energy generation.",
-      "Local service and claims support in Australia."
+      "DMEGC Solar Panels Australia include dependable long-term warranty protection for residential and commercial solar investments.",
+      "Advanced N-Type technology supports stable long-term power retention and renewable energy production.",
+      "Professional installation assistance and local technical support available across Australia."
     ],
     recommendation: "DMEGC Solar panels are highly recommended for customers who prioritize manufacturing precision, environmental standards, and robust product build quality.",
     logoText: "DMEGC",
@@ -610,66 +811,102 @@ export const productsData: Record<string, ProductData> = {
       { label: "DMEGCM10RT-B54HBT-HST", url: pdfB54 }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "N-type TOPCon Monocrystalline" },
-      { label: "Module Efficiency", value: "Up to 22.3%" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "22.0 kg" },
-      { label: "Fire Rating", value: "Class A (Double-Glass)" },
-      { label: "Front / Back Glass", value: "2.0mm Semi-tempered glass" },
-      { label: "Frame", value: "Anodized Aluminium Alloy (Black)" },
-      { label: "Operating Temp", value: "-40°C to +85°C" },
-      { label: "Junction Box", value: "IP68, 3 bypass diodes" }
+      { label: "Solar Cell Technology", value: "N-Type TOPCon" },
+      { label: "Module Efficiency", value: "Up to 22%+" },
+      { label: "Power Range", value: "Residential & Commercial" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "All-Black & Bifacial Options" },
+      { label: "Warranty", value: "Long-Term Product & Performance" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "DMEGC N-Type 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
       { name: "DMEGC N-Type 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" },
       { name: "DMEGC N-Type 440W", watts: "440W", efficiency: "22.3%", type: "N-Type TOPCon" }
     ],
+    featuredCard: {
+      badge: "EUROPEAN PRECISION",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "DMEGC Solar Panels are designed using advanced photovoltaic engineering to maximise energy generation, improve durability, and support long-term solar system performance.",
+      feature1Title: "Advanced N-Type Technology",
+      feature1Desc: "Improved solar efficiency, lower degradation rates, and enhanced lifetime renewable energy generation.",
+
+      feature2Title: "Highly Efficient Solar Modules",
+      feature2Desc: "Optimised photovoltaic architecture delivers stronger rooftop solar performance and electricity savings.",
+
+      feature3Title: "Excellent PID Resistance",
+      feature3Desc: "Advanced cell engineering minimises potential-induced degradation for long-term panel reliability."
+    },
   },
+  // done 
   "eging-solar-panels": {
     slug: "eging-solar-panels",
-    name: "Eging Solar Panels",
+    name: "EGing Solar Panels Australia",
     category: "Solar Panels",
     brand: "EGing PV",
-    tagline: "Pioneering Vertically Integrated Solar Developer",
+    tagline: "EGing Solar Panels — High-Performance Solar Technology for Australian Homes",
     subtitle: "Solid Power, Smart Energy",
-    intro: "EGing PV is a vertically integrated solar PV manufacturer founded in 2003. As one of the first solar companies listed on the Shanghai Stock Exchange, EGing PV manages the entire manufacturing chain from silicon ingots to final PV modules, ensuring tight quality control and highly competitive pricing.",
+    intro: "EGing Solar Panels Australia are designed to deliver reliable solar energy generation, advanced photovoltaic efficiency, and excellent long-term durability for residential and commercial solar installations. As a globally recognised solar manufacturer, EGing Solar Panels combine modern N-Type TOPCon technology, stable power output, and strong Australian climate performance to help homeowners maximise electricity savings and renewable energy production.\n\nKnown for quality engineering and cost-effective solar solutions, EGing Solar Panels are ideal for Australian rooftop systems seeking dependable performance, lower degradation, and long-term value.",
     whyChoose: [
-      "Fully vertically integrated production for consistent quality control.",
-      "Pioneering brand listed on the stock exchange with stable financials.",
-      "High-output half-cell modules with multi-busbar technology.",
-      "Excellent cost-to-performance ratio for residential and commercial systems.",
-      "Rigorous quality testing under TUV, CE, and MCS standards."
+      {
+        title: "High-Efficiency Solar Technology",
+        desc: "EGing Solar Panels use advanced photovoltaic engineering to maximise energy conversion efficiency and rooftop solar production."
+      },
+
+      {
+        title: "Reliable Australian Climate Performance",
+        desc: "Designed to perform efficiently in hot Australian weather conditions with stable power generation and strong thermal resistance."
+      },
+
+      {
+        title: "Strong Long-Term Durability",
+        desc: "Durable module construction helps improve resistance against harsh environmental conditions including wind, rain, and UV exposure."
+      },
+
+      {
+        title: "Excellent Value for Money",
+        desc: "EGing Solar Panels Australia provide an ideal balance between premium solar performance and cost-effective renewable energy solutions."
+      },
+
+      {
+        title: "Trusted Residential & Commercial Solar Solution",
+        desc: "Widely suitable for homes and businesses looking for dependable long-term solar energy generation."
+      }
     ],
     rangeTitle: "EGing Star Series TOPCon Modules",
-    rangeIntro: "EGing's Star series leverages N-type TOPCon cell technology to deliver high conversion efficiency and long-term durability.",
+    rangeIntro: "The EGing Star Series combines advanced N-Type TOPCon technology with high-efficiency photovoltaic engineering for residential and commercial solar projects across Australia.",
     rangeSpecs: [
-      "Module efficiency up to 22.0% for dependable energy production.",
-      "MBB half-cell structure minimizes shading losses and internal resistance.",
-      "Low degradation rate ensures consistent year-on-year solar yield.",
-      "Robust frame design compatible with standard racking setups.",
-      "Certified to withstand wind loads (2400 Pa) and snow loads (5400 Pa)."
+      "Improves energy conversion efficiency and lowers annual solar panel degradation rates.",
+      "Enhanced energy generation during cloudy weather and early morning sunlight conditions.",
+      "Optimised thermal management supports reliable solar output during hot Australian summers.",
+      "Durable solar module construction withstands wind pressure, heavy rain, and harsh outdoor environments.",
+      "Stable photovoltaic performance ensures dependable renewable energy production over decades."
     ],
     betterTitle: "What Makes EGing PV Better?",
     betterList: [
-      "Complete Vertical Integration: By producing everything in-house, EGing ensures that every component fits together perfectly with zero material mismatch.",
-      "Cost-Effectiveness: Vertical integration reduces supply chain costs, passing savings directly to the consumer.",
-      "Proven Field Durability: Millions of panels installed globally over the past two decades demonstrate excellent field performance."
+      "Complete Vertical Integration: EGing controls the manufacturing process from silicon wafer production to final solar module assembly, improving product consistency and quality reliability.",
+
+      "Cost-Effective Renewable Energy Solution: EGing Solar Panels Australia deliver strong solar performance and dependable long-term value at competitive pricing.",
+
+      "Proven Field Durability: Panels are engineered and tested for reliable performance under demanding Australian climate conditions and long-term outdoor exposure."
     ],
     installation: [
-      "Straightforward integration with any string or microinverter systems.",
-      "Standard framing and connector components reduce installer setup time.",
-      "CEC approved for all solar installation programs in Australia."
+      "EGing Solar Panels Australia are compatible with major inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
+      "Lightweight module construction enables simplified rooftop installation and faster system commissioning.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Budget-conscious customers wanting Tier-1 quality at a lower cost.",
-      "Large-scale commercial installations where ROI is the primary metric.",
-      "Rooftops looking for simple, no-nonsense solar solutions with strong warranties."
+      "Ideal for homeowners seeking affordable high-efficiency solar panels with dependable long-term performance.",
+      "Suitable for businesses wanting reliable renewable energy generation and reduced operating electricity costs.",
+      "Excellent for homes and commercial properties exposed to intense sunlight and extreme summer temperatures.",
+
     ],
+
     warranty: [
-      "15 to 25-Year Product Warranty depending on module specifications.",
-      "25-Year Linear Power Warranty guaranteeing reliable power generation.",
-      "Local support networks in Australia for prompt customer service."
+      "EGing Solar Panels Australia include dependable long-term warranty protection for residential and commercial solar investments.",
+      "Advanced TOPCon technology supports stable long-term energy retention and renewable energy production.",
+      "Professional installation assistance and technical support available for Australian solar projects."
     ],
     recommendation: "EGing PV panels are a great fit for users looking for a reliable, time-tested brand that offers outstanding value for money.",
     logoText: "EGingPV",
@@ -685,66 +922,101 @@ export const productsData: Record<string, ProductData> = {
       { label: "Eging-Datasheet-EG-440NT54-HLV_30-", url: pdfeg2 }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "N-type TOPCon Monocrystalline" },
-      { label: "Module Efficiency", value: "Up to 22.0%" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "21.5 kg" },
-      { label: "Frame", value: "Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68 Rated, 3 diodes" },
-      { label: "Max System Voltage", value: "1500V DC" },
-      { label: "Connector", value: "MC4-EVO2 compatible" },
-      { label: "Certifications", value: "CEC Approved, TUV, CE" }
+      { label: "Solar Cell Technology", value: "N-Type TOPCon" },
+      { label: "Module Efficiency", value: "Up to 22%+" },
+      { label: "Power Range", value: "Residential & Commercial" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "Mono & TOPCon Modules" },
+      { label: "Warranty", value: "Long-Term Product & Performance" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "Star Series 415W", watts: "415W", efficiency: "21.3%", type: "N-Type TOPCon" },
       { name: "Star Series 425W", watts: "425W", efficiency: "21.8%", type: "N-Type TOPCon" },
       { name: "Star Series 430W", watts: "430W", efficiency: "22.0%", type: "N-Type TOPCon" }
     ],
+    featuredCard: {
+      badge: "VERTICALLY INTEGRATED",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "EEGing Solar Panels are developed using advanced photovoltaic technology to deliver improved energy generation, stable performance, and dependable long-term renewable energy output.",
+      feature1Title: "High-Efficiency Integrated Solar Cells",
+      feature1Desc: "Advanced cell technology improves photovoltaic conversion rates and rooftop energy production.",
+
+      feature2Title: "Precision Manufacturing Standards",
+      feature2Desc: "Strict quality control processes help ensure long-term solar panel reliability and stable field performance.",
+
+      feature3Title: "Excellent Mechanical Durability",
+      feature3Desc: "Enhanced module strength improves resistance against harsh outdoor environmental conditions."
+    },
   },
+  // Done 
   "risen-solar-panels": {
     slug: "risen-solar-panels",
-    name: "Risen Solar Panels",
+    name: "Risen Solar Panels Australia",
     category: "Solar Panels",
     brand: "Risen Energy",
-    tagline: "Tier 1 Innovation & High-Performance Technology",
+    tagline: "Risen Solar Panels — High-Efficiency N-Type Solar Technology for Australian Homes",
     subtitle: "The Solar Pioneer since 1986",
-    intro: "Risen Energy is a leading, global Tier 1 manufacturer of high-performance solar photovoltaic products. Founded in 1986, Risen has been at the forefront of solar technology innovation, specializing in high-efficiency panels, smart PV systems, and energy storage solutions.",
+    intro: "Risen Solar Panels Australia are trusted for delivering advanced photovoltaic performance, high-efficiency energy generation, and dependable long-term solar reliability. As a globally recognised Tier-1 solar manufacturer, Risen Solar Panels combine modern N-Type TOPCon technology, strong module durability, and excellent Australian climate performance to help homeowners and businesses maximise renewable energy savings.\n\nDesigned for residential and commercial rooftop solar systems, Risen Solar Panels provide superior low-light generation, lower degradation rates, and stable power output in demanding Australian weather conditions.",
     whyChoose: [
-      "Tier 1 manufacturer with decades of PV R&D experience.",
-      "Leader in Heterojunction (HJT) and N-type TOPCon module technology.",
-      "Industry-leading low temperature coefficient for extreme heat performance.",
-      "High bifaciality and power outputs yielding higher ROI.",
-      "Robust local warranty presence and support in Australia."
+      {
+        title: "Tier-1 Global Solar Manufacturer",
+        desc: "Risen Solar Panels are produced by one of the world’s leading photovoltaic manufacturers known for premium engineering and reliable renewable energy technology."
+      },
+
+      {
+        title: "Advanced N-Type Solar Technology",
+        desc: "Modern TOPCon solar cell architecture improves efficiency, energy generation, and long-term panel reliability."
+      },
+
+      {
+        title: "Excellent Australian Heat Performance",
+        desc: "Risen Solar Panels Australia maintain stable energy production during extreme Australian temperatures and strong UV exposure."
+      },
+
+      {
+        title: "Strong Warranty & Reliability",
+        desc: "Long-term product and performance warranties provide dependable solar investment protection for homes and businesses."
+      },
+
+      {
+        title: "Trusted Residential & Commercial Solution",
+        desc: "Widely used across Australia for residential rooftop systems and commercial renewable energy installations."
+      }
     ],
     rangeTitle: "Risen Hyper-ion & Titan Series",
-    rangeIntro: "Risen's Titan and Hyper-ion series use 210mm large silicon wafers and half-cut cell layouts to achieve massive power outputs and excellent conversion rates.",
+    rangeIntro: "The Risen Hyper-ion and Titan Series combine premium N-Type solar technology with advanced photovoltaic engineering designed for high-efficiency residential and commercial solar installations.",
     rangeSpecs: [
-      "Module efficiency up to 22.5%+, with HJT models pushing boundaries.",
-      "Ultra-low temperature coefficient (-0.34%/°C for PERC, lower for HJT).",
-      "Low voltage design allows for longer solar strings and lower system cost.",
-      "Anti-reflective glass coating maximizes light trapping.",
-      "Excellent PID and LID resistance profiles."
+      "Advanced photovoltaic architecture improves rooftop energy generation and long-term performance.",
+      "Excellent heat resistance supports reliable solar output during Australian summer conditions.",
+      "Optimised panel engineering improves electrical efficiency and solar generation stability.",
+      "Enhanced module strength improves resistance against harsh weather and environmental stress.",
+      "Reduced degradation rates support stable renewable energy generation over decades of operation."
     ],
     betterTitle: "What Makes Risen Solar Better?",
     betterList: [
-      "Heterojunction (HJT) Leadership: Risen is a pioneer in mass-producing HJT panels, which combine thin-film and crystalline silicon for superior power yields.",
-      "Low carbon footprint options: Environmentally conscious manufacturing processes.",
-      "High Durability Frames: Enhanced structural integrity resisting corrosion and mechanical stresses."
+      "Heterojunction (HJT) Cell Innovation: Risen Solar Panels Australia utilise advanced HJT and N-Type technology to improve efficiency, lower degradation, and maximise energy generation.",
+
+      "Low Carbon Footprint Manufacturing: Environmentally responsible manufacturing processes support sustainable renewable energy production.",
+
+      "High Durability Solar Modules: Premium module construction enhances resistance against wind, rain, dust, and demanding Australian climate conditions."
     ],
     installation: [
-      "Compatible with major inverter brands like GoodWe, Growatt, and Sungrow.",
-      "Large wafer layout optimized for quick residential and commercial installs.",
-      "Approved by CEC and compliant with all Australian grid guidelines."
+      "Risen Solar Panels Australia are compatible with major inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
+      "Lightweight module construction supports simplified rooftop installation and faster commissioning.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Installations in very hot regions where temperature coefficient is vital.",
-      "Buyers looking for cutting-edge HJT technology and high-power modules.",
-      "Commercial developers looking to lower overall balance-of-system (BOS) costs."
+      "Ideal for homeowners seeking high-efficiency solar panels with dependable long-term electricity savings.",
+      "Perfect for businesses requiring stable renewable energy generation and lower operating electricity costs.",
+      "Excellent for homes and commercial properties exposed to strong sunlight and extreme summer heat.",
     ],
+
     warranty: [
-      "15 to 25-Year Product Warranty depending on model.",
-      "30-Year Performance Warranty ensuring over 85% output in year 30.",
-      "Australian offices providing direct, localized warranty resolution."
+      "Risen Solar Panels Australia include dependable long-term warranty protection for residential and commercial solar investments.",
+      "Advanced N-Type technology supports stable long-term power retention and renewable energy generation.",
+      "Professional installation assistance and technical support available across Australia."
     ],
     recommendation: "Risen Solar is a highly reliable option for users looking for high-capacity, heavy-duty solar panels engineered to withstand hot conditions.",
     logoText: "risen",
@@ -753,28 +1025,40 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: panel8,
     productImages: [
-      ri1,ri2
+      ri1, ri2
     ],
-     pdfUrls: [
+    pdfUrls: [
       { label: "Risen-370W-Silver-Frame", url: pdfri }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "Mono PERC / Heterojunction (HJT)" },
-      { label: "Module Efficiency", value: "Up to 22.5%" },
-      { label: "Temp. Coefficient", value: "-0.34% / °C (HJT: -0.26% / °C)" },
-      { label: "Dimensions", value: "1754 x 1096 x 30 mm" },
-      { label: "Weight", value: "21.0 kg" },
-      { label: "Front Glass", value: "3.2mm ARC tempered glass" },
-      { label: "Frame", value: "Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68, 3 diodes" },
-      { label: "Connector", value: "MC4 compatible" }
+      { label: "Solar Cell Technology", value: "N-Type TOPCon" },
+      { label: "Module Efficiency", value: "Up to 22.5%+" },
+      { label: "Power Range", value: "Residential & Commercial" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "Mono & N-Type Modules" },
+      { label: "Warranty", value: "Long-Term Product & Performance" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "Titan 415W Mono", watts: "415W", efficiency: "21.5%", type: "PERC Half-Cell" },
       { name: "Titan 420W Mono", watts: "420W", efficiency: "21.8%", type: "PERC Half-Cell" },
       { name: "Hyper-ion 440W HJT", watts: "440W", efficiency: "22.5%", type: "Heterojunction" }
     ],
+    featuredCard: {
+      badge: "HJT PIONEER",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Risen Solar Panels are developed using advanced photovoltaic engineering to deliver stable energy production, improved durability, and long-term solar efficiency.",
+      feature1Title: "Tier-1 Solar Technology",
+      feature1Desc: "Premium photovoltaic manufacturing standards ensure dependable long-term solar performance.",
+
+      feature2Title: "Advanced N-Type TOPCon Cells",
+      feature2Desc: "Improved energy conversion efficiency and lower degradation rates maximise lifetime energy production.",
+
+      feature3Title: "Excellent Temperature Coefficient",
+      feature3Desc: "Optimised thermal performance helps maintain stable solar generation during hot Australian summers."
+    },
   },
+  
   "trina-solar-panels": {
     slug: "trina-solar-panels",
     name: "Trina Solar Panels",
@@ -784,11 +1068,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Power Beyond Limits",
     intro: "Trina Solar is a pioneer in solar energy technology, founded in 1997. As one of the world's most trusted solar brands, Trina Solar has consistently set world records for solar cell efficiency and power output, supplying high-quality panels for residential, commercial, and utility-scale installations globally.",
     whyChoose: [
-      "Pioneering brand with nearly 30 years of industry leadership.",
-      "Vertex S+ series featuring dual-glass N-type TOPCon technology.",
-      "Sleek visual appearance with all-black options for modern homes.",
-      "Excellent fire safety rating due to double-glass layers.",
-      "High power density ensuring optimal roof utilization."
+      { title: "30 Years of Solar Innovation", desc: "Pioneering brand with nearly 30 years of industry leadership and world records in solar cell efficiency." },
+      { title: "Dual-Glass TOPCon Technology", desc: "Vertex S+ series featuring dual-glass N-type TOPCon technology for maximum protection and efficiency." },
+      { title: "Premium Aesthetic Design", desc: "Sleek visual appearance with all-black options for modern homes, combining style with top-tier performance." },
+      { title: "Class A Fire Safety Rating", desc: "Excellent fire safety rating due to double-glass layers, providing superior protection for home and family." },
+      { title: "High Power Density", desc: "High power density ensuring optimal roof utilization, generating more energy from the same roof space." }
     ],
     rangeTitle: "Trina Vertex S+ & Vertex N Series",
     rangeIntro: "The Vertex S+ series represents the next generation of residential solar panels, utilizing N-type i-TOPCon cells sandwiched between two layers of glass for maximum strength.",
@@ -827,9 +1111,9 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: panel9,
     productImages: [
- tr1,tr2
+      tr1, tr2
     ],
-     pdfUrls: [
+    pdfUrls: [
       { label: "Trina-Mono-perc-330w-HC", url: pdftr }
     ],
     datasheetSpecs: [
@@ -848,6 +1132,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "Vertex S+ 430W", watts: "430W", efficiency: "21.8%", type: "TOPCon Dual-Glass" },
       { name: "Vertex S+ 440W", watts: "440W", efficiency: "22.3%", type: "TOPCon Dual-Glass" }
     ],
+    featuredCard: {
+      badge: "DUAL-GLASS TECHNOLOGY",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Trina Solar Vertex S+ Panels Australia combine N-type i-TOPCon technology with industry-first dual-glass construction, delivering superior durability, fire safety, and long-term performance for Australian residential and commercial installations.",
+      feature1Title: "Ultra-Long Durability (30 Years)",
+      feature1Desc: "30-year performance warranty at 87.4% output with dual-glass construction protecting against moisture, acid rain, and salt spray.",
+      feature2Title: "N-Type i-TOPCon High Efficiency",
+      feature2Desc: "Up to 22.3% efficiency with Class A fire rating, ideal for homes prioritizing both performance and safety.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "longi-solar-panels": {
     slug: "longi-solar-panels",
@@ -858,11 +1153,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Steering the Energy Transition",
     intro: "LONGi Solar is the world's largest manufacturer of monocrystalline silicon wafers and modules. By focusing purely on monocrystalline technology, LONGi has driven down solar costs globally, making high-efficiency mono panels the industry standard. Their modules are synonymous with durability and high yield.",
     whyChoose: [
-      "The world's largest manufacturer of monocrystalline solar modules.",
-      "Hi-MO series utilizing advanced HPBC/TOPCon cell technologies.",
-      "Excellent PID resistance and low Light-Induced Degradation.",
-      "Massive R&D investment ensuring continuous efficiency improvements.",
-      "Solid company financials ensuring reliable 25-year warranty support."
+      { title: "World's #1 Mono Manufacturer", desc: "The world's largest manufacturer of monocrystalline solar modules, driving global solar cost reductions." },
+      { title: "HPBC Back-Contact Technology", desc: "Hi-MO series utilizing advanced HPBC/TOPCon cell technologies for grid-free front design and maximum efficiency." },
+      { title: "Zero PID & Low LID", desc: "Excellent PID resistance and low Light-Induced Degradation, ensuring peak performance from day one and long-term." },
+      { title: "Massive R&D Investment", desc: "Massive R&D investment ensuring continuous efficiency improvements and consistent world records in monocrystalline technology." },
+      { title: "Rock-Solid Warranty Support", desc: "Solid company financials ensuring reliable 25-year warranty support with strong local Australian service team." }
     ],
     rangeTitle: "LONGi Hi-MO 6 Explorer & Scientist Series",
     rangeIntro: "The Hi-MO 6 series features LONGi's proprietary HPBC (Hybrid Passivated Back Contact) cell technology, providing a grid-free front design for maximum power and clean look.",
@@ -901,9 +1196,9 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: panel10,
     productImages: [
-     lo1,lo2
+      lo1, lo2
     ],
-     pdfUrls: [
+    pdfUrls: [
       { label: "Longi-370W-Technical-Datasheet", url: pdflo }
     ],
     datasheetSpecs: [
@@ -922,6 +1217,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "Hi-MO 6 Explorer 430W", watts: "430W", efficiency: "22.0%", type: "HPBC Mono" },
       { name: "Hi-MO 6 Explorer 440W", watts: "440W", efficiency: "22.5%", type: "HPBC Mono" }
     ],
+    featuredCard: {
+      badge: "WORLD'S #1 MONO MANUFACTURER",
+      heading: "Engineered for Maximum Solar Performance",
+      description: "LONGi Solar Hi-MO 6 Panels Australia bring HPBC back-contact cell technology to deliver a clean, grid-free look with outstanding dust tolerance and maximum energy efficiency for Australian homes and businesses.",
+      feature1Title: "Grid-Free Front for Maximum Light",
+      feature1Desc: "HPBC back-contact design moves all electrodes to the rear, capturing 100% of available sunlight with a clean modern appearance.",
+      feature2Title: "Outstanding Dust & Heat Tolerance",
+      feature2Desc: "Superior panel configuration retains higher efficiency in dusty Australian environments with a -0.29%/°C temperature coefficient.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
 
 
@@ -937,11 +1243,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "The Engine of Your Solar System",
     intro: "GoodWe is a leading global PV inverter and energy storage systems manufacturer. Listed on the Shanghai Stock Exchange, GoodWe has installed over 35 GW of solar inverters across 100+ countries, offering a wide range of residential, commercial, and hybrid energy solutions.",
     whyChoose: [
-      "Global top-10 inverter manufacturer with proven reliability.",
-      "Extensive range of hybrid and grid-tied smart inverters.",
-      "Integrated smart monitoring platform (SEMS portal) for tracking.",
-      "High charging/discharging efficiency for hybrid battery setups.",
-      "Excellent local support and service offices in Australia."
+      { title: "Global Top-10 Inverter Manufacturer", desc: "Global top-10 inverter manufacturer with proven reliability across 35 GW+ installations in 100+ countries." },
+      { title: "Smart Hybrid Inverter Range", desc: "Extensive range of hybrid and grid-tied smart inverters for battery-ready, future-proof solar energy systems." },
+      { title: "SEMS Monitoring Portal", desc: "Integrated smart monitoring platform (SEMS portal) for real-time tracking of solar, battery, and home consumption." },
+      { title: "High Efficiency Hybrid Performance", desc: "High charging/discharging efficiency for hybrid battery setups, maximizing self-consumption and solar savings." },
+      { title: "Australian Local Support", desc: "Excellent local support and service offices in Australia ensuring fast warranty resolution and technical assistance." }
     ],
     rangeTitle: "GoodWe ES & MS Series Hybrid Inverters",
     rangeIntro: "GoodWe's hybrid range is highly regarded for its seamless battery integration, UPS-class backup capabilities, and smart home energy management systems.",
@@ -980,7 +1286,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: inverter1,
     productImages: [
-      go1,go2
+      go1, go2
     ],
 
     datasheetSpecs: [
@@ -998,6 +1304,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "GW5000-ES-20 (5kW)", watts: "5000W", efficiency: "98.2%", type: "Hybrid Inverter" },
       { name: "GW6000-ES-20 (6kW)", watts: "6000W", efficiency: "98.2%", type: "Hybrid Inverter" }
     ],
+    featuredCard: {
+      badge: "SMART HYBRID INVERTER",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "GoodWe Inverters Australia deliver smart hybrid energy management with UPS-class backup switching, seamless battery integration, and real-time SEMS monitoring for residential and commercial solar systems.",
+      feature1Title: "UPS-Class Backup Switching",
+      feature1Desc: "Switches to battery backup in under 10ms during power outages, keeping essential home appliances running 24/7.",
+      feature2Title: "Smart SEMS Monitoring",
+      feature2Desc: "Comprehensive real-time tracking of solar generation, battery storage, and home energy consumption via the SEMS portal.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "sungrow-inverters": {
     slug: "sungrow-inverters",
@@ -1008,11 +1325,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "The Most Bankable Inverter Brand Worldwide",
     intro: "Sungrow Power Supply is the world's most bankable inverter brand with over 405 GW installed worldwide. Founded in 1997, Sungrow is a leader in solar research and development, offering a comprehensive product portfolio of PV inverters and energy storage systems for residential, commercial, and utility applications.",
     whyChoose: [
-      "The world's most bankable inverter brand with a 25+ year track record.",
-      "Extremely high conversion efficiency up to 98.4%.",
-      "Seamless integration with Sungrow hybrid batteries and smart monitoring.",
-      "Robust build quality with IP66 protection against harsh weather.",
-      "Outstanding local support and post-sale service in Australia."
+      { title: "World's Most Bankable Inverter", desc: "The world's most bankable inverter brand with a 25+ year track record and 405 GW installed worldwide." },
+      { title: "98.4% Peak Conversion Efficiency", desc: "Extremely high conversion efficiency up to 98.4%, minimizing energy loss for maximum solar savings." },
+      { title: "Sungrow Ecosystem Integration", desc: "Seamless integration with Sungrow hybrid batteries and iSolarCloud smart monitoring app for complete energy control." },
+      { title: "IP66 All-Weather Protection", desc: "Robust build quality with IP66 protection rated against Australia's most extreme weather conditions." },
+      { title: "Outstanding Local Support", desc: "Outstanding local support and post-sale service team in Australia with Sydney-based headquarters." }
     ],
     rangeTitle: "Sungrow SG & SH Series Smart Inverters",
     rangeIntro: "Sungrow's SG (single-phase grid-tied) and SH (hybrid) series are the benchmark for reliability and performance in the Australian solar market.",
@@ -1051,8 +1368,8 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: inverter2,
     productImages: [
-   sungrow1,sungrow2 ],
-       pdfUrls: [
+      sungrow1, sungrow2],
+    pdfUrls: [
       { label: "sungrow-5kW-single-phase", url: pdfsg1 },
       { label: "sungrow-5kw-three-phase", url: pdfsg2 },
     ],
@@ -1072,6 +1389,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "SH5.0RS (5kW Hybrid)", watts: "5000W", efficiency: "98.2%", type: "Hybrid Inverter" },
       { name: "SH10RS (10kW Hybrid)", watts: "10000W", efficiency: "98.2%", type: "Hybrid Inverter" }
     ],
+    featuredCard: {
+      badge: "WORLD'S #1 INVERTER BRAND",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "Sungrow Inverters Australia set the global gold standard with 405 GW+ installed worldwide, delivering 98.4% peak efficiency, IP66 weatherproofing, and seamless battery integration for Australian homes and businesses.",
+      feature1Title: "IP66 Outdoor Weatherproofing",
+      feature1Desc: "Built-in PID recovery and Surge Protection Device (SPD) with IP66 housing rated for Australia's harshest outdoor conditions.",
+      feature2Title: "iSolarCloud Monitoring App",
+      feature2Desc: "One of the most powerful solar monitoring apps, tracking generation, consumption, and battery performance in real-time.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "growatt-inverters": {
     slug: "growatt-inverters",
@@ -1082,11 +1410,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Empowering Homes Worldwide",
     intro: "Growatt is a global leader in smart energy solutions, specializing in residential, commercial, and utility-scale PV inverters, energy storage systems, and smart energy management. Founded in 2011, Growatt is the world's No. 1 residential inverter supplier, known for its cost-effective and highly reliable products.",
     whyChoose: [
-      "World's No. 1 residential PV inverter supplier.",
-      "Sleek, modern design with OLED display and touch buttons.",
-      "Very competitive pricing with high-end features.",
-      "Wide MPPT voltage range for maximum solar generation.",
-      "Excellent local service and warranty team in Australia."
+      { title: "World's No. 1 Residential Inverter", desc: "World's No. 1 residential PV inverter supplier with a globally trusted reputation for quality and reliability." },
+      { title: "OLED Display & Touch Interface", desc: "Sleek, modern design with OLED display and touch buttons for direct system status checking without a phone." },
+      { title: "Competitive Pricing with Premium Features", desc: "Very competitive pricing with high-end features, making premium solar technology accessible to all homeowners." },
+      { title: "Wide MPPT Voltage Range", desc: "Wide MPPT voltage range for maximum solar generation, capturing more energy across varying light conditions." },
+      { title: "Australian Local Service Team", desc: "Excellent local service and warranty team in Australia with a Melbourne service center for rapid assistance." }
     ],
     rangeTitle: "Growatt MIN TL-X & SPH Series Inverters",
     rangeIntro: "The MIN TL-X series is Growatt's flagship single-phase residential inverter, featuring a compact design, excellent cooling, and user-friendly monitoring interfaces.",
@@ -1125,8 +1453,8 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: inverter3,
     productImages: [
-    grow1,grow2 ],
-        pdfUrls: [
+      grow1, grow2],
+    pdfUrls: [
       { label: "growatt-3-phase-inverter-3-6kw-TL3-latest-model", url: pdfgr1 },
       { label: "growatt-3kW-single-phase-Inverter", url: pdfgr2 }
     ],
@@ -1146,6 +1474,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "MIN 6000TL-X (6kW)", watts: "6000W", efficiency: "98.4%", type: "Single Phase String" },
       { name: "SPH 5000 (5kW Hybrid)", watts: "5000W", efficiency: "97.6%", type: "Hybrid Inverter" }
     ],
+    featuredCard: {
+      badge: "WORLD'S #1 RESIDENTIAL INVERTER",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "Growatt Inverters Australia combine 98.4% peak efficiency, an OLED display, and the ShinePhone smart monitoring app to deliver cost-effective, premium solar energy management for Australian homes.",
+      feature1Title: "OLED Display & Touch Interface",
+      feature1Desc: "Check system status directly on the inverter's built-in OLED screen without needing a smartphone or app.",
+      feature2Title: "Competitive Pricing with Premium Features",
+      feature2Desc: "World's No. 1 residential inverter supplier delivers top-tier reliability, fanless cooling, and wide MPPT range at an accessible price.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "solis-inverters": {
     slug: "solis-inverters",
@@ -1156,11 +1495,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Precision Engineering for Solar Power",
     intro: "Solis (Ginlong Technologies) is one of the oldest and largest manufacturers of solar string inverters, established in 2005. Solis specializes in string inverter technology, offering high-efficiency, reliable, and smart solutions for residential, commercial, and utility-scale energy projects.",
     whyChoose: [
-      "One of the oldest string inverter manufacturers with 18+ years experience.",
-      "High reliability with low failure rates and high conversion efficiency.",
-      "Excellent multi-MPPT designs for complex roof layouts.",
-      "Built-in leakage current protection and AFCI (Arc Fault Circuit Interrupter).",
-      "Dedicated local support network in Australia."
+      { title: "18+ Years Inverter Experience", desc: "One of the oldest string inverter manufacturers with 18+ years of proven performance and engineering excellence." },
+      { title: "High Reliability & Efficiency", desc: "High reliability with low failure rates and up to 98.1% high conversion efficiency for maximum solar returns." },
+      { title: "Multi-MPPT Complex Roof Design", desc: "Excellent multi-MPPT designs for complex roof layouts with multiple shading angles and orientations." },
+      { title: "Advanced AFCI Safety", desc: "Built-in leakage current protection and AFCI (Arc Fault Circuit Interrupter) for next-level fire risk prevention." },
+      { title: "Dedicated Australian Support", desc: "Dedicated local support network in Australia with a Sydney office for parts, repair, and rapid replacements." }
     ],
     rangeTitle: "Solis S5 & S6 Series Residential Inverters",
     rangeIntro: "Solis S6 string and hybrid inverters feature advanced safety systems, wider voltage windows, and smart fan cooling for hot climates.",
@@ -1223,6 +1562,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "S6-GR1P5K (5kW)", watts: "5000W", efficiency: "97.7%", type: "Grid-Tied String" },
       { name: "S6-EH1P5K-L-PRO (5kW Hybrid)", watts: "5000W", efficiency: "98.0%", type: "Hybrid Inverter" }
     ],
+    featuredCard: {
+      badge: "AFCI SAFETY TECHNOLOGY",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "Solis Inverters Australia deliver 18+ years of string inverter expertise with advanced AFCI arc-fault protection, multi-MPPT flexibility, and IP66 weatherproofing for complex Australian residential and commercial rooftops.",
+      feature1Title: "Advanced AFCI Arc-Fault Protection",
+      feature1Desc: "Automatically detects and shuts down DC arc faults before they become a fire hazard, protecting your home and investment.",
+      feature2Title: "Multi-MPPT Complex Roof Flexibility",
+      feature2Desc: "Up to 4 independent MPPT trackers handle multiple roof angles, shading conditions, and orientations for maximum generation.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "saj-inverters": {
     slug: "saj-inverters",
@@ -1233,11 +1583,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Smart Energy, Smart Life",
     intro: "SAJ Electric is a state-level high-tech enterprise specializing in motor drive, renewable energy conversion, transmission, and storage solutions. SAJ focuses on providing smart energy storage and generation systems for residential homes, focusing on smart app integration and sleek, compact designs.",
     whyChoose: [
-      "Focus on smart home ecosystems and integrated energy management.",
-      "Sleek and compact designs that fit modern home aesthetics.",
-      "High efficiency with advanced thermal dissipation.",
-      "Intuitive monitoring app (eSolar Portal) with smart automation features.",
-      "Growing Australian team providing reliable support."
+      { title: "Smart Home Energy Ecosystem", desc: "Focus on smart home ecosystems and integrated energy management via the eSolar portal and app automation." },
+      { title: "Sleek Modern Appliance Design", desc: "Sleek and compact designs that fit modern home aesthetics, looking more like furniture than electrical equipment." },
+      { title: "High Efficiency & Silent Operation", desc: "High efficiency with advanced thermal dissipation running under 25 dB for completely silent home operation." },
+      { title: "eSolar Smart Monitoring App", desc: "Intuitive monitoring app (eSolar Portal) with smart automation features for energy shifting and consumption analysis." },
+      { title: "Growing Australian Team", desc: "Growing Australian team providing reliable local warranty support, fast claims processing, and technical assistance." }
     ],
     rangeTitle: "SAJ R5 & H2 Series Hybrid Inverters",
     rangeIntro: "The SAJ R5 string and H2 hybrid inverters are characterized by their compact, fanless designs and high charging and discharging capabilities.",
@@ -1298,6 +1648,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "R5-5K-S2 (5kW)", watts: "5000W", efficiency: "98.2%", type: "Single Phase String" },
       { name: "H2-5K-S2 (5kW Hybrid)", watts: "5000W", efficiency: "98.0%", type: "Hybrid Inverter" }
     ],
+    featuredCard: {
+      badge: "SMART HOME ENERGY",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "SAJ Inverters Australia offer silent, sleek hybrid solar systems with the eSolar smart monitoring portal, making them the ideal smart home energy management solution for modern Australian residences.",
+      feature1Title: "Silent Fanless Operation",
+      feature1Desc: "Natural heat dissipation design runs under 25 dB, making it perfectly suited for installation near bedrooms or living areas.",
+      feature2Title: "150% DC Oversizing Capability",
+      feature2Desc: "Connect more solar panels than the rated AC output to maximize winter yields and low-light energy generation.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "solix-inverters": {
     slug: "solix-inverters",
@@ -1308,11 +1669,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Power Your Independence",
     intro: "Anker Solix represents the renewable energy division of Anker, a world-famous brand in charging technology. Solix offers highly efficient, smart microinverters and hybrid systems that give homeowners maximum energy control, high-resolution panel monitoring, and unmatched ease of use.",
     whyChoose: [
-      "Backed by Anker, a globally trusted consumer electronics and charging brand.",
-      "Advanced microinverter options for individual panel-level optimization.",
-      "Maximum shade tolerance and individual panel performance tracking.",
-      "High-resolution real-time monitoring via the Anker App.",
-      "Extremely long design life with top-tier components."
+      { title: "Backed by Global Anker Brand", desc: "Backed by Anker, a globally trusted consumer electronics and charging brand with decades of battery engineering." },
+      { title: "Panel-Level Optimization", desc: "Advanced microinverter options for individual panel-level optimization, eliminating the string inverter shading problem." },
+      { title: "Maximum Shade Tolerance", desc: "Maximum shade tolerance and individual panel performance tracking — one shaded panel never affects the rest." },
+      { title: "Premium Real-Time Monitoring App", desc: "High-resolution real-time monitoring via the Anker App for complete visibility of every panel's performance." },
+      { title: "25-Year Design Lifespan", desc: "Extremely long design life with top-tier components and an industry-leading 25-year microinverter warranty." }
     ],
     rangeTitle: "Anker Solix MI800 & Smart Hybrid Series",
     rangeIntro: "The Solix series introduces microinverter and compact hybrid tech designed for easy modular deployment, giving you control over every individual panel.",
@@ -1368,6 +1729,17 @@ export const productsData: Record<string, ProductData> = {
     models: [
       { name: "Solix MI800 Microinverter", watts: "800W", efficiency: "96.7%", type: "Microinverter" }
     ],
+    featuredCard: {
+      badge: "PANEL-LEVEL OPTIMIZATION",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "Anker Solix Microinverters Australia bring consumer-grade precision to solar power, with individual panel-level MPPT optimization, IP67 weatherproofing, and the Anker app for complete energy control.",
+      feature1Title: "Panel-Level Shade Tolerance",
+      feature1Desc: "Each panel operates independently — one shaded panel never reduces the output of the others, maximizing total generation.",
+      feature2Title: "IP67 Waterproof & Premium App",
+      feature2Desc: "Anker's trusted consumer app provides real-time panel monitoring with modular scalability backed by a 25-year design lifespan.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
 
 
@@ -1381,11 +1753,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Powering Your Independence Day & Night",
     intro: "FoxESS is a global leader in solar inverter and energy storage solutions. Backed by Tsingshan Group (a Fortune 500 company and the world's largest nickel producer), FoxESS has access to raw materials and battery cell production, delivering high-voltage, high-performance battery systems built to last.",
     whyChoose: [
-      "Backed by Tsingshan Group, ensuring vertical control of battery cell quality.",
-      "High-voltage stackable design for easy expansion.",
-      "Lithium Iron Phosphate (LFP) chemistry for maximum safety and life.",
-      "IP65 rated for indoor and outdoor installations.",
-      "Excellent backup power output capabilities for blackouts."
+      { title: "Fortune 500 Backed Supply Chain", desc: "Backed by Tsingshan Group (Fortune 500), ensuring vertical control of battery cell quality and long-term supply security." },
+      { title: "Easy Stackable Expansion", desc: "High-voltage stackable design for easy expansion — simply stack more modules with no additional wiring needed." },
+      { title: "Safe LFP Chemistry", desc: "Lithium Iron Phosphate (LFP) chemistry for maximum safety, thermal stability, and 10,000+ cycle life." },
+      { title: "IP65 Indoor & Outdoor Rated", desc: "IP65 rated for flexible indoor and outdoor installations in Australian garages, sheds, and utility areas." },
+      { title: "Reliable Blackout Backup Power", desc: "Excellent backup power output capabilities for blackouts, keeping essential appliances running day and night." }
     ],
     rangeTitle: "FoxESS ECS & Mira Stackable Series",
     rangeIntro: "The FoxESS ECS series is a high-performance, stackable battery storage system that allows homeowners to easily scale capacity from 4.0 kWh up to 20.0 kWh.",
@@ -1424,8 +1796,8 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery1,
     productImages: [
-     fox1,
-     fox2
+      fox1,
+      fox2
     ],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "LiFePO4 (Lithium Iron Phosphate)" },
@@ -1443,6 +1815,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "ECS2900-H3 (8.64 kWh)", watts: "8.64 kWh", efficiency: "97.0%", type: "High-Voltage LFP Stack" },
       { name: "ECS2900-H4 (11.52 kWh)", watts: "11.52 kWh", efficiency: "97.0%", type: "High-Voltage LFP Stack" }
     ],
+    featuredCard: {
+      badge: "LITHIUM IRON PHOSPHATE",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "FoxESS Battery Australia delivers high-voltage stackable LiFePO4 energy storage backed by Fortune 500 Tsingshan Group, offering scalable, safe, and long-lasting solar battery solutions for Australian homes.",
+      feature1Title: "Stackable Modular Design",
+      feature1Desc: "Start with a small system and easily expand capacity by stacking additional modules — no extra wiring required between units.",
+      feature2Title: "Safe LFP Chemistry",
+      feature2Desc: "Lithium Iron Phosphate cells eliminate thermal runaway risks, delivering 90% DoD and 97% round-trip efficiency for maximum usable energy.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "growatt-battery-systems": {
     slug: "growatt-battery-systems",
@@ -1453,11 +1836,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Store Solar, Power Life",
     intro: "Growatt's battery systems are engineered to pair perfectly with their hybrid inverters. By using advanced Cobalt-free LiFePO4 cells, Growatt provides safe, modular, and long-lasting energy storage. The stackable ARK series has become a massive favorite in Australia for its simplicity and clean look.",
     whyChoose: [
-      "Perfect integration with Growatt hybrid inverters.",
-      "Cobalt-free LiFePO4 (Lithium Iron Phosphate) chemistry for peak safety.",
-      "Modular stackable design for easy sizing and future upgrades.",
-      "Integrated automatic cell balancing and temperature monitoring.",
-      "CEC approved and eligible for all Australian battery rebates."
+      { title: "Perfect Growatt Inverter Integration", desc: "Perfect integration with Growatt hybrid inverters for a unified solar and storage ecosystem via the ShinePhone app." },
+      { title: "Cobalt-Free LFP Chemistry", desc: "Cobalt-free LiFePO4 (Lithium Iron Phosphate) chemistry for peak safety, thermal stability, and 100% usable DoD." },
+      { title: "Modular Stackable Design", desc: "Modular stackable design for easy sizing and future upgrades with no extra wiring between modules." },
+      { title: "Smart Cell Balancing BMS", desc: "Integrated automatic cell balancing and temperature monitoring protecting against over-charge and temperature spikes." },
+      { title: "CEC Approved for Australian Rebates", desc: "CEC approved and eligible for all Australian federal and state battery rebates and incentive programs." }
     ],
     rangeTitle: "Growatt ARK LFP & APX Storage Systems",
     rangeIntro: "The ARK series is a stackable LFP battery system supporting both low-voltage (LV) and high-voltage (HV) installations, offering flexible capacities up to 25.6 kWh.",
@@ -1496,7 +1879,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery6,
     productImages: [
-    growatt1,growatt2 ],
+      growatt1, growatt2],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
       { label: "Module Energy", value: "2.56 kWh" },
@@ -1513,6 +1896,17 @@ export const productsData: Record<string, ProductData> = {
       { name: "ARK 7.6H Stack (7.68 kWh)", watts: "7.68 kWh", efficiency: "97.2%", type: "LFP High Voltage" },
       { name: "ARK 10.2H Stack (10.24 kWh)", watts: "10.24 kWh", efficiency: "97.2%", type: "LFP High Voltage" }
     ],
+    featuredCard: {
+      badge: "COBALT-FREE LFP STORAGE",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "Growatt Battery Systems Australia deliver smart, cobalt-free LiFePO4 storage designed to pair seamlessly with Growatt hybrid inverters, offering modular capacity expansion and 100% usable Depth of Discharge.",
+      feature1Title: "100% Usable Depth of Discharge",
+      feature1Desc: "Cobalt-free LFP cells allow 100% DoD, maximizing every kWh stored with full capacity access and long-lasting cycle life.",
+      feature2Title: "Single-App Growatt Ecosystem",
+      feature2Desc: "Manage solar generation and battery storage together through the ShinePhone app with smart cell balancing and real-time monitoring.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "saj-battery-systems": {
     slug: "saj-battery-systems",
@@ -1523,11 +1917,11 @@ export const productsData: Record<string, ProductData> = {
     subtitle: "Smart Energy Storage, Styled for Homes",
     intro: "SAJ's battery systems are designed to offer seamless, all-in-one storage. Using high-performance LiFePO4 cells, SAJ focuses on creating compact, attractive battery units that integrate beautifully with their H2 hybrid inverters, providing homes with clean energy backup and smart load shifting.",
     whyChoose: [
-      "Sleek and unified home appliance look.",
-      "High charging/discharging rates for rapid home power supply.",
-      "Safe Cobalt-free LiFePO4 chemistry.",
-      "Modular high-voltage stackable design.",
-      "Excellent software integration with eSolar home automation."
+      { title: "Sleek Appliance-Grade Design", desc: "Sleek and unified home appliance look that complements modern interiors, installed near living spaces without looking out of place." },
+      { title: "High Charge & Discharge Rates", desc: "High charging/discharging rates for rapid home power supply, ensuring battery is ready when you need it most." },
+      { title: "Safe Cobalt-Free LFP Chemistry", desc: "Safe Cobalt-free LiFePO4 chemistry delivers long cycle life and zero thermal runaway risk for families." },
+      { title: "Modular High-Voltage Stack", desc: "Modular high-voltage stackable design scaling from 5.0 kWh up to 25.0 kWh for flexible home storage." },
+      { title: "eSolar Smart Home Integration", desc: "Excellent software integration with eSolar home automation for intelligent load shifting and peak shaving." }
     ],
     rangeTitle: "SAJ B2 & HS2 All-in-One Series",
     rangeIntro: "The B2 and HS2 series are modular high-voltage batteries that stack together to create a clean, cable-free battery column next to the inverter.",
@@ -1566,7 +1960,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery3,
     productImages: [
-sajo1,sajo2
+      sajo1, sajo2
     ],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
@@ -1583,6 +1977,17 @@ sajo1,sajo2
       { name: "B2-5.0 (5.0 kWh)", watts: "5.0 kWh", efficiency: "97.0%", type: "High-Voltage LFP" },
       { name: "B2-10.0 (10.0 kWh)", watts: "10.0 kWh", efficiency: "97.0%", type: "High-Voltage LFP" }
     ],
+    featuredCard: {
+      badge: "CABLE-FREE SMART STORAGE",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "SAJ Battery Systems Australia deliver silent, sleek, cable-free LiFePO4 storage that integrates perfectly with SAJ hybrid inverters and the eSolar smart home automation portal.",
+      feature1Title: "Cable-Free Stacking Design",
+      feature1Desc: "Battery modules plug directly into each other, eliminating messy wiring and creating a clean, compact installation for any home.",
+      feature2Title: "Time-of-Use Peak Shaving",
+      feature2Desc: "Programmable peak shaving and load shifting charges from solar or cheap off-peak grid power, slashing electricity bills.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "anker-solix-battery-systems": {
     slug: "anker-solix-battery-systems",
@@ -1593,11 +1998,11 @@ sajo1,sajo2
     subtitle: "Independence in Every Module",
     intro: "Anker Solix leverages Anker's world-leading battery and power management expertise to deliver premium, ultra-durable home energy storage. Built using automotive-grade LiFePO4 cells, Anker Solix batteries are designed to survive extreme environments while providing detailed smart monitoring and long cycle lives.",
     whyChoose: [
-      "Built with automotive-grade, high-durability LiFePO4 cells.",
-      "Industry-leading high cycle life with low degradation.",
-      "Beautiful modern aesthetic matching high-end home appliances.",
-      "Sleek app integration showing live power flows and battery health.",
-      "Robust backup capabilities for emergency situations."
+      { title: "Automotive-Grade LFP Cells", desc: "Built with automotive-grade, high-durability LiFePO4 cells for maximum cycle life and safety in any environment." },
+      { title: "Industry-Leading Cycle Life", desc: "Industry-leading high cycle life with low degradation, guaranteeing consistent performance for 10+ years." },
+      { title: "Ultra-Thin Premium Aesthetic", desc: "Beautiful modern aesthetic with an ultra-thin 15cm profile, matching high-end home appliances and flush wall mounting." },
+      { title: "Real-Time App Monitoring", desc: "Sleek app integration showing live power flows and battery health, powered by Anker's trusted consumer-grade software." },
+      { title: "Emergency Backup Power", desc: "Robust backup capabilities for emergency situations with fast grid isolation and thermal heating down to -20°C." }
     ],
     rangeTitle: "Anker Solix X1 Home Energy Storage System",
     rangeIntro: "The Solix X1 is Anker's premium, ultra-thin home battery system, featuring a modular power layout that allows independent charging/discharging for each module.",
@@ -1655,6 +2060,17 @@ sajo1,sajo2
       { name: "Solix X1 - 10kWh", watts: "10.0 kWh", efficiency: "97.5%", type: "Ultra-thin Modular" },
       { name: "Solix X1 - 15kWh", watts: "15.0 kWh", efficiency: "97.5%", type: "Ultra-thin Modular" }
     ],
+    featuredCard: {
+      badge: "PREMIUM MODULAR STORAGE",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "Anker Solix Battery Systems Australia deliver ultra-thin, automotive-grade LiFePO4 storage with individual module optimization and extreme temperature resilience from -20°C to 55°C.",
+      feature1Title: "Ultra-Thin 15cm Profile",
+      feature1Desc: "Flush-wall design with 100% DoD and independent module optimization, ensuring maximum usable capacity from every kWh stored.",
+      feature2Title: "Extreme Temperature Resilience",
+      feature2Desc: "Built-in thermal heating sheets operate in freezing temperatures down to -20°C, backed by a 10-year Anker global warranty.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "sungrow-battery-systems": {
     slug: "sungrow-battery-systems",
@@ -1665,11 +2081,11 @@ sajo1,sajo2
     subtitle: "Powerful, Safe, and Reliable Energy",
     intro: "Sungrow's high-voltage stackable battery systems are widely regarded as some of the most reliable and efficient home batteries in Australia. Pairing seamlessly with Sungrow hybrid inverters, the SBR series offers simple modular capacity expansion, high-power backup outputs, and advanced cell safety.",
     whyChoose: [
-      "The perfect partner for Sungrow hybrid inverters.",
-      "High-voltage design ensures minimal conversion losses and high efficiency.",
-      "Stackable modules (3.2 kWh each) allow easy resizing.",
-      "Cobalt-free LiFePO4 cells with multi-stage safety protection.",
-      "Extremely popular in Australia with massive local support."
+      { title: "Perfect Sungrow Inverter Partner", desc: "The perfect partner for Sungrow hybrid inverters, designed for seamless plug-and-play integration and iSolarCloud monitoring." },
+      { title: "High-Voltage Low-Loss Design", desc: "High-voltage design ensures minimal conversion losses and up to 98% round-trip efficiency for maximum energy savings." },
+      { title: "Tool-Free 3.2 kWh Modules", desc: "Stackable 3.2 kWh modules allow easy resizing from 9.6 kWh to 25.6 kWh with no tools or internal wiring required." },
+      { title: "Cobalt-Free Multi-Stage Safety", desc: "Cobalt-free LiFePO4 cells with multi-stage safety protection for outstanding thermal stability and long service life." },
+      { title: "Australia's Most Popular Battery", desc: "Extremely popular in Australia with massive local support, Sydney service center, and fast parts dispatch." }
     ],
     rangeTitle: "Sungrow SBR 9.6 - 25.6 kWh Series",
     rangeIntro: "The SBR series is a high-voltage stackable LFP battery system, offering capacities from 9.6 kWh (3 modules) up to 25.6 kWh (8 modules) per stack.",
@@ -1708,7 +2124,7 @@ sajo1,sajo2
     // Extra fields dynamically merged
     logoUrl: battery8,
     productImages: [
-   sun1,sun2  ],
+      sun1, sun2],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
       { label: "Module Energy Capacity", value: "3.2 kWh per block" },
@@ -1725,6 +2141,17 @@ sajo1,sajo2
       { name: "SBR128 (12.8 kWh)", watts: "12.8 kWh", efficiency: "98.0%", type: "High-Voltage LFP Stack" },
       { name: "SBR160 (16.0 kWh)", watts: "16.0 kWh", efficiency: "98.0%", type: "High-Voltage LFP Stack" }
     ],
+    featuredCard: {
+      badge: "HIGH-VOLTAGE BENCHMARK",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "Sungrow Battery Systems Australia are the benchmark for high-voltage stackable LFP storage, delivering tool-free stacking, 98% round-trip efficiency, and seamless integration with Sungrow hybrid inverters.",
+      feature1Title: "Tool-Free Plug-and-Stack",
+      feature1Desc: "Modules stack using plug-and-play connections with no internal battery wiring, reducing install time and improving reliability.",
+      feature2Title: "98% Round-Trip Efficiency",
+      feature2Desc: "High-voltage design minimizes conversion losses, delivering 100% usable DoD and up to 30A continuous discharge for heavy loads.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "alpha-ess-battery-systems": {
     slug: "alpha-ess-battery-systems",
@@ -1735,11 +2162,11 @@ sajo1,sajo2
     subtitle: "Your Smart Energy Manager",
     intro: "Alpha ESS is a leading global energy storage solution provider, established in 2012. Specializing in advanced residential and commercial battery systems, Alpha ESS provides fully integrated energy management systems that help homes and businesses maximize self-consumption and lock in energy independence.",
     whyChoose: [
-      "Over a decade of dedicated focus on battery storage engineering.",
-      "Fully integrated energy management system (EMS) for smart power flow.",
-      "Excellent value-for-money storage systems with long lifetimes.",
-      "Sleek and durable cabinets designed for outdoor durability.",
-      "Strong local office and support team based in Sydney, Australia."
+      { title: "10+ Years Battery Engineering Focus", desc: "Over a decade of dedicated focus on battery storage engineering, pioneering integrated energy management systems." },
+      { title: "Smart EMS Power Flow Control", desc: "Fully integrated energy management system (EMS) for smart power flow, automatically optimizing self-consumption." },
+      { title: "Excellent Value & Long Lifetime", desc: "Excellent value-for-money storage systems with 10,000+ cycle design life and long-term performance guarantees." },
+      { title: "Lockable All-In-One Cabinet", desc: "Sleek and durable lockable cabinets protect all wiring and components, safe for homes with children and pets." },
+      { title: "Sydney-Based Local Support", desc: "Strong local office and support team based in Sydney, Australia for immediate technical assistance and warranty claims." }
     ],
     rangeTitle: "Alpha ESS Smile5 & Smile-G3 Series",
     rangeIntro: "The Smile series features integrated, modular designs that combine the inverter and battery system in a unified cabinet for a clean look.",
@@ -1778,7 +2205,7 @@ sajo1,sajo2
     // Extra fields dynamically merged
     logoUrl: battery2,
     productImages: [
-    alpha1,alpha2
+      alpha1, alpha2
     ],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
@@ -1795,6 +2222,17 @@ sajo1,sajo2
       { name: "Smile5-BAT (5.04 kWh)", watts: "5.04 kWh", efficiency: "95.0%", type: "Modular Storage" },
       { name: "SMILE-G3-BAT (10.1 kWh)", watts: "10.1 kWh", efficiency: "96.0%", type: "Modular Storage" }
     ],
+    featuredCard: {
+      badge: "VPP-READY STORAGE",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "Alpha ESS Battery Systems Australia deliver a fully integrated, cabinet-enclosed LiFePO4 storage solution with 10,000+ cycle life and Virtual Power Plant (VPP) readiness for passive grid income.",
+      feature1Title: "10,000+ Cycle Design Life",
+      feature1Desc: "Advanced LFP cells built for over 10,000 charge cycles, ensuring decades of daily use with 95% Depth of Discharge.",
+      feature2Title: "VPP-Ready for Passive Income",
+      feature2Desc: "Join Australian Virtual Power Plant programs to sell excess stored energy back to the grid during peak demand periods.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "neovolt-battery-systems": {
     slug: "neovolt-battery-systems",
@@ -1805,11 +2243,11 @@ sajo1,sajo2
     subtitle: "Empowering Energy Independence",
     intro: "Neovolt is a rapidly growing brand specializing in high-density, reliable solar storage. Neovolt focus on providing Australian homeowners with heavy-duty battery storage that is both cost-effective and highly resilient, offering excellent battery management software and solid protection against extreme weather.",
     whyChoose: [
-      "High-density battery cells packing more capacity into less space.",
-      "Designed specifically to cope with harsh Australian climate conditions.",
-      "Excellent thermal regulation technology to prevent overheating.",
-      "Cost-effective storage solution with high-end safety features.",
-      "Dedicated local technical team based in Australia."
+      { title: "High-Density Australian Climate Ready", desc: "High-density battery cells packing more capacity into less space, designed specifically for harsh Australian climate conditions." },
+      { title: "Purpose-Built Thermal Regulation", desc: "Excellent thermal regulation technology to prevent overheating during extreme Australian summer heatwaves." },
+      { title: "High-Load Discharge Power", desc: "100A continuous discharge capability to handle large startup loads from air conditioning, pumps, and EV chargers." },
+      { title: "Cost-Effective Premium Storage", desc: "Cost-effective storage solution with high-end safety features, delivering Tier-1 battery performance at accessible prices." },
+      { title: "Local Australian Technical Team", desc: "Dedicated local technical team based in Australia for fast warranty processing and on-site technical support." }
     ],
     rangeTitle: "Neovolt PowerStack & Neo Series",
     rangeIntro: "Neovolt's storage solutions offer high discharge capacities and robust stackable blocks designed to meet the demands of modern high-load homes.",
@@ -1848,7 +2286,7 @@ sajo1,sajo2
     // Extra fields dynamically merged
     logoUrl: battery4,
     productImages: [
-      neo1,neo2
+      neo1, neo2
     ],
     datasheetSpecs: [
       { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
@@ -1865,6 +2303,17 @@ sajo1,sajo2
       { name: "PowerStack 5.1 (5.12 kWh)", watts: "5.12 kWh", efficiency: "97.0%", type: "Stackable LFP" },
       { name: "PowerStack 10.2 (10.24 kWh)", watts: "10.24 kWh", efficiency: "97.0%", type: "Stackable LFP" }
     ],
+    featuredCard: {
+      badge: "AUSTRALIAN CLIMATE READY",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "Neovolt Battery Systems Australia are purpose-built for Australian conditions, delivering thermally resilient LiFePO4 storage with 100A continuous discharge and smart BMS thermal management for high-load homes.",
+      feature1Title: "High-Load Discharge Capability",
+      feature1Desc: "100A continuous discharge handles large startup loads including air conditioning, pool pumps, and EV chargers without voltage drops.",
+      feature2Title: "Australian Heatwave Resilience",
+      feature2Desc: "Dedicated thermal regulation and IP65 weatherproofing ensure stable performance during extreme summer temperatures across Australia.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   },
   "sigenergy-battery-systems": {
     slug: "sigenergy-battery-systems",
@@ -1875,11 +2324,11 @@ sajo1,sajo2
     subtitle: "AI-Powered Clean Energy Independence",
     intro: "Sigenergy is a forward-thinking energy technology pioneer, founded by industry veterans. The company delivers SigenStor, the world's first 5-in-1 energy storage system that integrates the solar inverter, battery storage, EV DC charger, EMS, and PCS into a single, beautiful modular column, powered by advanced AI algorithms.",
     whyChoose: [
-      "World's first 5-in-1 integrated system: Inverter, Battery, EV Charger, PCS, EMS.",
-      "AI-driven energy management for maximum efficiency and savings.",
-      "Stunning minimalist column design with zero visible cables.",
-      "Advanced battery pack safety with individual cell sensors.",
-      "Future-proof system ready for vehicle-to-home (V2H) charging."
+      { title: "World's First 5-in-1 Energy System", desc: "World's first 5-in-1 integrated system combining Inverter, Battery, EV Charger, PCS, and EMS in one vertical column." },
+      { title: "AI-Driven Energy Management", desc: "AI-driven energy management for maximum efficiency and savings, learning your habits and checking weather forecasts." },
+      { title: "Futuristic Zero-Cable Design", desc: "Stunning minimalist column design with zero visible cables, replacing five separate electrical boxes with one sleek unit." },
+      { title: "5-Layer Battery Cell Safety", desc: "Advanced battery pack safety with individual cell sensors and built-in aerosol fire-suppression packs per module." },
+      { title: "V2H Future-Proof Technology", desc: "Future-proof system ready for vehicle-to-home (V2H) charging, supporting the next generation of EV energy management." }
     ],
     rangeTitle: "SigenStor Modular 5-in-1 Energy System",
     rangeIntro: "SigenStor stacks modular battery blocks (5.0 kWh to 8.0 kWh per block) directly underneath the matching inverter/EV charging module for a futuristic look.",
@@ -1936,5 +2385,16 @@ sajo1,sajo2
       { name: "Sigen Battery 5.0 (5.0 kWh)", watts: "5.0 kWh", efficiency: "98.0%", type: "AI Modular 5-in-1" },
       { name: "Sigen Battery 8.0 (8.0 kWh)", watts: "8.0 kWh", efficiency: "98.0%", type: "AI Modular 5-in-1" }
     ],
+    featuredCard: {
+      badge: "WORLD'S FIRST AI 5-IN-1",
+      heading: "Engineered for Maximum Energy Storage",
+      description: "Sigenergy SigenStor Battery Systems Australia deliver the world's first 5-in-1 AI-powered energy system, integrating solar inverter, battery, EV charger, PCS, and EMS into a single futuristic vertical column.",
+      feature1Title: "AI-Optimized Energy Management",
+      feature1Desc: "Sigen AI learns your household habits, checks weather forecasts, and automatically optimizes battery charging to maximize self-sufficiency.",
+      feature2Title: "Built-In Fire Safety System",
+      feature2Desc: "Individual cell sensors with built-in aerosol fire-suppression packs inside each module, providing five layers of battery safety protection.",
+      feature3Title: '',
+      feature3Desc: ''
+    },
   }
 };

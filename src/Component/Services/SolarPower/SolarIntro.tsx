@@ -33,7 +33,7 @@ const SolarIntro = () => {
             <div className="h-[2px] w-14 bg-[#FE9900]" />
 
             <span className="text-sm md:text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">
-              Renewable Energy
+              RENEWABLE ENERGY
             </span>
 
             <div className="h-[2px] w-14 bg-[#FE9900]" />
@@ -41,19 +41,15 @@ const SolarIntro = () => {
 
           {/* Main Heading */}
           <h2 className="text-3xl md:text-5xl font-black font-serif leading-tight text-[#111827] ">
-            Australia's Trusted Partner In
+            Australia’s Trusted Partner in
             <span className="mt-2 block text-[#004093]">
-              Renewable Energy
+              Solar Energy Solutions
             </span>
           </h2>
 
           {/* Description */}
           <p className="mx-auto mt-8 max-w-7xl text-lg leading-relaxed text-gray-900 md:text-xl">
-            Aussie Sun Solar delivers high-efficiency solar panels,
-            battery systems, and energy-saving solutions designed
-            for Australian homes and businesses. Our mission is to
-            help you reduce electricity costs while creating a
-            cleaner and more sustainable future.
+            Aussie Sun Solar provides high-quality solar panels, battery storage systems, and renewable energy solutions for Australian homes and businesses. We help reduce electricity costs with reliable, energy-efficient solar technology designed for long-term performance and sustainability.
           </p>
 
           {/* Stats */}
@@ -62,19 +58,19 @@ const SolarIntro = () => {
             {[
               {
                 number: "10K+",
-                label: "Installations",
+                label: "SOLAR INSTALLATIONS ACROSS AUSTRALIA",
               },
               {
                 number: "25 Years",
-                label: "Performance Warranty",
+                label: "PERFORMANCE WARRANTY ON SOLAR PRODUCTS",
               },
               {
                 number: "100%",
-                label: "Australian Support",
+                label: "AUSTRALIAN CUSTOMER SUPPORT",
               },
               {
                 number: "24/7",
-                label: "Customer Assistance",
+                label: "CUSTOMER ASSISTANCE & TECHNICAL SUPPORT",
               },
             ].map((item, i) => (
               <motion.div
@@ -105,7 +101,7 @@ const SolarIntro = () => {
                   {item.number}
                 </h3>
 
-                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.15em] text-gray-500">
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
                   {item.label}
                 </p>
               </motion.div>
@@ -144,7 +140,7 @@ const SolarIntro = () => {
                 hover:bg-[#ffb033]
               "
             >
-              Choose Your Package
+              EXPLORE SOLAR PACKAGES
 
               <ArrowRight
                 size={22}

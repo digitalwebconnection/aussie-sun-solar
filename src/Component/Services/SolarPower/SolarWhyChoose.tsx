@@ -12,38 +12,38 @@ const SolarWhyChoose = () => {
   const features = [
     {
       icon: Hammer,
-      title: 'Electrician-Owned',
-      desc: 'Experienced electrical professionals handling every installation with precision.',
+      title: 'Licensed Electrician-Owned Team',
+      desc: 'Qualified solar and electrical professionals delivering safe, efficient, and compliant solar installations with precision.',
       color: 'bg-orange-100 text-orange-500'
     },
     {
       icon: Zap,
-      title: 'Fast Installation',
-      desc: 'Quick installation process with smooth approvals and expert setup.',
+      title: 'Fast & Hassle-Free Installation',
+      desc: 'Quick solar panel installation process with smooth approvals, expert setup, and minimal disruption to your property.',
       color: 'bg-blue-100 text-blue-500'
     },
     {
       icon: BadgeDollarSign,
-      title: 'Affordable Pricing',
-      desc: 'Premium solar systems at competitive pricing for better savings.',
+      title: 'Affordable Solar Solutions',
+      desc: 'Premium solar power systems at competitive pricing designed to maximise long-term energy savings.',
       color: 'bg-emerald-100 text-emerald-500'
     },
     {
       icon: ShieldCheck,
-      title: 'Trusted Support',
-      desc: 'Reliable local support team available whenever you need assistance.',
+      title: 'Reliable Customer Support',
+      desc: 'Dedicated local support team available for ongoing assistance, maintenance, and solar system guidance.',
       color: 'bg-purple-100 text-purple-500'
     },
     {
       icon: Sun,
-      title: 'Tier-1 Products',
-      desc: 'High-quality solar panels and components designed to last for years.',
+      title: 'Tier-1 Solar Products',
+      desc: 'High-quality solar panels, inverters, and battery systems engineered for durability and maximum efficiency.',
       color: 'bg-yellow-100 text-yellow-500'
     },
     {
       icon: Users,
-      title: '5-Star Service',
-      desc: 'Thousands of happy customers trust our solar installation services.',
+      title: '5-Star Installation Service',
+      desc: 'Trusted by homeowners and businesses for delivering professional solar installation services and excellent customer satisfaction.',
       color: 'bg-indigo-100 text-indigo-500'
     }
   ];
@@ -66,7 +66,7 @@ const SolarWhyChoose = () => {
             viewport={{ once: true }}
             className="inline-block text-[#FE9900] font-bold uppercase tracking-[3px] text-sm mb-4"
           >
-            Why Choose Us
+            WHY CHOOSE OUR SOLAR COMPANY
           </motion.span>
 
           <motion.h2
@@ -75,9 +75,9 @@ const SolarWhyChoose = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-black text-[#0B1220] leading-tight"
           >
-            Trusted Solar
+            Trusted Solar Installation
             <span className="block text-[#FE9900]">
-              Installation Experts
+              Experts in Australia
             </span>
           </motion.h2>
 
@@ -86,10 +86,9 @@ const SolarWhyChoose = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 text-lg max-w-2xl mx-auto mt-6 leading-relaxed"
+            className="text-gray-500 text-lg max-w-6xl mx-auto mt-6 leading-relaxed"
           >
-            Delivering premium solar systems with expert installation,
-            quality products, and long-term customer support.
+            Delivering high-performance solar energy systems with expert installation, premium solar products, and reliable long-term customer support for homes and businesses across Australia.
           </motion.p>
         </div>
 
@@ -132,10 +131,10 @@ const SolarWhyChoose = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6   mt-10 md:mt-20">
 
           {[
-            ['10K+', 'Panels Installed'],
-            ['2500+', 'Happy Customers'],
-            ['25 Years', 'Warranty'],
-            ['5-Star', 'Customer Reviews']
+            ['10K+', 'Solar Panels Successfully Installed'],
+            ['2500+', 'Satisfied Residential & Commercial Customers'],
+            ['25 Years', 'Performance Warranty on Premium Solar Products'],
+            ['5-Star', 'Rated Solar Installation & Customer Service']
           ].map((item, i) => (
             <motion.div
               key={i}

@@ -43,20 +43,19 @@ const ContactServices = () => {
                 <div className="h-[2px] w-14 bg-[#FE9900]" />
 
                 <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">
-                  Our Services
+                  OUR SOLAR SERVICES
                 </span>
               </div>
 
               <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
-                Smart solar
+                Smart Solar Power Systems
                 <span className="block text-[#FE9900]">
-                  power systems
+                  in Australia for Homes & Businesses
                 </span>
               </h2>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
-                Explore reliable solar, battery, EV charging,
-                and electrical services designed for modern living.
+                Explore reliable solar power systems in Australia designed to reduce electricity costs, improve energy efficiency, and support sustainable living. We provide advanced solar panel installation, battery storage, EV charging, and electrical solutions tailored for residential, commercial, and industrial properties.
               </p>
             </motion.div>
 

@@ -42,7 +42,7 @@ export const WarrantySupport: React.FC<WarrantySupportProps> = ({
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
-            Reliable Protection & <br /> Long-Term Support
+           Warranty & Direct  Support
           </h2>
 
           <p className="text-slate-900 text-base md:text-lg mt-5 leading-relaxed">
@@ -107,7 +107,7 @@ export const WarrantySupport: React.FC<WarrantySupportProps> = ({
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             
             {/* Text */}
-            <div className="max-w-4xl">
+            <div className="max-w-6xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-[3px] rounded-full bg-[#FE9900]" />
 

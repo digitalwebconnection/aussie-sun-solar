@@ -128,11 +128,14 @@ export default function AboutFeatures() {
               className="relative"
             >
                <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
-              <Award size={54} className="mb-4  text-[#FE9900] relative z-10" />
+              <Award size={48} className="mb-2 text-[#FE9900] relative z-10" />
             </motion.div>
-            <h3 className="text-4xl md:text-6xl font-black tracking-tighter">7 +</h3>
-            <p className="text-xs uppercase tracking-[0.4em] mt-4 font-black text-center text-white/80">
+            <h3 className="text-4xl md:text-5xl font-black tracking-tighter">7 +</h3>
+            <p className="text-xs uppercase tracking-[0.2em] mt-2 font-black text-center text-white/90">
               Years Of Experience
+            </p>
+            <p className="text-[10px] md:text-xs mt-2 font-medium text-center text-white/70 px-2 leading-relaxed">
+              Providing reliable solar panel installation and renewable energy solutions across Australia.
             </p>
           </div>
         </motion.div>
@@ -150,19 +153,19 @@ export default function AboutFeatures() {
               <span className="text-[#FE9900] font-black tracking-[0.3em] uppercase text-xs px-8 py-2 bg-white/5 rounded-full border border-white/10">
                 Our Philosophy
               </span>
-              <h2 className="text-3xl lg:text-5xl font-black mt-8 mb-12 leading-[0.9] tracking-tighter">
-                We believe <br />
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">In Excellence</span>
+              <h2 className="text-3xl lg:text-4xl font-black mt-8 mb-12 leading-tight tracking-tighter text-white">
+                Delivering Trusted Solar Solutions Across Queensland <br />
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">With Quality & Excellence</span>
               </h2>
             </motion.div>
             
             <ul className="space-y-4">
               {[
-                "Honest advice, no sales tactics",
-                "Only using SAA and CEC-compliant equipment",
-                "Fast installs by in-house teams — never outsourced",
-                "Future-proof systems ready for batteries and EV",
-                "Long-term support, monitoring, and servicing"
+                "Honest guidance with transparent solar solutions and no pressure sales approach",
+                "Premium SAA & CEC-approved solar panels, inverters, and equipment",
+                "Fast and professional solar installations completed by experienced in-house teams",
+                "Future-ready solar systems compatible with battery storage and EV charging solutions",
+                "Ongoing support, monitoring, maintenance, and long-term energy savings for homes and businesses"
               ].map((item, index) => (
                 <motion.li 
                   key={index}
@@ -196,21 +199,21 @@ export default function AboutFeatures() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-[#004093] font-black tracking-[0.3em] uppercase text-xs px-4 py-2 bg-black/5 rounded-full border border-black/10">
-                Our Edge
+                WHY CHOOSE OUR SOLAR TEAM
               </span>
-              <h2 className="text-3xl lg:text-5xl font-black mt-8 mb-8 leading-[0.9] tracking-tighter">
-                What sets <br />
-                <span className="text-white">Us Apart</span>
+              <h2 className="text-3xl lg:text-4xl font-black mt-8 mb-8 leading-tight tracking-tighter">
+                What Makes Our Solar Company <br />
+                <span className="text-white">Stand Out</span> Across Queensland & Australia
               </h2>
             </motion.div>
             
             <ul className="space-y-4">
               {[
-                "Electrician-Owned — Built by Tradespeople",
-                "In-House Installers Across NSW, QLD & SA",
-                "Level 2 ASP Licensed (NSW)",
-                "Safe Work & CEC Compliant",
-                "Real Support, Even After Install"
+                "Licensed electrician-owned solar company focused on quality workmanship and reliable energy solutions",
+                "Experienced in-house solar installers serving Queensland, NSW, and South Australia",
+                "Certified Level 2 ASP professionals for safe and compliant electrical solar work",
+                "Fully CEC-compliant solar panel installation using trusted industry-approved equipment",
+                "Dedicated after-installation support, system monitoring, and customer assistance you can rely on"
               ].map((item, index) => (
                 <motion.li 
                   key={index}
@@ -260,12 +263,14 @@ export default function AboutFeatures() {
               className="relative"
             >
               <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
-              <Zap size={54} className="mb-4 text-[#FE9900] relative z-10" />
+              <Zap size={48} className="mb-2 text-[#FE9900] relative z-10" />
             </motion.div>
-            <h3 className="text-4xl md:text-6xl font-black tracking-tighter">400 +
-            </h3>
-            <p className="text-xs uppercase tracking-[0.4em] mt-4 font-black text-center text-white/80">
-              Level 2 ASP Jobs
+            <h3 className="text-4xl md:text-5xl font-black tracking-tighter">400 +</h3>
+            <p className="text-xs uppercase tracking-[0.2em] mt-2 font-black text-center text-white/90">
+              Level 2 ASP Solar & Electrical Projects
+            </p>
+            <p className="text-[10px] md:text-xs mt-2 font-medium text-center text-white/70 px-2 leading-relaxed">
+              Successfully Completed
             </p>
           </div>
         </motion.div>

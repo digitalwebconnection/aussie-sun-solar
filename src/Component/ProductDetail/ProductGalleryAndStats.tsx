@@ -30,11 +30,11 @@ export const ProductGalleryAndStats: React.FC<ProductGalleryAndStatsProps> = ({
         
         {/* LEFT COLUMN: Product Images Gallery */}
         <div className="lg:col-span-4 flex flex-col gap-4">
-          <div className="relative aspect-square w-full  overflow-hidden border border-slate-100 bg-slate-50 flex items-center justify-center group">
+          <div className="relative aspect-square w-full  h-130 overflow-hidden border border-slate-100 bg-slate-50 flex items-center justify-center group">
             <img
               src={activeImage}
               alt={product.name}
-              className="object-fill w-70 h-full transition duration-500 group-hover:scale-105"
+              className="object-fill w-70  h-full transition duration-500 group-hover:scale-105"
             />
             {/* HSL Gradient Tag */}
             <div className="absolute top-4 left-4 bg-linear-to-r from-[#004093] to-[#FE9900] text-white text-xs font-black px-4 py-2 rounded-full shadow-lg">
@@ -97,17 +97,19 @@ export const ProductGalleryAndStats: React.FC<ProductGalleryAndStatsProps> = ({
             </div>
 
             {/* Title & Tagline */}
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
-              {product.brand} — {product.tagline}
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+              {product.tagline}
             </h2>
             <p className="text-slate-700 text-xs font-bold uppercase tracking-wider mt-1 mb-4">
               {product.subtitle}
             </p>
 
             {/* Intro */}
-            <p className="text-slate-900 text-base leading-relaxed mb-6 font-medium">
-              {product.intro}
-            </p>
+            {product.intro.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-slate-900 text-base leading-relaxed mb-6 font-medium">
+                {paragraph.trim()}
+              </p>
+            ))}
 
             {/* Stats badges */}
             <div className="grid grid-cols-2 gap-4 mb-2">

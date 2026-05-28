@@ -9,15 +9,13 @@ const SolarSmarterLiving = () => {
     {
       icon: Users,
       title: "Trusted Across Australia",
-      desc: "Thousands of homeowners trust our premium solar solutions for long-term savings and energy freedom.",
+      desc: "Thousands of Australian homeowners choose our premium solar panel systems for long-term energy savings, lower power costs, and dependable renewable energy solutions.",
     },
     {
       icon: ShieldCheck,
       title: "Premium Quality Systems",
-      desc: "We use industry-leading solar technology designed for maximum efficiency and long-lasting performance.",
+      desc: "We provide advanced solar technology, high-efficiency solar panels, and durable battery storage solutions built for maximum performance and long-lasting reliability.",
     },
-  
-
   ];
 
   return (
@@ -60,7 +58,7 @@ const SolarSmarterLiving = () => {
                   10+
                 </h3>
                 <p className="text-[#004093] font-bold mt-2">
-                  Years Delivering Smart Solar Solutions
+                  Years Delivering Reliable Solar Energy Solutions Across Australia
                 </p>
               </motion.div>
             </div>
@@ -77,7 +75,7 @@ const SolarSmarterLiving = () => {
               viewport={{ once: true }}
               className="inline-block px-10 py-1 border-[#FE9900]/80 rounded-lg bg-[#FE9900]/80 text-black font-bold uppercase tracking-[0.2em] text-sm"
             >
-              Smart Solar Living
+              SMART SOLAR LIVING
             </motion.span>
 
             <motion.h2
@@ -98,9 +96,7 @@ const SolarSmarterLiving = () => {
               transition={{ delay: 0.2 }}
               className="mt-4 text-gray-900 text-lg leading-relaxed max-w-xl"
             >
-              Experience premium solar solutions designed to reduce energy
-              bills, increase independence, and create a cleaner future for
-              your family.
+              Discover high-performance solar power systems designed to lower electricity bills, increase energy efficiency, and deliver sustainable energy solutions for Australian homes and families.
             </motion.p>
 
             {/* Feature Cards */}

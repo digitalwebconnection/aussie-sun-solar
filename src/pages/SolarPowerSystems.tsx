@@ -18,26 +18,26 @@ const SolarPowerSystems = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-white"
     >
-      {/* 0. Cinematic Hero Section */}
+      {/* 1. Cinematic Hero Section */}
       <SolarHero />
 
-      {/* 1. Mission & Intro */}
+      {/* 2. Mission & Intro */}
       <SolarIntro />
 
-      {/* 2. Smarter Living Features */}
+      {/* 3. Smarter Living Features */}
       <SolarSmarterLiving />
 
-      {/* 3. How it Works Breakdown */}
+      {/* 4. How it Works Breakdown */}
       <SolarProcess />
 
-      {/* 7. Detailed "Why Choose" Grid */}
+      {/* 5.  Detailed "Why Choose" Grid */}
       <SolarWhyChoose />
-      {/* 4. Solar Packages & Pricing */}
+
+      {/* 6. Solar Packages & Pricing */}
       <SolarPackages />
 
-      {/* 5. What We Deliver (Trust Section) */}
+      {/* 7. What We Deliver (Trust Section) */}
       <SolarTrust />
-
 
       {/* 8. Trust & Accreditation Logos */}
       <SolarLogoStrip />
