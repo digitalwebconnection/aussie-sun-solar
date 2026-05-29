@@ -14,15 +14,18 @@ import panel10 from "../assets/Panel/10.webp"
 import j1 from "../assets/Jinko Solar/1.jpg";
 import j2 from "../assets/Jinko Solar/2.jpg";
 import pdf330 from "../assets/Jinko Solar/Jinko-330-cheetah-mono-perc.pdf";
-import pdf390 from "../assets/Jinko Solar/Jinko-Tiger-390W-Datasheet.pdf"
+import pdf390 from "../assets/Jinko Solar/Jinko-Tiger-390W-Datasheet.pdf";
+import pdfji440 from "../assets/Jinko Solar/jinko-475w-n-type-neo-datasheet.pdf";
 
 // ja solar page
 import ja1 from "../assets/ja solar/JA-solar-panel-600-watt.jpg";
 import ja2 from "../assets/ja solar/2.webp";
+import pdfja from "../assets/ja solar/c12d2b6d60d6f81.pdf";
 
 // AIKO Solar page
 import ai1 from "../assets/AIKO Solar/1.avif";
 import ai2 from "../assets/AIKO Solar/2.jpg";
+import pdfai from "../assets/AIKO Solar/Aiko-Neostar-475w.pdf";
 
 // Canadian Solar page
 import ca1 from "../assets/Canadian Solar/canadian-665watt-solar-panel.jpg";
@@ -73,6 +76,8 @@ import inverter6 from '../assets/Inverters/6.webp';
 // GoodWe Inverters
 import go1 from "../assets/GoodWe Inverters/goodwe-grid-tie-5kw-inverter.jpg";
 import go2 from "../assets/GoodWe Inverters/2.webp";
+import pdfgo from "../assets/GoodWe Inverters/GW_Lynx-F-G2-Series_Datasheet-AU.pdf"
+import pdfgo1 from "../assets/GoodWe Inverters/GW_EH_Datasheet-AU.pdf"
 
 
 // Sungrow
@@ -106,6 +111,8 @@ import pdfsaj2 from "../assets/saj/SAJ-5-10kW-3P-datasheet.pdf";
 
 import s1 from "../assets/Anker Solix/1.png";
 import s2 from "../assets/Anker Solix/2.jfif";
+import pdfsolix from "../assets/Anker Solix/Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25.pdf";
+
 
 
 //  ==================== SOLAR BATTERIES ====================
@@ -124,6 +131,7 @@ import battery5 from "../assets/Battery Partners/5.webp";
 // FoxESS
 import fox1 from "../assets/FoxESS/1.jpg";
 import fox2 from "../assets/FoxESS/2.png";
+import pdffox from "../assets/FoxESS/EN-EQ4800-Datasheet(AU)-V1.3-20250915.pdf"
 
 // growatt-battery-systems
 import growatt1 from "../assets/growatt bettry/1.png";
@@ -132,18 +140,22 @@ import growatt2 from "../assets/growatt bettry/2.jfif";
 // saj-battery
 import sajo1 from "../assets/saj-battery/saj-battery.webp"
 import sajo2 from "../assets/saj-battery/1.webp"
+import pdfsaj from "../assets/saj-battery/B2-X-HVa-S-EN-AU-20260525.pdf"
 
 // anker-solix-battery-systems
 import ank1 from "../assets/anker-solix-battery/1.webp"
 import ank2 from "../assets/anker-solix-battery/2.webp"
+import pdfank from "../assets/anker-solix-battery/Spec-Anker-Solar-Battery.pdf"
 
 // sungrow-battery-systems
 import sun1 from "../assets/sungrow-battery/1.webp"
 import sun2 from "../assets/sungrow-battery/2.png"
+import pdfsun from "../assets/sungrow-battery/DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU.pdf" 
 
 // alpha-ess-battery-systems
 import alpha1 from "../assets/alpha-ess-battery/1.webp"
 import alpha2 from "../assets/alpha-ess-battery/2.jpg"
+import pdfalp from "../assets/alpha-ess-battery/ALP_LV_2024.pdf"
 
 // neovolt-battery-systems
 import neo1 from "../assets/neovolt-battery/1.webp"
@@ -263,7 +275,8 @@ export const productsData: Record<string, ProductData> = {
 
     pdfUrls: [
       { label: "Jinko Cheetah 330W", url: pdf330 },
-      { label: "Jinko Tiger 370W", url: pdf390 }
+      { label: "Jinko Tiger 370W", url: pdf390 },
+      { label: "jinko-475w-n-type-neo-datasheet", url: pdfji440},
     ],
     datasheetSpecs: [
       { label: "Solar Cell Type", value: "N-Type TOPCon" },
@@ -361,6 +374,9 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: panel2,
+     pdfUrls: [
+      { label: "JAM54S43 LR 475W EN", url: pdfja },
+    ],
     productImages: [
       ja1, ja2
     ],
@@ -475,6 +491,9 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: panel3,
+     pdfUrls: [
+      { label: "Aiko-Neostar-475w", url: pdfai },
+    ],
     productImages: [
       ai1, ai2
     ],
@@ -1058,51 +1077,68 @@ export const productsData: Record<string, ProductData> = {
       feature3Desc: "Optimised thermal performance helps maintain stable solar generation during hot Australian summers."
     },
   },
-  
+  // Done
   "trina-solar-panels": {
     slug: "trina-solar-panels",
-    name: "Trina Solar Panels",
+    name: "Trina Solar Panels Australia",
     category: "Solar Panels",
     brand: "Trina Solar",
-    tagline: "Leading Smart Solar Energy Solutions",
+    tagline: "Trina Solar Panels — Smart High-Efficiency Solar Solutions for Australian Homes",
     subtitle: "Power Beyond Limits",
-    intro: "Trina Solar is a pioneer in solar energy technology, founded in 1997. As one of the world's most trusted solar brands, Trina Solar has consistently set world records for solar cell efficiency and power output, supplying high-quality panels for residential, commercial, and utility-scale installations globally.",
+    intro: "Trina Solar Panels Australia are among the most trusted and widely installed solar panels for residential and commercial solar systems across the country. Known for advanced N-Type TOPCon technology, high-efficiency energy generation, and outstanding long-term reliability, Trina Solar Panels deliver premium renewable energy performance in Australian climate conditions.\n\nAs a global leader in photovoltaic innovation, Trina Solar combines advanced cell technology, superior module engineering, and strong warranty support to help homeowners maximize solar savings, reduce electricity bills, and improve long-term energy independence.",
     whyChoose: [
-      { title: "30 Years of Solar Innovation", desc: "Pioneering brand with nearly 30 years of industry leadership and world records in solar cell efficiency." },
-      { title: "Dual-Glass TOPCon Technology", desc: "Vertex S+ series featuring dual-glass N-type TOPCon technology for maximum protection and efficiency." },
-      { title: "Premium Aesthetic Design", desc: "Sleek visual appearance with all-black options for modern homes, combining style with top-tier performance." },
-      { title: "Class A Fire Safety Rating", desc: "Excellent fire safety rating due to double-glass layers, providing superior protection for home and family." },
-      { title: "High Power Density", desc: "High power density ensuring optimal roof utilization, generating more energy from the same roof space." }
+      {
+        title: "Globally Trusted Solar Brand",
+        desc: "Trina Solar is one of the world's leading photovoltaic manufacturers, trusted globally for decades of solar innovation, quality manufacturing, and large-scale installations."
+      },
+      {
+        title: "Advanced N-Type TOPCon Technology",
+        desc: "Modern N-Type TOPCon cell architecture delivers higher energy conversion efficiency, improved low-light performance, and enhanced long-term reliability."
+      },
+      {
+        title: "Excellent Australian Climate Performance",
+        desc: "Engineered to perform efficiently in Australia's harsh climate conditions, including extreme temperatures, strong UV exposure, and varying weather patterns."
+      },
+      {
+        title: "Strong Warranty & Reliability",
+        desc: "Backed by comprehensive product and performance warranties, providing long-term confidence and protection for your solar investment."
+      },
+      {
+        title: "Premium Residential & Commercial Solution",
+        desc: "Ideal for residential rooftops and commercial solar projects, offering high efficiency, modern aesthetics, and dependable renewable energy generation."
+      }
     ],
     rangeTitle: "Trina Vertex S+ & Vertex N Series",
-    rangeIntro: "The Vertex S+ series represents the next generation of residential solar panels, utilizing N-type i-TOPCon cells sandwiched between two layers of glass for maximum strength.",
+    rangeIntro: "The Trina Vertex S+ and Vertex N Series combine premium photovoltaic engineering with advanced N-Type technology for high-efficiency residential and commercial solar installations across Australia.",
     rangeSpecs: [
-      "Module efficiency up to 22.3% using 210mm wafer technology.",
-      "Dual-glass structure replaces plastic backsheet for maximum lifetime.",
-      "Extremely low annual degradation (0.4% per year) after year 1.",
-      "Outstanding fire class rating (Class A) for enhanced safety.",
-      "Superior load resistance: 5400 Pa snow load and 4000 Pa wind load."
+      "Advanced N-Type TOPCon cell technology delivers higher efficiency and improved long-term solar energy generation.",
+      "High-efficiency module architecture maximises power output and optimises rooftop energy production.",
+      "Excellent low-light performance enhances solar generation during cloudy conditions and early morning hours.",
+      "Robust module construction provides superior mechanical strength for demanding Australian weather conditions.",
+      "Reduced long-term degradation helps maintain reliable renewable energy production throughout the system lifespan."
     ],
-    betterTitle: "What Makes Trina Vertex S+ Better?",
+    betterTitle: "What Makes Trina Solar Panels Better?",
     betterList: [
-      "Dual-Glass Construction: Increases resistance to moisture ingress, acid rain, salt spray, and physical stress.",
-      "TOPCon Cell Technology: Boosts energy yield in low-light and high-temperature environments.",
-      "Ultra-low Degradation: Guarantees 87.4% performance at year 30, outlasting standard modules."
+      "Dual-Glass Module Construction: Dual-glass panel design improves durability, protects against moisture ingress, and enhances long-term operational reliability.",
+      "Advanced TOPCon Cell Technology: Premium N-Type TOPCon photovoltaic architecture delivers higher efficiency, improved energy yields, and stronger long-term solar performance.",
+      "Ultra-Low Degradation Rates: Advanced N-Type cell engineering minimises annual performance loss and supports superior long-term energy retention throughout the module lifespan."
     ],
     installation: [
-      "Standard size and weight optimized for handling on residential roofs.",
-      "Compatible with major smart inverters and optimizer systems.",
-      "CEC approved for all local Australian rebates and grid codes."
+      "Compatible with leading inverter brands including Sungrow, GoodWe, Fronius, Growatt, and SolarEdge.",
+      "Lightweight module design enables faster rooftop installation and simplified system commissioning.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Homeowners seeking maximum long-term durability and safety (dual-glass).",
-      "Properties in coastal areas with high humidity or corrosive salt spray.",
-      "Premium projects demanding high efficiency and aesthetic appeal."
+      "Residential rooftop solar systems seeking high-efficiency panels and long-term electricity savings.",
+      "Commercial solar installations requiring reliable renewable energy generation and reduced operating costs.",
+      "Properties located in high-temperature Australian regions with intense sunlight exposure.",
     ],
+
     warranty: [
-      "25-Year Product Warranty on workmanship and materials.",
-      "30-Year Performance Warranty ensuring long-term returns on investment.",
-      "Responsive Australian customer support for easy warranty claims."
+      "25-Year Product Warranty providing dependable protection for residential and commercial solar investments.",
+      "30-Year Performance Warranty supporting stable long-term energy retention and renewable energy generation.",
+      "Comprehensive warranty coverage backed by Trina Solar's global manufacturing expertise and reliability."
     ],
     recommendation: "Trina Vertex S+ is one of the best residential panels on the market today, combining N-type TOPCon efficiency with the ultimate protection of dual-glass construction.",
     logoText: "Trinasolar",
@@ -1117,15 +1153,13 @@ export const productsData: Record<string, ProductData> = {
       { label: "Trina-Mono-perc-330w-HC", url: pdftr }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "N-type i-TOPCon Double-Glass" },
-      { label: "Module Efficiency", value: "Up to 22.3%" },
-      { label: "Dimensions", value: "1762 x 1134 x 30 mm" },
-      { label: "Weight", value: "21.0 kg" },
-      { label: "Glass Structure", value: "1.6mm + 1.6mm Double-Glass" },
-      { label: "Fire Safety", value: "Class A certified" },
-      { label: "Frame", value: "Black Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68 Rated, 3 bypass diodes" },
-      { label: "Connector", value: "TS4 / MC4 EVO2" }
+      { label: "Solar Cell Technology", value: "N-Type TOPCon" },
+      { label: "Module Efficiency", value: "Up to 22.5%+" },
+      { label: "Power Range", value: "Residential & Commercial Applications" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "Vertex S+, Vertex N & Dual-Glass Modules" },
+      { label: "Warranty", value: "Long-Term Product & Performance Warranty" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "Vertex S+ 415W", watts: "415W", efficiency: "21.3%", type: "TOPCon Dual-Glass" },
@@ -1135,59 +1169,80 @@ export const productsData: Record<string, ProductData> = {
     featuredCard: {
       badge: "DUAL-GLASS TECHNOLOGY",
       heading: "Engineered for Maximum Solar Performance",
-      description: "Trina Solar Vertex S+ Panels Australia combine N-type i-TOPCon technology with industry-first dual-glass construction, delivering superior durability, fire safety, and long-term performance for Australian residential and commercial installations.",
-      feature1Title: "Ultra-Long Durability (30 Years)",
-      feature1Desc: "30-year performance warranty at 87.4% output with dual-glass construction protecting against moisture, acid rain, and salt spray.",
-      feature2Title: "N-Type i-TOPCon High Efficiency",
-      feature2Desc: "Up to 22.3% efficiency with Class A fire rating, ideal for homes prioritizing both performance and safety.",
-      feature3Title: '',
-      feature3Desc: ''
+      description: "Trina Solar Panels are developed using advanced photovoltaic engineering to maximise solar energy generation, improve durability, and support long-term system performance.",
+      feature1Title: "Premium Tier-1 Manufacturing",
+      feature1Desc: "Globally recognised Tier-1 solar manufacturing ensures exceptional quality standards, reliable performance, and long-term solar system dependability.",
+
+      feature2Title: "Advanced Vertex N Technology",
+      feature2Desc: "Trina Solar's Vertex N module technology delivers higher energy yields, improved efficiency, and reduced long-term power degradation.",
+
+      feature3Title: "Excellent Temperature Performance",
+      feature3Desc: "Optimised thermal performance helps maintain stable energy production during Australia's high-temperature and harsh weather conditions."
     },
   },
+  // Done
   "longi-solar-panels": {
     slug: "longi-solar-panels",
-    name: "Longi Solar Panels",
+    name: "LONGi Solar Panels Australia",
     category: "Solar Panels",
     brand: "LONGi Solar",
-    tagline: "World Leader in Monocrystalline Solar",
+    tagline: "LONGi Solar Panels — World-Leading High-Efficiency Solar Technology",
     subtitle: "Steering the Energy Transition",
-    intro: "LONGi Solar is the world's largest manufacturer of monocrystalline silicon wafers and modules. By focusing purely on monocrystalline technology, LONGi has driven down solar costs globally, making high-efficiency mono panels the industry standard. Their modules are synonymous with durability and high yield.",
+    intro: "LONGi Solar Panels Australia are among the most trusted and widely installed solar panels for residential and commercial solar systems across the country. As a global leader in monocrystalline photovoltaic technology, LONGi Solar Panels deliver outstanding energy efficiency, premium reliability, and exceptional long-term solar performance for Australian homes and businesses.\n\nDesigned for Australian climate conditions, LONGi Solar Panels combine advanced N-Type and HPBC solar cell technology with durable module engineering to maximise rooftop solar generation, reduce electricity bills, and improve long-term renewable energy savings.",
     whyChoose: [
-      { title: "World's #1 Mono Manufacturer", desc: "The world's largest manufacturer of monocrystalline solar modules, driving global solar cost reductions." },
-      { title: "HPBC Back-Contact Technology", desc: "Hi-MO series utilizing advanced HPBC/TOPCon cell technologies for grid-free front design and maximum efficiency." },
-      { title: "Zero PID & Low LID", desc: "Excellent PID resistance and low Light-Induced Degradation, ensuring peak performance from day one and long-term." },
-      { title: "Massive R&D Investment", desc: "Massive R&D investment ensuring continuous efficiency improvements and consistent world records in monocrystalline technology." },
-      { title: "Rock-Solid Warranty Support", desc: "Solid company financials ensuring reliable 25-year warranty support with strong local Australian service team." }
+      {
+        title: "World-Leading Solar Manufacturer",
+        desc: "LONGi is one of the world's largest and most recognised photovoltaic manufacturers, trusted globally for premium solar technology and proven product quality."
+      },
+      {
+        title: "Advanced HPBC Solar Technology",
+        desc: "Innovative HPBC and N-Type cell technology delivers higher energy conversion efficiency, lower degradation rates, and stronger long-term solar performance."
+      },
+      {
+        title: "Excellent Australian Climate Performance",
+        desc: "Engineered to maintain reliable power generation in Australia's extreme heat, strong UV conditions, and diverse weather environments."
+      },
+      {
+        title: "Strong Warranty & Reliability",
+        desc: "Comprehensive product and performance warranties provide long-term confidence and dependable protection for residential and commercial solar investments."
+      },
+      {
+        title: "Premium Residential & Commercial Solar Solution",
+        desc: "Widely selected for Australian homes, businesses, and large-scale renewable energy projects seeking high efficiency and reliable energy generation."
+      }
     ],
     rangeTitle: "LONGi Hi-MO 6 Explorer & Scientist Series",
-    rangeIntro: "The Hi-MO 6 series features LONGi's proprietary HPBC (Hybrid Passivated Back Contact) cell technology, providing a grid-free front design for maximum power and clean look.",
+    rangeIntro: "The LONGi Hi-MO Series combines advanced HPBC photovoltaic technology with premium solar engineering designed for Australian residential and commercial rooftop installations.",
     rangeSpecs: [
-      "Module efficiency up to 22.8% for premium power output.",
-      "HPBC technology provides a modern, clean, grid-less front look.",
-      "Better temperature coefficient of -0.29%/°C for peak summer output.",
-      "Optimized performance under dirty or dusty conditions.",
-      "Anti-reflective and self-cleaning glass surface."
+      "Advanced HPBC solar cell technology improves photovoltaic conversion efficiency and long-term rooftop energy generation.",
+      "Excellent low-light performance enhances energy capture during cloudy weather, mornings, and late afternoon conditions.",
+      "Improved heat resistance supports stable solar production during extreme Australian temperatures and strong sunlight exposure.",
+      "High mechanical strength provides reliable protection against harsh weather conditions and environmental stress.",
+      "Reduced degradation rates help maintain dependable renewable energy production and long-term energy yield."
     ],
-    betterTitle: "What Makes LONGi Hi-MO 6 Better?",
+    betterTitle: "What Makes LONGi Solar Panels Better?",
     betterList: [
-      "HPBC Cell Structure: By moving all electrode lines to the rear, the front captures 100% of available light, raising efficiency and giving a uniform dark look.",
-      "Dust and Dirt Tolerance: Better cell configuration allows panels to retain higher efficiency even when partially covered in dust.",
-      "Extreme Reliability: Minimal degradation and outstanding mechanical stress tolerance."
+      "HPBC Cell Structure: Advanced HPBC solar cell technology improves efficiency, reduces shading losses, and maximises long-term energy generation.",
+      "Dust & Dirt Resistance: Optimised module design helps minimise the impact of dust accumulation and supports stable rooftop solar performance.",
+      "Long-Term Reliability: Premium manufacturing quality and advanced photovoltaic engineering enhance durability, reliability, and lifetime energy production."
     ],
     installation: [
-      "Standard dimensions fit most residential mounting racks.",
-      "Pairs perfectly with premium hybrid and string inverters.",
-      "Listed by the Clean Energy Council (CEC) for Australian rebates."
+      "Compatible with major inverter brands including Sungrow, GoodWe, Fronius, Growatt, and SolarEdge.",
+      "Lightweight module construction enables simplified rooftop installation and faster system commissioning.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
     ],
+
     bestFor: [
-      "Homeowners who value aesthetic cleanliness and uniform black roofs.",
-      "Dusty environments where cleaning panels is difficult or infrequent.",
-      "Customers seeking a financially rock-solid brand with reliable warranties."
+      "Ideal for residential rooftop solar systems seeking premium efficiency and long-term electricity savings.",
+      "Suitable for commercial solar installations requiring reliable renewable energy generation and reduced operating costs.",
+      "Excellent for properties located in high-temperature Australian regions with strong sunlight exposure.",
+
     ],
+
     warranty: [
-      "25-Year Product Warranty for materials and workmanship.",
-      "25-Year Linear Power Warranty ensuring at least 88.9% output at year 25.",
-      "Strong Australian local support team for easy claims and questions."
+      "25-Year Product Warranty providing dependable protection for materials, workmanship, and long-term solar investment value.",
+      "30-Year Performance Warranty supporting stable energy retention and reliable renewable energy generation over time.",
+      "Comprehensive warranty coverage backed by LONGi's global manufacturing expertise and industry-leading solar innovation."
     ],
     recommendation: "LONGi's Hi-MO 6 panels are a top-tier choice, offering a unique grid-free look, excellent dirt tolerance, and the financial backing of the world's largest wafer manufacturer.",
     logoText: "LONGi",
@@ -1202,15 +1257,13 @@ export const productsData: Record<string, ProductData> = {
       { label: "Longi-370W-Technical-Datasheet", url: pdflo }
     ],
     datasheetSpecs: [
-      { label: "Cell Type", value: "HPBC Monocrystalline (Back Contact)" },
-      { label: "Module Efficiency", value: "Up to 22.8%" },
-      { label: "Dimensions", value: "1722 x 1134 x 30 mm" },
-      { label: "Weight", value: "20.8 kg" },
-      { label: "Front Glass", value: "3.2mm tempered glass with ARC" },
-      { label: "Frame", value: "Anodized Aluminium Alloy" },
-      { label: "Junction Box", value: "IP68, 3 diodes" },
-      { label: "Temp. Coefficient", value: "-0.29% / °C" },
-      { label: "Cell Connection", value: "108 (6x18) cells" }
+      { label: "Solar Cell Technology", value: "HPBC / N-Type Mono" },
+      { label: "Module Efficiency", value: "Up to 24%+" },
+      { label: "Power Range", value: "Residential & Commercial Applications" },
+      { label: "Temperature Performance", value: "Excellent Heat Resistance" },
+      { label: "Panel Design", value: "Hi-MO Series & Dual-Glass Options" },
+      { label: "Warranty", value: "Long-Term Product & Performance Warranty" },
+      { label: "Installation Type", value: "Rooftop & Ground-Mount" }
     ],
     models: [
       { name: "Hi-MO 6 Explorer 420W", watts: "420W", efficiency: "21.5%", type: "HPBC Mono" },
@@ -1220,13 +1273,15 @@ export const productsData: Record<string, ProductData> = {
     featuredCard: {
       badge: "WORLD'S #1 MONO MANUFACTURER",
       heading: "Engineered for Maximum Solar Performance",
-      description: "LONGi Solar Hi-MO 6 Panels Australia bring HPBC back-contact cell technology to deliver a clean, grid-free look with outstanding dust tolerance and maximum energy efficiency for Australian homes and businesses.",
-      feature1Title: "Grid-Free Front for Maximum Light",
-      feature1Desc: "HPBC back-contact design moves all electrodes to the rear, capturing 100% of available sunlight with a clean modern appearance.",
-      feature2Title: "Outstanding Dust & Heat Tolerance",
-      feature2Desc: "Superior panel configuration retains higher efficiency in dusty Australian environments with a -0.29%/°C temperature coefficient.",
-      feature3Title: '',
-      feature3Desc: ''
+      description: "LONGi Solar Panels are developed using advanced photovoltaic engineering to maximise energy generation, improve durability, and support long-term rooftop solar efficiency.",
+      feature1Title: "Tier-1 Solar Manufacturing",
+      feature1Desc: "Globally recognised Tier-1 manufacturing standards ensure exceptional product quality, dependable performance, and long-term solar system reliability.",
+
+      feature2Title: "Advanced HPBC Cell Technology",
+      feature2Desc: "Innovative HPBC solar cell architecture improves energy conversion efficiency, increases rooftop power generation, and enhances overall system performance.",
+
+      feature3Title: "Superior Temperature Performance",
+      feature3Desc: "Optimised thermal characteristics help maintain stable solar energy production during Australia's high temperatures and demanding climate conditions."
     },
   },
 
@@ -1234,50 +1289,69 @@ export const productsData: Record<string, ProductData> = {
 
 
   // ==================== SOLAR INVERTERS ====================
+  // Done
   "goodwe-inverters": {
     slug: "goodwe-inverters",
-    name: "GoodWe Inverters",
+    name: "GoodWe Inverter Australia",
     category: "Solar Inverters",
     brand: "GoodWe",
-    tagline: "Smart Energy Innovator",
+    tagline: "GoodWe Solar Inverter — Smart Energy Solutions for Australian Solar Systems",
     subtitle: "The Engine of Your Solar System",
-    intro: "GoodWe is a leading global PV inverter and energy storage systems manufacturer. Listed on the Shanghai Stock Exchange, GoodWe has installed over 35 GW of solar inverters across 100+ countries, offering a wide range of residential, commercial, and hybrid energy solutions.",
+    intro: "GoodWe Inverter Australia solutions are among the most trusted choices for residential and commercial solar installations across the country. Known for advanced hybrid inverter technology, intelligent energy management, and excellent long-term reliability, GoodWe Solar Inverters are designed to maximise solar generation, battery storage efficiency, and energy independence for Australian homes and businesses.\n\nAs a globally recognised inverter manufacturer, GoodWe combines premium engineering, smart monitoring systems, and strong Australian support to deliver efficient and future-ready renewable energy solutions.",
     whyChoose: [
-      { title: "Global Top-10 Inverter Manufacturer", desc: "Global top-10 inverter manufacturer with proven reliability across 35 GW+ installations in 100+ countries." },
-      { title: "Smart Hybrid Inverter Range", desc: "Extensive range of hybrid and grid-tied smart inverters for battery-ready, future-proof solar energy systems." },
-      { title: "SEMS Monitoring Portal", desc: "Integrated smart monitoring platform (SEMS portal) for real-time tracking of solar, battery, and home consumption." },
-      { title: "High Efficiency Hybrid Performance", desc: "High charging/discharging efficiency for hybrid battery setups, maximizing self-consumption and solar savings." },
-      { title: "Australian Local Support", desc: "Excellent local support and service offices in Australia ensuring fast warranty resolution and technical assistance." }
+      {
+        title: "Advanced Hybrid Inverter Technology",
+        desc: "GoodWe Solar Inverters provide seamless integration between solar panels, battery storage systems, and grid power for smarter energy management."
+      },
+      {
+        title: "High-Efficiency Energy Conversion",
+        desc: "Advanced inverter engineering maximises solar energy generation, improves system efficiency, and supports higher renewable energy utilisation."
+      },
+      {
+        title: "Smart SEMS Monitoring Platform",
+        desc: "The GoodWe SEMS Portal enables real-time monitoring of solar production, battery performance, and household energy consumption from any device."
+      },
+      {
+        title: "Excellent Australian Support Network",
+        desc: "GoodWe Inverter Australia solutions are supported by experienced technical teams, extensive installer networks, and dependable after-sales service."
+      },
+      {
+        title: "Reliable Residential & Commercial Performance",
+        desc: "Widely trusted for residential and commercial solar projects requiring efficient energy management, battery compatibility, and long-term inverter reliability."
+      }
     ],
     rangeTitle: "GoodWe ES & MS Series Hybrid Inverters",
-    rangeIntro: "GoodWe's hybrid range is highly regarded for its seamless battery integration, UPS-class backup capabilities, and smart home energy management systems.",
+    rangeIntro: "The GoodWe ES & MS Series combines premium hybrid inverter technology with intelligent battery management and efficient solar energy conversion for Australian homes.",
     rangeSpecs: [
-      "Up to 98.2% maximum efficiency for efficient power conversion.",
-      "UPS-level backup switching in under 10ms for critical loads.",
-      "IP65 water and dust protection for outdoor installation.",
-      "Fanless design for quiet indoor or outdoor operation.",
-      "Dual-MPPT configurations to handle multiple roof orientations."
+      "High conversion efficiency of up to 98.2% maximises rooftop solar energy generation and system performance.",
+      "UPS-level backup switching provides rapid power transition during outages for enhanced energy security.",
+      "IP65-rated weather protection supports reliable operation in demanding Australian outdoor environments.",
+      "Quiet fanless cooling design reduces operating noise while improving long-term inverter reliability.",
+      "Dual MPPT technology optimises solar energy harvest across multiple roof orientations and installation layouts."
     ],
-    betterTitle: "What Makes GoodWe Inverters Better?",
+    betterTitle: "What Makes GoodWe Solar Inverters Better?",
     betterList: [
-      "SEMS Monitoring Portal: A comprehensive dashboard that tracks generation, storage, and home consumption in real-time.",
-      "Exceptional Battery Compatibility: Works seamlessly with BYD, LG, and GoodWe's own Lynx battery storage systems.",
-      "Active Temperature Control: Advanced thermal management protects internal electronics, prolonging inverter life."
+      "SEMS Monitoring Portal: Advanced smart monitoring provides real-time visibility into solar generation, battery performance, and household energy consumption.",
+      "Exceptional Battery Compatibility: Compatible with a wide range of lithium battery storage systems for flexible and future-ready energy solutions.",
+      "Active Temperature Control: Advanced thermal management technology enhances inverter stability, operating efficiency, and long-term system reliability."
     ],
     installation: [
-      "Compact design and light weight allow simple single-person wall mounting.",
-      "Easy commissioning via the SolarGo mobile application.",
-      "Fully compliant with Australian AS/NZS 4777.2 grid standards."
+      "Compatible with major solar panel brands including Trina Solar, LONGi, Jinko, Canadian Solar, and REC.",
+      "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
     ],
+
     bestFor: [
-      "Homeowners planning to add battery storage now or in the near future.",
-      "Properties requiring backup power during blackouts.",
-      "Budget-conscious buyers seeking premium smart features."
+      "Residential hybrid solar systems requiring battery storage, backup power, and advanced energy management.",
+      "Commercial solar installations seeking reliable energy generation and reduced electricity operating costs.",
+      "Smart energy homes wanting intelligent monitoring, automation, and efficient battery integration.",
+
     ],
+
     warranty: [
-      "5 to 10-Year Warranty with options to extend.",
-      "Dedicated Australian service center for fast swap-outs and troubleshooting.",
-      "Local field technicians available for installer assistance."
+      "10-Year Product Warranty providing dependable long-term protection for residential and commercial solar systems.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Ongoing software updates and smart monitoring platform support to enhance long-term inverter reliability and performance."
     ],
     recommendation: "GoodWe hybrid inverters are highly recommended for homeowners who want a smart, quiet, battery-ready solar system with robust backup power capabilities.",
     logoText: "GOODWE",
@@ -1285,20 +1359,22 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: inverter1,
+    pdfUrls: [
+      { label: "GW_Lynx-F-G2-Series_Datasheet-AU", url: pdfgo },
+      { label: "GW_EH_Datasheet-AU", url: pdfgo1 },
+    ],
     productImages: [
       go1, go2
     ],
 
     datasheetSpecs: [
-      { label: "Max Efficiency", value: "98.2%" },
-      { label: "Euro Efficiency", value: "97.5%" },
-      { label: "MPPT Tracker Number", value: "2" },
-      { label: "Max DC Input Power", value: "6500W" },
-      { label: "Nominal AC Power", value: "5000W" },
-      { label: "Backup Transition Time", value: "< 10ms (UPS Class)" },
-      { label: "Cooling System", value: "Natural Convection (Fanless)" },
-      { label: "Dimensions", value: "516 x 440 x 184 mm" },
-      { label: "Weight", value: "28.0 kg" }
+      { label: "Inverter Type", value: "Hybrid & Grid-Tied" },
+      { label: "Maximum Efficiency", value: "Up to 98.2%" },
+      { label: "Battery Compatibility", value: "Lithium Battery Systems" },
+      { label: "Monitoring Platform", value: "GoodWe SEMS Portal" },
+      { label: "Installation Type", value: "Residential & Commercial" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Compliance", value: "AS/NZS 4777.2 Certified" }
     ],
     models: [
       { name: "GW5000-ES-20 (5kW)", watts: "5000W", efficiency: "98.2%", type: "Hybrid Inverter" },
@@ -1306,60 +1382,81 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "SMART HYBRID INVERTER",
-      heading: "Engineered for Maximum Energy Efficiency",
-      description: "GoodWe Inverters Australia deliver smart hybrid energy management with UPS-class backup switching, seamless battery integration, and real-time SEMS monitoring for residential and commercial solar systems.",
-      feature1Title: "UPS-Class Backup Switching",
-      feature1Desc: "Switches to battery backup in under 10ms during power outages, keeping essential home appliances running 24/7.",
-      feature2Title: "Smart SEMS Monitoring",
-      feature2Desc: "Comprehensive real-time tracking of solar generation, battery storage, and home energy consumption via the SEMS portal.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Solar Performance",
+      description: "GoodWe Solar Inverters are developed using advanced smart energy technology to improve solar generation efficiency, battery integration, and long-term renewable energy management.",
+      feature1Title: "Advanced Hybrid Inverter Systems",
+      feature1Desc: "Supports intelligent solar energy generation, battery charging, energy storage management, and backup power functionality for modern energy systems.",
+
+      feature2Title: "Excellent Solar Conversion Efficiency",
+      feature2Desc: "High inverter efficiency helps maximise rooftop solar production, improve energy utilisation, and increase long-term electricity savings.",
+
+      feature3Title: "Integrated Smart Monitoring",
+      feature3Desc: "The SEMS monitoring platform provides real-time performance tracking, system diagnostics, and detailed energy management insights."
     },
   },
+  // DOne
   "sungrow-inverters": {
     slug: "sungrow-inverters",
-    name: "Sungrow Inverters",
+    name: "Sungrow Inverter Australia",
     category: "Solar Inverters",
     brand: "Sungrow",
-    tagline: "Clean Power for All",
+    tagline: "Sungrow Solar Inverter — Advanced Smart Energy Solutions for Australian Homes",
     subtitle: "The Most Bankable Inverter Brand Worldwide",
-    intro: "Sungrow Power Supply is the world's most bankable inverter brand with over 405 GW installed worldwide. Founded in 1997, Sungrow is a leader in solar research and development, offering a comprehensive product portfolio of PV inverters and energy storage systems for residential, commercial, and utility applications.",
+    intro: "Sungrow Inverter Australia solutions are among the most trusted and widely installed solar inverter systems for residential and commercial solar projects across the country. As a global leader in photovoltaic inverter technology, Sungrow Solar Inverter systems deliver exceptional energy conversion efficiency, advanced hybrid battery integration, and reliable long-term renewable energy performance for Australian homes and businesses.\n\nDesigned for Australian climate conditions, Sungrow inverters combine intelligent energy management, high-efficiency MPPT technology, and premium build quality to maximise rooftop solar generation, reduce electricity bills, and improve energy independence.",
     whyChoose: [
-      { title: "World's Most Bankable Inverter", desc: "The world's most bankable inverter brand with a 25+ year track record and 405 GW installed worldwide." },
-      { title: "98.4% Peak Conversion Efficiency", desc: "Extremely high conversion efficiency up to 98.4%, minimizing energy loss for maximum solar savings." },
-      { title: "Sungrow Ecosystem Integration", desc: "Seamless integration with Sungrow hybrid batteries and iSolarCloud smart monitoring app for complete energy control." },
-      { title: "IP66 All-Weather Protection", desc: "Robust build quality with IP66 protection rated against Australia's most extreme weather conditions." },
-      { title: "Outstanding Local Support", desc: "Outstanding local support and post-sale service team in Australia with Sydney-based headquarters." }
+      {
+        title: "Global Solar Technology Leader",
+        desc: "Sungrow is one of the world's leading renewable energy manufacturers, recognised globally for advanced inverter technology and extensive solar installations."
+      },
+      {
+        title: "High-Efficiency Solar Conversion",
+        desc: "Sungrow Solar Inverters deliver exceptional energy conversion efficiency, helping maximise rooftop solar generation and long-term electricity savings."
+      },
+      {
+        title: "Advanced Smart Monitoring Platform",
+        desc: "The iSolarCloud monitoring platform provides real-time visibility into solar production, battery performance, and household energy consumption."
+      },
+      {
+        title: "Excellent Australian Climate Reliability",
+        desc: "Engineered for stable operation in Australia's harsh climate, including extreme temperatures, strong sunlight, and demanding outdoor conditions."
+      },
+      {
+        title: "Trusted Residential & Commercial Solution",
+        desc: "Widely installed across Australian homes, businesses, and large-scale renewable energy projects requiring reliable and efficient energy management."
+      }
     ],
     rangeTitle: "Sungrow SG & SH Series Smart Inverters",
-    rangeIntro: "Sungrow's SG (single-phase grid-tied) and SH (hybrid) series are the benchmark for reliability and performance in the Australian solar market.",
+    rangeIntro: "The Sungrow SG (string inverter) and SH (hybrid inverter) Series combine premium inverter engineering with intelligent battery management and advanced solar energy conversion for Australian residential and commercial solar systems.",
     rangeSpecs: [
-      "Maximum efficiency up to 98.4% with Euro-efficiency of 97.5%.",
-      "Built-in PID recovery function to protect solar panels over time.",
-      "IP66 weatherproofing allows worry-free outdoor placement.",
-      "Smart curve scanning for tracking down shading issues.",
-      "Integrated DC isolator and Surge Protection Devices (SPD)."
+      "High conversion efficiency of up to 98.4% helps maximise rooftop solar energy production and system performance.",
+      "Fast backup switching supports reliable emergency power supply during grid outages and power interruptions.",
+      "IP65/IP66-rated weather protection ensures dependable operation in demanding Australian outdoor environments.",
+      "Smart curve scanning technology enhances system diagnostics, fault detection, and solar performance optimisation.",
+      "Integrated surge protection and advanced safety features improve long-term inverter reliability and operational security."
     ],
-    betterTitle: "What Makes Sungrow Inverters Better?",
+    betterTitle: "What Makes Sungrow Solar Inverters Better?",
     betterList: [
-      "iSolarCloud App: One of the most intuitive and robust monitoring apps on the market, tracking production and consumption details.",
-      "Built-in PID Recovery: Automatically reverses PID effects in panels overnight, restoring lost solar panel efficiency.",
-      "Quiet Operation: Fanless natural cooling design ensures minimal noise emission, ideal for home environments."
+      "iSolarCloud Smart Monitoring: Advanced monitoring platform provides real-time visibility into solar generation, battery performance, and household energy consumption.",
+      "Advanced Hybrid Battery Integration: Supports seamless battery storage integration for improved energy independence, self-consumption, and backup power capability.",
+      "Intelligent Thermal Management: Advanced cooling and thermal control systems enhance inverter efficiency, reliability, and long-term operational stability."
     ],
     installation: [
-      "Plug-and-play connectors for swift and clean electrical wiring.",
-      "Lightweight casing with brackets included for straightforward installation.",
-      "Fully AS/NZS 4777.2 compliant with built-in DRM (Demand Response Mode)."
+      "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
+      "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
     ],
+
     bestFor: [
-      "Homeowners seeking the highest standard of reliability and performance.",
-      "Installations exposed to extreme weather requiring high-grade IP66 casing.",
-      "Those who want a cohesive Sungrow ecosystem (inverter + Sungrow SBR battery)."
+      "Residential hybrid solar systems requiring battery storage, backup power, and intelligent energy management.",
+      "Commercial solar installations seeking reliable renewable energy generation and lower electricity operating costs.",
+      "Smart energy homes requiring advanced solar monitoring and efficient battery integration.",
+
     ],
+
     warranty: [
-      "10-Year Warranty on all residential string and hybrid inverters in Australia.",
-      "Local service headquarters in Sydney ensuring fast turnaround on parts.",
-      "Highly responsive hotline for tech support."
+      "10-Year Product Warranty providing dependable long-term protection for residential and commercial solar systems.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous software updates and advanced monitoring platform support to enhance long-term inverter performance and reliability."
     ],
     recommendation: "Sungrow inverters are the gold standard for Australian solar installations, combining premium performance, long warranties, and outstanding app monitoring.",
     logoText: "SUNGROW",
@@ -1374,15 +1471,13 @@ export const productsData: Record<string, ProductData> = {
       { label: "sungrow-5kw-three-phase", url: pdfsg2 },
     ],
     datasheetSpecs: [
-      { label: "Max Efficiency", value: "98.4%" },
-      { label: "Euro Efficiency", value: "97.9%" },
-      { label: "Protection Rating", value: "IP66 (Outdoor Approved)" },
-      { label: "MPPT Number", value: "2 / 3 depending on model" },
-      { label: "Built-in Protection", value: "PID Recovery & DC Isolator" },
-      { label: "Noise Emission", value: "< 25 dB (Ultra-quiet)" },
-      { label: "Cooling Method", value: "Natural Cooling" },
-      { label: "Communications", value: "WLAN / Ethernet / RS485" },
-      { label: "Weight", value: "18.5 kg" }
+      { label: "Inverter Type", value: "Hybrid & String Inverter" },
+      { label: "Maximum Efficiency", value: "Up to 98.4%" },
+      { label: "Battery Compatibility", value: "Lithium Battery Systems" },
+      { label: "Monitoring Platform", value: "iSolarCloud Smart Monitoring" },
+      { label: "Installation Type", value: "Residential & Commercial" },
+      { label: "Protection Rating", value: "IP65 / IP66 Outdoor Rated" },
+      { label: "Compliance", value: "AS/NZS 4777.2 Certified" }
     ],
     models: [
       { name: "SG5.0RS (5kW)", watts: "5000W", efficiency: "98.4%", type: "Grid-Tied String" },
@@ -1391,45 +1486,63 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "WORLD'S #1 INVERTER BRAND",
-      heading: "Engineered for Maximum Energy Efficiency",
-      description: "Sungrow Inverters Australia set the global gold standard with 405 GW+ installed worldwide, delivering 98.4% peak efficiency, IP66 weatherproofing, and seamless battery integration for Australian homes and businesses.",
-      feature1Title: "IP66 Outdoor Weatherproofing",
-      feature1Desc: "Built-in PID recovery and Surge Protection Device (SPD) with IP66 housing rated for Australia's harshest outdoor conditions.",
-      feature2Title: "iSolarCloud Monitoring App",
-      feature2Desc: "One of the most powerful solar monitoring apps, tracking generation, consumption, and battery performance in real-time.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Sungrow Solar Inverter systems are developed using advanced smart energy technology to improve solar generation efficiency, battery integration, and long-term renewable energy management.",
+      feature1Title: "Advanced Hybrid Inverter Technology",
+      feature1Desc: "Supports seamless solar energy generation, battery charging, energy storage integration, and backup power functionality for modern energy systems.",
+
+      feature2Title: "High MPPT Conversion Efficiency",
+      feature2Desc: "Optimised Maximum Power Point Tracking (MPPT) technology maximises solar energy harvest across varying sunlight and weather conditions.",
+
+      feature3Title: "Integrated Smart Energy Monitoring",
+      feature3Desc: "The iSolarCloud platform provides real-time performance monitoring, system diagnostics, and intelligent energy management insights."
     },
   },
+  // done 
   "growatt-inverters": {
     slug: "growatt-inverters",
-    name: "Growatt Inverters",
+    name: "Growatt Inverter Australia",
     category: "Solar Inverters",
     brand: "Growatt",
-    tagline: "Global Leader in Smart Energy Solutions",
+    tagline: "Growatt Solar Inverter — Smart, Efficient & Reliable Solar Energy Solutions",
     subtitle: "Empowering Homes Worldwide",
-    intro: "Growatt is a global leader in smart energy solutions, specializing in residential, commercial, and utility-scale PV inverters, energy storage systems, and smart energy management. Founded in 2011, Growatt is the world's No. 1 residential inverter supplier, known for its cost-effective and highly reliable products.",
+    intro: "Growatt Inverter Australia systems are among the most popular choices for residential and commercial solar installations thanks to their smart energy management, high-efficiency performance, and excellent value for money. Designed for Australian homes and businesses, Growatt Solar Inverter solutions combine advanced hybrid inverter technology, intelligent monitoring systems, and reliable battery integration to maximise rooftop solar generation and long-term electricity savings.\n\nAs one of the world’s fastest-growing inverter manufacturers, Growatt delivers innovative renewable energy technology engineered for Australian climate conditions and modern smart energy systems.",
     whyChoose: [
-      { title: "World's No. 1 Residential Inverter", desc: "World's No. 1 residential PV inverter supplier with a globally trusted reputation for quality and reliability." },
-      { title: "OLED Display & Touch Interface", desc: "Sleek, modern design with OLED display and touch buttons for direct system status checking without a phone." },
-      { title: "Competitive Pricing with Premium Features", desc: "Very competitive pricing with high-end features, making premium solar technology accessible to all homeowners." },
-      { title: "Wide MPPT Voltage Range", desc: "Wide MPPT voltage range for maximum solar generation, capturing more energy across varying light conditions." },
-      { title: "Australian Local Service Team", desc: "Excellent local service and warranty team in Australia with a Melbourne service center for rapid assistance." }
+      {
+        title: "Smart Hybrid Inverter Technology",
+        desc: "Growatt Solar Inverters support seamless solar generation, battery charging, energy storage integration, and backup power functionality for smarter energy management."
+      },
+      {
+        title: "Excellent Value & Performance",
+        desc: "Delivering premium energy conversion efficiency and dependable solar performance at competitive pricing for residential and commercial applications."
+      },
+      {
+        title: "Intelligent Monitoring Platform",
+        desc: "The Growatt ShinePhone App provides real-time visibility into solar production, battery performance, and household energy consumption from anywhere."
+      },
+      {
+        title: "Reliable Australian Climate Durability",
+        desc: "Engineered to operate efficiently in Australia's demanding climate, including high temperatures, strong sunlight, and challenging outdoor environments."
+      },
+      {
+        title: "Trusted Residential & Commercial Solution",
+        desc: "Widely installed across Australia for homes and businesses seeking reliable renewable energy generation, battery compatibility, and long-term inverter performance."
+      }
     ],
     rangeTitle: "Growatt MIN TL-X & SPH Series Inverters",
-    rangeIntro: "The MIN TL-X series is Growatt's flagship single-phase residential inverter, featuring a compact design, excellent cooling, and user-friendly monitoring interfaces.",
+    rangeIntro: "The Growatt MIN TL-X and SPH Series combine premium inverter engineering with advanced hybrid energy management designed for Australian residential solar systems.",
     rangeSpecs: [
-      "98.4% maximum efficiency for optimal energy conversion.",
-      "OLED display with touch key for easy manual checking.",
-      "Integrated Type II DC/AC Surge Protection.",
-      "Fanless design with natural convection cooling for low noise.",
-      "Support for export limitation and consumption monitoring."
+      "High conversion efficiency of up to 98.4% helps maximise rooftop solar energy production and overall system performance.",
+      "Advanced MPPT technology optimises solar energy harvest across varying sunlight conditions and multiple roof orientations.",
+      "Intelligent battery integration supports seamless compatibility with lithium energy storage systems for enhanced energy management.",
+      "Quiet fanless cooling design uses natural convection to reduce operating noise and improve long-term inverter reliability.",
+      "Smart export control and energy monitoring features help optimise self-consumption, solar usage, and grid export efficiency."
     ],
     betterTitle: "What Makes Growatt Inverters Better?",
     betterList: [
-      "User-friendly OLED Display: Allows homeowners to easily check system status directly on the unit without a phone.",
-      "ShinePhone App: Easy-to-use application with real-time remote monitoring and remote service parameters configuration.",
-      "Affordable Reliability: Provides top-tier build quality and performance at a highly accessible price point."
+      "User-Friendly OLED Display: Simple inverter interface enables homeowners and installers to quickly monitor system status, performance, and energy generation.",
+      "ShinePhone Smart Monitoring App: Advanced mobile monitoring provides real-time visibility into solar production, battery performance, and household energy consumption.",
+      "Affordable Long-Term Reliability: Growatt Solar Inverters deliver dependable renewable energy performance, strong efficiency, and excellent value for Australian solar buyers."
     ],
     installation: [
       "Compact size and light weight make it one of the easiest units to install.",
@@ -1459,15 +1572,13 @@ export const productsData: Record<string, ProductData> = {
       { label: "growatt-3kW-single-phase-Inverter", url: pdfgr2 }
     ],
     datasheetSpecs: [
-      { label: "Max Efficiency", value: "98.4%" },
-      { label: "Display Screen", value: "OLED display with touch key" },
-      { label: "MPPT Trackers", value: "2" },
-      { label: "Max Input Current", value: "13.5A per string" },
-      { label: "Cooling System", value: "Natural convection (no fans)" },
-      { label: "DC / AC surge protection", value: "Type II" },
-      { label: "Dimensions", value: "375 x 350 x 160 mm" },
-      { label: "Weight", value: "10.8 kg" },
-      { label: "Grid Standards", value: "AS/NZS 4777.2 compliant" }
+      { label: "Inverter Type", value: "Hybrid & String Inverter" },
+      { label: "Maximum Efficiency", value: "Up to 98.4%" },
+      { label: "Battery Compatibility", value: "Lithium Battery Systems" },
+      { label: "Monitoring Platform", value: "Growatt ShinePhone App" },
+      { label: "Installation Type", value: "Residential & Commercial" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Compliance", value: "AS/NZS 4777.2 Certified" }
     ],
     models: [
       { name: "MIN 5000TL-X (5kW)", watts: "5000W", efficiency: "98.4%", type: "Single Phase String" },
@@ -1476,60 +1587,80 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "WORLD'S #1 RESIDENTIAL INVERTER",
-      heading: "Engineered for Maximum Energy Efficiency",
-      description: "Growatt Inverters Australia combine 98.4% peak efficiency, an OLED display, and the ShinePhone smart monitoring app to deliver cost-effective, premium solar energy management for Australian homes.",
-      feature1Title: "OLED Display & Touch Interface",
-      feature1Desc: "Check system status directly on the inverter's built-in OLED screen without needing a smartphone or app.",
-      feature2Title: "Competitive Pricing with Premium Features",
-      feature2Desc: "World's No. 1 residential inverter supplier delivers top-tier reliability, fanless cooling, and wide MPPT range at an accessible price.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Growatt Solar Inverter systems are developed using advanced smart energy technology to improve solar efficiency, battery integration, and long-term renewable energy management.",
+      feature1Title: "Advanced Hybrid Energy Systems",
+      feature1Desc: "Supports intelligent solar generation, battery storage integration, and emergency backup functionality for efficient renewable energy management.",
+
+      feature2Title: "High Solar Conversion Efficiency",
+      feature2Desc: "Optimised inverter technology maximises rooftop solar energy production, improves system efficiency, and increases electricity savings.",
+
+      feature3Title: "Smart Real-Time Monitoring",
+      feature3Desc: "The Growatt ShinePhone platform provides live performance monitoring, system diagnostics, and intelligent energy management insights."
     },
   },
+  // done
   "solis-inverters": {
     slug: "solis-inverters",
-    name: "Solis Inverters",
+    name: "Solis Inverter Australia",
     category: "Solar Inverters",
     brand: "Solis",
-    tagline: "Innovative String Inverter Specialist",
+    tagline: "Solis Solar Inverter — Reliable Smart String Inverter Solutions for Australian Homes",
     subtitle: "Precision Engineering for Solar Power",
-    intro: "Solis (Ginlong Technologies) is one of the oldest and largest manufacturers of solar string inverters, established in 2005. Solis specializes in string inverter technology, offering high-efficiency, reliable, and smart solutions for residential, commercial, and utility-scale energy projects.",
+    intro: "Solis Inverter Australia systems are trusted by homeowners and solar installers for delivering reliable solar energy conversion, advanced safety technology, and excellent long-term performance. As one of the world’s leading string inverter manufacturers, Solis Solar Inverter solutions combine high conversion efficiency, smart monitoring, and durable engineering designed specifically for Australian climate conditions.\n\nIdeal for residential and commercial solar installations, Solis inverters provide efficient rooftop solar management, stable energy generation, and seamless compatibility with modern solar panel and battery systems.",
     whyChoose: [
-      { title: "18+ Years Inverter Experience", desc: "One of the oldest string inverter manufacturers with 18+ years of proven performance and engineering excellence." },
-      { title: "High Reliability & Efficiency", desc: "High reliability with low failure rates and up to 98.1% high conversion efficiency for maximum solar returns." },
-      { title: "Multi-MPPT Complex Roof Design", desc: "Excellent multi-MPPT designs for complex roof layouts with multiple shading angles and orientations." },
-      { title: "Advanced AFCI Safety", desc: "Built-in leakage current protection and AFCI (Arc Fault Circuit Interrupter) for next-level fire risk prevention." },
-      { title: "Dedicated Australian Support", desc: "Dedicated local support network in Australia with a Sydney office for parts, repair, and rapid replacements." }
+      {
+        title: "Trusted Global String Inverter Brand",
+        desc: "Solis Solar Inverters are manufactured by one of the world's leading inverter specialists, recognised globally for reliable renewable energy technology and innovation."
+      },
+      {
+        title: "Excellent Multi-MPPT Efficiency",
+        desc: "Advanced MPPT tracking technology optimises rooftop solar generation across multiple roof orientations, shading conditions, and varying sunlight levels."
+      },
+      {
+        title: "Advanced Safety Protection",
+        desc: "Built-in AFCI safety technology and intelligent protection systems enhance electrical safety and help reduce operational risks."
+      },
+      {
+        title: "Strong Australian Climate Performance",
+        desc: "Engineered for reliable operation in Australia's harsh climate, including extreme temperatures, strong sunlight, and demanding outdoor environments."
+      },
+      {
+        title: "Smart Monitoring & Energy Management",
+        desc: "The SolisCloud platform provides real-time monitoring, inverter diagnostics, and intelligent energy management insights for system optimisation."
+      }
     ],
     rangeTitle: "Solis S5 & S6 Series Residential Inverters",
-    rangeIntro: "Solis S6 string and hybrid inverters feature advanced safety systems, wider voltage windows, and smart fan cooling for hot climates.",
+    rangeIntro: "The Solis S5 and S6 Series combine premium inverter engineering with advanced smart energy management for Australian residential and commercial solar systems.",
     rangeSpecs: [
-      "Up to 98.1% efficiency to minimize energy loss.",
-      "AFCI protection actively mitigates DC arc fault risks on the roof.",
-      "Wide input voltage range to capture early morning and late evening sun.",
-      "IP66 enclosure for high durability in dusty and wet conditions.",
-      "Multiple MPPTs (up to 3 or 4 on larger models) for maximum flexibility."
+      "High conversion efficiency of up to 98.7% maximises rooftop solar energy generation and overall system performance.",
+      "Advanced multi-MPPT technology improves energy production across different roof orientations, shading conditions, and installation layouts.",
+      "Built-in AFCI protection enhances electrical safety by detecting arc faults and helping prevent potential fire hazards.",
+      "Smart cooling technology and optimised thermal management support reliable operation during high Australian temperatures.",
+      "Durable inverter construction delivers strong long-term reliability and dependable renewable energy performance."
     ],
-    betterTitle: "What Makes Solis Inverters Better?",
+    betterTitle: "What Makes Solis Solar Inverters Better?",
     betterList: [
-      "Advanced AFCI safety: Scans for DC arc faults and shuts down the system automatically to prevent fire risks.",
-      "Excellent Multi-MPPT tracking: Allows for multiple roof angles and orientations, optimizing generation on complex roofs.",
-      "Highly Durable Components: Built using industrial-grade materials designed for long-term outdoor installation."
+      "Advanced AFCI Safety Technology: Built-in safety systems detect electrical arc faults early, enhancing solar system protection and operational safety.",
+      "Excellent Multi-MPPT Tracking: Optimised solar tracking technology maximises energy generation across complex roof layouts, orientations, and shading conditions.",
+      "Highly Durable Components: Premium inverter engineering improves long-term reliability, weather resistance, and stable renewable energy performance."
     ],
     installation: [
-      "Simple installation process with detailed step-by-step guides.",
-      "Smart commissioning tool via the SolisCloud app.",
-      "Fully compliant with AS/NZS 4777.2 grid standard requirements."
+      "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
+      "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
     ],
+
     bestFor: [
-      "Properties with complex roof structures and multiple shading angles.",
-      "Safety-conscious homeowners seeking advanced arc-fault protection.",
-      "Commercial solar arrays needing stable string inverter technology."
+      "Residential rooftop solar systems seeking efficient, reliable, and high-performance inverter solutions.",
+      "Commercial solar installations requiring dependable renewable energy generation and reduced electricity operating costs.",
+      "Smart energy homes wanting advanced solar monitoring and intelligent energy management capabilities.",
     ],
+
     warranty: [
-      "5 to 10-Year product warranty options in Australia.",
-      "Sydney-based local support office for parts, repair, and replacements.",
-      "Direct technical helpline for immediate troubleshooting."
+      "10-Year Product Warranty providing dependable long-term protection for residential and commercial solar installations.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous software updates and monitoring platform support to enhance long-term inverter reliability and energy performance."
     ],
     recommendation: "Solis inverters are an excellent choice for complex roof layouts, providing top-tier safety features and multi-MPPT capabilities at a very competitive price.",
     logoText: "solis",
@@ -1548,15 +1679,13 @@ export const productsData: Record<string, ProductData> = {
       { label: "solis-three-phase-5-20kW", url: pdfsolis3 },
     ],
     datasheetSpecs: [
-      { label: "Max Efficiency", value: "98.1%" },
-      { label: "Safety Protections", value: "Integrated AFCI arc fault protection" },
-      { label: "MPPT Trackers", value: "2" },
-      { label: "Max Input Current", value: "16A" },
-      { label: "Protection Rating", value: "IP66" },
-      { label: "Export Control", value: "Integrated export limitation system" },
-      { label: "Backup Output", value: "5kW continuous backup capability" },
-      { label: "Dimensions", value: "410 x 515 x 180 mm" },
-      { label: "Weight", value: "18.3 kg" }
+      { label: "Inverter Type", value: "String & Hybrid Inverter" },
+      { label: "Maximum Efficiency", value: "Up to 98.7%" },
+      { label: "Battery Compatibility", value: "Lithium Battery Systems" },
+      { label: "Monitoring Platform", value: "SolisCloud Monitoring" },
+      { label: "Installation Type", value: "Residential & Commercial" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Compliance", value: "AS/NZS 4777.2 Certified" }
     ],
     models: [
       { name: "S6-GR1P5K (5kW)", watts: "5000W", efficiency: "97.7%", type: "Grid-Tied String" },
@@ -1564,60 +1693,81 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "AFCI SAFETY TECHNOLOGY",
-      heading: "Engineered for Maximum Energy Efficiency",
-      description: "Solis Inverters Australia deliver 18+ years of string inverter expertise with advanced AFCI arc-fault protection, multi-MPPT flexibility, and IP66 weatherproofing for complex Australian residential and commercial rooftops.",
-      feature1Title: "Advanced AFCI Arc-Fault Protection",
-      feature1Desc: "Automatically detects and shuts down DC arc faults before they become a fire hazard, protecting your home and investment.",
-      feature2Title: "Multi-MPPT Complex Roof Flexibility",
-      feature2Desc: "Up to 4 independent MPPT trackers handle multiple roof angles, shading conditions, and orientations for maximum generation.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Solar Performance",
+      description: "Solis Solar Inverter systems are designed using advanced photovoltaic engineering to improve solar conversion efficiency, system reliability, and long-term renewable energy generation.",
+      feature1Title: "High Conversion Efficiency",
+      feature1Desc: "Optimised inverter architecture maximises rooftop solar energy production, improves system performance, and increases long-term electricity savings.",
+
+      feature2Title: "Intelligent Multi-MPPT Technology",
+      feature2Desc: "Advanced Maximum Power Point Tracking technology optimises solar generation across complex roof layouts, shading conditions, and multiple panel orientations.",
+
+      feature3Title: "Advanced AFCI Safety Protection",
+      feature3Desc: "Built-in Arc Fault Circuit Interruption (AFCI) technology enhances electrical safety, detects potential faults, and helps reduce fire risks."
     },
   },
+  // Done 
   "saj-inverters": {
     slug: "saj-inverters",
-    name: "SAJ Inverters",
+    name: "SAJ Inverter Australia",
     category: "Solar Inverters",
     brand: "SAJ",
-    tagline: "Smart Home Energy Specialist",
+    tagline: "SAJ Solar Inverter — Smart Home Energy Solutions for Australian Solar Systems",
     subtitle: "Smart Energy, Smart Life",
-    intro: "SAJ Electric is a state-level high-tech enterprise specializing in motor drive, renewable energy conversion, transmission, and storage solutions. SAJ focuses on providing smart energy storage and generation systems for residential homes, focusing on smart app integration and sleek, compact designs.",
+    intro: "SAJ Inverter Australia systems are designed for homeowners seeking intelligent energy management, sleek inverter design, and reliable solar performance. Known for advanced hybrid inverter technology, smart app integration, and efficient battery compatibility, SAJ Solar Inverter solutions provide modern renewable energy systems tailored for Australian homes and climate conditions.\n\nAs a fast-growing smart energy brand, SAJ combines premium photovoltaic engineering, quiet inverter operation, and intelligent energy monitoring to help Australian homeowners maximise rooftop solar generation, reduce electricity bills, and improve energy independence.",
     whyChoose: [
-      { title: "Smart Home Energy Ecosystem", desc: "Focus on smart home ecosystems and integrated energy management via the eSolar portal and app automation." },
-      { title: "Sleek Modern Appliance Design", desc: "Sleek and compact designs that fit modern home aesthetics, looking more like furniture than electrical equipment." },
-      { title: "High Efficiency & Silent Operation", desc: "High efficiency with advanced thermal dissipation running under 25 dB for completely silent home operation." },
-      { title: "eSolar Smart Monitoring App", desc: "Intuitive monitoring app (eSolar Portal) with smart automation features for energy shifting and consumption analysis." },
-      { title: "Growing Australian Team", desc: "Growing Australian team providing reliable local warranty support, fast claims processing, and technical assistance." }
+      {
+        title: "Smart Home Energy Technology",
+        desc: "SAJ Solar Inverter systems combine solar generation, battery storage, and intelligent home energy management into a seamless smart energy platform."
+      },
+      {
+        title: "Elegant Modern Inverter Design",
+        desc: "Compact, sleek, and modern inverter styling makes SAJ systems ideal for contemporary Australian homes and smart energy installations."
+      },
+      {
+        title: "Advanced Battery Compatibility",
+        desc: "SAJ Inverter Australia solutions support efficient lithium battery integration for enhanced energy storage, backup power, and self-consumption."
+      },
+      {
+        title: "Intelligent eSolar Monitoring Platform",
+        desc: "The SAJ eSolar Portal provides real-time monitoring of solar generation, battery performance, and household energy consumption."
+      },
+      {
+        title: "Reliable Australian Climate Performance",
+        desc: "Engineered for dependable operation in Australia's demanding climate conditions, including high temperatures and outdoor environmental exposure."
+      }
     ],
     rangeTitle: "SAJ R5 & H2 Series Hybrid Inverters",
-    rangeIntro: "The SAJ R5 string and H2 hybrid inverters are characterized by their compact, fanless designs and high charging and discharging capabilities.",
+    rangeIntro: "The SAJ R5 and H2 Series combine premium hybrid inverter engineering with intelligent battery management and smart renewable energy control for Australian homes.",
     rangeSpecs: [
-      "Max efficiency of 98.2% for high solar conversion rates.",
-      "Fanless natural cooling for silent home operation.",
-      "Support for up to 150% DC oversizing to maximize winter yields.",
-      "IP65 protection for safe indoor or outdoor wall mounting.",
-      "Smart App configuration via Bluetooth or WiFi."
+      "High conversion efficiency of up to 98.2% maximises rooftop solar energy generation and overall system performance.",
+      "Intelligent hybrid battery control optimises battery charging, discharging, backup power, and energy management.",
+      "Quiet fanless operation uses natural cooling technology to minimise noise and enhance residential comfort.",
+      "Advanced smart monitoring through the eSolar platform provides real-time diagnostics, performance tracking, and energy optimisation.",
+      "Durable inverter engineering delivers reliable long-term renewable energy performance and operational stability."
     ],
     betterTitle: "What Makes SAJ Inverters Better?",
     betterList: [
-      "Sleek Aesthetic Design: Casing is clean and modern, looking more like an appliance than electrical gear.",
-      "eSolar Portal: Provides comprehensive analysis of energy consumption and battery charge states with smart suggestions.",
-      "High DC Over-sizing: Enables installers to connect more solar panels, maximizing output in winter or low-light."
+      "Sleek Aesthetic Design: Modern compact inverter styling blends seamlessly into contemporary Australian homes and smart energy systems.",
+      "eSolar Smart Monitoring Platform: Advanced monitoring tools provide real-time solar generation insights, battery tracking, and energy management analytics.",
+      "High DC Oversizing Capability: Supports larger solar array configurations for improved rooftop energy generation, system flexibility, and energy yield."
     ],
     installation: [
-      "Lightweight, wall-mounted setup with clear bracket guides.",
-      "Quick app commissioning via eSolar O&M mobile tools.",
-      "CEC approved for all state and federal solar incentives."
+      "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
+      "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
     ],
+
     bestFor: [
-      "Homeowners looking for a silent, sleek inverter installed near living spaces.",
-      "Users wanting an integrated smart-home look and feel.",
-      "Residential setups aiming for heavy winter solar panel oversizing."
+      "Residential hybrid solar systems seeking battery-ready functionality and intelligent energy management features.",
+      "Smart energy homes requiring advanced renewable energy monitoring and seamless smart inverter integration.",
+      "Quiet residential installations needing silent inverter operation and flexible indoor or outdoor placement.",
+
     ],
+
     warranty: [
-      "10-Year product warranty for Australian markets.",
-      "Local service channels ensuring speedy processing of warranty requests.",
-      "Technical support staff based locally in Australia."
+      "10-Year Product Warranty providing dependable long-term protection for residential and commercial renewable energy systems.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous monitoring updates and intelligent energy management features to enhance long-term inverter reliability and efficiency."
     ],
     recommendation: "SAJ inverters are an ideal choice for residential homes looking for a silent, stylish, and smart-home integrated inverter with excellent software monitoring.",
     logoText: "SAJ",
@@ -1634,15 +1784,13 @@ export const productsData: Record<string, ProductData> = {
       { label: "SAJ-5-10kW-3P-datasheet", url: pdfsaj2 },
     ],
     datasheetSpecs: [
-      { label: "Max Efficiency", value: "98.2%" },
-      { label: "Euro Efficiency", value: "97.8%" },
-      { label: "MPPT Numbers", value: "2" },
-      { label: "Oversizing Cap", value: "Up to 150% DC oversizing" },
-      { label: "Cooling system", value: "Natural heat dissipation" },
-      { label: "Noise level", value: "< 25 dB" },
-      { label: "Protection Class", value: "IP65 Rated" },
-      { label: "Dimensions", value: "389 x 342 x 150 mm" },
-      { label: "Weight", value: "11.5 kg" }
+      { label: "Inverter Type", value: "Hybrid & Smart Inverter" },
+      { label: "Maximum Efficiency", value: "Up to 98.2%" },
+      { label: "Battery Compatibility", value: "Lithium Battery Systems" },
+      { label: "Monitoring Platform", value: "eSolar Portal" },
+      { label: "Installation Type", value: "Residential & Commercial" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Compliance", value: "AS/NZS 4777.2 Certified" }
     ],
     models: [
       { name: "R5-5K-S2 (5kW)", watts: "5000W", efficiency: "98.2%", type: "Single Phase String" },
@@ -1651,59 +1799,80 @@ export const productsData: Record<string, ProductData> = {
     featuredCard: {
       badge: "SMART HOME ENERGY",
       heading: "Engineered for Maximum Energy Efficiency",
-      description: "SAJ Inverters Australia offer silent, sleek hybrid solar systems with the eSolar smart monitoring portal, making them the ideal smart home energy management solution for modern Australian residences.",
-      feature1Title: "Silent Fanless Operation",
-      feature1Desc: "Natural heat dissipation design runs under 25 dB, making it perfectly suited for installation near bedrooms or living areas.",
-      feature2Title: "150% DC Oversizing Capability",
-      feature2Desc: "Connect more solar panels than the rated AC output to maximize winter yields and low-light energy generation.",
-      feature3Title: '',
-      feature3Desc: ''
+      description: "SAJ Solar Inverter systems are designed using advanced smart energy technology to improve solar generation efficiency, battery integration, and long-term renewable energy management.",
+      feature1Title: "Smart Energy Management",
+      feature1Desc: "Advanced inverter intelligence optimises solar generation, battery charging, energy storage, and household energy consumption for improved efficiency.",
+
+      feature2Title: "High Solar Conversion Efficiency",
+      feature2Desc: "Efficient inverter architecture maximises renewable energy generation, improves system performance, and increases long-term electricity savings.",
+
+      feature3Title: "Silent Fanless Cooling Design",
+      feature3Desc: "Natural cooling technology minimises operating noise while enhancing inverter reliability, durability, and long-term performance."
     },
   },
+  // done
   "solix-inverters": {
     slug: "solix-inverters",
-    name: "Solix Inverters",
+    name: "Solix Inverter Australia",
     category: "Solar Inverters",
     brand: "Anker Solix",
-    tagline: "Next-Gen Microinverters & Smart Energy Control",
+    tagline: "Solix Solar Inverter — Smart Microinverter & Hybrid Energy Solutions for Australian Homes",
     subtitle: "Power Your Independence",
-    intro: "Anker Solix represents the renewable energy division of Anker, a world-famous brand in charging technology. Solix offers highly efficient, smart microinverters and hybrid systems that give homeowners maximum energy control, high-resolution panel monitoring, and unmatched ease of use.",
+    intro: "Solix Inverter Australia systems are designed for homeowners seeking advanced smart energy management, premium microinverter technology, and reliable long-term solar performance. Built with intelligent energy optimisation and high-efficiency renewable energy conversion, Solix Solar Inverter solutions deliver superior rooftop solar generation, real-time monitoring, and seamless battery integration for modern Australian homes.\n\nKnown for innovative panel-level optimisation and smart home energy control, Solix inverters are ideal for Australian residential solar systems requiring maximum efficiency, enhanced safety, and flexible solar expansion.",
     whyChoose: [
-      { title: "Backed by Global Anker Brand", desc: "Backed by Anker, a globally trusted consumer electronics and charging brand with decades of battery engineering." },
-      { title: "Panel-Level Optimization", desc: "Advanced microinverter options for individual panel-level optimization, eliminating the string inverter shading problem." },
-      { title: "Maximum Shade Tolerance", desc: "Maximum shade tolerance and individual panel performance tracking — one shaded panel never affects the rest." },
-      { title: "Premium Real-Time Monitoring App", desc: "High-resolution real-time monitoring via the Anker App for complete visibility of every panel's performance." },
-      { title: "25-Year Design Lifespan", desc: "Extremely long design life with top-tier components and an industry-leading 25-year microinverter warranty." }
+      {
+        title: "Advanced Microinverter Technology",
+        desc: "Solix Solar Inverter systems provide individual panel-level optimisation, helping maximise rooftop solar energy generation even under partial shading conditions."
+      },
+      {
+        title: "Smart Energy Monitoring",
+        desc: "Real-time monitoring of solar production and household energy consumption helps homeowners optimise electricity usage and maximise savings."
+      },
+      {
+        title: "Enhanced Solar Safety",
+        desc: "Microinverter architecture reduces high-voltage DC risks, improves electrical safety, and enhances overall rooftop solar system protection."
+      },
+      {
+        title: "Excellent Australian Climate Performance",
+        desc: "Engineered for reliable operation in Australia's demanding climate, including high temperatures, strong sunlight, and outdoor weather exposure."
+      },
+      {
+        title: "Flexible Solar System Expansion",
+        desc: "Modular inverter technology enables homeowners to easily expand rooftop solar capacity as energy requirements grow over time."
+      }
     ],
     rangeTitle: "Anker Solix MI800 & Smart Hybrid Series",
-    rangeIntro: "The Solix series introduces microinverter and compact hybrid tech designed for easy modular deployment, giving you control over every individual panel.",
+    rangeIntro: "The Solix MI800 and Smart Hybrid Series combine premium microinverter engineering with intelligent energy management designed for Australian residential solar systems.",
     rangeSpecs: [
-      "Up to 96.7% CEC efficiency with panel-level MPPT tracking.",
-      "Individual panel monitoring via WiFi and Bluetooth connectivity.",
-      "IP67 environmental rating for maximum protection directly under panels.",
-      "Ultra-low startup voltage to generate power in minimal light.",
-      "Sleek, modular hybrid configurations for home battery matching."
+      "High panel-level efficiency maximises rooftop solar energy generation and improves long-term electricity savings.",
+      "Individual solar panel monitoring provides real-time visibility into the performance of every panel independently.",
+      "Smart battery compatibility enables seamless integration with lithium battery storage systems for advanced hybrid energy solutions.",
+      "Ultra-low startup voltage improves low-light performance and increases energy generation during cloudy conditions and early mornings.",
+      "Modular solar expansion capability allows flexible system upgrades and easy addition of future solar capacity."
     ],
     betterTitle: "What Makes Anker Solix Better?",
     betterList: [
-      "Panel-Level Optimization: If one panel is shaded, others generate 100% power, unlike string inverters where shading affects the whole string.",
-      "Anker App Integration: Combines solar generation, home load, and backup storage monitoring in a premium consumer-grade app.",
-      "Modular Scalability: Start small with a few panels and easily expand your system as your power needs grow."
+      "Panel-Level Optimisation Technology: Maximises energy generation by optimising each solar panel individually for superior rooftop solar performance.",
+      "Smart App Integration: Advanced monitoring platform provides real-time visibility into solar generation, battery storage, and household energy consumption.",
+      "Modular Scalability: Flexible renewable energy architecture allows homeowners to easily expand solar capacity as electricity requirements increase."
     ],
     installation: [
-      "Plug-and-play installation, mounting directly onto the solar panel racking.",
-      "Eliminates high-voltage DC runs down the wall, improving home safety.",
-      "CEC certified and approved for Australian utility connections."
+      "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
+      "Seamlessly integrates with lithium battery systems for advanced hybrid solar energy storage solutions.",
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
     ],
+
     bestFor: [
-      "Properties with severe, irregular shading from trees or chimneys.",
-      "Homeowners who want high-tech, panel-level monitoring and premium apps.",
-      "Modular solar installations that plan to expand step-by-step."
+      "Residential rooftop solar systems seeking advanced panel-level optimisation and smart solar technology.",
+      "Homes with partial roof shading caused by trees, chimneys, or complex roof layouts requiring maximum solar efficiency.",
+      "Smart energy homes wanting advanced renewable energy monitoring and intelligent energy management capabilities.",
+      "Expandable solar installations planning future rooftop solar expansion and battery storage integration."
     ],
+
     warranty: [
-      "12 to 25-Year warranty (microinverters carry industry-leading long lifetimes).",
-      "Backed by Anker's massive international support structure.",
-      "Dedicated Australian customer help center."
+      "Long-term product warranty providing dependable protection for residential solar energy investments.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous software updates and intelligent monitoring platform support to enhance long-term inverter performance and renewable energy efficiency."
     ],
     recommendation: "Anker Solix microinverters are the ultimate choice for shaded roofs, offering panel-level optimization, modular growth, and the reliability of a global charging giant.",
     logoText: "ANKERSOLIX",
@@ -1711,20 +1880,21 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: inverter6,
+     pdfUrls: [
+      { label: "Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25-F-G2-Series_Datasheet-AU", url: pdfsolix },
+    ],
     productImages: [
       s1,
       s2
     ],
     datasheetSpecs: [
-      { label: "Peak Efficiency", value: "97.3%" },
-      { label: "CEC Efficiency", value: "96.7%" },
-      { label: "Nominal AC Power", value: "800W" },
-      { label: "MPPT Number", value: "2 (Independent Panel Optimization)" },
-      { label: "Environmental Rating", value: "IP67 (Waterproof & Dustproof)" },
-      { label: "Cooling Type", value: "Natural Convection" },
-      { label: "Dimensions", value: "263 x 218 x 40 mm" },
-      { label: "Weight", value: "2.8 kg" },
-      { label: "Warranty", value: "12-25 Years" }
+      { label: "Inverter Type", value: "Microinverter & Hybrid" },
+      { label: "Maximum Efficiency", value: "Up to 96.7%" },
+      { label: "Monitoring Platform", value: "Smart App Integration" },
+      { label: "Battery Compatibility", value: "Lithium Battery Systems" },
+      { label: "Installation Type", value: "Residential Solar Systems" },
+      { label: "Protection Rating", value: "IP67 Outdoor Rated" },
+      { label: "Compliance", value: "AS/NZS 4777.2 Certified" }
     ],
     models: [
       { name: "Solix MI800 Microinverter", watts: "800W", efficiency: "96.7%", type: "Microinverter" }
@@ -1732,62 +1902,82 @@ export const productsData: Record<string, ProductData> = {
     featuredCard: {
       badge: "PANEL-LEVEL OPTIMIZATION",
       heading: "Engineered for Maximum Energy Efficiency",
-      description: "Anker Solix Microinverters Australia bring consumer-grade precision to solar power, with individual panel-level MPPT optimization, IP67 weatherproofing, and the Anker app for complete energy control.",
-      feature1Title: "Panel-Level Shade Tolerance",
-      feature1Desc: "Each panel operates independently — one shaded panel never reduces the output of the others, maximizing total generation.",
-      feature2Title: "IP67 Waterproof & Premium App",
-      feature2Desc: "Anker's trusted consumer app provides real-time panel monitoring with modular scalability backed by a 25-year design lifespan.",
-      feature3Title: '',
-      feature3Desc: ''
+      description: "Solix Solar Inverter systems are developed using advanced renewable energy technology to improve solar conversion efficiency, system reliability, and long-term rooftop solar generation.",
+      feature1Title: "Panel-Level Solar Optimisation",
+      feature1Desc: "Each solar panel operates independently to maximise rooftop energy production, improve efficiency, and minimise shading losses.",
+
+      feature2Title: "Advanced Smart Monitoring",
+      feature2Desc: "Integrated app-based monitoring provides real-time performance tracking, system diagnostics, and detailed energy usage insights.",
+
+      feature3Title: "Superior Safety Features",
+      feature3Desc: "Low-voltage system architecture enhances installation safety, reduces rooftop electrical risks, and improves overall system protection."
     },
   },
 
 
   // ==================== SOLAR BATTERIES ====================
+  // done
   "foxess-battery": {
     slug: "foxess-battery",
-    name: "FoxESS Battery",
+    name: "FoxESS Battery Australia",
     category: "Solar Batteries",
     brand: "FoxESS",
-    tagline: "Advanced High-Voltage Storage Solutions",
+    tagline: "FoxESS Solar Battery — Advanced High-Voltage Energy Storage Solutions",
     subtitle: "Powering Your Independence Day & Night",
-    intro: "FoxESS is a global leader in solar inverter and energy storage solutions. Backed by Tsingshan Group (a Fortune 500 company and the world's largest nickel producer), FoxESS has access to raw materials and battery cell production, delivering high-voltage, high-performance battery systems built to last.",
+    intro: "FoxESS Battery Australia systems are designed to deliver reliable home energy storage, intelligent battery management, and high-performance backup power for Australian households and businesses. Built using advanced lithium iron phosphate (LiFePO4) technology, FoxESS Solar Battery solutions provide safe, scalable, and efficient renewable energy storage for modern solar systems.\n\nKnown for high-voltage battery technology, modular expansion capability, and excellent compatibility with hybrid solar inverters, FoxESS batteries help Australian homeowners maximise solar self-consumption, reduce electricity bills, and improve long-term energy independence.",
     whyChoose: [
-      { title: "Fortune 500 Backed Supply Chain", desc: "Backed by Tsingshan Group (Fortune 500), ensuring vertical control of battery cell quality and long-term supply security." },
-      { title: "Easy Stackable Expansion", desc: "High-voltage stackable design for easy expansion — simply stack more modules with no additional wiring needed." },
-      { title: "Safe LFP Chemistry", desc: "Lithium Iron Phosphate (LFP) chemistry for maximum safety, thermal stability, and 10,000+ cycle life." },
-      { title: "IP65 Indoor & Outdoor Rated", desc: "IP65 rated for flexible indoor and outdoor installations in Australian garages, sheds, and utility areas." },
-      { title: "Reliable Blackout Backup Power", desc: "Excellent backup power output capabilities for blackouts, keeping essential appliances running day and night." }
+      {
+        title: "Advanced High-Voltage Storage Technology",
+        desc: "FoxESS Solar Battery systems utilise high-voltage architecture to improve charging efficiency, energy transfer, and overall renewable energy performance."
+      },
+      {
+        title: "Safe LiFePO4 Battery Chemistry",
+        desc: "Premium lithium iron phosphate battery technology delivers enhanced safety, thermal stability, long cycle life, and dependable long-term performance."
+      },
+      {
+        title: "Modular Battery Expansion",
+        desc: "FoxESS Battery Australia solutions allow homeowners to easily increase storage capacity as household energy requirements grow over time."
+      },
+      {
+        title: "Excellent Australian Climate Performance",
+        desc: "Engineered for reliable operation in Australia's demanding climate conditions, including high temperatures and outdoor environmental exposure."
+      },
+      {
+        title: "Reliable Residential Energy Storage Solution",
+        desc: "Widely trusted for Australian homes seeking backup power, increased solar self-consumption, and smarter renewable energy management."
+      }
     ],
     rangeTitle: "FoxESS ECS & Mira Stackable Series",
-    rangeIntro: "The FoxESS ECS series is a high-performance, stackable battery storage system that allows homeowners to easily scale capacity from 4.0 kWh up to 20.0 kWh.",
+    rangeIntro: "The FoxESS ECS and Mira Series combine premium high-voltage battery engineering with modular energy storage technology for Australian residential solar systems.",
     rangeSpecs: [
-      "Modular stackable design: 2.9 kWh to 4.0 kWh per block.",
-      "High charging and discharging efficiency up to 97%.",
-      "Safe LFP (Lithium Iron Phosphate) cell technology.",
-      "Wide temperature operating range (-10°C to 50°C).",
-      "90% Depth of Discharge (DoD) for maximum usable capacity."
+      "Modular stackable battery design allows flexible storage expansion as household energy requirements increase.",
+      "High charging and discharging efficiency improves solar self-consumption, energy utilisation, and backup power performance.",
+      "Safe LiFePO4 battery chemistry enhances thermal stability, operational safety, and long-term reliability.",
+      "Wide operating temperature range supports dependable battery performance across diverse Australian climate conditions.",
+      "Intelligent Smart BMS integration optimises energy management, battery protection, and overall system efficiency."
     ],
     betterTitle: "What Makes FoxESS Batteries Better?",
     betterList: [
-      "Vertical Supply Chain: Backed by the world's largest nickel producer, ensuring high-quality raw materials and long-term cell supply security.",
-      "Stackable Ease: No wiring required between battery modules, simply stack them on top of each other to increase storage capacity.",
-      "Smart BMS (Battery Management System): Monitors cells individually, balancing voltage and temperature to prevent degradation."
+      "Vertical Supply Chain Control: Strong manufacturing quality control improves battery consistency, product reliability, and long-term performance.",
+      "Stackable Modular Design: Flexible battery architecture allows homeowners to easily expand energy storage capacity as future energy needs increase.",
+      "Smart Battery Management System (BMS): Advanced monitoring technology optimises battery performance, charging efficiency, system protection, and operational safety."
     ],
     installation: [
-      "Quick stackable mounting saves installers hours of wiring time.",
-      "Can be wall-mounted or floor-standing depending on property space.",
-      "CEC approved for all battery incentive schemes in Australia."
+      "Compatible with major hybrid inverter brands including FoxESS, Sungrow, GoodWe, Growatt, and Solis.",
+      "Wall-mounted and floor-mounted installation options provide flexible battery placement for Australian homes.",
+      "Fully compliant with Australian Clean Energy Council (CEC) standards and rebate eligibility requirements."
     ],
+
     bestFor: [
-      "Homeowners wishing to start with small storage and expand later.",
-      "Properties exposed to ambient temperature changes requiring robust thermal profiles.",
-      "High-load homes that require rapid battery charging during peak sun."
+      "Residential solar battery storage systems seeking efficient energy storage and reliable backup power protection.",
+      "Smart energy homes wanting advanced renewable energy management and reduced dependence on the electricity grid.",
+      "Australian backup power systems requiring dependable battery storage during blackouts and peak electricity pricing periods.",
     ],
+
     warranty: [
-      "10-Year product warranty guaranteeing long-term cycle performance.",
-      "Australian offices managing claims and customer queries.",
-      "Highly responsive local field support."
+      "10-Year Battery Warranty providing dependable long-term protection for residential energy storage investments.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous software updates and intelligent monitoring features to enhance long-term battery efficiency and reliability."
     ],
     recommendation: "FoxESS batteries are an excellent, high-performance storage solution for those wanting a safe, modular, and easily expandable battery backed by a global industrial giant.",
     logoText: "FoxESS",
@@ -1795,20 +1985,21 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery1,
+    pdfUrls: [
+      { label: "EN-EQ4800-Datasheet(AU)-V1.3-20250915", url: pdffox },
+    ],
     productImages: [
       fox1,
       fox2
     ],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "LiFePO4 (Lithium Iron Phosphate)" },
-      { label: "Module Capacity", value: "2.88 kWh / block" },
-      { label: "Max Stack Capacity", value: "20.16 kWh (7 modules)" },
-      { label: "Depth of Discharge", value: "90%" },
-      { label: "Roundtrip Efficiency", value: "97%" },
-      { label: "Operating Temp", value: "-10°C to 50°C" },
-      { label: "IP Protection Class", value: "IP65 Rated" },
-      { label: "Weight per Module", value: "32.5 kg" },
-      { label: "Dimensions (W x H x D)", value: "570 x 350 x 380 mm (3 modules)" }
+      { label: "Battery Type", value: "High-Voltage LiFePO4" },
+      { label: "Usable Capacity", value: "Modular Expandable System" },
+      { label: "Battery Chemistry", value: "Lithium Iron Phosphate" },
+      { label: "Installation Type", value: "Indoor & Outdoor" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Monitoring System", value: "Smart Battery BMS" },
+      { label: "Compatibility", value: "Hybrid Solar Inverter Systems" }
     ],
     models: [
       { name: "ECS2900-H2 (5.76 kWh)", watts: "5.76 kWh", efficiency: "97.0%", type: "High-Voltage LFP Stack" },
@@ -1817,60 +2008,80 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "LITHIUM IRON PHOSPHATE",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "FoxESS Battery Australia delivers high-voltage stackable LiFePO4 energy storage backed by Fortune 500 Tsingshan Group, offering scalable, safe, and long-lasting solar battery solutions for Australian homes.",
-      feature1Title: "Stackable Modular Design",
-      feature1Desc: "Start with a small system and easily expand capacity by stacking additional modules — no extra wiring required between units.",
-      feature2Title: "Safe LFP Chemistry",
-      feature2Desc: "Lithium Iron Phosphate cells eliminate thermal runaway risks, delivering 90% DoD and 97% round-trip efficiency for maximum usable energy.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Energy Storage Performance",
+      description: "FoxESS Solar Battery systems are designed using advanced renewable energy storage technology to improve charging efficiency, battery safety, and long-term energy reliability.",
+      feature1Title: "Advanced Battery Management System (BMS)",
+      feature1Desc: "Intelligent monitoring technology optimises charging control, battery protection, system safety, and long-term energy storage performance.",
+
+      feature2Title: "High-Efficiency Energy Storage",
+      feature2Desc: "Optimised battery architecture maximises solar energy storage, improves charging efficiency, and enhances backup power reliability.",
+
+      feature3Title: "Reliable Thermal Stability",
+      feature3Desc: "LiFePO4 battery chemistry supports safe, stable, and dependable operation during Australia's high-temperature climate conditions."
     },
   },
+  // Done
   "growatt-battery-systems": {
     slug: "growatt-battery-systems",
-    name: "Growatt Battery Systems",
+    name: "Growatt Solar Battery",
     category: "Solar Batteries",
     brand: "Growatt",
-    tagline: "Smart Energy Storage for Every Home",
+    tagline: "Growatt Battery Systems — Smart Energy Storage for Australian Homes",
     subtitle: "Store Solar, Power Life",
-    intro: "Growatt's battery systems are engineered to pair perfectly with their hybrid inverters. By using advanced Cobalt-free LiFePO4 cells, Growatt provides safe, modular, and long-lasting energy storage. The stackable ARK series has become a massive favorite in Australia for its simplicity and clean look.",
+    intro: "Growatt Solar Battery systems are among the most trusted residential energy storage solutions for Australian homes seeking reliable backup power, smarter solar energy usage, and long-term electricity savings. Designed to work seamlessly with hybrid solar inverters, Growatt Battery Systems combine advanced LiFePO4 battery technology, modular scalability, and intelligent battery management for efficient renewable energy storage.\n\nBuilt for Australian climate conditions, Growatt batteries help homeowners maximise solar self-consumption, reduce reliance on the grid, and improve overall home energy independence.",
     whyChoose: [
-      { title: "Perfect Growatt Inverter Integration", desc: "Perfect integration with Growatt hybrid inverters for a unified solar and storage ecosystem via the ShinePhone app." },
-      { title: "Cobalt-Free LFP Chemistry", desc: "Cobalt-free LiFePO4 (Lithium Iron Phosphate) chemistry for peak safety, thermal stability, and 100% usable DoD." },
-      { title: "Modular Stackable Design", desc: "Modular stackable design for easy sizing and future upgrades with no extra wiring between modules." },
-      { title: "Smart Cell Balancing BMS", desc: "Integrated automatic cell balancing and temperature monitoring protecting against over-charge and temperature spikes." },
-      { title: "CEC Approved for Australian Rebates", desc: "CEC approved and eligible for all Australian federal and state battery rebates and incentive programs." }
+      {
+        title: "Seamless Hybrid Inverter Integration",
+        desc: "Growatt Solar Battery systems are designed to work seamlessly with Growatt hybrid inverters for efficient renewable energy generation and storage management."
+      },
+      {
+        title: "Safe LiFePO4 Battery Chemistry",
+        desc: "Cobalt-free lithium iron phosphate battery technology delivers excellent thermal stability, enhanced safety, and dependable long-term performance."
+      },
+      {
+        title: "Modular Stackable Design",
+        desc: "Growatt Battery Systems allow homeowners to easily expand energy storage capacity as household energy requirements increase."
+      },
+      {
+        title: "Smart Battery Monitoring",
+        desc: "Integrated battery management systems provide real-time monitoring of charging, temperature, battery health, and overall energy performance."
+      },
+      {
+        title: "Excellent Australian Climate Durability",
+        desc: "Engineered for reliable operation in Australia's demanding climate conditions, including high temperatures and outdoor environmental exposure."
+      }
     ],
     rangeTitle: "Growatt ARK LFP & APX Storage Systems",
-    rangeIntro: "The ARK series is a stackable LFP battery system supporting both low-voltage (LV) and high-voltage (HV) installations, offering flexible capacities up to 25.6 kWh.",
+    rangeIntro: "The Growatt ARK LFP and APX Series combine premium battery engineering with advanced modular storage technology designed for Australian residential solar systems.",
     rangeSpecs: [
-      "Modular capacity from 2.56 kWh up to 25.6 kWh.",
-      "Cobalt-free LFP chemistry ensures thermal stability and safety.",
-      "100% Depth of Discharge (DoD) for maximum usable storage.",
-      "IP65 protection for indoor and outdoor floor-mount installation.",
-      "Smart remote firmware upgrades via the Growatt Shine Server."
+      "Flexible modular capacity allows energy storage expansion to support growing household energy demands and future system upgrades.",
+      "Safe cobalt-free LiFePO4 battery chemistry enhances thermal stability, operational safety, and long-term performance reliability.",
+      "High usable energy capacity maximises stored renewable energy utilisation and improves overall energy independence.",
+      "IP65-rated indoor and outdoor protection supports flexible installation options in a variety of environmental conditions.",
+      "Smart remote monitoring through the Growatt Shine Server enables real-time diagnostics, performance tracking, and energy management."
     ],
-    betterTitle: "What Makes Growatt Batteries Better?",
+    betterTitle: "What Makes Growatt Solar Batteries Better?",
     betterList: [
-      "Modular Customization: Connect multiple battery modules without additional cables, keeping the install clean and compact.",
-      "Advanced BMS Protection: Real-time cell monitoring protects against over-charge, over-discharge, and temperature spikes.",
-      "Single-App Integration: Manage both your solar generation and battery storage through the Growatt ShinePhone app."
+      "Modular Customisation: Growatt Battery Systems allow flexible energy storage expansion without complex additional wiring or major installation upgrades.",
+      "Advanced Battery Management System (BMS): Integrated smart battery protection improves charging control, system safety, reliability, and long-term performance.",
+      "Single-App Energy Monitoring: The Growatt ShinePhone platform provides convenient monitoring of solar generation, battery storage, and household energy consumption."
     ],
     installation: [
-      "Stackable design with slide-in connection blocks reduces installation footprint.",
-      "Floor-mount base ensures stable positioning.",
-      "CEC approved for all local battery rebates."
+      "Compatible with Growatt hybrid inverters and major Australian solar system configurations.",
+      "Flexible floor-mounted and stackable installation options suit garages, utility rooms, and outdoor energy storage areas.",
+      "Fully compliant with Australian Clean Energy Council (CEC) standards and battery rebate eligibility requirements."
     ],
+
     bestFor: [
-      "Homes with an existing Growatt hybrid inverter wanting a unified brand setup.",
-      "Users looking for 100% Depth of Discharge to maximize battery value.",
-      "Properties where battery installation needs to occur in a visible garage or utility area."
+      "Residential solar battery storage systems seeking efficient energy storage and reliable backup power capability.",
+      "Smart energy homes wanting advanced renewable energy management and reduced dependence on the electricity grid.",
+      "Expandable renewable energy systems planning future solar and battery capacity upgrades.",
     ],
+
     warranty: [
-      "10-Year product warranty backed by Growatt's extensive Australian operations.",
-      "Direct swap-out service and local technical support.",
-      "Responsive customer service team."
+      "10-Year Product Warranty providing dependable long-term protection for residential energy storage investments.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous software updates and intelligent monitoring features to enhance long-term battery efficiency and renewable energy performance."
     ],
     recommendation: "Growatt battery systems are the natural choice for anyone running a Growatt inverter, offering modular expansion, maximum usable storage, and single-app control.",
     logoText: "Growatt",
@@ -1881,15 +2092,13 @@ export const productsData: Record<string, ProductData> = {
     productImages: [
       growatt1, growatt2],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
-      { label: "Module Energy", value: "2.56 kWh" },
-      { label: "Max Stack Capacity", value: "25.6 kWh (10 modules)" },
-      { label: "Depth of Discharge", value: "100% Usable Capacity" },
-      { label: "Protection Rating", value: "IP65" },
-      { label: "Cooling Method", value: "Natural Passive Cooling" },
-      { label: "Installation Method", value: "Floor-stand or Wall-mount" },
-      { label: "Dimensions", value: "650 x 260 x 185 mm per module" },
-      { label: "Weight per Block", value: "30.0 kg" }
+      { label: "Battery Type", value: "LiFePO4 Solar Battery" },
+      { label: "Storage Design", value: "Modular Stackable System" },
+      { label: "Battery Chemistry", value: "Cobalt-Free Lithium Iron Phosphate" },
+      { label: "Installation Type", value: "Indoor & Outdoor" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Monitoring Platform", value: "Growatt Shine Server" },
+      { label: "Compatibility", value: "Hybrid Solar Inverter Systems" }
     ],
     models: [
       { name: "ARK 5.1H Stack (5.12 kWh)", watts: "5.12 kWh", efficiency: "97.2%", type: "LFP High Voltage" },
@@ -1898,60 +2107,81 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "COBALT-FREE LFP STORAGE",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "Growatt Battery Systems Australia deliver smart, cobalt-free LiFePO4 storage designed to pair seamlessly with Growatt hybrid inverters, offering modular capacity expansion and 100% usable Depth of Discharge.",
-      feature1Title: "100% Usable Depth of Discharge",
-      feature1Desc: "Cobalt-free LFP cells allow 100% DoD, maximizing every kWh stored with full capacity access and long-lasting cycle life.",
-      feature2Title: "Single-App Growatt Ecosystem",
-      feature2Desc: "Manage solar generation and battery storage together through the ShinePhone app with smart cell balancing and real-time monitoring.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Energy Storage Performance",
+      description: "Growatt Solar Battery systems use advanced renewable energy storage technology to improve charging efficiency, backup reliability, and long-term battery performance.",
+      feature1Title: "Modular Energy Expansion",
+      feature1Desc: "Flexible stackable battery architecture allows future storage upgrades and scalable energy capacity as household requirements grow.",
+
+      feature2Title: "Advanced Smart BMS Protection",
+      feature2Desc: "Intelligent battery monitoring protects against overcharging, overheating, voltage fluctuations, and other operational risks.",
+
+      feature3Title: "High-Efficiency Energy Storage",
+      feature3Desc: "Optimised charging and discharging technology improves solar self-consumption, backup energy availability, and overall system efficiency."
     },
   },
+  // Done
   "saj-battery-systems": {
     slug: "saj-battery-systems",
     name: "SAJ Battery Systems",
     category: "Solar Batteries",
     brand: "SAJ",
-    tagline: "All-in-One Smart Battery Solutions",
+    tagline: "SAJ Solar Battery — All-in-One Smart Energy Storage for Australian Homes",
     subtitle: "Smart Energy Storage, Styled for Homes",
-    intro: "SAJ's battery systems are designed to offer seamless, all-in-one storage. Using high-performance LiFePO4 cells, SAJ focuses on creating compact, attractive battery units that integrate beautifully with their H2 hybrid inverters, providing homes with clean energy backup and smart load shifting.",
+    intro: "SAJ Battery Systems are designed to deliver intelligent home energy storage, seamless hybrid inverter integration, and reliable backup power for modern Australian households. Built with advanced LiFePO4 battery technology and smart energy management features, SAJ Solar Battery solutions help homeowners maximize rooftop solar usage, lower electricity bills, and improve long-term energy independence.\n\nKnown for sleek all-in-one battery design, quiet operation, and advanced smart monitoring, SAJ battery storage systems are ideal for Australian homes seeking premium renewable energy storage with modern aesthetics and reliable performance.",
     whyChoose: [
-      { title: "Sleek Appliance-Grade Design", desc: "Sleek and unified home appliance look that complements modern interiors, installed near living spaces without looking out of place." },
-      { title: "High Charge & Discharge Rates", desc: "High charging/discharging rates for rapid home power supply, ensuring battery is ready when you need it most." },
-      { title: "Safe Cobalt-Free LFP Chemistry", desc: "Safe Cobalt-free LiFePO4 chemistry delivers long cycle life and zero thermal runaway risk for families." },
-      { title: "Modular High-Voltage Stack", desc: "Modular high-voltage stackable design scaling from 5.0 kWh up to 25.0 kWh for flexible home storage." },
-      { title: "eSolar Smart Home Integration", desc: "Excellent software integration with eSolar home automation for intelligent load shifting and peak shaving." }
+      {
+        title: "Elegant All-in-One Battery Design",
+        desc: "SAJ Solar Battery systems combine smart energy storage and hybrid inverter integration within a compact, modern, and visually appealing design."
+      },
+      {
+        title: "High Charging & Discharging Efficiency",
+        desc: "Advanced battery technology improves energy transfer efficiency, enhances solar self-consumption, and supports reliable backup power performance."
+      },
+      {
+        title: "Safe LiFePO4 Battery Chemistry",
+        desc: "Premium lithium iron phosphate battery technology delivers excellent thermal stability, enhanced safety, and dependable long-term reliability."
+      },
+      {
+        title: "Smart Home Energy Integration",
+        desc: "SAJ Battery Systems support intelligent renewable energy management through advanced monitoring, automation, and smart energy control features."
+      },
+      {
+        title: "Excellent Australian Climate Durability",
+        desc: "Engineered for reliable operation in Australia's demanding climate conditions, including high temperatures and outdoor environmental exposure."
+      }
     ],
     rangeTitle: "SAJ B2 & HS2 All-in-One Series",
-    rangeIntro: "The B2 and HS2 series are modular high-voltage batteries that stack together to create a clean, cable-free battery column next to the inverter.",
+    rangeIntro: "The SAJ B2 and HS2 Series combine premium battery engineering with advanced all-in-one renewable energy storage technology for Australian residential solar systems.",
     rangeSpecs: [
-      "Modular capacity blocks of 5.0 kWh, scalable up to 25.0 kWh.",
-      "High discharging capability to power heavy household appliances.",
-      "IP65 dust and moisture resistance for flexible placement.",
-      "Natural cooling for whisper-quiet operation.",
-      "Safe and long-lasting Lithium Iron Phosphate chemistry."
+      "Flexible modular storage capacity allows battery expansion to support growing household energy requirements and future system upgrades.",
+      "High backup power capability helps maintain essential household appliances and energy availability during power outages.",
+      "IP65-rated weather protection supports reliable indoor and outdoor installation in diverse environmental conditions.",
+      "Quiet natural cooling design enhances operational silence while improving long-term battery reliability and performance.",
+      "Long-life LiFePO4 battery technology delivers improved safety, extended cycle life, and dependable renewable energy storage."
     ],
     betterTitle: "What Makes SAJ Batteries Better?",
     betterList: [
-      "Cable-free Stacking: The modules plug directly into each other, removing messy DC wiring and increasing system reliability.",
-      "Peak Shaving & Load Shifting: Program the battery through the app to charge from solar/cheap off-peak grid power and discharge during peak rates.",
-      "Compact Footprint: Narrow design takes up very little wall and floor space."
+      "Cable-Free Stackable Design: Clean modular battery connections simplify installation, reduce wiring complexity, and improve overall system reliability.",
+      "Peak Shaving & Load Shifting: Smart energy management technology helps optimise battery charging schedules and reduce electricity costs during peak pricing periods.",
+      "Compact Home-Friendly Footprint: Slim modern battery design saves valuable floor space while blending seamlessly into residential environments."
     ],
     installation: [
-      "Quick mounting brackets and direct-fit connectors ensure easy setup.",
-      "Commissioning is completed in minutes using the SAJ mobile app.",
-      "Listed by the CEC for safety and performance compliance."
+      "Compatible with SAJ hybrid inverters and modern Australian residential solar energy systems.",
+      "Flexible wall-mounted and modular installation options suit garages, utility rooms, and outdoor energy storage applications.",
+      "Fully compliant with Australian Clean Energy Council (CEC) standards and battery rebate eligibility requirements."
     ],
+
     bestFor: [
-      "Homeowners seeking a clean, neat installation with zero visible cables.",
-      "Properties in areas with time-of-use electricity pricing.",
-      "Users looking for a quiet battery that can sit in proximity to living areas."
+      "Residential solar battery storage systems seeking smart renewable energy storage and reliable backup power solutions.",
+      "Smart energy homes wanting intelligent energy monitoring and advanced renewable energy management.",
+      "Compact home installations requiring sleek, space-saving battery storage solutions.",
+
     ],
+
     warranty: [
-      "10-Year performance warranty guaranteeing cycle life.",
-      "Local tech support and parts dispatch in Australia.",
-      "Reliable warranty backing."
+      "10-Year Battery Warranty providing dependable long-term protection for residential energy storage investments.",
+      "Australian technical support network offering professional installer assistance and responsive customer service.",
+      "Continuous software updates and intelligent monitoring features to enhance long-term battery efficiency and renewable energy performance."
     ],
     recommendation: "SAJ batteries are highly recommended for homes seeking a beautiful, quiet, cable-free storage setup with smart automation to slash power bills.",
     logoText: "SAJ",
@@ -1959,19 +2189,20 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery3,
+     pdfUrls: [
+      { label: "B2-X-HVa-S-EN-AU-20260525", url: pdfsaj },
+    ],
     productImages: [
       sajo1, sajo2
     ],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
-      { label: "Module Capacity", value: "5.0 kWh" },
-      { label: "Max Configuration", value: "25.0 kWh (5 stacks in parallel)" },
-      { label: "Depth of Discharge", value: "90%" },
-      { label: "Max Charge/Discharge", value: "30A / 30A" },
-      { label: "Protection Rating", value: "IP65" },
-      { label: "Operating Temp", value: "-10°C to 50°C" },
-      { label: "Weight per Module", value: "48.0 kg" },
-      { label: "Dimensions", value: "626 x 365 x 165 mm" }
+      { label: "Battery Type", value: "LiFePO4 Solar Battery" },
+      { label: "Storage Design", value: "Modular High-Voltage System" },
+      { label: "Battery Chemistry", value: "Lithium Iron Phosphate" },
+      { label: "Installation Type", value: "Indoor & Outdoor" },
+      { label: "Protection Rating", value: "IP65 Outdoor Rated" },
+      { label: "Monitoring Platform", value: "SAJ eSolar Platform" },
+      { label: "Compatibility", value: "Hybrid Solar Inverter Systems" }
     ],
     models: [
       { name: "B2-5.0 (5.0 kWh)", watts: "5.0 kWh", efficiency: "97.0%", type: "High-Voltage LFP" },
@@ -1979,39 +2210,57 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "CABLE-FREE SMART STORAGE",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "SAJ Battery Systems Australia deliver silent, sleek, cable-free LiFePO4 storage that integrates perfectly with SAJ hybrid inverters and the eSolar smart home automation portal.",
-      feature1Title: "Cable-Free Stacking Design",
-      feature1Desc: "Battery modules plug directly into each other, eliminating messy wiring and creating a clean, compact installation for any home.",
-      feature2Title: "Time-of-Use Peak Shaving",
-      feature2Desc: "Programmable peak shaving and load shifting charges from solar or cheap off-peak grid power, slashing electricity bills.",
-      feature3Title: '',
-      feature3Desc: ''
+      heading: "Engineered for Maximum Energy Storage Performance",
+      description: "SAJ Solar Battery systems use advanced renewable energy storage technology to improve charging efficiency, backup reliability, and long-term battery durability.",
+      feature1Title: "Sleek Unified Battery Design",
+      feature1Desc: "Modern compact battery styling integrates neatly into Australian homes, garages, and utility spaces while maintaining a clean installation appearance.",
+
+      feature2Title: "High-Efficiency Energy Storage",
+      feature2Desc: "Optimised charging and discharging technology improves solar self-consumption, backup power availability, and long-term energy savings.",
+
+      feature3Title: "Advanced Smart Battery Management",
+      feature3Desc: "Integrated BMS technology enhances charging protection, battery balancing, operational safety, and long-term system performance."
     },
   },
+  // done
   "anker-solix-battery-systems": {
     slug: "anker-solix-battery-systems",
     name: "Anker Solix Battery Systems",
     category: "Solar Batteries",
     brand: "Anker Solix",
-    tagline: "Ultra-Durable Power Storage from the Charging Pioneer",
+    tagline: "Advanced Solar Battery Storage for Smarter Energy Independence ",
     subtitle: "Independence in Every Module",
-    intro: "Anker Solix leverages Anker's world-leading battery and power management expertise to deliver premium, ultra-durable home energy storage. Built using automotive-grade LiFePO4 cells, Anker Solix batteries are designed to survive extreme environments while providing detailed smart monitoring and long cycle lives.",
+    intro: "Smart and reliable solar battery storage designed for Australian homes and businesses. Enjoy efficient backup power, lower electricity bills, and advanced LiFePO4 battery performance with Anker Solix energy storage solutions.",
     whyChoose: [
-      { title: "Automotive-Grade LFP Cells", desc: "Built with automotive-grade, high-durability LiFePO4 cells for maximum cycle life and safety in any environment." },
-      { title: "Industry-Leading Cycle Life", desc: "Industry-leading high cycle life with low degradation, guaranteeing consistent performance for 10+ years." },
-      { title: "Ultra-Thin Premium Aesthetic", desc: "Beautiful modern aesthetic with an ultra-thin 15cm profile, matching high-end home appliances and flush wall mounting." },
-      { title: "Real-Time App Monitoring", desc: "Sleek app integration showing live power flows and battery health, powered by Anker's trusted consumer-grade software." },
-      { title: "Emergency Backup Power", desc: "Robust backup capabilities for emergency situations with fast grid isolation and thermal heating down to -20°C." }
+      {
+        title: "Automotive-Grade LiFePO4 Technology",
+        desc: "Premium automotive-grade LiFePO4 battery cells deliver safer, longer-lasting, and highly reliable energy storage performance for Australian homes and solar systems."
+      },
+      {
+        title: "High Cycle Life & Low Degradation",
+        desc: "Advanced battery engineering provides exceptional cycle life, reduced degradation, and long-term solar energy storage efficiency for maximum savings."
+      },
+      {
+        title: "Modern Slimline Battery Design",
+        desc: "Stylish and space-saving battery design blends perfectly with modern Australian homes while supporting high-performance energy storage solutions."
+      },
+      {
+        title: "Smart App Energy Monitoring",
+        desc: "Real-time app monitoring allows users to track solar generation, battery performance, backup power usage, and household energy consumption instantly."
+      },
+      {
+        title: "Reliable Backup Power Protection",
+        desc: "Fast-response backup power technology keeps essential appliances running during blackouts and grid outages with uninterrupted energy support."
+      }
     ],
     rangeTitle: "Anker Solix X1 Home Energy Storage System",
-    rangeIntro: "The Solix X1 is Anker's premium, ultra-thin home battery system, featuring a modular power layout that allows independent charging/discharging for each module.",
+    rangeIntro: "Advanced Anker Solix Home Energy Storage System designed for Australian homes seeking reliable solar battery storage, smart energy management, and long-term energy independence.",
     rangeSpecs: [
-      "Ultra-thin profile (only 15cm deep) for a flush-wall look.",
-      "Modular energy management: each module functions independently.",
-      "100% Depth of Discharge with long cycle life.",
-      "Operating range from -20°C to 55°C with built-in thermal heating.",
-      "IP65 rated for full outdoor exposure."
+      "Ultra-slim 15cm battery profile delivers a modern wall-mounted appearance with space-saving installation benefits.",
+      "Intelligent modular energy management improves battery efficiency, scalability, and long-term solar energy storage performance.",
+      "100% depth of discharge maximises usable energy capacity while supporting long cycle life and greater energy savings.",
+      "Designed for Australian climate conditions with reliable operation from -20°C to 55°C and integrated thermal protection.",
+      "IP65-rated weatherproof protection ensures dependable performance against dust, rain, and demanding outdoor environments."
     ],
     betterTitle: "What Makes Anker Solix X1 Better?",
     betterList: [
@@ -2020,14 +2269,15 @@ export const productsData: Record<string, ProductData> = {
       "Super-fast Backup Switch: Provides automatic grid isolation and emergency backup power within milliseconds."
     ],
     installation: [
-      "Modular blocks plug together easily, mounting flush against the wall.",
-      "Advanced app setup guides the installer and homeowner through commissioning.",
-      "Approved by the Clean Energy Council (CEC)."
+      "Modular battery blocks allow faster installation with clean wall-mounted integration for modern Australian homes.",
+      "Intelligent app-based commissioning simplifies setup, monitoring, and energy management for installers and homeowners.",
+      "Fully Clean Energy Council (CEC) approved for Australian residential solar and battery storage installations."
     ],
+
     bestFor: [
-      "Homeowners who want premium design, thin profiles, and premium apps.",
-      "Regions experiencing extreme winter cold or intense summer heat.",
-      "Users looking for maximum energy extraction with independent module management."
+      "Premium smart homes seeking advanced energy storage solutions, sleek design, smart app controls, and reliable backup power.",
+      "Properties located in extreme Australian climate conditions with intense summer heat and cold winter temperatures.",
+      "Users wanting maximum solar energy utilisation, independent module management, and long-term electricity savings."
     ],
     warranty: [
       "10-Year comprehensive warranty backed by Anker's global presence.",
@@ -2040,20 +2290,23 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery7,
+     pdfUrls: [
+      { label: "Spec-Anker-Solar-Battery", url: pdfank },
+    ],
     productImages: [
       ank1,
       ank2
     ],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "Automotive-Grade LiFePO4" },
-      { label: "Module Energy", value: "5.0 kWh" },
-      { label: "Max Capacity per Stack", value: "30.0 kWh" },
-      { label: "Thickness", value: "15 cm (Ultra-thin profile)" },
-      { label: "Operating Temperature", value: "-20°C to 55°C (Built-in thermal sheets)" },
-      { label: "Environmental Rating", value: "IP65 Rated" },
-      { label: "Depth of Discharge", value: "100%" },
-      { label: "Roundtrip Efficiency", value: "97.5%" },
-      { label: "Backup Switching Speed", value: "< 20ms" }
+      { label: "Battery Chemistry", value: "Advanced Automotive-Grade LiFePO4" },
+      { label: "Module Energy", value: "5.0 kWh High-Efficiency Storage" },
+      { label: "Maximum Capacity per Stack", value: "Up to 30.0 kWh Expandable Storage" },
+      { label: "Battery Thickness", value: "Ultra-Slim 15 cm Space-Saving Design" },
+      { label: "Operating Temperature", value: "-20°C to 55°C Optimised for Australian Conditions" },
+      { label: "Environmental Protection", value: "IP65 Rated Weather-Resistant Protection" },
+      { label: "Depth of Discharge", value: "100% Usable Battery Capacity" },
+      { label: "Roundtrip Efficiency", value: "Up to 97.5% Energy Efficiency" },
+      { label: "Backup Switching Speed", value: "Ultra-Fast <20ms Backup Response" }
     ],
     models: [
       { name: "Solix X1 - 5kWh", watts: "5.0 kWh", efficiency: "97.5%", type: "Ultra-thin Modular" },
@@ -2062,39 +2315,56 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "PREMIUM MODULAR STORAGE",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "Anker Solix Battery Systems Australia deliver ultra-thin, automotive-grade LiFePO4 storage with individual module optimization and extreme temperature resilience from -20°C to 55°C.",
-      feature1Title: "Ultra-Thin 15cm Profile",
-      feature1Desc: "Flush-wall design with 100% DoD and independent module optimization, ensuring maximum usable capacity from every kWh stored.",
-      feature2Title: "Extreme Temperature Resilience",
-      feature2Desc: "Built-in thermal heating sheets operate in freezing temperatures down to -20°C, backed by a 10-year Anker global warranty.",
+      heading: "Engineered for Maximum Energy Efficiency",
+      description: "The Anker Solix Energy Storage System is built with advanced LiFePO4 battery technology, intelligent energy management, and high-efficiency power optimisation to deliver reliable solar battery storage performance for Australian homes and businesses.",
+      feature1Title: "Long-Term Battery Reliability",
+      feature1Desc: "Designed for stable long-term energy storage with low degradation, dependable backup power capability, and consistent renewable energy performance.",
+
+      feature2Title: "High-Efficiency Energy Technology",
+      feature2Desc: "Optimised solar energy storage and intelligent power management help maximise energy savings, self-consumption, and overall system efficiency.",
       feature3Title: '',
       feature3Desc: ''
     },
   },
+  // Done
   "sungrow-battery-systems": {
     slug: "sungrow-battery-systems",
-    name: "Sungrow Battery Systems",
+    name: "Sungrow Battery Systems Australia",
     category: "Solar Batteries",
     brand: "Sungrow",
-    tagline: "The Benchmark for High-Voltage Battery Storage",
+    tagline: "Smart & Reliable Sungrow Battery Storage System Solutions",
     subtitle: "Powerful, Safe, and Reliable Energy",
-    intro: "Sungrow's high-voltage stackable battery systems are widely regarded as some of the most reliable and efficient home batteries in Australia. Pairing seamlessly with Sungrow hybrid inverters, the SBR series offers simple modular capacity expansion, high-power backup outputs, and advanced cell safety.",
+    intro: "The Sungrow Battery Storage System delivers advanced energy storage technology for Australian homes and businesses seeking reliable backup power, greater energy independence, and improved solar energy efficiency. Designed with intelligent battery management and high-performance energy storage technology, Sungrow battery systems help maximise solar self-consumption while reducing electricity costs.",
     whyChoose: [
-      { title: "Perfect Sungrow Inverter Partner", desc: "The perfect partner for Sungrow hybrid inverters, designed for seamless plug-and-play integration and iSolarCloud monitoring." },
-      { title: "High-Voltage Low-Loss Design", desc: "High-voltage design ensures minimal conversion losses and up to 98% round-trip efficiency for maximum energy savings." },
-      { title: "Tool-Free 3.2 kWh Modules", desc: "Stackable 3.2 kWh modules allow easy resizing from 9.6 kWh to 25.6 kWh with no tools or internal wiring required." },
-      { title: "Cobalt-Free Multi-Stage Safety", desc: "Cobalt-free LiFePO4 cells with multi-stage safety protection for outstanding thermal stability and long service life." },
-      { title: "Australia's Most Popular Battery", desc: "Extremely popular in Australia with massive local support, Sydney service center, and fast parts dispatch." }
+      {
+        title: "Proven Energy Storage Expertise",
+        desc: "Over a decade of innovation in smart battery storage systems and advanced solar energy management solutions."
+      },
+      {
+        title: "Intelligent Energy Management System",
+        desc: "Fully integrated EMS technology delivers smarter power flow, efficient solar energy usage, and improved battery performance."
+      },
+      {
+        title: "High-Value Solar Battery Storage",
+        desc: "Cost-effective energy storage solutions designed for long-term reliability, energy savings, and maximum solar efficiency."
+      },
+      {
+        title: "Durable Outdoor Battery Design",
+        desc: "Premium weather-resistant battery cabinets engineered for Australian outdoor conditions and long-lasting performance."
+      },
+      {
+        title: "Trusted Australian Support",
+        desc: "Dedicated local support and technical assistance across Australia for reliable installation and ongoing energy storage support."
+      }
     ],
     rangeTitle: "Sungrow SBR 9.6 - 25.6 kWh Series",
     rangeIntro: "The SBR series is a high-voltage stackable LFP battery system, offering capacities from 9.6 kWh (3 modules) up to 25.6 kWh (8 modules) per stack.",
     rangeSpecs: [
-      "High-voltage design: 3.2 kWh modules stacked in series.",
-      "High charging and discharging current up to 30A.",
-      "IP55 rated for indoor and outdoor installations.",
-      "Lithium Iron Phosphate cells for thermal stability.",
-      "Weight-optimized modules with integrated handles for easy installation."
+      "Flexible modular battery capacity expands from 5.0 kWh up to 30.0 kWh to support growing residential energy requirements.",
+      "Advanced LiFePO4 battery technology delivers enhanced safety, long cycle life, and dependable long-term energy storage performance.",
+      "Premium integrated cabinet design protects internal components while enabling clean, space-saving installation.",
+      "VPP-ready smart energy functionality supports intelligent energy management and future Virtual Power Plant participation.",
+      "Intelligent remote monitoring provides real-time battery performance tracking, smart controls, and automatic system updates."
     ],
     betterTitle: "What Makes Sungrow SBR Better?",
     betterList: [
@@ -2103,14 +2373,15 @@ export const productsData: Record<string, ProductData> = {
       "iSolarCloud Monitoring: View detailed charge/discharge logs and state of health alongside solar production."
     ],
     installation: [
-      "Modules stack directly on a base plate, locked together with side pins.",
-      "Automatic detection of battery capacity during inverter setup.",
-      "CEC approved and fully compliant with all local battery safety standards."
+      "Cabinet-style battery design enables clean, secure, and code-compliant solar battery installation.",
+      "Pre-wired internal components simplify installation and improve connection efficiency with home switchboards.",
+      "Fully CEC-approved for Australian solar battery rebates and residential energy storage installations."
     ],
+
     bestFor: [
-      "Homeowners installing a Sungrow hybrid inverter who want a matching system.",
-      "Homes with high-power backup requirements (running multiple AC units during blackouts).",
-      "Those who value clean, tool-free installation layouts."
+      "Modern smart homes seeking sleek, cabinet-enclosed battery storage systems with reliable backup power capability.",
+      "VPP energy program users wanting Virtual Power Plant-ready battery systems for smarter energy management and additional savings opportunities.",
+      "Homeowners seeking long-term energy storage performance with durable LiFePO4 battery technology and dependable renewable energy storage."
     ],
     warranty: [
       "10-Year product warranty covering capacity retention.",
@@ -2123,18 +2394,21 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery8,
+     pdfUrls: [
+      { label: "DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU", url: pdfsun },
+    ],
     productImages: [
       sun1, sun2],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "Cobalt-free LiFePO4" },
-      { label: "Module Energy Capacity", value: "3.2 kWh per block" },
-      { label: "Stack Options", value: "9.6 kWh to 25.6 kWh (3-8 modules)" },
-      { label: "Max Discharge Power", value: "Up to 30A continuous" },
-      { label: "Depth of Discharge", value: "100% Usable" },
-      { label: "Protection Rating", value: "IP55" },
-      { label: "Roundtrip Efficiency", value: "98.0%" },
-      { label: "Dimensions", value: "625 x 330 x 140 mm per module" },
-      { label: "Weight per Module", value: "33.0 kg" }
+      { label: "Battery Chemistry", value: "High-Performance Lithium Iron Phosphate (LFP)" },
+      { label: "Module Capacity", value: "5.04 kWh Smart Energy Storage" },
+      { label: "Maximum Storage Capacity", value: "Up to 30.24 kWh Expandable Sungrow Battery System" },
+      { label: "Depth of Discharge", value: "Up to 95% Usable Battery Capacity" },
+      { label: "Cabinet Protection", value: "IP21 Indoor / IP65 Outdoor Weather Protection" },
+      { label: "Battery Cycle Life", value: "10,000+ Long-Life Charging Cycles" },
+      { label: "Virtual Power Plant Ready", value: "Smart VPP Energy Management Compatible" },
+      { label: "Weight per Module", value: "48.0 kg Premium Battery Module" },
+      { label: "Dimensions", value: "Compact Modular Design for Flexible Installation" }
     ],
     models: [
       { name: "SBR096 (9.6 kWh)", watts: "9.6 kWh", efficiency: "98.0%", type: "High-Voltage LFP Stack" },
@@ -2143,30 +2417,47 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "HIGH-VOLTAGE BENCHMARK",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "Sungrow Battery Systems Australia are the benchmark for high-voltage stackable LFP storage, delivering tool-free stacking, 98% round-trip efficiency, and seamless integration with Sungrow hybrid inverters.",
-      feature1Title: "Tool-Free Plug-and-Stack",
-      feature1Desc: "Modules stack using plug-and-play connections with no internal battery wiring, reducing install time and improving reliability.",
-      feature2Title: "98% Round-Trip Efficiency",
-      feature2Desc: "High-voltage design minimizes conversion losses, delivering 100% usable DoD and up to 30A continuous discharge for heavy loads.",
+      heading: "Engineered for Maximum Solar Efficiency",
+      description: "Alpha ESS energy storage systems are designed with advanced battery technology, intelligent energy management, and high-efficiency components to deliver reliable solar battery storage performance for Australian homes and businesses.",
+      feature1Title: "Long-Term Battery Reliability",
+      feature1Desc: "Built for stable long-term energy storage, dependable backup power capability, reduced battery degradation, and consistent renewable energy performance.",
+
+      feature2Title: "High-Efficiency Energy Technology",
+      feature2Desc: "Optimised energy storage and intelligent power management help maximise solar self-consumption, energy savings, and long-term energy independence.",
       feature3Title: '',
       feature3Desc: ''
     },
   },
+  // Done
   "alpha-ess-battery-systems": {
     slug: "alpha-ess-battery-systems",
-    name: "Alpha ESS Battery Systems",
+    name: "Alpha ESS Battery Systems Australia",
     category: "Solar Batteries",
     brand: "Alpha ESS",
-    tagline: "Smart Energy Storage Pioneers",
+    tagline: "Smart & Reliable Alpha ESS Battery Australia Solutions",
     subtitle: "Your Smart Energy Manager",
-    intro: "Alpha ESS is a leading global energy storage solution provider, established in 2012. Specializing in advanced residential and commercial battery systems, Alpha ESS provides fully integrated energy management systems that help homes and businesses maximize self-consumption and lock in energy independence.",
+    intro: "Alpha ESS battery systems deliver advanced solar battery storage solutions for Australian homes and businesses seeking reliable backup power, smarter energy management, and greater energy independence. Designed with intelligent energy technology and long-lasting battery performance, Alpha ESS Battery Australia solutions help maximise solar self-consumption while reducing electricity costs.",
     whyChoose: [
-      { title: "10+ Years Battery Engineering Focus", desc: "Over a decade of dedicated focus on battery storage engineering, pioneering integrated energy management systems." },
-      { title: "Smart EMS Power Flow Control", desc: "Fully integrated energy management system (EMS) for smart power flow, automatically optimizing self-consumption." },
-      { title: "Excellent Value & Long Lifetime", desc: "Excellent value-for-money storage systems with 10,000+ cycle design life and long-term performance guarantees." },
-      { title: "Lockable All-In-One Cabinet", desc: "Sleek and durable lockable cabinets protect all wiring and components, safe for homes with children and pets." },
-      { title: "Sydney-Based Local Support", desc: "Strong local office and support team based in Sydney, Australia for immediate technical assistance and warranty claims." }
+      {
+        title: "Proven Battery Storage Expertise",
+        desc: "Over a decade of innovation in Alpha ESS battery systems delivering reliable solar energy storage solutions for Australian homes and businesses."
+      },
+      {
+        title: "Intelligent Energy Management System",
+        desc: "Advanced integrated EMS technology optimises solar energy usage, smart power flow, and battery performance for maximum energy efficiency."
+      },
+      {
+        title: "Cost-Effective Energy Storage Solutions",
+        desc: "High-value Alpha ESS Battery Australia systems designed for long-term savings, reliable backup power, and superior battery lifespan."
+      },
+      {
+        title: "Durable Outdoor Battery Design",
+        desc: "Weather-resistant cabinet design engineered for Australian climate conditions with long-lasting solar battery storage durability."
+      },
+      {
+        title: "Trusted Australian Support Network",
+        desc: "Professional local support and technical assistance across Australia for seamless installation, monitoring, and ongoing battery system performance."
+      }
     ],
     rangeTitle: "Alpha ESS Smile5 & Smile-G3 Series",
     rangeIntro: "The Smile series features integrated, modular designs that combine the inverter and battery system in a unified cabinet for a clean look.",
@@ -2184,14 +2475,15 @@ export const productsData: Record<string, ProductData> = {
       "Outstanding Cycle Life: Built to handle over 10,000 cycles, ensuring decades of reliable daily charging."
     ],
     installation: [
-      "Cabinet mounting provides a structured, code-compliant install layout.",
-      "Pre-wired internal components simplify connection to the main switchboard.",
-      "CEC approved for all state battery rebates."
+      "Cabinet-style Alpha ESS battery systems provide clean, secure, and code-compliant solar battery installations.",
+      "Pre-wired internal components simplify switchboard connections and improve installation efficiency for Australian homes.",
+      "Fully CEC-approved for Australian solar battery rebates and residential energy storage system installations."
     ],
+
     bestFor: [
-      "Homeowners seeking a neat, cabinet-enclosed battery system.",
-      "Those interested in participating in VPP programs for passive income.",
-      "Buyers looking for maximum cycle life and long-term durability."
+      "Modern energy-efficient homes seeking premium cabinet-style battery storage with smart energy management and reliable backup power.",
+      "VPP-ready energy users looking to participate in Virtual Power Plant programs for smarter energy optimisation and additional savings opportunities.",
+      "Homeowners wanting long-term solar battery performance with durable LiFePO4 technology and dependable energy storage capability."
     ],
     warranty: [
       "10-Year product warranty on battery modules.",
@@ -2204,19 +2496,22 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery2,
+     pdfUrls: [
+      { label: "ALP_LV_2024", url: pdfalp },
+    ],
     productImages: [
       alpha1, alpha2
     ],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
-      { label: "Module Capacity", value: "5.04 kWh" },
-      { label: "Max Storage Cap", value: "Smile5: 30.24 kWh (6 modules)" },
-      { label: "Depth of Discharge", value: "95%" },
-      { label: "Cabinet Protection", value: "IP21 (Indoor) / IP65 (With outdoor cover)" },
-      { label: "Design Cycle Life", value: "10000+ Cycles" },
-      { label: "Virtual Power Plant", value: "VPP Ready" },
-      { label: "Weight per Block", value: "48.0 kg" },
-      { label: "Dimensions", value: "610 x 236 x 312 mm per module" }
+      { label: "Battery Chemistry", value: "High-Performance Lithium Iron Phosphate (LFP) Battery" },
+      { label: "Module Capacity", value: "5.04 kWh Smart Energy Storage Capacity" },
+      { label: "Maximum Storage Capacity", value: "Up to 30.24 kWh Expandable Alpha ESS Battery System" },
+      { label: "Depth of Discharge", value: "Up to 95% Usable Battery Capacity" },
+      { label: "Cabinet Protection", value: "IP21 Indoor / IP65 Outdoor Weather Protection" },
+      { label: "Battery Cycle Life", value: "10,000+ Long-Life Charging Cycles" },
+      { label: "Virtual Power Plant Ready", value: "VPP Compatible Smart Energy Management" },
+      { label: "Weight per Module", value: "48.0 kg Premium Battery Module" },
+      { label: "Dimensions", value: "Compact Modular Design for Flexible Australian Installation" }
     ],
     models: [
       { name: "Smile5-BAT (5.04 kWh)", watts: "5.04 kWh", efficiency: "95.0%", type: "Modular Storage" },
@@ -2224,30 +2519,47 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "VPP-READY STORAGE",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "Alpha ESS Battery Systems Australia deliver a fully integrated, cabinet-enclosed LiFePO4 storage solution with 10,000+ cycle life and Virtual Power Plant (VPP) readiness for passive grid income.",
-      feature1Title: "10,000+ Cycle Design Life",
-      feature1Desc: "Advanced LFP cells built for over 10,000 charge cycles, ensuring decades of daily use with 95% Depth of Discharge.",
-      feature2Title: "VPP-Ready for Passive Income",
-      feature2Desc: "Join Australian Virtual Power Plant programs to sell excess stored energy back to the grid during peak demand periods.",
+      heading: "Engineered for Maximum Solar Energy Efficiency",
+      description: "Alpha ESS battery systems are built with advanced energy storage technology, intelligent battery management, and high-efficiency components to deliver reliable solar battery performance for Australian homes and businesses seeking energy independence and lower electricity costs.",
+      feature1Title: "Long-Term Battery Reliability",
+      feature1Desc: "Designed for dependable long-term solar energy storage with stable backup power performance, low battery degradation, and extended operational lifespan.",
+
+      feature2Title: "High-Efficiency Energy Technology",
+      feature2Desc: "Optimised smart energy management and solar power utilisation help maximise battery efficiency, energy savings, self-consumption, and overall system performance.",
       feature3Title: '',
       feature3Desc: ''
     },
   },
+  // Done
   "neovolt-battery-systems": {
     slug: "neovolt-battery-systems",
-    name: "Neovolt Battery Systems",
+    name: "Neovolt Battery Systems Australia",
     category: "Solar Batteries",
     brand: "Neovolt",
-    tagline: "Innovative High-Capacity Storage Solutions",
+    tagline: "Smart & Reliable Neovolt Battery Australia Solutions",
     subtitle: "Empowering Energy Independence",
-    intro: "Neovolt is a rapidly growing brand specializing in high-density, reliable solar storage. Neovolt focus on providing Australian homeowners with heavy-duty battery storage that is both cost-effective and highly resilient, offering excellent battery management software and solid protection against extreme weather.",
+    intro: "Neovolt battery systems deliver high-capacity solar energy storage solutions for Australian homes and businesses seeking reliable backup power, smarter energy management, and greater energy independence. Designed for Australian climate conditions, Neovolt Battery Australia systems provide efficient battery performance, advanced protection technology, and long-term energy storage reliability.",
     whyChoose: [
-      { title: "High-Density Australian Climate Ready", desc: "High-density battery cells packing more capacity into less space, designed specifically for harsh Australian climate conditions." },
-      { title: "Purpose-Built Thermal Regulation", desc: "Excellent thermal regulation technology to prevent overheating during extreme Australian summer heatwaves." },
-      { title: "High-Load Discharge Power", desc: "100A continuous discharge capability to handle large startup loads from air conditioning, pumps, and EV chargers." },
-      { title: "Cost-Effective Premium Storage", desc: "Cost-effective storage solution with high-end safety features, delivering Tier-1 battery performance at accessible prices." },
-      { title: "Local Australian Technical Team", desc: "Dedicated local technical team based in Australia for fast warranty processing and on-site technical support." }
+      {
+        title: "High-Density Battery Storage Technology",
+        desc: "Advanced Neovolt battery systems utilise high-density LiFePO4 battery cells to maximise energy storage capacity while maintaining reliable performance in Australian climate conditions."
+      },
+      {
+        title: "Advanced Thermal Management System",
+        desc: "Intelligent thermal regulation technology helps protect battery performance, improve efficiency, and ensure reliable operation during extreme Australian summer temperatures."
+      },
+      {
+        title: "High-Power Discharge Performance",
+        desc: "Up to 100A continuous discharge capability supports high-demand household loads, including air conditioning, pool pumps, and EV charging systems."
+      },
+      {
+        title: "Cost-Effective Energy Storage Solution",
+        desc: "Premium solar battery storage designed to deliver long-term energy savings, reliable backup power, and excellent value for Australian homeowners."
+      },
+      {
+        title: "Local Australian Technical Support",
+        desc: "Dedicated Australian-based technical support and warranty assistance ensure fast service, expert guidance, and dependable after-sales support."
+      }
     ],
     rangeTitle: "Neovolt PowerStack & Neo Series",
     rangeIntro: "Neovolt's storage solutions offer high discharge capacities and robust stackable blocks designed to meet the demands of modern high-load homes.",
@@ -2265,14 +2577,15 @@ export const productsData: Record<string, ProductData> = {
       "Smart Balancing BMS: Ensures cells age evenly, extending the functional lifespan of the battery stack."
     ],
     installation: [
-      "Simple floor-mount stacking system with quick-lock bracket sets.",
-      "App-based commissioning streamlines connection to the hybrid inverter.",
-      "Approved by the Clean Energy Council (CEC) for Australian use."
+      "Modular floor-mounted battery design enables fast installation, secure stacking, and flexible energy storage expansion.",
+      "Intelligent app-based commissioning simplifies inverter integration, system monitoring, and battery setup.",
+      "Fully CEC-approved for Australian residential solar battery installations and rebate eligibility."
     ],
+
     bestFor: [
-      "Homes in hot regional areas requiring extra thermal resilience.",
-      "Properties with heavy electric loads (air conditioning, pumps, EV chargers).",
-      "Homeowners seeking N-type/next-gen battery cells at competitive prices."
+      "Homes in hot Australian regions seeking advanced thermal management and reliable battery performance during extreme temperatures.",
+      "High-energy consumption households running air conditioners, pool pumps, EV chargers, and other demanding electrical loads.",
+      "Energy-conscious homeowners seeking cost-effective solar battery storage, reliable backup power, and greater energy independence."
     ],
     warranty: [
       "10-Year product warranty covering performance and capacity.",
@@ -2289,15 +2602,15 @@ export const productsData: Record<string, ProductData> = {
       neo1, neo2
     ],
     datasheetSpecs: [
-      { label: "Battery Chemistry", value: "Lithium Iron Phosphate (LFP)" },
-      { label: "Module energy", value: "5.12 kWh" },
-      { label: "Max Capacity", value: "20.48 kWh (4 stacks)" },
-      { label: "IP Weatherproof", value: "IP65 Rated" },
-      { label: "Continuous Discharge", value: "100A continuous" },
-      { label: "Operating Temp", value: "-10°C to 55°C" },
-      { label: "Cooling system", value: "Smart BMS Thermal management" },
-      { label: "Weight per Stack", value: "46.0 kg" },
-      { label: "Dimensions", value: "600 x 380 x 170 mm per block" }
+      { label: "Battery Chemistry", value: "High-Performance Lithium Iron Phosphate (LFP) Battery" },
+      { label: "Module Energy Capacity", value: "5.12 kWh Smart Energy Storage Module" },
+      { label: "Maximum Storage Capacity", value: "Up to 20.48 kWh Expandable Neovolt Battery System" },
+      { label: "Weather Protection Rating", value: "IP65-Rated Outdoor Battery Protection" },
+      { label: "Continuous Discharge Current", value: "100A Continuous High-Power Output" },
+      { label: "Operating Temperature Range", value: "-10°C to 55°C Optimised for Australian Conditions" },
+      { label: "Battery Cooling System", value: "Intelligent BMS Thermal Management Technology" },
+      { label: "Weight per Battery Stack", value: "46.0 kg Compact Modular Design" },
+      { label: "Dimensions", value: "Space-Efficient Battery Module for Flexible Installation" }
     ],
     models: [
       { name: "PowerStack 5.1 (5.12 kWh)", watts: "5.12 kWh", efficiency: "97.0%", type: "Stackable LFP" },
@@ -2305,30 +2618,47 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "AUSTRALIAN CLIMATE READY",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "Neovolt Battery Systems Australia are purpose-built for Australian conditions, delivering thermally resilient LiFePO4 storage with 100A continuous discharge and smart BMS thermal management for high-load homes.",
-      feature1Title: "High-Load Discharge Capability",
-      feature1Desc: "100A continuous discharge handles large startup loads including air conditioning, pool pumps, and EV chargers without voltage drops.",
-      feature2Title: "Australian Heatwave Resilience",
-      feature2Desc: "Dedicated thermal regulation and IP65 weatherproofing ensure stable performance during extreme summer temperatures across Australia.",
+      heading: "Engineered for Reliable Solar Battery Performance",
+      description: "Neovolt Battery Systems Australia are designed for Australian conditions, delivering high-capacity LiFePO4 battery storage, intelligent energy management, and dependable backup power for homes seeking greater energy independence and lower electricity costs.",
+      feature1Title: "High-Performance Energy Storage",
+      feature1Desc: "Advanced battery technology delivers stable power output, high continuous discharge capability, and dependable performance for energy-intensive households.",
+
+      feature2Title: "Built for Australian Weather Conditions",
+      feature2Desc: "IP65-rated weather protection and intelligent thermal management help maintain efficient battery operation during extreme Australian heat, storms, and varying climate conditions.",
       feature3Title: '',
       feature3Desc: ''
     },
   },
+  // Done
   "sigenergy-battery-systems": {
     slug: "sigenergy-battery-systems",
     name: "Sigenergy Battery Systems",
     category: "Solar Batteries",
     brand: "Sigenergy",
-    tagline: "World's First 5-in-1 Home Energy System with AI",
+    tagline: "Smart AI-Powered Sigenergy Battery System for Energy Independence",
     subtitle: "AI-Powered Clean Energy Independence",
-    intro: "Sigenergy is a forward-thinking energy technology pioneer, founded by industry veterans. The company delivers SigenStor, the world's first 5-in-1 energy storage system that integrates the solar inverter, battery storage, EV DC charger, EMS, and PCS into a single, beautiful modular column, powered by advanced AI algorithms.",
+    intro: "The Sigenergy Battery System is an advanced all-in-one energy storage solution designed for Australian homes seeking smarter energy management, reliable backup power, and maximum solar efficiency. Combining AI-powered technology, battery storage, solar integration, and intelligent energy control, Sigenergy Battery Australia solutions help homeowners achieve greater energy independence and lower",
     whyChoose: [
-      { title: "World's First 5-in-1 Energy System", desc: "World's first 5-in-1 integrated system combining Inverter, Battery, EV Charger, PCS, and EMS in one vertical column." },
-      { title: "AI-Driven Energy Management", desc: "AI-driven energy management for maximum efficiency and savings, learning your habits and checking weather forecasts." },
-      { title: "Futuristic Zero-Cable Design", desc: "Stunning minimalist column design with zero visible cables, replacing five separate electrical boxes with one sleek unit." },
-      { title: "5-Layer Battery Cell Safety", desc: "Advanced battery pack safety with individual cell sensors and built-in aerosol fire-suppression packs per module." },
-      { title: "V2H Future-Proof Technology", desc: "Future-proof system ready for vehicle-to-home (V2H) charging, supporting the next generation of EV energy management." }
+      {
+        title: "All-in-One 5-in-1 Energy Storage System",
+        desc: "Combines solar inverter, battery storage, EV charging, EMS, and PCS into one intelligent Sigenergy Battery System for smarter energy management."
+      },
+      {
+        title: "AI-Powered Energy Optimisation",
+        desc: "Advanced AI technology analyses energy usage patterns and solar generation to maximise efficiency, battery performance, and energy savings."
+      },
+      {
+        title: "Premium Cable-Free Design",
+        desc: "Modern integrated design eliminates visible wiring, delivering a sleek, space-saving energy storage solution for Australian homes."
+      },
+      {
+        title: "Advanced Multi-Layer Safety Protection",
+        desc: "Built-in fire suppression technology, intelligent monitoring, and multiple safety layers ensure reliable and secure battery operation."
+      },
+      {
+        title: "Future-Ready EV Energy Integration",
+        desc: "Supports next-generation EV charging and Vehicle-to-Home (V2H) capabilities for greater energy independence and smart home readiness."
+      }
     ],
     rangeTitle: "SigenStor Modular 5-in-1 Energy System",
     rangeIntro: "SigenStor stacks modular battery blocks (5.0 kWh to 8.0 kWh per block) directly underneath the matching inverter/EV charging module for a futuristic look.",
@@ -2346,14 +2676,15 @@ export const productsData: Record<string, ProductData> = {
       "Unmatched Battery Safety: Features individual cell temperature monitoring and built-in aerosol fire-suppression packs inside each module."
     ],
     installation: [
-      "Vertical stacking with slide-fit guide rails, taking under 15 minutes to stack.",
-      "Eliminates complex wiring between inverter, battery, and EV charger.",
-      "CEC listed and certified to meet the highest global standards."
+      "Innovative vertical modular design enables faster installation, reduced wiring complexity, and seamless system expansion.",
+      "Integrated battery storage, inverter, EV charging, and energy management systems simplify setup and smart home integration.",
+      "Fully CEC-approved and compliant with Australian standards for residential solar battery storage installations."
     ],
+
     bestFor: [
-      "High-end smart homes wanting a futuristic, AI-optimized energy ecosystem.",
-      "Homeowners planning to add a fast DC electric vehicle charger.",
-      "Properties where wall space is limited but vertical space is available."
+      "Smart energy-efficient homes seeking AI-powered battery storage with intelligent energy management and advanced solar integration.",
+      "EV owners and future-ready households planning electric vehicle charging integration and smarter energy control through a unified platform.",
+      "Modern Australian homes requiring space-saving battery storage, reliable backup power, and greater long-term energy independence."
     ],
     warranty: [
       "10-Year product warranty backed by a fast-growing global team.",
@@ -2371,15 +2702,15 @@ export const productsData: Record<string, ProductData> = {
       sig2
     ],
     datasheetSpecs: [
-      { label: "System Integration", value: "5-in-1: Inverter, Battery, EV Charger, PCS, EMS" },
-      { label: "Battery Capacity Block", value: "5.0 kWh or 8.0 kWh" },
-      { label: "Max Stack Capacity", value: "48.0 kWh" },
-      { label: "Internal Fire Safety", value: "Built-in aerosol fire-extinguisher" },
-      { label: "IP Rating", value: "IP66 Casing" },
-      { label: "AI Optimization", value: "Sigen AI energy forecasting" },
-      { label: "Max charging rate", value: "1.0C charge/discharge capability" },
-      { label: "Weight per Module", value: "45.0 kg" },
-      { label: "Thickness", value: "26.0 cm (flush vertical stack)" }
+      { label: "System Integration", value: "All-in-One 5-in-1 Energy System (Solar Inverter, Battery Storage, EV Charger, PCS & EMS)" },
+      { label: "Battery Capacity Options", value: "5.0 kWh or 8.0 kWh Modular Battery Units" },
+      { label: "Maximum Storage Capacity", value: "Up to 48.0 kWh Expandable Sigenergy Battery System" },
+      { label: "Fire Safety Protection", value: "Integrated Aerosol Fire Suppression Technology" },
+      { label: "Weather Protection Rating", value: "IP66-Rated Outdoor Protection for Australian Conditions" },
+      { label: "AI Energy Optimisation", value: "Advanced AI-Powered Energy Forecasting & Smart Energy Management" },
+      { label: "Charge & Discharge Rate", value: "1.0C High-Performance Charging & Discharging Capability" },
+      { label: "Weight per Module", value: "45.0 kg Compact Modular Battery Design" },
+      { label: "System Thickness", value: "26 cm Ultra-Slim Vertical Stack Configuration" }
     ],
     models: [
       { name: "Sigen Battery 5.0 (5.0 kWh)", watts: "5.0 kWh", efficiency: "98.0%", type: "AI Modular 5-in-1" },
@@ -2387,12 +2718,13 @@ export const productsData: Record<string, ProductData> = {
     ],
     featuredCard: {
       badge: "WORLD'S FIRST AI 5-IN-1",
-      heading: "Engineered for Maximum Energy Storage",
-      description: "Sigenergy SigenStor Battery Systems Australia deliver the world's first 5-in-1 AI-powered energy system, integrating solar inverter, battery, EV charger, PCS, and EMS into a single futuristic vertical column.",
-      feature1Title: "AI-Optimized Energy Management",
-      feature1Desc: "Sigen AI learns your household habits, checks weather forecasts, and automatically optimizes battery charging to maximize self-sufficiency.",
-      feature2Title: "Built-In Fire Safety System",
-      feature2Desc: "Individual cell sensors with built-in aerosol fire-suppression packs inside each module, providing five layers of battery safety protection.",
+      heading: "Engineered for Smarter Energy Independence",
+      description: "Sigenergy Battery Australia combines AI-powered energy management, intelligent solar battery storage, and reliable backup power to help Australian homeowners maximise solar savings and energy efficiency.",
+      feature1Title: "AI Smart Energy Optimisation",
+      feature1Desc: "Advanced AI technology automatically manages battery charging, solar energy usage, and household consumption to maximise self-sufficiency and energy efficiency.",
+
+      feature2Title: "Advanced Safety Protection",
+      feature2Desc: "Built-in fire safety technology, real-time monitoring, and intelligent battery protection systems deliver safe, reliable, and long-term energy storage performance.",
       feature3Title: '',
       feature3Desc: ''
     },

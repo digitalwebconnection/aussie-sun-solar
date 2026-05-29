@@ -1,13 +1,38 @@
+import { useState } from "react";
+import { useToast } from "../ui/Toast";
 import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
   ChevronRight,
-  Headset,
   Sparkles,
 } from "lucide-react";
 
 const ContactHero = () => {
+  const toast = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setIsSubmitting(false);
+    if (data.success) {
+      toast.success("Message sent successfully! We'll be in touch shortly.");
+      (event.target as HTMLFormElement).reset();
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <section className="relative overflow-hidden bg-white py-24">
 
@@ -114,11 +139,6 @@ const ContactHero = () => {
                   title: "Email",
                   value: "info@aussiesunsolar.com.au",
                 },
-                {
-                  icon: Headset,
-                  title: "Support",
-                  value: "support@aussiesunsolar.com.au",
-                },
               ].map((item, i) => {
                 const Icon = item.icon;
 
@@ -207,17 +227,21 @@ const ContactHero = () => {
             </div>
 
             {/* Form */}
-            <form className="relative z-10 space-y-5">
+            <form className="relative z-10 space-y-5" onSubmit={onSubmit}>
 
               <div className="grid gap-5 md:grid-cols-2">
                 <input
                   type="text"
+                  name="name"
+                  required
                   placeholder="Full Name"
                   className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none transition-all focus:ring-2 focus:ring-[#FE9900]"
                 />
 
                 <input
                   type="email"
+                  name="email"
+                  required
                   placeholder="Email Address"
                   className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none transition-all focus:ring-2 focus:ring-[#FE9900]"
                 />
@@ -226,11 +250,12 @@ const ContactHero = () => {
               <div className="grid gap-5 md:grid-cols-2">
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone Number"
                   className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none transition-all focus:ring-2 focus:ring-[#FE9900]"
                 />
 
-                <select className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none">
+                <select name="service" className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none">
                   <option>Select Service</option>
                   <option>Solar Installation</option>
                   <option>Battery Storage</option>
@@ -241,18 +266,18 @@ const ContactHero = () => {
 
               <textarea
                 rows={5}
+                name="message"
+                required
                 placeholder="Write your message..."
                 className="w-full rounded-xl border border-white/10 bg-white p-5 font-medium text-[#004093] outline-none transition-all resize-none focus:ring-2 focus:ring-[#FE9900]"
               />
 
               {/* Button */}
               <motion.button
-                whileHover={{
-                  scale: 1.02,
-                }}
-                whileTap={{
-                  scale: 0.98,
-                }}
+                type="submit"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 className="
                   group
                   flex
@@ -272,11 +297,12 @@ const ContactHero = () => {
                   transition-all
                   duration-300
                   hover:bg-white
+                  disabled:opacity-70
+                  disabled:cursor-not-allowed
                 "
               >
-                Submit Inquiry
-
-                <ChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                {isSubmitting ? "Sending..." : "Submit Inquiry"}
+                {!isSubmitting && <ChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />}
               </motion.button>
             </form>
           </motion.div>

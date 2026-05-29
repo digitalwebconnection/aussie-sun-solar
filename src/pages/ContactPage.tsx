@@ -1,6 +1,6 @@
 import ContactPageHero from '../Component/Contact/ContactPageHero';
 import ContactHero from '../Component/Contact/ContactHero';
-import ContactOffices from '../Component/Contact/ContactOffices';
+
 import ContactServices from '../Component/Contact/ContactServices';
 
 
@@ -13,13 +13,8 @@ const ContactPage = () => {
       {/* 1. Contact Info & Form Section */}
       <ContactHero />
 
-      {/* 2. Office Locations */}
-      <ContactOffices />
-
-      {/* 3. Services Grid */}
+      {/* 2. Services Grid */}
       <ContactServices />
-
-
 
     </main>
   );

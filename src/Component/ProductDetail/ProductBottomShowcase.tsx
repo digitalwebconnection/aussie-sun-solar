@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useToast } from "../ui/Toast";
 import { MessageSquare, Phone, Mail, ShieldCheck, Zap, Award, CheckCircle } from "lucide-react";
 import type { ProductData } from "../../data/products";
 
@@ -7,6 +8,21 @@ interface ProductBottomShowcaseProps {
 }
 
 export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ product }) => {
+  const toast = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+        const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
+    const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+    const data = await response.json();
+    setIsSubmitting(false);
+    if (data.success) { toast.success("Request sent successfully! We'll be in touch shortly."); (event.target as HTMLFormElement).reset(); }
+    else { toast.error("Something went wrong. Please try again."); }
+  };
+
   return (
     <div className="relative overflow-hidden bg-slate-950 text-white  border border-slate-800 shadow-2xl shadow-slate-950/20 mt-12">
       {/* Background Image of Solar Panels with Dark Overlay */}
@@ -94,15 +110,13 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
             </p>
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you! We will contact you shortly.");
-              }}
+              onSubmit={onSubmit}
               className="space-y-4"
             >
               <div>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Full Name"
                   required
                   className="w-full px-4 py-3 text-xs font-semibold rounded-xl bg-slate-900/60 border border-white/10 text-white placeholder-slate-500 focus:outline-hidden focus:border-[#FE9900] focus:ring-1 focus:ring-[#FE9900] transition"
@@ -112,6 +126,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
               <div>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Best Contact Number"
                   required
                   className="w-full px-4 py-3 text-xs font-semibold rounded-xl bg-slate-900/60 border border-white/10 text-white placeholder-slate-500 focus:outline-hidden focus:border-[#FE9900] focus:ring-1 focus:ring-[#FE9900] transition"
@@ -120,10 +135,11 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
 
               <div>
                 <select
+                  name="category"
                   required
                   className="w-full px-4 py-3 text-xs font-semibold rounded-xl bg-slate-900/60 border border-white/10 text-slate-400 focus:outline-hidden focus:border-[#FE9900] focus:ring-1 focus:ring-[#FE9900] transition"
                 >
-                  <option value="" disabled selected className="bg-slate-950">Select solar category...</option>
+                  <option value="" disabled className="bg-slate-950">Select solar category...</option>
                   <option value="Solar Panels" className="bg-slate-950 text-white">Solar Panels</option>
                   <option value="Inverters" className="bg-slate-950 text-white">Solar Inverters</option>
                   <option value="Batteries" className="bg-slate-950 text-white">Battery Storage</option>
@@ -131,11 +147,15 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
                 </select>
               </div>
 
+              
+              
+
               <button
                 type="submit"
-                className="w-full bg-[#FE9900] hover:bg-[#e08600] text-white py-3.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all duration-300 shadow-lg shadow-[#FE9900]/20 hover:scale-[1.01]"
+                disabled={isSubmitting}
+                className="w-full bg-[#FE9900] hover:bg-[#e08600] text-white py-3.5 rounded-xl text-xs font-black tracking-wider uppercase transition-all duration-300 shadow-lg shadow-[#FE9900]/20 hover:scale-[1.01] disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Send Request
+                {isSubmitting ? "Sending..." : "Send Request"}
               </button>
             </form>
 

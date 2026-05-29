@@ -49,8 +49,8 @@ const BatterySmarterLiving = () => {
             </motion.h2>
 
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="mt-4 text-gray-900 text-lg leading-relaxed max-w-xl">
-              Take complete control of your energy. Our battery storage solutions let you store
-              solar power and use it whenever you need it — day or night.
+              Advanced home battery storage Australia solutions for lower electricity bills, reliable backup power, and smarter solar energy usage. 
+              
             </motion.p>
 
             <div className="mt-8 grid gap-5">

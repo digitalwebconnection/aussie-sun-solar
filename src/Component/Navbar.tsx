@@ -344,7 +344,7 @@ const SolarNavbar = () => {
 
             {/* ---- DESKTOP RIGHT: Phone + CTA ---- */}
             <div className="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0 pe-2">
-              <a
+              {/* <a
                 href="tel:1300504912"
                 className="flex items-center gap-3 group"
               >
@@ -357,7 +357,7 @@ const SolarNavbar = () => {
                     1300 504 912
                   </p>
                 </div>
-              </a>
+              </a> */}
 
               <Link
                 to="/contact"

@@ -1,8 +1,8 @@
 import  { useEffect, useState } from "react";
 import {
   ArrowRight,
-
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import hero1 from "../../assets/home-page/hero1.jpg"
 
 /* ================================
@@ -103,23 +103,23 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* BUTTONS */}
-          <div className="flex flex-wrap items-center gap-5   mt-5 md:mt-12">
+            {/* BUTTONS */}
+            <div className="flex flex-wrap items-center gap-5   mt-5 md:mt-12">
 
-            {/* BUTTON */}
-            <button className="group bg-[#FE9900] hover:bg-[#ffae2b] text-white w-full md:w-auto px-10 py-2 rounded-2xl text-lg font-bold flex items-center justify-center gap-4 shadow-[0_10px_40px_rgba(254,153,0,0.45)] transition-all duration-300 hover:scale-105">
+              {/* BUTTON */}
+              <Link
+                to="/contact"
+                className="group bg-[#FE9900] hover:bg-[#ffae2b] text-white w-full md:w-auto px-10 py-2 rounded-2xl text-lg font-bold flex items-center justify-center gap-4 shadow-[0_10px_40px_rgba(254,153,0,0.45)] transition-all duration-300 hover:scale-105"
+              >
+                Get Free Quote
+                <ArrowRight
+                  size={22}
+                  className="group-hover:translate-x-1 transition duration-300"
+                />
+              </Link>
 
-              Get Free Quote
 
-              <ArrowRight
-                size={22}
-                className="group-hover:translate-x-1 transition duration-300"
-              />
-
-            </button>
-
-
-          </div>
+            </div>
 
           
 
@@ -156,11 +156,12 @@ const HeroSection = () => {
             solar + battery systems.
           </p>
 
-          <button className="w-full mt-8 bg-[#FE9900] hover:bg-[#ffad29] text-[#004093] py-2 rounded-xl font-bold text-lg transition duration-300 hover:scale-[1.02]">
-
+          <Link
+            to="/contact"
+            className="w-full mt-8 bg-[#FE9900] hover:bg-[#ffad29] text-[#004093] py-2 rounded-xl font-bold text-lg transition duration-300 hover:scale-[1.02] block text-center"
+          >
             Calculate Savings
-
-          </button>
+          </Link>
 
         </div>
 

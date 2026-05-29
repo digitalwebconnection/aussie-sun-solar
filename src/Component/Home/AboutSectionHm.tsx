@@ -3,9 +3,11 @@ import {
   Award,
   ShieldCheck,
   Zap,
+  ArrowRight,
 } from "lucide-react";
 import BlurText from "../BlurText";
 import Stack from "../Stack";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -143,6 +145,23 @@ const AboutSection = () => {
           </div>
 
 
+          {/* CTA BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center justify-center gap-3 bg-[#004093] hover:bg-[#003070] text-white px-8 py-3 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105 shadow-lg shadow-[#004093]/25"
+            >
+              Get Free Quote
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/projects"
+              className="group inline-flex items-center justify-center gap-3 border-2 border-[#004093] text-[#004093] hover:bg-[#004093] hover:text-white px-8 py-3 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105"
+            >
+              View Our Projects
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
         </div>
 

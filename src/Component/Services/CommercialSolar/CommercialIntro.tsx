@@ -16,12 +16,11 @@ const CommercialIntro = () => {
             <div className="h-[2px] w-14 bg-[#FE9900]" />
           </div>
           <h2 className="text-3xl font-black font-serif leading-tight text-[#111827] md:text-5xl">
-            Australia's Trusted Partner In
-            <span className="mt-2 block text-[#004093]">Commercial Solar</span>
+            Australia’s Trusted Experts In 
+            <span className="mt-2 block text-[#004093]">Commercial Solar Solutions</span>
           </h2>
           <p className="mx-auto mt-8 max-w-7xl text-lg leading-relaxed text-gray-900 md:text-xl">
-            Aussie Sun Solar designs and installs large-scale solar systems for commercial and industrial properties across Australia. Cut your energy overheads, increase sustainability, and benefit from government incentives.
-          </p>
+         Aussie Sun Solar provides trusted Commercial Solar Solutions Australia businesses rely on for lower energy costs and better efficiency.Smart solar systems for warehouses, offices, and commercial properties across Australia. </p>
 
           <div className="mt-8 md:mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[{ number: "500+", label: "Commercial Installs" }, { number: "100kW+", label: "Largest System" }, { number: "100%", label: "Australian Support" }, { number: "25 Years", label: "Panel Warranty" }].map((item, i) => (

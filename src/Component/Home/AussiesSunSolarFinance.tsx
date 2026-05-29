@@ -1,4 +1,6 @@
 
+import { useState } from "react";
+import { useToast } from "../ui/Toast";
 import {
   Sun,
   BadgeDollarSign,
@@ -8,6 +10,21 @@ import {
 } from "lucide-react";
 
 export default function AussiesSunSolarFinance() {
+  const toast = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+        const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
+    const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+    const data = await response.json();
+    setIsSubmitting(false);
+    if (data.success) { toast.success("Request sent successfully! We'll be in touch shortly."); (event.target as HTMLFormElement).reset(); }
+    else { toast.error("Something went wrong. Please try again."); }
+  };
+
   return (
     <section className="w-full bg-[#f4f8ff] py-10 md:py-16 overflow-hidden" aria-label="Solar finance options">
       <div className="max-w-7xl mx-auto">
@@ -183,15 +200,16 @@ export default function AussiesSunSolarFinance() {
                 </p>
               </div>
 
-              <form className="space-y-5">
+              <form className="space-y-5" onSubmit={onSubmit}>
 
                 <div>
                   <label className="text-[#004093] font-semibold mb-2 block">
                     Full Name
                   </label>
-
                   <input
                     type="text"
+                    name="name"
+                    required
                     placeholder="Enter full name"
                     className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-[#f7f9ff] outline-none focus:border-[#FE9900]"
                   />
@@ -201,9 +219,10 @@ export default function AussiesSunSolarFinance() {
                   <label className="text-[#004093] font-semibold mb-2 block">
                     Email Address
                   </label>
-
                   <input
                     type="email"
+                    name="email"
+                    required
                     placeholder="Enter email address"
                     className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-[#f7f9ff] outline-none focus:border-[#FE9900]"
                   />
@@ -213,9 +232,9 @@ export default function AussiesSunSolarFinance() {
                   <label className="text-[#004093] font-semibold mb-2 block">
                     Contact Number
                   </label>
-
                   <input
-                    type="text"
+                    type="tel"
+                    name="phone"
                     placeholder="Enter mobile number"
                     className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-[#f7f9ff] outline-none focus:border-[#FE9900]"
                   />
@@ -225,9 +244,9 @@ export default function AussiesSunSolarFinance() {
                   <label className="text-[#004093] font-semibold mb-2 block">
                     Address
                   </label>
-
                   <input
                     type="text"
+                    name="address"
                     placeholder="Enter address"
                     className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-[#f7f9ff] outline-none focus:border-[#FE9900]"
                   />
@@ -237,8 +256,7 @@ export default function AussiesSunSolarFinance() {
                   <label className="text-[#004093] font-semibold mb-2 block">
                     Interested In
                   </label>
-
-                  <select className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-[#f7f9ff] outline-none focus:border-[#FE9900]">
+                  <select name="service" className="w-full h-14 px-5 rounded-2xl border border-gray-200 bg-[#f7f9ff] outline-none focus:border-[#FE9900]">
                     <option>Residential Solar</option>
                     <option>Commercial Solar</option>
                     <option>Solar Battery</option>
@@ -246,13 +264,16 @@ export default function AussiesSunSolarFinance() {
                   </select>
                 </div>
 
-                <button className="group w-full bg-[#FE9900] hover:bg-orange-500 transition-all duration-300 h-16 rounded-2xl text-white font-black text-lg flex items-center justify-center gap-3 shadow-xl">
-                  Request Free Quote
+                
+                
 
-                  <ArrowRight
-                    size={22}
-                    className="group-hover:translate-x-1 transition-all"
-                  />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group w-full bg-[#FE9900] hover:bg-orange-500 transition-all duration-300 h-16 rounded-2xl text-white font-black text-lg flex items-center justify-center gap-3 shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? "Sending..." : "Request Free Quote"}
+                  {!isSubmitting && <ArrowRight size={22} className="group-hover:translate-x-1 transition-all" />}
                 </button>
 
               </form>

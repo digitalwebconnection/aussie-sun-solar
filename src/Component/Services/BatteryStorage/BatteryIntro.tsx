@@ -20,14 +20,12 @@ const BatteryIntro = () => {
           </div>
 
           <h2 className="text-4xl font-black font-serif leading-tight text-[#111827] md:text-6xl">
-            Australia's Leading Battery
-            <span className="mt-2 block text-[#004093]">Storage Specialists</span>
+            Australia’s Trusted Battery  
+            <span className="mt-2 block text-[#004093]">Storage Solutions Experts</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-7xl text-lg leading-relaxed text-gray-900 md:text-xl">
-            Aussie Sun Solar provides cutting-edge battery storage systems that let you harness
-            every drop of solar energy. Store excess power during the day and use it at night,
-            during peak periods, or when the grid goes down — giving you total energy control.
+            Aussie Sun Solar offers reliable battery storage solutions in Australia for smarter solar energy use and lower electricity bills.Power your home or business day and night with efficient solar battery backup systems.
           </p>
 
           <div className="mt-8 md:mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">

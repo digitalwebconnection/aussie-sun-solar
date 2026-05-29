@@ -54,7 +54,7 @@ const PremiumSolarPackages = () => {
 
       <div className="max-w-7xl mx-auto px-5 md:px-0 relative z-10">
         {/* Header */}
-        <div className="flex flex-col  md:items-end justify-center text-center md:mb-20 mb-5 gap-8">
+        <div className="flex flex-col  md:items-end justify-center text-center md:mb-10 mb-5 gap-8">
           <div className="max-w-2xl mx-auto">
             <motion.span
               initial={{ opacity: 0, x: -20 }}

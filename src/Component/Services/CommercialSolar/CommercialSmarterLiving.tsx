@@ -28,11 +28,10 @@ const CommercialSmarterLiving = () => {
           <div>
             <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block px-10 py-1 border-[#FE9900]/80 rounded-lg bg-[#FE9900]/80 text-black font-bold uppercase tracking-[0.2em] text-sm">Smart Commercial Solar</motion.span>
             <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-3xl md:text-5xl font-black leading-tight text-[#004093]">
-              Power Your Business <br /> The Smarter Way
+              Power Your Business <br /> With Smart Solar
             </motion.h2>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="mt-4 text-gray-900 text-lg leading-relaxed max-w-xl">
-              Commercial solar systems from Aussie Sun Solar are engineered to deliver maximum energy output and ROI for warehouses, offices, factories, and retail properties.
-            </motion.p>
+            Commercial Solar Australia solutions designed to reduce energy costs, improve efficiency, and maximise long-term business savings. Reliable solar systems for warehouses, offices, factories, and commercial properties across Australia.  </motion.p>
             <div className="mt-8 grid gap-5">
               {items.map((item, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }} className="group flex gap-5 p-6 rounded-lg shadow-xl shadow-black/40 bg-white border border-gray-300 hover:border-[#FE9900]/60 hover:shadow-2xl transition-all duration-500">

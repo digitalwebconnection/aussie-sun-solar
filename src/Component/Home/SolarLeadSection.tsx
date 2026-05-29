@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useToast } from "../ui/Toast";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Battery,
@@ -58,6 +59,20 @@ const solarOptions = [
 
 const SolarLeadSection = () => {
     const [activeTab, setActiveTab] = useState(0);
+    const toast = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+                const formData = new FormData(event.target as HTMLFormElement);
+        formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
+        const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+        const data = await response.json();
+        setIsSubmitting(false);
+        if (data.success) { toast.success("Request sent successfully! We'll be in touch shortly."); (event.target as HTMLFormElement).reset(); }
+        else { toast.error("Something went wrong. Please try again."); }
+    };
 
     return (
         <section className="relative py-6 md:py-14 bg-white overflow-hidden text-[#004093] font-sans" aria-label="Build your smart solar ecosystem">
@@ -193,7 +208,7 @@ const SolarLeadSection = () => {
                                 </p>
                             </div>
 
-                            <form className="space-y-5 relative z-10">
+                            <form className="space-y-5 relative z-10" onSubmit={onSubmit}>
                                 {/* Name & Phone Row */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="relative">
@@ -202,6 +217,8 @@ const SolarLeadSection = () => {
                                             whileFocus="focus"
                                             variants={inputVariants}
                                             type="text"
+                                            name="name"
+                                            required
                                             placeholder="First Name"
                                             className="w-full pl-12 pr-5 py-4 rounded-lg bg-slate-50 border border-slate-100 text-[#004093] outline-none transition-all text-sm font-bold placeholder:text-slate-400 placeholder:font-medium"
                                         />
@@ -211,7 +228,8 @@ const SolarLeadSection = () => {
                                         <motion.input
                                             whileFocus="focus"
                                             variants={inputVariants}
-                                            type="text"
+                                            type="tel"
+                                            name="phone"
                                             placeholder="Phone"
                                             className="w-full pl-12 pr-5 py-4 rounded-lg bg-slate-50 border border-slate-100 text-[#004093] outline-none transition-all text-sm font-bold placeholder:text-slate-400 placeholder:font-medium"
                                         />
@@ -225,6 +243,8 @@ const SolarLeadSection = () => {
                                         whileFocus="focus"
                                         variants={inputVariants}
                                         type="email"
+                                        name="email"
+                                        required
                                         placeholder="Email Address"
                                         className="w-full pl-12 pr-5 py-4 rounded-lg bg-slate-50 border border-slate-100 text-[#004093] outline-none transition-all text-sm font-bold placeholder:text-slate-400 placeholder:font-medium"
                                     />
@@ -236,6 +256,7 @@ const SolarLeadSection = () => {
                                     <motion.select
                                         whileFocus="focus"
                                         variants={inputVariants}
+                                        name="property_type"
                                         className="w-full pl-12 pr-5 py-4 rounded-lg bg-slate-50 border border-slate-200 text-[#004093] outline-none transition-all text-sm font-bold appearance-none cursor-pointer"
                                     >
                                         <option>Select Property Type</option>
@@ -245,11 +266,16 @@ const SolarLeadSection = () => {
                                     </motion.select>
                                 </div>
 
+                                
+                                
+
                                 {/* THE ULTRA-PREMIUM BUTTON */}
                                 <motion.button
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="relative w-full group overflow-hidden bg-[#004093] text-white py-5 rounded-[1.25rem] font-black text-sm uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 shadow-[0_15px_30px_-5px_rgba(0,64,147,0.3)]"
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                                    className="relative w-full group overflow-hidden bg-[#004093] text-white py-5 rounded-[1.25rem] font-black text-sm uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 shadow-[0_15px_30px_-5px_rgba(0,64,147,0.3)] disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {/* Shimmer Effect Layer */}
                                     <motion.div
@@ -259,15 +285,17 @@ const SolarLeadSection = () => {
                                         className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12"
                                     />
 
-                                    <span className="relative z-10">Get My Estimate</span>
+                                    <span className="relative z-10">{isSubmitting ? "Sending..." : "Get My Estimate"}</span>
 
-                                    <motion.div
-                                        animate={{ x: [0, 5, 0] }}
-                                        transition={{ repeat: Infinity, duration: 1.5 }}
-                                        className="relative z-10"
-                                    >
-                                        <ChevronRight size={20} strokeWidth={3} />
-                                    </motion.div>
+                                    {!isSubmitting && (
+                                        <motion.div
+                                            animate={{ x: [0, 5, 0] }}
+                                            transition={{ repeat: Infinity, duration: 1.5 }}
+                                            className="relative z-10"
+                                        >
+                                            <ChevronRight size={20} strokeWidth={3} />
+                                        </motion.div>
+                                    )}
 
                                     {/* Hover Background Shift */}
                                     <div className="absolute inset-0 bg-[#FE9900] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

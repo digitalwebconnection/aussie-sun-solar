@@ -1,6 +1,7 @@
 import ProjectsHero from '../Component/Projects/ProjectsHero';
 import ProjectStats from '../Component/Projects/ProjectStats';
-import ProjectsGrid from '../Component/Projects/ProjectsGrid';
+// import ProjectsGrid from '../Component/Projects/ProjectsGrid';
+import ProjectsGallery from '../Component/Projects/ProjectsGallery';
 import ProjectProcess from '../Component/Projects/ProjectProcess';
 
 
@@ -14,13 +15,14 @@ const ProjectsPage = () => {
       <ProjectStats />
 
       {/* 3. Filterable projects grid */}
-      <ProjectsGrid />
+      {/* <ProjectsGrid /> */}
 
-      {/* 4. 4-step installation process */}
+      {/* 4. Real project photo gallery */}
+      <ProjectsGallery />
+
+      {/* 5. 4-step installation process */}
       <ProjectProcess />
 
-      {/* 7. Dark CTA with contact cards */}
-     
     </main>
   );
 };

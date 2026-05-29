@@ -1,8 +1,25 @@
 
+import { useState } from "react";
+import { useToast } from "../../ui/Toast";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
 const BatteryHero = () => {
+  const toast = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+        const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
+    const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+    const data = await response.json();
+    setIsSubmitting(false);
+    if (data.success) { toast.success("Message sent! We'll contact you shortly."); (event.target as HTMLFormElement).reset(); }
+    else { toast.error("Something went wrong. Please try again."); }
+  };
+
   return (
     <section className="relative overflow-hidden pt-28 pb-8">
       {/* Background Image */}
@@ -39,15 +56,14 @@ const BatteryHero = () => {
               </div>
 
               <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
-                Battery storage
+                 Battery Storage Solutions
                 <span className="block text-[#FE9900]">
-                  solutions
+                  Australia 
                 </span>
               </h2>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
-                Store excess solar energy and power your home day and night
-                with advanced battery storage systems.
+                Store solar energy, cut electricity costs, and enjoy reliable backup power with smart battery storage solutions in Australia.Perfect for homes and businesses seeking sustainable, energy-efficient living.
               </p>
             </motion.div>
           </div>
@@ -83,54 +99,15 @@ const BatteryHero = () => {
                 Fill out the form and our team will contact you shortly.
               </p>
 
-              <form className="mt-4 space-y-2">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="
-                    h-14 w-full rounded-xl border border-white/10
-                    bg-white/10 px-5 text-white outline-none
-                    placeholder:text-white/50 focus:border-[#FE9900]
-                  "
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="
-                    h-14 w-full rounded-xl border border-white/10
-                    bg-white/10 px-5 text-white outline-none
-                    placeholder:text-white/50 focus:border-[#FE9900]
-                  "
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="
-                    h-14 w-full rounded-xl border border-white/10
-                    bg-white/10 px-5 text-white outline-none
-                    placeholder:text-white/50 focus:border-[#FE9900]
-                  "
-                />
-                <textarea
-                  rows={2}
-                  placeholder="Your Message"
-                  className="
-                    w-full rounded-xl border border-white/10
-                    bg-white/10 p-5 text-white outline-none
-                    resize-none placeholder:text-white/50
-                    focus:border-[#FE9900]
-                  "
-                />
-                <button
-                  className="
-                    flex w-full items-center justify-center gap-3
-                    rounded-xl bg-[#FE9900] px-7 py-4 font-bold
-                    text-black transition-all duration-300
-                    hover:scale-[1.02]
-                  "
-                >
-                  Submit Inquiry
-                  <ChevronRight size={20} />
+              <form className="mt-4 space-y-2" onSubmit={onSubmit}>
+                <input type="text" name="name" required placeholder="Full Name" className="h-14 w-full rounded-xl border border-white/10 bg-white/10 px-5 text-white outline-none placeholder:text-white/50 focus:border-[#FE9900]" />
+                <input type="email" name="email" required placeholder="Email Address" className="h-14 w-full rounded-xl border border-white/10 bg-white/10 px-5 text-white outline-none placeholder:text-white/50 focus:border-[#FE9900]" />
+                <input type="tel" name="phone" placeholder="Phone Number" className="h-14 w-full rounded-xl border border-white/10 bg-white/10 px-5 text-white outline-none placeholder:text-white/50 focus:border-[#FE9900]" />
+                <textarea rows={2} name="message" required placeholder="Your Message" className="w-full rounded-xl border border-white/10 bg-white/10 p-5 text-white outline-none resize-none placeholder:text-white/50 focus:border-[#FE9900]" />
+                
+                
+                <button type="submit" disabled={isSubmitting} className="flex w-full items-center justify-center gap-3 rounded-xl bg-[#FE9900] px-7 py-4 font-bold text-black transition-all duration-300 hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed">
+                  {isSubmitting ? "Sending..." : "Submit Inquiry"} {!isSubmitting && <ChevronRight size={20} />}
                 </button>
               </form>
             </div>

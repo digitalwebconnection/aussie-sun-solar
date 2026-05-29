@@ -16,12 +16,11 @@ const EVIntro = () => {
             <div className="h-[2px] w-14 bg-[#FE9900]" />
           </div>
           <h2 className="text-3xl font-black font-serif leading-tight text-[#111827] md:text-5xl">
-            Australia's Preferred EV
-            <span className="mt-2 block text-[#004093]">Charging Installers</span>
+            Australia’s Trusted EV 
+            <span className="mt-2 block text-[#004093]">Charging Specialists</span>
           </h2>
           <p className="mx-auto mt-8 max-w-7xl text-lg leading-relaxed text-gray-900 md:text-xl">
-            Aussie Sun Solar installs fast, reliable EV chargers at your home or business. Charge your electric vehicle overnight using clean solar energy and wake up to a full battery every morning.
-          </p>
+          Aussie Sun Solar delivers smart EV Chargers Australia solutions for fast, reliable, and energy-efficient vehicle charging. Power your EV with solar compatible charging systems built for Australian homes and businesses. </p>
 
           <div className="mt-6 md:mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[{ number: "1K+", label: "EV Chargers Installed" }, { number: "7kW–22kW", label: "Charger Speeds" }, { number: "100%", label: "Local Support" }, { number: "24/7", label: "Monitoring" }].map((item, i) => (

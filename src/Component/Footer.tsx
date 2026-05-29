@@ -4,7 +4,9 @@ import {
   Mail,
   MapPin,
   ExternalLink,
+  Code,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import {
   FaFacebookF,
@@ -87,22 +89,16 @@ const Footer = () => {
 
           {/* BUTTON */}
 
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow:
-                "0 20px 25px -5px rgb(254 153 0 / 0.2)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center justify-center gap-3 bg-[#FE9900] text-white px-6 sm:px-8 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl shadow-[#FE9900]/20 transition-all group w-full sm:w-auto"
+          <Link
+            to="/contact"
+            className="flex items-center justify-center gap-3 bg-[#FE9900] text-white px-6 sm:px-8 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl shadow-[#FE9900]/20 transition-all group w-full sm:w-auto hover:bg-[#e68900] hover:scale-105"
           >
             Get A Free Quote
-
             <ExternalLink
               size={20}
               className="group-hover:rotate-45 transition-transform"
             />
-          </motion.button>
+          </Link>
         </div>
       </div>
 
@@ -220,14 +216,11 @@ const Footer = () => {
             <div className="space-y-8">
               {[
                 {
-                  state: "South Australia",
-                  addr: "3/55 Gawler Place, Adelaide",
+                  state: "New South Wales",
+                  addr: "114 burns road, kellyville nsw 2155",
                 },
 
-                {
-                  state: "Queensland",
-                  addr: "29/97 Creek St, Brisbane City",
-                },
+
               ].map((loc, i) => (
                 <div
                   key={i}
@@ -259,28 +252,24 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3 text-[#004093]">
               <span className="w-2 h-7 bg-[#FE9900] rounded-full"></span>
-
               Quick Links
             </h3>
-
             <ul className="space-y-4">
               {[
-                "Home",
-                "Products",
-                "About Us",
-                "Our Projects",
-                "Contact Us",
-                "Pay a Bill",
+                { label: "Home", to: "/" },
+                { label: "Products", to: "/products" },
+                { label: "About Us", to: "/about" },
+                { label: "Our Projects", to: "/projects" },
+                { label: "Contact Us", to: "/contact" },
               ].map((link, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
+                  <Link
+                    to={link.to}
                     className="text-gray-600 hover:text-[#FE9900] font-semibold transition-all flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#FE9900] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -353,22 +342,22 @@ const Footer = () => {
           {/* LINKS */}
 
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm md:text-base text-center">
-            <a
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
               className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
             >
               Privacy Policy
-            </a>
+            </Link>
 
             <a
-              href="/terms-condition"
+              href="#"
               className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
             >
-              Terms & Conditions
+              Terms &amp; Conditions
             </a>
 
             <a
-              href="/complaints-policy"
+              href="#"
               className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
             >
               Complaints Handling Policy
@@ -377,7 +366,7 @@ const Footer = () => {
 
           {/* COPYRIGHT */}
 
-          <div>
+          <div className="flex flex-col items-center lg:items-end gap-1">
             <p className="text-gray-500 text-sm md:text-base text-center lg:text-right">
               ©2026
               <span className="font-bold text-[#004093]">
@@ -386,6 +375,7 @@ const Footer = () => {
               </span>{" "}
               ABN 14 657 213 873
             </p>
+
           </div>
         </div>
       </div>
@@ -412,10 +402,23 @@ const Footer = () => {
             competitor advertised quotes only
             and must be for identical goods.
           </p>
+          <div className="flex justify-between">
+            <p className="text-[#004093] font-semibold mt-4 text-sm md:text-base">
+              *Terms and conditions apply.
+            </p>
+            <p className="text-xl flex text-gray-500 text-center lg:text-right">
 
-          <p className="text-[#004093] font-semibold mt-4 text-sm md:text-base">
-            *Terms and conditions apply.
-          </p>
+              <Code size={28} className="text-[#FE9900] pt-1 " />   Developed by{"  "}
+              <a
+                href="https://digitalwebconnection.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#FE9900] hover:underline"
+              >
+                {"  "}  Digital Web Connection
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
