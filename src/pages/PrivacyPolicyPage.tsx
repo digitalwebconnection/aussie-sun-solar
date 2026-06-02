@@ -36,7 +36,7 @@ You can control cookie preferences through our cookie banner or your browser set
   {
     title: "Information Sharing & Disclosure",
     content: `We do not sell, trade, or rent your personal information to third parties. We may share your information with:
-• Our CEC-accredited installation partners who fulfil your solar installation
+• Our SAA-accredited installation partners who fulfil your solar installation
 • Government bodies for Small-Scale Technology Certificate (STC) claims and rebate processing
 • Payment processors for financial transactions
 • Analytics service providers (data is anonymised)

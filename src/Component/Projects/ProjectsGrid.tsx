@@ -2,53 +2,51 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, ArrowRight } from "lucide-react";
 
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+import solarProject2 from '../../assets/downloaded-images/solar-project-2.jpg';
+import installingSolar from '../../assets/downloaded-images/installing-solar.jpg';
+
 const projects = [
   {
     id: 1,
     title: "Residential Solar Project",
     location: "Melbourne, Australia",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop",
+    image: solarRoof1,
     category: "Residential",
   },
   {
     id: 2,
     title: "Commercial Rooftop Solar",
     location: "Sydney, Australia",
-    image:
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1200&auto=format&fit=crop",
+    image: solarProject2,
     category: "Commercial",
   },
   {
     id: 3,
     title: "Industrial Solar Installation",
     location: "Brisbane, Australia",
-    image:
-      "https://images.unsplash.com/photo-1559302995-f09f21503348?q=80&w=1200&auto=format&fit=crop",
+    image: installingSolar,
     category: "Industrial",
   },
    {
     id: 4,
     title: "Residential Solar Project",
     location: "Melbourne, Australia",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop",
+    image: solarRoof1,
     category: "Residential",
   },
   {
     id: 5,
     title: "Commercial Rooftop Solar",
     location: "Sydney, Australia",
-    image:
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1200&auto=format&fit=crop",
+    image: solarProject2,
     category: "Commercial",
   },
   {
     id: 6,
     title: "Industrial Solar Installation",
     location: "Brisbane, Australia",
-    image:
-      "https://images.unsplash.com/photo-1559302995-f09f21503348?q=80&w=1200&auto=format&fit=crop",
+    image: installingSolar,
     category: "Industrial",
   },
 ];

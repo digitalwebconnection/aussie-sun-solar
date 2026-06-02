@@ -11,7 +11,7 @@ export const WhyAussieDifference: React.FC = () => {
     },
     {
       title: "Professional Installation",
-      desc: "Every solar system is set up by Clean Energy Council (CEC) accredited installers, ensuring safety, compliance, and excellence.",
+      desc: "Every solar system is set up by Clean Energy Council (SAA) accredited installers, ensuring safety, compliance, and excellence.",
       icon: <Wrench className="text-[#FE9900] group-hover:text-white transition-colors duration-300" size={24} />
     },
     {
@@ -50,8 +50,8 @@ export const WhyAussieDifference: React.FC = () => {
   // Animation variants for individual cards
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { type: "spring", stiffness: 100, damping: 15 }
     },
@@ -64,7 +64,7 @@ export const WhyAussieDifference: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#FE9900]/5 rounded-full blur-3xl pointer-events-none" />
 
         {/* Animated Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -81,7 +81,7 @@ export const WhyAussieDifference: React.FC = () => {
         </motion.div>
 
         {/* Animated Cards Grid */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -92,7 +92,7 @@ export const WhyAussieDifference: React.FC = () => {
             <motion.div
               key={idx}
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { duration: 0.2, ease: "easeOut" }
               }}

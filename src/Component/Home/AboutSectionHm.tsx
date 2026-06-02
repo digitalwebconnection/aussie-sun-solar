@@ -9,6 +9,11 @@ import BlurText from "../BlurText";
 import Stack from "../Stack";
 import { Link } from "react-router-dom";
 
+import solarInstalling from '../../assets/downloaded-images/installing-solar.jpg';
+import adaniPanel from '../../assets/downloaded-images/adani-solar-panel.jpg';
+import solarRoofStreet from '../../assets/downloaded-images/solar-roof-street.jpg';
+import aerialSolarHouse from '../../assets/downloaded-images/aerial-solar-house.jpg';
+
 const AboutSection = () => {
   return (
     <section className="relative py-12 md:py-24 bg-white overflow-hidden" aria-label="About Aussie Sun Solar">
@@ -25,14 +30,14 @@ const AboutSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
-        
+
         {/* =====================================
             LEFT SIDE: PREMIUM IMAGE STACK
         ===================================== */}
         <div className="relative">
           {/* BACKGROUND DECORATION */}
           <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#FE9900]/5 rounded-full "></div>
-          
+
           <div className="relative">
             {/* MAIN IMAGE STACK */}
             <div className="relative w-full h-[300px] lg:h-[500px] z-10">
@@ -42,10 +47,10 @@ const AboutSection = () => {
                 autoplay={true}
                 autoplayDelay={4000}
                 cards={[
-                  "https://cdn.britannica.com/91/222691-050-E8BDF226/installing-solar-panels.jpg",
-                  "https://5.imimg.com/data5/SELLER/Default/2025/3/498378875/UQ/HE/BB/35789085/solar-penal-570-adani.jpeg",
-                  "https://png.pngtree.com/thumb_back/fw800/background/20230113/pngtree-blue-solar-panels-on-roof-with-street-view-photo-image_49208374.jpg",
-                  "https://patidarsolar.com/wp-content/uploads/2024/01/aerial-view-private-house-with-solar-panels-roof-1024x682.jpg"
+                  solarInstalling,
+                  adaniPanel,
+                  solarRoofStreet,
+                  aerialSolarHouse
                 ].map((src, i) => (
                   <div key={i} className="w-full h-full relative overflow-hidden">
                     <img
@@ -73,7 +78,7 @@ const AboutSection = () => {
             {/* TRUST BADGE */}
             <div className="absolute top-2 left-2 bg-[#004093] z-11 text-white py-4 px-6 rounded-xl shadow-xl flex items-center gap-3">
               <ShieldCheck className="text-[#FE9900]" />
-              <span className="font-bold tracking-tight">CEC Accredited</span>
+              <span className="font-bold tracking-tight">SAA Accredited</span>
             </div>
           </div>
         </div>
@@ -82,7 +87,7 @@ const AboutSection = () => {
             RIGHT SIDE: PROFESSIONAL CONTENT
         ===================================== */}
         <div className="lg:pl-5">
-       
+
           {/* MAIN HEADING */}
           <h2 className="text-3xl lg:text-5xl font-extrabold text-[#111827] leading-tight tracking-tight flex flex-col items-start">
             <BlurText
@@ -119,7 +124,7 @@ const AboutSection = () => {
               className="text-gray-900 text-lg leading-relaxed block"
             />
             <BlurText
-              text="With CEC-certified installers, Tier-1 solar technology, zero upfront cost options, and trusted local support, we make switching to smart solar energy simple, reliable, and affordable across Australia."
+              text="With SAA-certified installers, Tier-1 solar technology, zero upfront cost options, and trusted local support, we make switching to smart solar energy simple, reliable, and affordable across Australia."
               delay={20}
               animateBy="words"
               direction="top"
@@ -130,7 +135,7 @@ const AboutSection = () => {
           {/* CORE FEATURES GRID */}
           <div className="grid sm:grid-cols-2 gap-6 mt-5 md:mt-12 ">
             {[
-              { title: "CEC Certified Installers", icon: Award },
+              { title: "SAA Certified Installers", icon: Award },
               { title: "Tier-1 Premium Tech", icon: Zap },
               { title: "Zero Upfront Cost", icon: CheckCircle2 },
               { title: "Local Ongoing Support", icon: ShieldCheck },

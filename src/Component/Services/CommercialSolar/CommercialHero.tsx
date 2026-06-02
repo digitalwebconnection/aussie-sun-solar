@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useToast } from "../../ui/Toast";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import commercialSolar1 from '../../../assets/downloaded-images/commercial-solar-1.jpg';
 
 const CommercialHero = () => {
   const toast = useToast();
@@ -23,7 +24,7 @@ const CommercialHero = () => {
     <section className="relative overflow-hidden pt-28 pb-8">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2000&auto=format&fit=crop"
+          src={commercialSolar1}
           alt="Commercial Solar Background"
           className="h-full w-full object-cover"
         />

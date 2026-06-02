@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Building2, ShieldCheck } from "lucide-react";
+import solarRoof1 from '../../../assets/downloaded-images/solar-roof-1.jpg';
 
 const CommercialSmarterLiving = () => {
   const items = [
@@ -15,7 +16,7 @@ const CommercialSmarterLiving = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -80 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
-              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop" alt="Commercial Solar" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={solarRoof1} alt="Commercial Solar" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
               <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }} className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 rounded-lg shadow-xl max-w-xs">
                 <h3 className="text-4xl font-black text-[#FE9900] leading-none">500+</h3>

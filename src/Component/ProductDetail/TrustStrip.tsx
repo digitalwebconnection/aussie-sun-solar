@@ -6,7 +6,7 @@ export const TrustStrip: React.FC = () => {
     { label: "Clean Energy Council Approved", icon: <Award size={36} className="text-[#004093]" /> },
     { label: "Tier 1 Solar Bloomberg", icon: <Zap size={36} className="text-[#004093]" /> },
     { label: "25-Year Warranty", icon: <ShieldCheck size={36} className="text-[#004093]" /> },
-    { label: "CEC Accredited Retailer", icon: <Award size={36} className="text-[#004093]" /> },
+    { label: "SAA Accredited Retailer", icon: <Award size={36} className="text-[#004093]" /> },
     { label: "100% Carbon Offset", icon: <Zap size={36} className="text-[#004093]" /> }
   ];
 

@@ -70,13 +70,13 @@ const cardVariants = {
 const ProjectStats: React.FC = () => {
   return (
     <section className="relative bg-white py-14 overflow-hidden">
-      
+
       {/* Decorative Background Grid */}
-      <div className="absolute inset-0 z-0 opacity-[0.03]" 
-        style={{ 
+      <div className="absolute inset-0 z-0 opacity-[0.03]"
+        style={{
           backgroundImage: `radial-gradient(#004093 1px, transparent 1px)`,
-          backgroundSize: '40px 40px' 
-        }} 
+          backgroundSize: '40px 40px'
+        }}
       />
 
       {/* Background Blurs */}
@@ -188,7 +188,7 @@ const ProjectStats: React.FC = () => {
                       separator=","
                     />
                   </h3>
-                  <span 
+                  <span
                     className="text-2xl font-bold"
                     style={{ color: s.color }}
                   >
@@ -213,9 +213,9 @@ const ProjectStats: React.FC = () => {
                     backgroundColor: s.color,
                   }}
                 />
-                
+
                 {/* Subtle border glow on hover */}
-                <div 
+                <div
                   className="absolute inset-0 rounded-[2.5rem] border-2 border-transparent transition-colors duration-500 group-hover:border-current pointer-events-none opacity-5"
                   style={{ color: s.color }}
                 />
@@ -233,7 +233,7 @@ const ProjectStats: React.FC = () => {
           className="mt-10 flex flex-wrap items-center justify-center gap-8 border-t border-gray-600 pt-10 text-sm font-bold text-gray-900"
         >
           <div className="flex items-center gap-2 hover:text-[#004093] transition-colors cursor-default">
-            <span className="text-[#FE9900]">✓</span> CEC Accredited Installers
+            <span className="text-[#FE9900]">✓</span> SAA Accredited Installers
           </div>
           <div className="flex items-center gap-2 hover:text-[#004093] transition-colors cursor-default">
             <span className="text-[#FE9900]">✓</span> 10-Year Workmanship Warranty

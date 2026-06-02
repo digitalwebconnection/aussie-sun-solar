@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Sun, Battery, Car, Building2, ArrowRight, ChevronRight, ShieldCheck, Users, Zap, Sparkles } from 'lucide-react';
+import solarRoof1 from '../assets/downloaded-images/solar-roof-1.jpg';
+import batteryStorage1 from '../assets/downloaded-images/battery-storage-1.jpg';
+import commercialSolar1 from '../assets/downloaded-images/commercial-solar-1.jpg';
+import evCharger1 from '../assets/downloaded-images/ev-charger-1.jpg';
+import solarHeroBg from '../assets/downloaded-images/solar-hero-bg.jpg';
 
 const services = [
   {
@@ -9,7 +14,7 @@ const services = [
     subtitle: 'Residential Solar',
     desc: 'High-efficiency solar panels for homes and properties across Australia. Reduce your energy bills and achieve energy independence.',
     path: '/services/solar-power-systems',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop',
+    image: solarRoof1,
     color: 'from-amber-400 to-orange-500',
     stats: ['10K+ Installs', '25Y Warranty', '100% Local Support'],
   },
@@ -19,7 +24,7 @@ const services = [
     subtitle: 'Energy Storage',
     desc: 'Store excess solar energy and power your home at night or during blackouts with cutting-edge battery storage technology.',
     path: '/services/battery-storage-solutions',
-    image: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=800&auto=format&fit=crop',
+    image: batteryStorage1,
     color: 'from-blue-400 to-indigo-600',
     stats: ['5K+ Batteries', '10Y Warranty', '24/7 Monitoring'],
   },
@@ -29,7 +34,7 @@ const services = [
     subtitle: 'Electric Vehicle Charging',
     desc: 'Professional EV charger installation at home or your business. Charge your electric vehicle using clean solar energy.',
     path: '/services/ev-chargers',
-    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800&auto=format&fit=crop',
+    image: evCharger1,
     color: 'from-emerald-400 to-teal-600',
     stats: ['1K+ Chargers', '7kW–22kW', 'All EV Brands'],
   },
@@ -39,14 +44,14 @@ const services = [
     subtitle: 'Business Solar',
     desc: 'Large-scale commercial solar systems for warehouses, offices, and industrial facilities. Cut overheads and meet sustainability goals.',
     path: '/services/commercial-solar',
-    image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=800&auto=format&fit=crop',
+    image: commercialSolar1,
     color: 'from-purple-400 to-pink-600',
     stats: ['500+ Installs', 'Up to 100kW+', 'Finance Available'],
   },
 ];
 
 const whyUs = [
-  { icon: ShieldCheck, title: 'CEC Accredited', desc: 'All our installers are Clean Energy Council accredited professionals.' },
+  { icon: ShieldCheck, title: 'SAA Accredited', desc: 'All our installers are Clean Energy Council accredited professionals.' },
   { icon: Users, title: '10,000+ Happy Customers', desc: 'Thousands of Australian homes and businesses trust Aussie Sun Solar.' },
   { icon: Zap, title: 'Fast Installation', desc: 'Quick, professional installs with smooth grid approvals and support.' },
   { icon: Sparkles, title: 'Premium Products Only', desc: 'We only supply Tier-1 solar panels, inverters, and battery systems.' },
@@ -59,7 +64,7 @@ const ServicesPage = () => {
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden pt-36 pb-20">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2000&auto=format&fit=crop" alt="Services Background" className="h-full w-full object-cover" />
+          <img src={solarHeroBg} alt="Services Background" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black/65" />
         </div>
         <div className="absolute left-[-10%] top-0 h-80 w-80 rounded-full bg-[#FE9900]/10 blur-[120px]" />

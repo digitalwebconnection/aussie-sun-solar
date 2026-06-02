@@ -4,29 +4,30 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
+import newSolarSystem from '../../assets/downloaded-images/new-solar-system.webp';
+import expandingSolar from '../../assets/downloaded-images/expanding-solar.webp';
+import newSolarBattery from '../../assets/downloaded-images/new-solar-battery.webp';
+import contactService from '../../assets/downloaded-images/contact-service.jpg';
+
 const services = [
   {
     title: "Solar Power Systems",
-    image:
-      "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/new-solar-sytem.webp",
+    image: newSolarSystem,
     desc: "High-performance solar systems designed for homes and businesses.",
   },
   {
     title: "Battery Storage Solutions",
-    image:
-      "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/expanding-existing-solar.webp",
+    image: expandingSolar,
     desc: "Store excess energy and maximize your solar savings efficiently.",
   },
   {
     title: "EV Chargers",
-    image:
-      "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/new-solar-battery-sytem.webp",
+    image: newSolarBattery,
     desc: "Smart EV charging solutions for residential and commercial use.",
   },
   {
     title: "Other Services",
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop",
+    image: contactService,
     desc: "Complete energy solutions tailored for your modern lifestyle.",
   },
 ];

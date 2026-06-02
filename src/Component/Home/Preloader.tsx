@@ -103,7 +103,10 @@ export default function Preloader() {
                     y: [-10, 10, -10],
                   }}
                   transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-[-20%] opacity-40 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] scale-150 mix-blend-overlay"
+                  className="absolute inset-[-20%] opacity-30 scale-150 mix-blend-overlay"
+                  style={{
+                    background: 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.05) 2px, rgba(255,255,255,0.05) 4px)'
+                  }}
                 />
 
                 {/* Internal Heat Glow */}

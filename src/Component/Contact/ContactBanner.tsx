@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Phone, ChevronRight } from "lucide-react";
+import contactBannerPerson from '../../assets/downloaded-images/contact-banner-person.jpg';
 
 const ContactBanner = () => {
   return (
@@ -45,7 +46,7 @@ const ContactBanner = () => {
             
             <div className="hidden lg:block">
               <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop" 
+                src={contactBannerPerson} 
                 alt="Support Team"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />

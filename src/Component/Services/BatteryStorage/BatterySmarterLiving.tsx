@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Battery, ShieldCheck } from "lucide-react";
+import batterySmarter from '../../../assets/downloaded-images/battery-smarter.jpg';
 
 const BatterySmarterLiving = () => {
   const items = [
@@ -25,7 +26,7 @@ const BatterySmarterLiving = () => {
           <motion.div initial={{ opacity: 0, x: -80 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
+                src={batterySmarter}
                 alt="Battery Storage"
                 className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
               />

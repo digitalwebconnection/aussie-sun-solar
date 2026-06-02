@@ -8,6 +8,8 @@ import {
     Zap,
 } from 'lucide-react';
 
+import supportPerson from '../../assets/downloaded-images/support-person.jpg';
+
 export default function SolarSupportSection() {
     return (
         <section className="relative overflow-hidden" aria-label="Solar support and consultation">
@@ -37,7 +39,7 @@ export default function SolarSupportSection() {
                     "
                 >
 
-                   
+
 
                     {/* ORANGE GLOW */}
                     <div className="absolute -right-20 top-0 max-w-7xl mx-auto rounded-full bg-[#FE9900]/20 blur-[120px] " />
@@ -144,7 +146,7 @@ export default function SolarSupportSection() {
                             <div className="mt-4 md:mt-10 flex flex-wrap gap-5">
 
                                 {[
-                                    'CEC Certified Installers',
+                                    'SAA Certified Installers',
                                     'Battery Ready Systems',
                                     '25-Year Performance Warranty',
                                 ].map((item, i) => (
@@ -261,7 +263,7 @@ export default function SolarSupportSection() {
                                         </p>
 
                                         <h3 className="mt-1 text-2xl font-black text-white">
-                                            1300 589 245    
+                                            1300 589 245
                                         </h3>
                                     </div>
                                 </motion.div>
@@ -287,7 +289,7 @@ export default function SolarSupportSection() {
                                 viewport={{
                                     once: true,
                                 }}
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop"
+                                src={supportPerson}
                                 alt="Solar support team specialist"
                                 className="h-full w-full object-cover"
                             />

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import directorImg from '../../assets/downloaded-images/director.jpg';
 
 export default function DirectorMessage() {
   const containerRef = useRef(null);
@@ -33,7 +34,7 @@ export default function DirectorMessage() {
               <div className="relative z-10 rounded-lg overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-200 group">
                 <motion.img 
                   style={{ y: imgY }}
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
+                  src={directorImg} 
                   alt="Director and Founder of Aussie Sun Solar" 
                   className="w-full aspect-4/5 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -87,7 +88,7 @@ export default function DirectorMessage() {
                   <div className="relative">
                     <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#FE9900] shadow-lg">
                       <img 
-                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" 
+                        src={directorImg} 
                         alt="Director avatar portrait" 
                         className="w-full h-full object-cover"
                       />

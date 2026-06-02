@@ -93,7 +93,7 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
                     <Check size={16} className="text-green-500 shrink-0" />
-                    <span>Verified CEC Specifications</span>
+                    <span>Verified SAA Specifications</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-bold text-slate-800">
                     <Check size={16} className="text-green-500 shrink-0" />

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 
 const ContactPageHero = () => {
   return (
@@ -7,7 +8,7 @@ const ContactPageHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop"
+          src={solarRoof1}
           alt="Solar panels on rooftop background"
           className="h-full w-full object-cover"
         />

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, ArrowRight } from "lucide-react";
+import supportPerson from '../../assets/downloaded-images/support-person.jpg';
 
 export const ContactCTA: React.FC = () => {
   return (
@@ -49,7 +50,7 @@ export const ContactCTA: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+                src={supportPerson}
                 alt="Aussie Sun Solar support expert"
                 className="w-full h-full object-cover"
               />

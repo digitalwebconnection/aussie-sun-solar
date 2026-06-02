@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, SunMedium } from "lucide-react";
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+import zodiacCommercial from '../../assets/downloaded-images/zodiac-commercial-solar.png';
+import graceIndustrial from '../../assets/downloaded-images/grace-industrial-solar.webp';
 
 export default function SolarExpertiseSection() {
   const locations = [
     {
       title: "Residential Solar Solutions",
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop",
+      image: solarRoof1,
       description: "Reliable residential solar solutions designed for Australian homes to reduce electricity bills, increase energy efficiency, and deliver long-term savings with high-performance solar panel systems.",
       points: [
         "Premium high-efficiency solar panels for maximum power generation",
@@ -16,7 +19,7 @@ export default function SolarExpertiseSection() {
     },
     {
       title: "Commercial Solar Energy",
-      image: "https://zodiacenergy.com/images/blog/commercial-solar-system.png",
+      image: zodiacCommercial,
       description: "Advanced commercial solar energy systems for offices, retail spaces, warehouses, and commercial buildings looking to lower operational costs and improve energy efficiency across Queensland and Australia.",
       points: [
         "Reduce business electricity expenses with smart solar technology",
@@ -27,7 +30,7 @@ export default function SolarExpertiseSection() {
     },
     {
       title: "Industrial Solar Projects",
-      image: "https://gracerenew.com/images/solar-for-industrial.webp",
+      image: graceIndustrial,
       description: "Large-scale industrial solar projects built for factories, manufacturing units, and high-energy industries requiring reliable, cost-effective, and high-performance renewable energy solutions.",
       points: [
         "Mega watt solar installations for industrial-scale energy demands",

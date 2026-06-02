@@ -54,7 +54,7 @@ const PremiumSolarPackages = () => {
 
       <div className="max-w-7xl mx-auto px-5 md:px-0 relative z-10">
         {/* Header */}
-        <div className="flex flex-col  md:items-end justify-center text-center md:mb-10 mb-5 gap-8">
+        <div className="flex flex-col  md:items-end justify-center text-center md:mb-1`6 mb-5 gap-8">
           <div className="max-w-2xl mx-auto">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -72,7 +72,7 @@ const PremiumSolarPackages = () => {
               <span className="text-[#FE9900]">Energy Portfolios.</span>
             </motion.h2>
           </div>
-  
+
         </div>
 
         {/* Pricing Grid */}
@@ -80,7 +80,7 @@ const PremiumSolarPackages = () => {
           {packages.map((pkg, idx) => (
             <motion.div
               key={idx}
-        
+
               onMouseLeave={() => setHoveredIndex(null)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ const PremiumSolarPackages = () => {
           className="mt-6 md:mt-16 flex flex-col items-center gap-4 border-t border-white/50 pt-6 md:pt-12"
         >
           <div className="flex gap-8 items-center  grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="text-xs font-bold tracking-widest text-white">CEC ACCREDITED</span>
+            <span className="text-xs font-bold tracking-widest text-white">SAA ACCREDITED</span>
             <span className="text-xs font-bold tracking-widest text-white">ISO 9001</span>
             <span className="text-xs font-bold tracking-widest text-white">NET ZERO 2050</span>
           </div>

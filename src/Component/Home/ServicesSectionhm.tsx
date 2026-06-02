@@ -10,6 +10,13 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+import energyStorage from '../../assets/downloaded-images/energy-storage.webp';
+import batterySec2 from '../../assets/downloaded-images/battery-section-2.jpg';
+import evSection from '../../assets/downloaded-images/ev-section.jpg';
+import commercialSolar1 from '../../assets/downloaded-images/commercial-solar-1.jpg';
+import windSolar from '../../assets/downloaded-images/wind-solar.jpg';
+
 
 /* =========================================
    SERVICES DATA
@@ -21,8 +28,7 @@ const services = [
         description:
             "High-performance residential & commercial solar systems built for maximum savings.",
         icon: Sun,
-        image:
-            "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1974&auto=format&fit=crop",
+        image: solarRoof1,
     },
 
     {
@@ -30,8 +36,7 @@ const services = [
         description:
             "Store excess solar energy with smart battery systems for uninterrupted power.",
         icon: BatteryCharging,
-        image:
-            "https://www.energytoolbase.com/wp-content/uploads/2024/04/rhPqEofJT4e2aip7uBf3.webp",
+        image: energyStorage,
     },
 
     {
@@ -39,8 +44,7 @@ const services = [
         description:
             "Fast & efficient EV charging solutions designed for modern smart homes.",
         icon: Car,
-        image:
-            "https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1974&auto=format&fit=crop",
+        image: batterySec2,
     },
 
     {
@@ -48,8 +52,7 @@ const services = [
         description:
             "Reliable electrical upgrades, maintenance and smart energy integration services.",
         icon: Zap,
-        image:
-            "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1974&auto=format&fit=crop",
+        image: evSection,
     },
 
     {
@@ -57,8 +60,7 @@ const services = [
         description:
             "Professional cleaning, inspections and performance optimization for solar systems.",
         icon: Wrench,
-        image:
-            "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1974&auto=format&fit=crop",
+        image: commercialSolar1,
     },
 
     {
@@ -66,8 +68,7 @@ const services = [
         description:
             "Expert guidance to help homes and businesses maximize long-term energy savings.",
         icon: ShieldCheck,
-        image:
-            "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1974&auto=format&fit=crop",
+        image: windSolar,
     },
 ];
 

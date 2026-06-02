@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 
 import logo from "../assets/logo.png";
+import secLogo from "../assets/downloaded-images/sec-logo.svg";
 
 /* ====================================
    ANIMATION VARIANTS
@@ -287,7 +288,7 @@ const Footer = () => {
 
           <div className="flex flex-col sm:flex-row items-center gap-5">
             <img
-              src="https://arisesolar.com.au/wp-content/themes/arise-solar/assets/images/sec-logo.svg"
+              src={secLogo}
               alt="Smart Energy Council accreditation logo"
               className="h-16 sm:h-20 md:h-24 object-contain"
             />
@@ -373,7 +374,7 @@ const Footer = () => {
                 {" "}
                 AUSSIE SUN SOLAR PTY LTD
               </span>{" "}
-              ABN 14 657 213 873
+              ABN 47 697 452 583
             </p>
 
           </div>

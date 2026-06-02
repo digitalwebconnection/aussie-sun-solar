@@ -8,11 +8,16 @@ import battery3 from '../../assets/Battery Partners/3.webp';
 import battery4 from '../../assets/Battery Partners/4.webp';
 import battery5 from '../../assets/Battery Partners/5.webp';
 
+import teslaPowerwall from '../../assets/downloaded-images/tesla-powerwall.jpg';
+import sigstorBattery from '../../assets/downloaded-images/sigstor-battery.png';
+import alphaessBattery from '../../assets/downloaded-images/alphaess-battery.png';
+import neovoltBattery from '../../assets/downloaded-images/neovolt-battery.png';
+import goodweLynx from '../../assets/downloaded-images/goodwe-lynx-battery.png';
+
 const batteries = [
   {
     id: 1,
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_7iYGRuFqyIF2hieiJRkhMi0Tp9DbnamVw&s',
+    image: teslaPowerwall,
     logo: battery1,
     name: 'Tesla PowerWall',
     tag: 'Smart Energy',
@@ -21,8 +26,7 @@ const batteries = [
 
   {
     id: 2,
-    image:
-      'https://cloverenergysystems.com/wp-content/uploads/2024/12/sigstor-battery-inverter.png',
+    image: sigstorBattery,
     logo: battery2,
     name: 'SigStor Hybrid Battery',
     tag: 'Hybrid Storage',
@@ -31,8 +35,7 @@ const batteries = [
 
   {
     id: 3,
-    image:
-      'https://www.alphaess.com/Public/Uploads/uploadfile/images/20220507/weibiaoti-2.png',
+    image: alphaessBattery,
     logo: battery3,
     name: 'AlphaESS Storage System',
     tag: 'Eco Efficient',
@@ -41,8 +44,7 @@ const batteries = [
 
   {
     id: 4,
-    image:
-      'https://voltxenergy.com.au/cdn/shop/files/neovolt_pdp_Single-Phase_Solar_Battery_System.png?v=1777507162',
+    image: neovoltBattery,
     logo: battery4,
     name: 'NeoVolt Battery System',
     tag: 'High Performance',
@@ -51,8 +53,7 @@ const batteries = [
 
   {
     id: 5,
-    image:
-      'https://en.goodwe.com/images/blog/198/lynx-home-battery.png',
+    image: goodweLynx,
     logo: battery5,
     name: 'GoodWe Lynx Home Battery',
     tag: 'Premium Backup',

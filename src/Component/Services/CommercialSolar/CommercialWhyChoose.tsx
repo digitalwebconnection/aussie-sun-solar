@@ -3,7 +3,7 @@ import { Hammer, Zap, BadgeDollarSign, ShieldCheck, Building2, Users } from 'luc
 
 const CommercialWhyChoose = () => {
   const features = [
-    { icon: Hammer, title: 'Accredited Installers', desc: 'CEC accredited commercial solar professionals with decades of large-scale project experience.', color: 'bg-orange-100 text-orange-500' },
+    { icon: Hammer, title: 'Accredited Installers', desc: 'SAA accredited commercial solar professionals with decades of large-scale project experience.', color: 'bg-orange-100 text-orange-500' },
     { icon: Zap, title: 'High-Output Systems', desc: 'Commercial-grade solar arrays delivering maximum kilowatt-hours for your business operations.', color: 'bg-blue-100 text-blue-500' },
     { icon: BadgeDollarSign, title: 'Finance Options', desc: 'Flexible finance and leasing solutions to get your commercial solar system with zero upfront cost.', color: 'bg-emerald-100 text-emerald-500' },
     { icon: ShieldCheck, title: 'Full Project Management', desc: 'We handle design, approvals, installation, and grid connection from start to finish.', color: 'bg-purple-100 text-purple-500' },

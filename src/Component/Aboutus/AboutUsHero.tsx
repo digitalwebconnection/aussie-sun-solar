@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import alpexSolarHero from '../../assets/downloaded-images/alpex-solar-hero.jpg';
+
 export default function SolarAboutHero() {
   return (
     <section className="relative min-h-[70vh] lg:min-h-[85vh] overflow-hidden bg-black flex items-center" aria-label="About Aussie Sun Solar">
@@ -10,7 +12,7 @@ export default function SolarAboutHero() {
           initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          src="https://alpexsolar.com/resources/wp-content/uploads/2024/08/Untitleddesign-2024-08-01T223222.01.jpeg"
+          src={alpexSolarHero}
           alt="Solar Energy"
           className="w-full h-full object-cover"
         />

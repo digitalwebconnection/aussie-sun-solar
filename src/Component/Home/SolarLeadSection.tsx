@@ -10,6 +10,11 @@ import {
     ChevronRight, Mail, User, Home
 } from "lucide-react";
 
+import newSolarSystem from '../../assets/downloaded-images/new-solar-system.webp';
+import expandingSolar from '../../assets/downloaded-images/expanding-solar.webp';
+import newSolarBattery from '../../assets/downloaded-images/new-solar-battery.webp';
+import allBattery from '../../assets/downloaded-images/all-battery.png';
+
 const inputVariants = {
     focus: {
         scale: 1.04,
@@ -23,7 +28,7 @@ const solarOptions = [
         id: 1,
         title: "Complete Solar Setup",
         subtitle: "Full-scale rooftop intelligence.",
-        image: "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/new-solar-sytem.webp",
+        image: newSolarSystem,
         badge: "Premium Solution",
         icon: <LayoutGrid size={20} />,
         features: ["25 Years Performance Warranty", "High Efficiency Solar Panels", "Fast Installation Support"],
@@ -32,7 +37,7 @@ const solarOptions = [
         id: 2,
         title: "System Upgrade",
         subtitle: "Modernize your existing energy.",
-        image: "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/expanding-existing-solar.webp",
+        image: expandingSolar,
         badge: "Efficiency Boost",
         icon: <Zap size={20} />,
         features: ["Extra Power Generation", "Latest Inverter Technology", "Lower Electricity Bills"],
@@ -41,7 +46,7 @@ const solarOptions = [
         id: 3,
         title: "Solar + Battery",
         subtitle: "Total energy independence.",
-        image: "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/new-solar-battery-sytem.webp",
+        image: newSolarBattery,
         badge: "Smart Hybrid",
         icon: <Battery size={20} />,
         features: ["Night Time Power Backup", "Hybrid Smart System", "Maximum Energy Savings"],
@@ -50,7 +55,7 @@ const solarOptions = [
         id: 4,
         title: "Storage Only",
         subtitle: "Reliable 24/7 backup power.",
-        image: "https://hexasolarsolutions.com.au/wp-content/uploads/2026/02/All-Battery-New.png",
+        image: allBattery,
         badge: "Power Storage",
         icon: <ShieldCheck size={20} />,
         features: ["Premium Lithium Batteries", "Smart Energy Monitoring", "Uninterrupted Supply"],
@@ -65,7 +70,7 @@ const SolarLeadSection = () => {
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsSubmitting(true);
-                const formData = new FormData(event.target as HTMLFormElement);
+        const formData = new FormData(event.target as HTMLFormElement);
         formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
         const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
         const data = await response.json();
@@ -265,9 +270,6 @@ const SolarLeadSection = () => {
                                         <option>Industrial Site</option>
                                     </motion.select>
                                 </div>
-
-                                
-                                
 
                                 {/* THE ULTRA-PREMIUM BUTTON */}
                                 <motion.button

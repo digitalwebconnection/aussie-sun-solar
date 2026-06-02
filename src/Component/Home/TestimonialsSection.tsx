@@ -2,30 +2,35 @@ import { TestimonialsCard } from "../ui/testimonials-card";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
+import testimonial1 from '../../assets/downloaded-images/testimonial-1.jpg';
+import testimonial2 from '../../assets/downloaded-images/testimonial-2.jpg';
+import testimonial3 from '../../assets/downloaded-images/testimonial-3.jpg';
+import testimonial4 from '../../assets/downloaded-images/support-person.jpg';
+
 const items = [
   {
     id: 1,
     title: "David Richardson",
     description: "The Aussie Sun Solr team was incredible. Our energy bills dropped by 70% in the first month. Best investment for our home!",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop",
+    image: testimonial1,
   },
   {
     id: 2,
     title: "Sarah Thompson",
     description: "Exceptional service from design to install. The monitoring app is so easy to use, and I love seeing my carbon footprint shrink.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&auto=format&fit=crop",
+    image: testimonial2,
   },
   {
     id: 3,
     title: "Mark Benson",
     description: "Tier-1 panels and local support. Knowing Hexa handles everything in-house gives me peace of mind. Highly recommend their solar solutions.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&h=400&auto=format&fit=crop",
+    image: testimonial3,
   },
   {
     id: 4,
     title: "Elena Rodriguez",
     description: "Professional, clean, and fast installation. They navigated the rebates for us, making the whole process stress-free and affordable.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&h=400&auto=format&fit=crop",
+    image: testimonial4,
   },
 ];
 

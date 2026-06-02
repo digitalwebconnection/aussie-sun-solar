@@ -61,8 +61,6 @@ const HeroSection = () => {
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-linear-to-r from-[#000000]/85 via-[#000000]/70 to-black/40"></div>
 
-      
-
       {/* ================================
           CONTENT
       ================================= */}
@@ -94,7 +92,7 @@ const HeroSection = () => {
           </h1>
 
           {/* DESCRIPTION */}
-          <div className="mt-8 text-white/80 text-md md:text-lg leading-[1.8] max-w-7xl space-y-4">
+          <div className="mt-8 text-white/80 text-md md:text-lg leading-[1.8] max-w-4xl space-y-4">
             <p>
               Power your home or business with premium renewable energy solutions designed for long-term savings and energy independence.
             </p>
@@ -118,13 +116,7 @@ const HeroSection = () => {
                 />
               </Link>
 
-
             </div>
-
-          
-
-    
-
         </div>
 
       </div>

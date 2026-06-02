@@ -150,7 +150,7 @@ import pdfank from "../assets/anker-solix-battery/Spec-Anker-Solar-Battery.pdf"
 // sungrow-battery-systems
 import sun1 from "../assets/sungrow-battery/1.webp"
 import sun2 from "../assets/sungrow-battery/2.png"
-import pdfsun from "../assets/sungrow-battery/DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU.pdf" 
+import pdfsun from "../assets/sungrow-battery/DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU.pdf"
 
 // alpha-ess-battery-systems
 import alpha1 from "../assets/alpha-ess-battery/1.webp"
@@ -251,7 +251,7 @@ export const productsData: Record<string, ProductData> = {
 
       "Lightweight solar module design allows faster rooftop installation and simplified mounting integration.",
 
-      "Fully Clean Energy Council (CEC) approved for Australian solar rebate eligibility and residential installations."
+      "Fully Clean Energy Council (SAA) approved for Australian solar rebate eligibility and residential installations."
     ],
     bestFor: [
       "Ideal for homeowners seeking high-efficiency rooftop solar panels with strong long-term energy savings.",
@@ -276,7 +276,7 @@ export const productsData: Record<string, ProductData> = {
     pdfUrls: [
       { label: "Jinko Cheetah 330W", url: pdf330 },
       { label: "Jinko Tiger 370W", url: pdf390 },
-      { label: "jinko-475w-n-type-neo-datasheet", url: pdfji440},
+      { label: "jinko-475w-n-type-neo-datasheet", url: pdfji440 },
     ],
     datasheetSpecs: [
       { label: "Solar Cell Type", value: "N-Type TOPCon" },
@@ -355,7 +355,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "JA Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
       "Lightweight module construction enables faster rooftop solar installation and simplified mounting integration.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -374,7 +374,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: panel2,
-     pdfUrls: [
+    pdfUrls: [
       { label: "JAM54S43 LR 475W EN", url: pdfja },
     ],
     productImages: [
@@ -472,7 +472,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "AIKO Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
       "Lightweight premium module construction enables simplified rooftop solar installation and faster commissioning.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -491,7 +491,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: panel3,
-     pdfUrls: [
+    pdfUrls: [
       { label: "Aiko-Neostar-475w", url: pdfai },
     ],
     productImages: [
@@ -576,7 +576,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Canadian Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
       "Lightweight module construction supports faster rooftop installation and simplified mounting integration.",
-      "Fully Clean Energy Council (CEC) approved for Australian solar rebate eligibility and residential installations."
+      "Fully Clean Energy Council (SAA) approved for Australian solar rebate eligibility and residential installations."
     ],
 
     bestFor: [
@@ -692,7 +692,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "DAS Solar Panels Australia are compatible with leading inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
       "Lightweight module construction enables simplified rooftop installation and faster commissioning.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -802,7 +802,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "DMEGC Solar Panels Australia are compatible with major inverter brands including Sungrow, Fronius, GoodWe, Growatt, and SolarEdge.",
       "Lightweight module construction supports faster rooftop installation and simplified mounting integration.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -912,7 +912,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "EGing Solar Panels Australia are compatible with major inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
       "Lightweight module construction enables simplified rooftop installation and faster system commissioning.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -1023,7 +1023,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Risen Solar Panels Australia are compatible with major inverter brands including Sungrow, GoodWe, Growatt, Fronius, and SolarEdge.",
       "Lightweight module construction supports simplified rooftop installation and faster commissioning.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -1126,7 +1126,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with leading inverter brands including Sungrow, GoodWe, Fronius, Growatt, and SolarEdge.",
       "Lightweight module design enables faster rooftop installation and simplified system commissioning.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -1229,7 +1229,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major inverter brands including Sungrow, GoodWe, Fronius, Growatt, and SolarEdge.",
       "Lightweight module construction enables simplified rooftop installation and faster system commissioning.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential and commercial solar rebate eligibility."
+      "Fully Clean Energy Council (SAA) approved for Australian residential and commercial solar rebate eligibility."
     ],
 
     bestFor: [
@@ -1338,7 +1338,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major solar panel brands including Trina Solar, LONGi, Jinko, Canadian Solar, and REC.",
       "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
-      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (SAA) rebate eligibility."
     ],
 
     bestFor: [
@@ -1443,7 +1443,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
       "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
-      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (SAA) rebate eligibility."
     ],
 
     bestFor: [
@@ -1547,7 +1547,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compact size and light weight make it one of the easiest units to install.",
       "Support for WiFi, GPRS, and RF monitoring sticks.",
-      "Clean Energy Council (CEC) listed and approved for rebates."
+      "Clean Energy Council (SAA) listed and approved for rebates."
     ],
     bestFor: [
       "Budget-conscious residential solar installations.",
@@ -1648,7 +1648,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
       "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
-      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (SAA) rebate eligibility."
     ],
 
     bestFor: [
@@ -1754,7 +1754,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
       "Seamlessly integrates with lithium battery storage systems for advanced hybrid renewable energy solutions.",
-      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (SAA) rebate eligibility."
     ],
 
     bestFor: [
@@ -1859,7 +1859,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major solar panel brands including LONGi, Trina Solar, Jinko Solar, Canadian Solar, and REC.",
       "Seamlessly integrates with lithium battery systems for advanced hybrid solar energy storage solutions.",
-      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (CEC) rebate eligibility."
+      "Fully compliant with Australian AS/NZS 4777.2 standards and approved for Clean Energy Council (SAA) rebate eligibility."
     ],
 
     bestFor: [
@@ -1880,7 +1880,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: inverter6,
-     pdfUrls: [
+    pdfUrls: [
       { label: "Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25-F-G2-Series_Datasheet-AU", url: pdfsolix },
     ],
     productImages: [
@@ -1965,7 +1965,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with major hybrid inverter brands including FoxESS, Sungrow, GoodWe, Growatt, and Solis.",
       "Wall-mounted and floor-mounted installation options provide flexible battery placement for Australian homes.",
-      "Fully compliant with Australian Clean Energy Council (CEC) standards and rebate eligibility requirements."
+      "Fully compliant with Australian Clean Energy Council (SAA) standards and rebate eligibility requirements."
     ],
 
     bestFor: [
@@ -2069,7 +2069,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with Growatt hybrid inverters and major Australian solar system configurations.",
       "Flexible floor-mounted and stackable installation options suit garages, utility rooms, and outdoor energy storage areas.",
-      "Fully compliant with Australian Clean Energy Council (CEC) standards and battery rebate eligibility requirements."
+      "Fully compliant with Australian Clean Energy Council (SAA) standards and battery rebate eligibility requirements."
     ],
 
     bestFor: [
@@ -2168,7 +2168,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Compatible with SAJ hybrid inverters and modern Australian residential solar energy systems.",
       "Flexible wall-mounted and modular installation options suit garages, utility rooms, and outdoor energy storage applications.",
-      "Fully compliant with Australian Clean Energy Council (CEC) standards and battery rebate eligibility requirements."
+      "Fully compliant with Australian Clean Energy Council (SAA) standards and battery rebate eligibility requirements."
     ],
 
     bestFor: [
@@ -2189,7 +2189,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery3,
-     pdfUrls: [
+    pdfUrls: [
       { label: "B2-X-HVa-S-EN-AU-20260525", url: pdfsaj },
     ],
     productImages: [
@@ -2271,7 +2271,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Modular battery blocks allow faster installation with clean wall-mounted integration for modern Australian homes.",
       "Intelligent app-based commissioning simplifies setup, monitoring, and energy management for installers and homeowners.",
-      "Fully Clean Energy Council (CEC) approved for Australian residential solar and battery storage installations."
+      "Fully Clean Energy Council (SAA) approved for Australian residential solar and battery storage installations."
     ],
 
     bestFor: [
@@ -2290,7 +2290,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery7,
-     pdfUrls: [
+    pdfUrls: [
       { label: "Spec-Anker-Solar-Battery", url: pdfank },
     ],
     productImages: [
@@ -2358,13 +2358,13 @@ export const productsData: Record<string, ProductData> = {
       }
     ],
     rangeTitle: "Sungrow SBR 9.6 - 25.6 kWh Series",
-    rangeIntro: "The SBR series is a high-voltage stackable LFP battery system, offering capacities from 9.6 kWh (3 modules) up to 25.6 kWh (8 modules) per stack.",
+    rangeIntro: "Smart Sungrow Battery Storage System solutions designed for Australian homes seeking reliable solar energy storage, backup power protection, and greater energy independence.",
     rangeSpecs: [
-      "Flexible modular battery capacity expands from 5.0 kWh up to 30.0 kWh to support growing residential energy requirements.",
-      "Advanced LiFePO4 battery technology delivers enhanced safety, long cycle life, and dependable long-term energy storage performance.",
-      "Premium integrated cabinet design protects internal components while enabling clean, space-saving installation.",
-      "VPP-ready smart energy functionality supports intelligent energy management and future Virtual Power Plant participation.",
-      "Intelligent remote monitoring provides real-time battery performance tracking, smart controls, and automatic system updates."
+      "Expandable battery storage capacity designed to support growing household energy demands and maximise solar self-consumption.",
+      "Premium LiFePO4 battery cells deliver enhanced safety, long cycle life, and dependable long-term energy storage performance.",
+      "Sleek, space-saving battery design enables seamless integration with residential solar systems and modern Australian homes.",
+      "Intelligent energy management technology helps optimise solar energy usage, improve efficiency, and reduce electricity costs.",
+      "Advanced app-based monitoring provides real-time battery performance tracking, energy insights, and smart system control from anywhere."
     ],
     betterTitle: "What Makes Sungrow SBR Better?",
     betterList: [
@@ -2375,13 +2375,13 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Cabinet-style battery design enables clean, secure, and code-compliant solar battery installation.",
       "Pre-wired internal components simplify installation and improve connection efficiency with home switchboards.",
-      "Fully CEC-approved for Australian solar battery rebates and residential energy storage installations."
+      "Fully SAA-approved for Australian solar battery rebates and residential energy storage installations."
     ],
 
     bestFor: [
-      "Modern smart homes seeking sleek, cabinet-enclosed battery storage systems with reliable backup power capability.",
-      "VPP energy program users wanting Virtual Power Plant-ready battery systems for smarter energy management and additional savings opportunities.",
-      "Homeowners seeking long-term energy storage performance with durable LiFePO4 battery technology and dependable renewable energy storage."
+      "Ideal for homeowners seeking sleek, cabinet-enclosed battery storage systems with reliable backup power.",
+      "Perfect for users wanting Virtual Power Plant (VPP) ready battery systems for smarter energy management and additional savings.",
+      "Designed for buyers seeking high cycle life, durable LiFePO4 battery technology, and dependable long-term solar energy storage.  "
     ],
     warranty: [
       "10-Year product warranty covering capacity retention.",
@@ -2394,7 +2394,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery8,
-     pdfUrls: [
+    pdfUrls: [
       { label: "DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU", url: pdfsun },
     ],
     productImages: [
@@ -2418,12 +2418,12 @@ export const productsData: Record<string, ProductData> = {
     featuredCard: {
       badge: "HIGH-VOLTAGE BENCHMARK",
       heading: "Engineered for Maximum Solar Efficiency",
-      description: "Alpha ESS energy storage systems are designed with advanced battery technology, intelligent energy management, and high-efficiency components to deliver reliable solar battery storage performance for Australian homes and businesses.",
+      description: "Sungrow Battery Storage System solutions are designed with advanced battery technology, intelligent energy management, and high-efficiency power storage to help Australian homes maximise solar self-consumption, reduce electricity costs, and achieve greater energy independence.",
       feature1Title: "Long-Term Battery Reliability",
-      feature1Desc: "Built for stable long-term energy storage, dependable backup power capability, reduced battery degradation, and consistent renewable energy performance.",
+      feature1Desc: "Built for dependable long-term energy storage with advanced battery protection, stable backup power performance, and consistent energy output in Australian conditions.",
 
       feature2Title: "High-Efficiency Energy Technology",
-      feature2Desc: "Optimised energy storage and intelligent power management help maximise solar self-consumption, energy savings, and long-term energy independence.",
+      feature2Desc: "Optimised energy storage and smart power management help maximise solar energy usage, improve system efficiency, and deliver greater long-term savings.",
       feature3Title: '',
       feature3Desc: ''
     },
@@ -2477,7 +2477,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Cabinet-style Alpha ESS battery systems provide clean, secure, and code-compliant solar battery installations.",
       "Pre-wired internal components simplify switchboard connections and improve installation efficiency for Australian homes.",
-      "Fully CEC-approved for Australian solar battery rebates and residential energy storage system installations."
+      "Fully SAA-approved for Australian solar battery rebates and residential energy storage system installations."
     ],
 
     bestFor: [
@@ -2496,7 +2496,7 @@ export const productsData: Record<string, ProductData> = {
     ,
     // Extra fields dynamically merged
     logoUrl: battery2,
-     pdfUrls: [
+    pdfUrls: [
       { label: "ALP_LV_2024", url: pdfalp },
     ],
     productImages: [
@@ -2579,7 +2579,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Modular floor-mounted battery design enables fast installation, secure stacking, and flexible energy storage expansion.",
       "Intelligent app-based commissioning simplifies inverter integration, system monitoring, and battery setup.",
-      "Fully CEC-approved for Australian residential solar battery installations and rebate eligibility."
+      "Fully SAA-approved for Australian residential solar battery installations and rebate eligibility."
     ],
 
     bestFor: [
@@ -2678,7 +2678,7 @@ export const productsData: Record<string, ProductData> = {
     installation: [
       "Innovative vertical modular design enables faster installation, reduced wiring complexity, and seamless system expansion.",
       "Integrated battery storage, inverter, EV charging, and energy management systems simplify setup and smart home integration.",
-      "Fully CEC-approved and compliant with Australian standards for residential solar battery storage installations."
+      "Fully SAA-approved and compliant with Australian standards for residential solar battery storage installations."
     ],
 
     bestFor: [

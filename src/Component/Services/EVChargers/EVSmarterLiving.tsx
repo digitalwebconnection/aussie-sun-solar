@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Zap, ShieldCheck } from "lucide-react";
+import evChargingStation from '../../../assets/downloaded-images/ev-charging-station.jpg';
 
 const EVSmarterLiving = () => {
   const items = [
@@ -15,7 +16,7 @@ const EVSmarterLiving = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -80 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
-              <img src="https://img.magnific.com/free-photo/ev-charging-station-clean-energy-filling-technology-electric-car-charging_35913-2573.jpg?semt=ais_hybrid&w=740&q=80" alt="EV Charger" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={evChargingStation} alt="EV Charger" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
               <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }} className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 rounded-lg shadow-xl max-w-xs">
                 <h3 className="text-4xl font-black text-[#FE9900] leading-none">1K+</h3>

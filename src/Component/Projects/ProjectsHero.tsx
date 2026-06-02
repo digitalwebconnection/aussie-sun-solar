@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 
 const HeroSection: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const HeroSection: React.FC = () => {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            'url("https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2000&auto=format&fit=crop")',
+            `url(${solarRoof1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

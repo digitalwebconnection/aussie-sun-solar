@@ -2,26 +2,26 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Zap, Hammer, ArrowUpRight, Sparkles } from 'lucide-react';
 
 const BatteryTrust = () => {
- const deliveries = [
-  {
-    title: 'Licensed Battery Installers',
-    desc: 'Certified experts delivering safe and reliable battery storage solutions across Australia for homes and businesses.',
-    icon: Hammer,
-    gradient: 'from-orange-400 to-orange-500'
-  },
-  {
-    title: 'Premium Tier-1 Batteries',
-    desc: 'High-performance solar battery systems designed for maximum savings, energy efficiency, and long-term reliability.',
-    icon: ShieldCheck,
-    gradient: 'from-blue-500 to-cyan-400'
-  },
-  {
-    title: 'CEC Approved Systems',
-    desc: 'CEC-approved battery storage systems ensuring trusted performance, Australian compliance, and rebate eligibility.',
-    icon: Zap,
-    gradient: 'from-purple-500 to-pink-500'
-  },
-];
+  const deliveries = [
+    {
+      title: 'Licensed Battery Installers',
+      desc: 'Certified experts delivering safe and reliable battery storage solutions across Australia for homes and businesses.',
+      icon: Hammer,
+      gradient: 'from-orange-400 to-orange-500'
+    },
+    {
+      title: 'Premium Tier-1 Batteries',
+      desc: 'High-performance solar battery systems designed for maximum savings, energy efficiency, and long-term reliability.',
+      icon: ShieldCheck,
+      gradient: 'from-blue-500 to-cyan-400'
+    },
+    {
+      title: 'SAA Approved Systems',
+      desc: 'SAA-approved battery storage systems ensuring trusted performance, Australian compliance, and rebate eligibility.',
+      icon: Zap,
+      gradient: 'from-purple-500 to-pink-500'
+    },
+  ];
 
   return (
     <section className="relative py-12 overflow-hidden bg-white">

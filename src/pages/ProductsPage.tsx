@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { productsData } from "../data/products";
 import { ArrowRight, ShieldCheck, Zap, Award } from "lucide-react";
 import { useEffect } from "react";
+import solarHeroBg from '../assets/downloaded-images/solar-hero-bg.jpg';
 
 const ProductsPage = () => {
   // Scroll to top on page load
@@ -25,7 +26,7 @@ const ProductsPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2000&auto=format&fit=crop"
+            src={solarHeroBg}
             alt="Solar field"
             className="h-full w-full object-cover"
           />
@@ -111,7 +112,7 @@ const ProductsPage = () => {
                         <span className="text-xs font-black uppercase tracking-wider text-[#FE9900]">
                           {product.brand} Warranty
                         </span>
-                        
+
                         <Link
                           to={`/products/${product.slug}`}
                           className="inline-flex items-center gap-2 bg-[#004093] hover:bg-[#FE9900] text-white px-5 py-2.5 rounded-full font-bold transition duration-300 text-xs shadow-md"
@@ -132,7 +133,7 @@ const ProductsPage = () => {
       {/* ==================== TRUST FEATURE STRIP ==================== */}
       <section className="bg-[#004093] text-white py-16 border-t-4 border-[#FE9900]">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-10">We Only Install CEC Approved Products</h2>
+          <h2 className="text-2xl md:text-3xl font-black mb-10">We Only Install SAA Approved Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center">
               <Award size={40} className="text-[#FE9900] mb-4" />

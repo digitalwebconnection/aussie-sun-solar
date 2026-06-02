@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, X } from "lucide-react";
 
+import supportAvatar from '../assets/downloaded-images/support-avatar.jpg';
+
 export default function WhatsAppChatWidget() {
   const [isOpen, setIsOpen] =
     useState(false);
@@ -41,7 +43,7 @@ export default function WhatsAppChatWidget() {
 
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-white shrink-0">
               <img
-                src="https://i.pravatar.cc/150?img=12"
+                src={supportAvatar}
                 alt="support"
                 className="w-full h-full object-cover"
               />

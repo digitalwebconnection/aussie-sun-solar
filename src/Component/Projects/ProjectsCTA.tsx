@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import FlipFadeText from '../Animations/FlipFadeText';
+import solarHeroBg from '../../assets/downloaded-images/solar-hero-bg.jpg';
 
 const ProjectsCTA: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const ProjectsCTA: React.FC = () => {
             <div
               className="absolute top-0 right-0 w-full h-full opacity-100"
               style={{
-                backgroundImage: 'url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80")',
+                backgroundImage: `url(${solarHeroBg})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 maskImage: 'linear-gradient(to left, black 0%, transparent 100%)',

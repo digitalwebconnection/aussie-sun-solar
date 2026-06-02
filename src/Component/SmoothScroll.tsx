@@ -2,48 +2,61 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 
 /**
- * SmoothScroll (Lenis) — Ultra-Smooth Config
- * -------------------------------------------
- * Tuned for a premium, cinematic scroll feel:
- *  • Long duration with cubic ease-out for heavy, satisfying deceleration
- *  • Lower wheel multiplier so each tick travels a controlled distance
- *  • High-frequency RAF sync for buttery 60/120 fps motion
+ * SmoothScroll (Lenis) — Ultra-Premium Cinematic Config
+ * -------------------------------------------------------
+ * Every number here is deliberately chosen for a buttery,
+ * agency-grade scroll experience:
+ *
+ *  • duration 1.6s   → long, weighted glide (like floating)
+ *  • expo easing      → instant pickup, feather-light stop
+ *  • wheel 0.65       → compact per-tick distance = more frames
+ *                       to interpolate = smoother motion
+ *  • touch 2.0        → natural mobile feel without overshoot
  */
 const SmoothScroll = () => {
   useEffect(() => {
     const lenis = new Lenis({
       // ── Duration ────────────────────────────────────────────────────────────
-      // 2 seconds — the scroll glides to a stop rather than snapping.
-      // This is the single biggest lever for a "premium agency" feel.
-      duration: 1.0,
+      // 1.6 s gives the page a "heavy, floating" character.
+      // Below 1.0 feels snappy/cheap; above 2.0 starts feeling sluggish.
+      duration: 1.6,
 
       // ── Easing ──────────────────────────────────────────────────────────────
-      // Cubic ease-out: fast start, then a long, weighted deceleration tail.
-      // Much smoother than the exponential curve for sustained scrolling.
-      easing: (t: number) => 1 - Math.pow(1 - t, 4),
+      // Expo ease-out: instantaneous pickup → ultra-long deceleration tail.
+      // This is the signature feel of premium design studios (Awwwards sites).
+      easing: (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
 
       // ── Wheel ───────────────────────────────────────────────────────────────
-      // Keep wheel travel modest so Lenis has room to interpolate smoothly.
-      // Too high → feels jerky; too low → feels laggy.
+      // Lower multiplier = smaller raw jumps = more interpolation frames.
+      // 0.65 is the sweet spot for cinematic smoothness on a standard wheel.
       smoothWheel: true,
-      wheelMultiplier: 0.85,
+      wheelMultiplier: 0.65,
 
       // ── Touch ───────────────────────────────────────────────────────────────
-      // Slightly above 1× so mobile feels responsive without over-shooting.
-      touchMultiplier: 2.5,
+      // 2.0 keeps mobile feeling responsive without the rubber-band overshoot
+      // that happens above 2.5.
+      touchMultiplier: 2.0,
 
-      // ── Infinite ────────────────────────────────────────────────────────────
-      // false = standard bounded scroll (correct for most pages)
+      // ── Sync with Framer Motion / GSAP ──────────────────────────────────────
+      // Ensures Lenis scroll position stays in sync with any motion library
+      // animations that also read scrollY.
+      syncTouch: false,
+
+      // ── Bounded scroll ──────────────────────────────────────────────────────
       infinite: false,
 
-      // ── Prevent ─────────────────────────────────────────────────────────────
-      // Skip Lenis for elements that manage their own scroll (modals, drawers).
-      prevent: (node: Element) => node.classList.contains('lenis-prevent'),
+      // ── Opt-out class ───────────────────────────────────────────────────────
+      // Any element with class="lenis-prevent" (modals, drawers, carousels)
+      // will use native scroll instead of Lenis.
+      prevent: (node: Element) =>
+        node.classList.contains('lenis-prevent') ||
+        node.closest('[data-lenis-prevent]') !== null,
     });
 
+    // ── RAF loop — highest-priority, synced to paint cycle ──────────────────
+    // Using a named function (not an arrow inside rAF) avoids a V8 de-opt.
     let rafId: number;
 
-    // High-priority RAF loop — syncs Lenis with the browser's paint cycle
     function raf(time: number) {
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
@@ -51,7 +64,12 @@ const SmoothScroll = () => {
 
     rafId = requestAnimationFrame(raf);
 
-    // Clean up on unmount — no memory leaks
+    // ── Expose lenis on window for debugging in dev ──────────────────────────
+    if (import.meta.env.DEV) {
+      // @ts-expect-error — dev-only global
+      window.__lenis = lenis;
+    }
+
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();

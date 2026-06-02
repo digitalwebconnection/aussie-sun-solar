@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Phone, ArrowRight } from 'lucide-react';
+import solarCtaBg from '../../../assets/downloaded-images/solar-cta-bg.jpg';
 
 const SolarCTA = () => {
   return (
@@ -50,7 +51,7 @@ const SolarCTA = () => {
     
           <div 
             className="lg:w-2/5 h-full min-h-[500px] bg-cover bg-center relative"
-            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200")' }}
+            style={{ backgroundImage: `url(${solarCtaBg})` }}
           >
             {/* Artistic Overlay */}
             <div className="absolute inset-0 bg-linear-to-r from-[#004093] via-transparent to-transparent hidden lg:block" />

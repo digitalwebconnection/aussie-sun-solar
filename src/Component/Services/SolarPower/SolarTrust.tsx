@@ -22,7 +22,7 @@ const SolarTrust = () => {
       gradient: 'from-blue-500 to-cyan-400'
     },
     {
-      title: 'CEC Approved Components',
+      title: 'SAA Approved Components',
       desc: 'All systems include Clean Energy Council approved inverters and components for trusted performance.',
       icon: Zap,
       gradient: 'from-purple-500 to-pink-500'

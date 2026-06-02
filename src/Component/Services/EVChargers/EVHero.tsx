@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useToast } from "../../ui/Toast";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import evCharger1 from '../../../assets/downloaded-images/ev-charger-1.jpg';
 
 const EVHero = () => {
   const toast = useToast();
@@ -23,7 +24,7 @@ const EVHero = () => {
     <section className="relative overflow-hidden pt-28 pb-8">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2000&auto=format&fit=crop"
+          src={evCharger1}
           alt="EV Charger Background"
           className="h-full w-full object-cover"
         />

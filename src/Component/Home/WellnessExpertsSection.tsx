@@ -10,38 +10,39 @@ import {
     Wrench,
 } from 'lucide-react';
 
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+import solarMonitoring from '../../assets/downloaded-images/solar-monitoring.jpg';
+import groundMountedSolar from '../../assets/downloaded-images/ground-mounted-solar.jpg';
+import solarInstallationImg from '../../assets/downloaded-images/solar-installation.jpg';
+
 const FEATURES = [
     {
         icon: ShieldCheck,
         title: 'Trusted Solar Energy Experts',
         description:
             'Our certified solar professionals deliver reliable energy solutions with quality installation and long-term performance.',
-        image:
-            'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop',
+        image: solarRoof1,
     },
     {
         icon: Clock3,
         title: '24/7 System Monitoring',
         description:
             'Real-time solar performance tracking and dedicated support to ensure maximum efficiency and uninterrupted power savings.',
-        image:
-            'https://5.imimg.com/data5/SELLER/Default/2024/5/415483937/QC/XX/ER/74280208/solar-energy-monitoring-system-500x500.jpg',
+        image: solarMonitoring,
     },
     {
         icon: Wrench,
         title: 'End-to-End Solar Installation',
         description:
             'From consultation and design to installation and maintenance, every project is handled completely by our in-house team.',
-        image:
-            'https://sspindia.in/wp-content/uploads/2026/01/Ground-Mounted-Systems.jpg',
+        image: groundMountedSolar,
     },
     {
         icon: BatteryCharging,
         title: 'Complete Energy Saving Solutions',
         description:
             'Residential, commercial, and industrial solar systems designed to reduce electricity costs and support sustainable living.',
-        image:
-            'https://emtsolar.com/wp-content/uploads/2022/09/AdobeStock_392737024-1024x683.jpg',
+        image: solarInstallationImg,
     },
 ];
 

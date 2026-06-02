@@ -4,6 +4,8 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+import sigenergySmarter from '../../../assets/downloaded-images/sigenergy-smarter.webp';
+
 const SolarSmarterLiving = () => {
   const items = [
     {
@@ -38,7 +40,7 @@ const SolarSmarterLiving = () => {
             {/* Main Image */}
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
               <img
-                src="https://www.sigenergy.com/uploads/en_content/1741156288490534.webp"
+                src={sigenergySmarter}
                 alt="Solar Home"
                 className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
               />

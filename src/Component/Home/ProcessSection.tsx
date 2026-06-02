@@ -30,7 +30,7 @@ const PROCESS = [
         description:
             'Our certified in-house technicians deliver a fast, clean, and professional installation experience with premium-quality workmanship.',
         points: [
-            'CEC-certified installation',
+            'SAA-certified installation',
             'Battery-ready integration',
             'Safety testing & activation',
         ],
@@ -252,7 +252,7 @@ export default function ProcessTimelineSection() {
                                         </div>
                                     </div>
 
-                                 
+
                                 </div>
 
                             </motion.div>

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { BadgeCheck } from 'lucide-react';
 import Counter from './Counter';
 
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+
 const STATS = [
     {
         value: 20,
@@ -55,8 +57,7 @@ export default function StatsSection() {
                 <div
                     className="absolute inset-0 scale-110 bg-fixed bg-cover bg-center"
                     style={{
-                        backgroundImage:
-                            "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&h=1000&fit=crop')",
+                        backgroundImage: `url('${solarRoof1}')`,
                     }}
                 />
 

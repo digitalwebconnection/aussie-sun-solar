@@ -16,7 +16,7 @@ const FEATURES = [
     {
         icon: ShieldCheck,
         title: 'Tier-1 Certified',
-        description: 'Elite CEC-accredited installers delivering high-yield performance across Australia.',
+        description: 'Elite SAA-accredited installers delivering high-yield performance across Australia.',
     },
     {
         icon: Clock3,
@@ -69,7 +69,7 @@ export default function WhyChooseSection() {
                         </h2>
                         <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#FE9900]" />
                         <p className="mx-auto mt-8 max-w-4xl text-md md:text-lg leading-relaxed text-slate-500">
-                            We combine premium Australian standards with world-class solar technology 
+                            We combine premium Australian standards with world-class solar technology
                             to deliver energy independence that lasts for decades.
                         </p>
                     </motion.div>
@@ -120,14 +120,14 @@ export default function WhyChooseSection() {
                 </div>
 
                 {/* BOTTOM TRUST BAR */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     className="mt-4 md:mt-10 border-t border-slate-100 pt-10 flex flex-wrap justify-center gap-x-12 gap-y-6"
                 >
-                    {['CEC APPROVED', '100% IN-HOUSE', 'AUSTRALIA WIDE', 'TIER 1PANELS'].map((trust, idx) => (
+                    {['SAA APPROVED', '100% IN-HOUSE', 'AUSTRALIA WIDE', 'TIER 1PANELS'].map((trust, idx) => (
                         <div key={idx} className="flex items-center gap-3 text-[11px] font-black tracking-[0.3em] text-slate-900">
-                           <div className="h-1.5 w-1.5 rounded-full bg-[#FE9900]" /> {trust}
+                            <div className="h-1.5 w-1.5 rounded-full bg-[#FE9900]" /> {trust}
                         </div>
                     ))}
                 </motion.div>

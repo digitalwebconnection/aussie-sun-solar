@@ -1,9 +1,12 @@
-import { useRef} from "react";
+import { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { CheckCircle2, Zap, Award } from "lucide-react";
 import gsap from "gsap";
-import { Canvas} from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { Float, Sphere, MeshDistortMaterial } from "@react-three/drei";
+
+import etSolarFeature from '../../assets/downloaded-images/et-solar-feature.jpg';
+import insolationSolar from '../../assets/downloaded-images/insolation-solar.jpg';
 
 
 // 3D Background Element
@@ -100,23 +103,23 @@ export default function AboutFeatures() {
   return (
     <section ref={containerRef} className="bg-white overflow-hidden selection:bg-[#FE9900] selection:text-white" aria-label="Our philosophy and what sets us apart">
       <div className="grid lg:grid-cols-2">
-        
+
         {/* TOP LEFT: IMAGE & STATS */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="relative h-full overflow-hidden group"
         >
           <img
-            src="https://etimg.etb2bimg.com/photo/111210277.cms"
+            src={etSolarFeature}
             alt="Solar panel installation crew on rooftop"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-linear-to-b from-[#004093]/40 to-[#004093]/10"></div>
-          
+
           {/* Stats Card with GSAP Tilt */}
-          <div 
+          <div
             ref={card1Ref}
             onMouseMove={(e) => handleMouseMove(e, card1Ref)}
             onMouseLeave={() => handleMouseLeave(card1Ref)}
@@ -127,7 +130,7 @@ export default function AboutFeatures() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="relative"
             >
-               <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
+              <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
               <Award size={48} className="mb-2 text-[#FE9900] relative z-10" />
             </motion.div>
             <h3 className="text-4xl md:text-5xl font-black tracking-tighter">7 +</h3>
@@ -143,7 +146,7 @@ export default function AboutFeatures() {
         {/* TOP RIGHT: BELIEFS */}
         <div className="bg-[#004093] p-4 lg:p-10 flex flex-col justify-center text-white relative overflow-hidden">
           <ThreeSceneBlue />
-          
+
           <div className="relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -158,16 +161,16 @@ export default function AboutFeatures() {
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">With Quality & Excellence</span>
               </h2>
             </motion.div>
-            
+
             <ul className="space-y-4">
               {[
                 "Honest guidance with transparent solar solutions and no pressure sales approach",
-                "Premium SAA & CEC-approved solar panels, inverters, and equipment",
+                "Premium & SAA-approved solar panels, inverters, and equipment",
                 "Fast and professional solar installations completed by experienced in-house teams",
                 "Future-ready solar systems compatible with battery storage and EV charging solutions",
                 "Ongoing support, monitoring, maintenance, and long-term energy savings for homes and businesses"
               ].map((item, index) => (
-                <motion.li 
+                <motion.li
                   key={index}
                   custom={index}
                   initial="hidden"
@@ -206,16 +209,16 @@ export default function AboutFeatures() {
                 <span className="text-white">Stand Out</span> Across Queensland & Australia
               </h2>
             </motion.div>
-            
+
             <ul className="space-y-4">
               {[
                 "Licensed electrician-owned solar company focused on quality workmanship and reliable energy solutions",
                 "Experienced in-house solar installers serving Queensland, NSW, and South Australia",
                 "Certified Level 2 ASP professionals for safe and compliant electrical solar work",
-                "Fully CEC-compliant solar panel installation using trusted industry-approved equipment",
+                "Fully SAA-compliant solar panel installation using trusted industry-approved equipment",
                 "Dedicated after-installation support, system monitoring, and customer assistance you can rely on"
               ].map((item, index) => (
-                <motion.li 
+                <motion.li
                   key={index}
                   custom={index + 5}
                   initial="hidden"
@@ -237,21 +240,21 @@ export default function AboutFeatures() {
         </div>
 
         {/* BOTTOM RIGHT: IMAGE & STATS */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           className="relative h-full overflow-hidden group order-1 lg:order-2"
         >
           <img
-            src="https://insolationenergy.in/public/upload/blog/mobilebanner/20240305151028.jpg"
+            src={insolationSolar}
             alt="Solar installation workplace team"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
-          
+
           {/* Stats Card with GSAP Tilt */}
-          <div 
+          <div
             ref={card2Ref}
             onMouseMove={(e) => handleMouseMove(e, card2Ref)}
             onMouseLeave={() => handleMouseLeave(card2Ref)}

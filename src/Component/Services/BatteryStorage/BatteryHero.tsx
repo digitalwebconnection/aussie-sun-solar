@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useToast } from "../../ui/Toast";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import batteryStorage1 from '../../../assets/downloaded-images/battery-storage-1.jpg';
 
 const BatteryHero = () => {
   const toast = useToast();
@@ -25,7 +26,7 @@ const BatteryHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=2000&auto=format&fit=crop"
+          src={batteryStorage1}
           alt="Battery Storage Background"
           className="h-full w-full object-cover"
         />

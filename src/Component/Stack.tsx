@@ -2,6 +2,11 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import './Stack.css';
 
+import house1 from '../assets/downloaded-images/house-1.jpg';
+import house2 from '../assets/downloaded-images/house-2.jpg';
+import house3 from '../assets/downloaded-images/house-3.jpg';
+import house4 from '../assets/downloaded-images/house-4.jpg';
+
 function CardRotate({ children, onSendToBack, sensitivity, disableDrag = false }: any) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -77,7 +82,7 @@ export default function Stack({
           id: 1,
           content: (
             <img
-              src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format"
+              src={house1}
               alt="card-1"
               className="card-image"
             />
@@ -87,7 +92,7 @@ export default function Stack({
           id: 2,
           content: (
             <img
-              src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format"
+              src={house2}
               alt="card-2"
               className="card-image"
             />
@@ -97,7 +102,7 @@ export default function Stack({
           id: 3,
           content: (
             <img
-              src="https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format"
+              src={house3}
               alt="card-3"
               className="card-image"
             />
@@ -107,7 +112,7 @@ export default function Stack({
           id: 4,
           content: (
             <img
-              src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format"
+              src={house4}
               alt="card-4"
               className="card-image"
             />

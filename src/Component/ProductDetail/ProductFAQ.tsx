@@ -26,7 +26,7 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
     },
     {
       q: `How long does the installation take?`,
-      a: `A standard residential installation typically takes 1 to 2 days depending on system size and roof access. Aussie Sun Solar's CEC-accredited installers handle the entire process from structural safety checks to final commissioning.`,
+      a: `A standard residential installation typically takes 1 to 2 days depending on system size and roof access. Aussie Sun Solar's SAA-accredited installers handle the entire process from structural safety checks to final commissioning.`,
     },
   ];
 
@@ -72,8 +72,8 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
     product.category === "Solar Panels"
       ? panelFAQs
       : product.category === "Solar Inverters"
-      ? inverterFAQs
-      : batteryFAQs;
+        ? inverterFAQs
+        : batteryFAQs;
 
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
@@ -83,7 +83,7 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
 
   return (
     <section className="relative overflow-hidden bg-white py-12 md:py-16 max-w-7xl mx-auto">
-      
+
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-[#004093]/5 rounded-full blur-3xl" />
@@ -91,7 +91,7 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
       </div>
 
       <div className="relative z-10">
-        
+
         {/* Heading */}
         <div className="max-w-6xl  mx-auto text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-5">
@@ -120,13 +120,12 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
             return (
               <div
                 key={idx}
-                className={`group relative overflow-hidden rounded-lg border transition-all duration-500 ${
-                  isOpen
+                className={`group relative overflow-hidden rounded-lg border transition-all duration-500 ${isOpen
                     ? "border-[#004093]/20 bg-linear-to-br from-blue-50 to-white shadow-2xl shadow-blue-100/40"
                     : "border-slate-200 bg-white hover:border-[#004093]/20 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/60"
-                }`}
+                  }`}
               >
-                
+
                 {/* Glow Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
                   <div className="absolute top-0 right-0 w-40 h-40 bg-[#FE9900]/10 rounded-full blur-3xl" />
@@ -135,11 +134,10 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
 
                 {/* Animated Top Line */}
                 <div
-                  className={`h-[4px] bg-linear-to-r from-[#004093] via-[#FE9900] to-[#004093] transition-all duration-500 ${
-                    isOpen
+                  className={`h-[4px] bg-linear-to-r from-[#004093] via-[#FE9900] to-[#004093] transition-all duration-500 ${isOpen
                       ? "opacity-100"
                       : "opacity-0 group-hover:opacity-100"
-                  }`}
+                    }`}
                 />
 
                 {/* Button */}
@@ -147,25 +145,23 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
                   onClick={() => toggleFAQ(idx)}
                   className="relative z-10 w-full flex items-center justify-between gap-5 p-6 md:p-7 text-left"
                 >
-                  
+
                   {/* Left */}
                   <div className="flex items-start gap-4">
-                    
+
                     {/* Icon */}
                     <div
-                      className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-500 ${
-                        isOpen
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-500 ${isOpen
                           ? "bg-linear-to-br from-[#004093] to-[#0A56B5] shadow-lg shadow-blue-200"
                           : "bg-slate-100 group-hover:bg-linear-to-br group-hover:from-[#FE9900] group-hover:to-orange-500"
-                      }`}
+                        }`}
                     >
                       <HelpCircle
                         size={20}
-                        className={`transition duration-500 ${
-                          isOpen
+                        className={`transition duration-500 ${isOpen
                             ? "text-white"
                             : "text-[#004093] group-hover:text-white"
-                        }`}
+                          }`}
                       />
                     </div>
 
@@ -176,45 +172,41 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
                       </span>
 
                       <div
-                        className={`mt-4 h-[3px] rounded-full bg-linear-to-r from-[#FE9900] to-[#004093] transition-all duration-700 ${
-                          isOpen
+                        className={`mt-4 h-[3px] rounded-full bg-linear-to-r from-[#FE9900] to-[#004093] transition-all duration-700 ${isOpen
                             ? "w-32"
                             : "w-14 group-hover:w-24"
-                        }`}
+                          }`}
                       />
                     </div>
                   </div>
 
                   {/* Arrow */}
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500 ${
-                      isOpen
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500 ${isOpen
                         ? "bg-[#004093] rotate-180"
                         : "bg-slate-100 group-hover:bg-[#004093]"
-                    }`}
+                      }`}
                   >
                     <ChevronDown
                       size={18}
-                      className={`transition duration-500 ${
-                        isOpen
+                      className={`transition duration-500 ${isOpen
                           ? "text-white"
                           : "text-[#004093] group-hover:text-white"
-                      }`}
+                        }`}
                     />
                   </div>
                 </button>
 
                 {/* Answer */}
                 <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen
+                  className={`grid transition-all duration-500 ease-in-out ${isOpen
                       ? "grid-rows-[1fr] opacity-100"
                       : "grid-rows-[0fr] opacity-0"
-                  }`}
+                    }`}
                 >
                   <div className="overflow-hidden">
                     <div className="relative z-10 px-6 md:px-7 pb-7">
-                      
+
                       {/* Divider */}
                       <div className="border-t border-slate-200 pt-6">
                         <p className="text-slate-900 text-sm md:text-base font-medium leading-relaxed max-w-4xl">

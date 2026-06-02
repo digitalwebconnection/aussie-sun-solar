@@ -2,15 +2,15 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ChevronLeft, ChevronRight, Images } from "lucide-react";
 
-import p1  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.51 (1).jpeg";
-import p2  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.51.jpeg";
-import p3  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.52 (1).jpeg";
-import p4  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.52.jpeg";
-import p5  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.53 (1).jpeg";
-import p6  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.53 (2).jpeg";
-import p7  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.53.jpeg";
-import p8  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.54 (1).jpeg";
-import p9  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.54 (2).jpeg";
+import p1 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.51 (1).jpeg";
+import p2 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.51.jpeg";
+import p3 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.52 (1).jpeg";
+import p4 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.52.jpeg";
+import p5 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.53 (1).jpeg";
+import p6 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.53 (2).jpeg";
+import p7 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.53.jpeg";
+import p8 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.54 (1).jpeg";
+import p9 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.54 (2).jpeg";
 import p10 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.54.jpeg";
 import p11 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.55 (1).jpeg";
 import p12 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.11.55 (2).jpeg";
@@ -32,15 +32,15 @@ import p27 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp I
 import p28 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.12.00 (2).jpeg";
 import p29 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.12.00 (3).jpeg";
 import p30 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.08/WhatsApp Image 2026-05-12 at 19.12.00.jpeg";
-import q1  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.06 (1).jpeg";
-import q2  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.06 (2).jpeg";
-import q3  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.06.jpeg";
-import q4  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07 (1).jpeg";
-import q5  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07 (2).jpeg";
-import q6  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07.jpeg";
-import q7  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.08 (1).jpeg";
-import q8  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.08 (2).jpeg";
-import q9  from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.08.jpeg";
+import q1 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.06 (1).jpeg";
+import q2 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.06 (2).jpeg";
+import q3 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.06.jpeg";
+import q4 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07 (1).jpeg";
+import q5 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07 (2).jpeg";
+import q6 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07.jpeg";
+import q7 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.08 (1).jpeg";
+import q8 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.08 (2).jpeg";
+import q9 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.08.jpeg";
 import q10 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.09 (1).jpeg";
 import q11 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.09 (2).jpeg";
 import q12 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.09.jpeg";
@@ -51,11 +51,11 @@ import q16 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp I
 import q17 from "../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.11.jpeg";
 
 const allPhotos = [
- p23,p24,p25,p26,p27, p1,p2,p3,p4,
-  p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,
-  p21,p22,p28,p29,p30,
-  q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,
-  q11,q12,q13,q14,q15,q16,q17,p5,p6,p7,p8,p9,p10,
+  p23, p24, p25, p26, p27, p1, p2, p3, p4,
+  p11, p12, p13, p14, p15, p16, p17, p18, p19, p20,
+  p21, p22, p28, p29, p30,
+  q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
+  q11, q12, q13, q14, q15, q16, q17, p5, p6, p7, p8, p9, p10,
 ];
 
 const INITIAL_SHOW = 10;
@@ -72,7 +72,7 @@ const INITIAL_SHOW = 10;
    pos 7 → col-span-1 row-span-1  (small square)
    pos 8 → col-span-2 row-span-2  (big featured, 400px tall)
    pos 9 → col-span-1 row-span-1  (small square)
-*/  
+*/
 
 const BENTO: { col: string; row: string }[] = [
   { col: "col-span-2", row: "row-span-2" },
@@ -135,7 +135,7 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }: {
         {photos.map((src, i) => (
           <button key={i} onClick={(e) => { e.stopPropagation(); }}
             className={`shrink-0 w-10 h-10 rounded-lg overflow-hidden border-2 transition-all ${i === index ? "border-[#FE9900] scale-110" : "border-white/20 opacity-50 hover:opacity-100"}`}
-            onClickCapture={(e) => { e.stopPropagation(); onClose(); setTimeout(() => {}, 0); }}
+            onClickCapture={(e) => { e.stopPropagation(); onClose(); setTimeout(() => { }, 0); }}
           >
             <img src={src} className="w-full h-full object-cover" />
           </button>
@@ -191,10 +191,10 @@ const ProjectsGallery = () => {
   const [showAll, setShowAll] = useState(false);
 
   const visible = showAll ? allPhotos : allPhotos.slice(0, INITIAL_SHOW);
-  const open  = useCallback((i: number) => setLightboxIndex(i), []);
+  const open = useCallback((i: number) => setLightboxIndex(i), []);
   const close = useCallback(() => setLightboxIndex(null), []);
-  const prev  = useCallback(() => setLightboxIndex(i => i === null ? 0 : (i - 1 + allPhotos.length) % allPhotos.length), []);
-  const next  = useCallback(() => setLightboxIndex(i => i === null ? 0 : (i + 1) % allPhotos.length), []);
+  const prev = useCallback(() => setLightboxIndex(i => i === null ? 0 : (i - 1 + allPhotos.length) % allPhotos.length), []);
+  const next = useCallback(() => setLightboxIndex(i => i === null ? 0 : (i + 1) % allPhotos.length), []);
 
   return (
     <>
@@ -216,7 +216,7 @@ const ProjectsGallery = () => {
               <span className="text-[#FE9900]">Real Results</span>
             </h2>
             <p className="mt-4 text-gray-900 text-base md:text-lg max-w-6xl mx-auto">
-              Every photo is a genuine solar installation completed by our CEC-accredited team across Australia.
+              Every photo is a genuine solar installation completed by our SAA-accredited team across Australia.
             </p>
             <div className="flex items-center justify-center gap-3 mt-5">
               <div className="h-px w-16 bg-[#FE9900]" />

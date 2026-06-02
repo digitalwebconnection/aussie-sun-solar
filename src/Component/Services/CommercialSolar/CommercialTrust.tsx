@@ -3,7 +3,7 @@ import { ShieldCheck, Zap, Hammer, ArrowUpRight, Sparkles } from 'lucide-react';
 
 const CommercialTrust = () => {
   const deliveries = [
-    { title: 'CEC Accredited Professionals', desc: 'Every commercial solar project is handled by Clean Energy Council accredited designers and installers.', icon: Hammer, gradient: 'from-orange-400 to-orange-500' },
+    { title: 'SAA Accredited Professionals', desc: 'Every commercial solar project is handled by Clean Energy Council accredited designers and installers.', icon: Hammer, gradient: 'from-orange-400 to-orange-500' },
     { title: 'Premium Commercial Panels', desc: 'We use Tier-1 commercial solar panels designed for maximum output, durability and 25-year performance.', icon: ShieldCheck, gradient: 'from-blue-500 to-cyan-400' },
     { title: 'Grid Connection Management', desc: 'We handle all network applications, approvals, and grid connection for a completely hassle-free experience.', icon: Zap, gradient: 'from-purple-500 to-pink-500' },
   ];

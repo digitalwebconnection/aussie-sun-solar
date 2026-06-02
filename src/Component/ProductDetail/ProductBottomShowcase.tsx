@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useToast } from "../ui/Toast";
 import { MessageSquare, Phone, Mail, ShieldCheck, Zap, Award, CheckCircle } from "lucide-react";
 import type { ProductData } from "../../data/products";
+import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 
 interface ProductBottomShowcaseProps {
   product: ProductData;
@@ -14,7 +15,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-        const formData = new FormData(event.target as HTMLFormElement);
+    const formData = new FormData(event.target as HTMLFormElement);
     formData.append("access_key", "f3cef460-e2ec-49da-adab-5f4180bdf046");
     const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
     const data = await response.json();
@@ -28,7 +29,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
       {/* Background Image of Solar Panels with Dark Overlay */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img
-          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop"
+          src={solarRoof1}
           alt="Solar Panels Showcase"
           className="w-full h-full object-cover"
         />
@@ -36,7 +37,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 p-8 md:p-12 items-center">
-        
+
         {/* LEFT COLUMN: Solar Panel Showcase Details */}
         <div className="lg:col-span-6 flex flex-col justify-center">
           <div className="inline-flex items-center gap-2 bg-[#FE9900]/15 border border-[#FE9900]/30 rounded-full px-4 py-1.5 w-fit mb-6">
@@ -49,7 +50,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
           <h3 className="text-2xl md:text-4xl font-black tracking-tight leading-tight mb-4">
             Maximize Energy Yields With {product.brand}
           </h3>
-          
+
           <p className="text-slate-400 text-sm md:text-base mb-8 leading-relaxed font-medium">
             Ready to upgrade your property? Aussie Sun Solar configures custom systems utilizing {product.brand} solar technology to optimize power generation and lower utility bills.
           </p>
@@ -60,9 +61,9 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
               <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
                 <CheckCircle size={18} />
               </div>
-              <span className="text-sm font-bold text-slate-200">CEC Approved Clean Energy Technology</span>
+              <span className="text-sm font-bold text-slate-200">SAA Approved Clean Energy Technology</span>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-[#004093]/30 flex items-center justify-center text-blue-400">
                 <ShieldCheck size={18} />
@@ -82,7 +83,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
           <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-4 flex items-center gap-4 hover:border-white/10 transition group">
             <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 border border-white/10">
               <img
-                src="https://cdn.britannica.com/91/222691-050-E8BDF226/installing-solar-panels.jpg"
+                src={solarRoof1}
                 alt="Solar Panel Close Up"
                 className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
               />
@@ -147,8 +148,8 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
                 </select>
               </div>
 
-              
-              
+
+
 
               <button
                 type="submit"

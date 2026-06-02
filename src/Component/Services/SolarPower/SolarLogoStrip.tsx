@@ -1,26 +1,32 @@
 import { motion } from "framer-motion";
 
+import secLogo from '../../../assets/downloaded-images/sec-logo.svg';
+import teslaLogo from '../../../assets/downloaded-images/tesla-logo.svg';
+import growattLogo from '../../../assets/Growatt Inverters/1.jpg';
+import sungrowLogo from '../../../assets/downloaded-images/sungrow-logo.png';
+import jinkoLogo from '../../../assets/Jinko Solar/1.jpg';
+
 const SolarLogoStrip = () => {
   const logos = [
     {
-      name: "CEC",
-      url: "https://arisesolar.com.au/wp-content/themes/arise-solar/assets/images/sec-logo.svg",
+      name: "SAA",
+      url: secLogo,
     },
     {
       name: "Tesla",
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcz4AymYGv5LSbCIPcU0HGLIY7mDjx3xhUXg&s",
+      url: teslaLogo,
     },
     {
       name: "Growatt",
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnVUMoSUmeEvFN2DTi-ZyBeHYbPlboc40YsQ&s",
+      url: growattLogo,
     },
     {
       name: "Sungrow",
-      url: "https://5.imimg.com/data5/SELLER/Default/2024/9/453258022/VH/UP/RG/91379867/sungrow-sungrow-solar-inverter-battery.png",
+      url: sungrowLogo,
     },
     {
       name: "Jinko",
-      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsHQxxUFfFwDuPb1ycxTBcVq4edn0woiBwPQ&s",
+      url: jinkoLogo,
     },
   ];
 
@@ -39,9 +45,8 @@ const SolarLogoStrip = () => {
               transition={{ delay: i * 0.1 }}
               src={logo.url}
               alt={logo.name}
-              className={`h-16 object-contain ${
-                logo.name === "Tesla" ? "h-8" : ""
-              }`}
+              className={`h-16 object-contain ${logo.name === "Tesla" ? "h-8" : ""
+                }`}
             />
           ))}
         </div>
@@ -62,9 +67,8 @@ const SolarLogoStrip = () => {
                 key={i}
                 src={logo.url}
                 alt={logo.name}
-                className={`h-12 object-contain shrink-0 ${
-                  logo.name === "Tesla" ? "h-6" : ""
-                }`}
+                className={`h-12 object-contain shrink-0 ${logo.name === "Tesla" ? "h-6" : ""
+                  }`}
               />
             ))}
           </motion.div>
