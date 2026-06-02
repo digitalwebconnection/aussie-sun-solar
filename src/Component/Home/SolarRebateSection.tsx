@@ -171,7 +171,7 @@ const SolarBatterySection = () => {
               {/* Bottom Box */}
               <div className="mt-8 bg-linear-to-r from-[#004093] to-[#0f5bc7] rounded-lg  md:p-6 p-3 flex items-center justify-between">
 
-                <div>
+                {/* <div>
                   <p className="text-white/90 text-sm uppercase tracking-wider">
                     Free Consultation
                   </p>
@@ -179,7 +179,7 @@ const SolarBatterySection = () => {
                   <h4 className="text-2xl font-black text-white mt-1">
                     1300 504 912
                   </h4>
-                </div>
+                </div> */}
 
                 <button className="w-14 h-14 rounded-2xl bg-white text-[#004093] flex items-center justify-center hover:scale-110 transition-all duration-300">
                   <ArrowRight size={22} />

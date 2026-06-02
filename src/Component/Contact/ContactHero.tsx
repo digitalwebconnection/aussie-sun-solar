@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useToast } from "../ui/Toast";
 import { motion } from "framer-motion";
 import {
-  Phone,
+  // Phone,
   Mail,
   ChevronRight,
   Sparkles,
@@ -11,6 +11,29 @@ import {
 const ContactHero = () => {
   const toast = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [focusedFields, setFocusedFields] = useState<Record<string, boolean>>({});
+
+  const handleFocus = (field: string) => {
+    setFocusedFields((prev) => ({ ...prev, [field]: true }));
+  };
+
+  const handleBlur = (field: string) => {
+    setFocusedFields((prev) => ({ ...prev, [field]: false }));
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -28,6 +51,13 @@ const ContactHero = () => {
     if (data.success) {
       toast.success("Message sent successfully! We'll be in touch shortly.");
       (event.target as HTMLFormElement).reset();
+      setFormValues({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
     } else {
       toast.error("Something went wrong. Please try again.");
     }
@@ -129,11 +159,7 @@ const ContactHero = () => {
             <div className="mt-12  space-y-5">
 
               {[
-                {
-                  icon: Phone,
-                  title: "Phone",
-                  value: "1300 504 912",
-                },
+               
                 {
                   icon: Mail,
                   title: "Email",
@@ -230,47 +256,235 @@ const ContactHero = () => {
             <form className="relative z-10 space-y-5" onSubmit={onSubmit}>
 
               <div className="grid gap-5 md:grid-cols-2">
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="Full Name"
-                  className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none transition-all focus:ring-2 focus:ring-[#FE9900]"
-                />
+                <div className="relative">
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formValues.name}
+                    onFocus={() => handleFocus("name")}
+                    onBlur={() => handleBlur("name")}
+                    onChange={handleChange}
+                    className={`
+                      h-14
+                      w-full
+                      rounded-xl
+                      border
+                      bg-white
+                      px-5
+                      pt-5
+                      pb-1
+                      font-medium
+                      text-[#004093]
+                      outline-none
+                      transition-all
+                      duration-200
+                      ${focusedFields.name ? "border-[#FE9900] ring-2 ring-[#FE9900]" : "border-white/10"}
+                    `}
+                  />
+                  <span
+                    className={`
+                      absolute
+                      left-5
+                      transition-all
+                      duration-200
+                      pointer-events-none
+                      ${(focusedFields.name || formValues.name)
+                        ? `top-1.5 text-xs font-bold ${focusedFields.name ? "text-[#FE9900]" : "text-gray-400"}`
+                        : "top-1/2 -translate-y-1/2 text-base text-gray-500 font-medium"
+                      }
+                    `}
+                  >
+                    Full Name
+                  </span>
+                </div>
 
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Email Address"
-                  className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none transition-all focus:ring-2 focus:ring-[#FE9900]"
-                />
+                <div className="relative">
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={formValues.email}
+                    onFocus={() => handleFocus("email")}
+                    onBlur={() => handleBlur("email")}
+                    onChange={handleChange}
+                    className={`
+                      h-14
+                      w-full
+                      rounded-xl
+                      border
+                      bg-white
+                      px-5
+                      pt-5
+                      pb-1
+                      font-medium
+                      text-[#004093]
+                      outline-none
+                      transition-all
+                      duration-200
+                      ${focusedFields.email ? "border-[#FE9900] ring-2 ring-[#FE9900]" : "border-white/10"}
+                    `}
+                  />
+                  <span
+                    className={`
+                      absolute
+                      left-5
+                      transition-all
+                      duration-200
+                      pointer-events-none
+                      ${(focusedFields.email || formValues.email)
+                        ? `top-1.5 text-xs font-bold ${focusedFields.email ? "text-[#FE9900]" : "text-gray-400"}`
+                        : "top-1/2 -translate-y-1/2 text-base text-gray-500 font-medium"
+                      }
+                    `}
+                  >
+                    Email Address
+                  </span>
+                </div>
               </div>
 
               <div className="grid gap-5 md:grid-cols-2">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none transition-all focus:ring-2 focus:ring-[#FE9900]"
-                />
+                <div className="relative">
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formValues.phone}
+                    onFocus={() => handleFocus("phone")}
+                    onBlur={() => handleBlur("phone")}
+                    onChange={handleChange}
+                    className={`
+                      h-14
+                      w-full
+                      rounded-xl
+                      border
+                      bg-white
+                      px-5
+                      pt-5
+                      pb-1
+                      font-medium
+                      text-[#004093]
+                      outline-none
+                      transition-all
+                      duration-200
+                      ${focusedFields.phone ? "border-[#FE9900] ring-2 ring-[#FE9900]" : "border-white/10"}
+                    `}
+                  />
+                  <span
+                    className={`
+                      absolute
+                      left-5
+                      transition-all
+                      duration-200
+                      pointer-events-none
+                      ${(focusedFields.phone || formValues.phone)
+                        ? `top-1.5 text-xs font-bold ${focusedFields.phone ? "text-[#FE9900]" : "text-gray-400"}`
+                        : "top-1/2 -translate-y-1/2 text-base text-gray-500 font-medium"
+                      }
+                    `}
+                  >
+                    Phone Number
+                  </span>
+                </div>
 
-                <select name="service" className="h-14 rounded-xl border border-white/10 bg-white px-5 font-medium text-[#004093] outline-none">
-                  <option>Select Service</option>
-                  <option>Solar Installation</option>
-                  <option>Battery Storage</option>
-                  <option>EV Charging</option>
-                  <option>Electrical Services</option>
-                </select>
+                <div className="relative">
+                  <select
+                    name="service"
+                    value={formValues.service}
+                    onFocus={() => handleFocus("service")}
+                    onBlur={() => handleBlur("service")}
+                    onChange={handleChange}
+                    className={`
+                      h-14
+                      w-full
+                      rounded-xl
+                      border
+                      bg-white
+                      px-5
+                      pt-5
+                      pb-1
+                      font-medium
+                      text-[#004093]
+                      outline-none
+                      appearance-none
+                      transition-all
+                      duration-200
+                      ${focusedFields.service ? "border-[#FE9900] ring-2 ring-[#FE9900]" : "border-white/10"}
+                    `}
+                  >
+                    <option value="" disabled hidden></option>
+                    <option value="Solar Installation" className="text-[#004093]">Solar Installation</option>
+                    <option value="Battery Storage" className="text-[#004093]">Battery Storage</option>
+                    <option value="EV Charging" className="text-[#004093]">EV Charging</option>
+                    <option value="Electrical Services" className="text-[#004093]">Electrical Services</option>
+                  </select>
+                  
+                  {/* Select Icon */}
+                  <div className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-[#004093]">
+                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                      <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                    </svg>
+                  </div>
+
+                  <span
+                    className={`
+                      absolute
+                      left-5
+                      transition-all
+                      duration-200
+                      pointer-events-none
+                      ${(focusedFields.service || formValues.service)
+                        ? `top-1.5 text-xs font-bold ${focusedFields.service ? "text-[#FE9900]" : "text-gray-400"}`
+                        : "top-1/2 -translate-y-1/2 text-base text-gray-500 font-medium"
+                      }
+                    `}
+                  >
+                    Select Service
+                  </span>
+                </div>
               </div>
 
-              <textarea
-                rows={5}
-                name="message"
-                required
-                placeholder="Write your message..."
-                className="w-full rounded-xl border border-white/10 bg-white p-5 font-medium text-[#004093] outline-none transition-all resize-none focus:ring-2 focus:ring-[#FE9900]"
-              />
+              <div className="relative">
+                <textarea
+                  rows={5}
+                  name="message"
+                  required
+                  value={formValues.message}
+                  onFocus={() => handleFocus("message")}
+                  onBlur={() => handleBlur("message")}
+                  onChange={handleChange}
+                  className={`
+                    w-full
+                    rounded-xl
+                    border
+                    bg-white
+                    pt-7
+                    pb-3
+                    px-5
+                    font-medium
+                    text-[#004093]
+                    outline-none
+                    transition-all
+                    duration-200
+                    resize-none
+                    ${focusedFields.message ? "border-[#FE9900] ring-2 ring-[#FE9900]" : "border-white/10"}
+                  `}
+                />
+                <span
+                  className={`
+                    absolute
+                    left-5
+                    transition-all
+                    duration-200
+                    pointer-events-none
+                    ${(focusedFields.message || formValues.message)
+                      ? `top-2 text-xs font-bold ${focusedFields.message ? "text-[#FE9900]" : "text-gray-400"}`
+                      : "top-5 text-base text-gray-500 font-medium"
+                    }
+                  `}
+                >
+                  Write your message...
+                </span>
+              </div>
 
               {/* Button */}
               <motion.button

@@ -1,6 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import {
-  Phone,
+  // Phone,
   Mail,
   MapPin,
   ExternalLink,
@@ -155,27 +155,7 @@ const Footer = () => {
             <div className="space-y-6">
               {/* PHONE */}
 
-              <a
-                href="tel:1300504912"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#004093] flex items-center justify-center group-hover:bg-[#FE9900] transition-colors shadow-lg shadow-blue-900/10">
-                  <Phone
-                    size={20}
-                    className="text-white"
-                  />
-                </div>
-
-                <div>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Support Line
-                  </p>
-
-                  <h4 className="font-extrabold text-base sm:text-lg group-hover:text-[#FE9900] transition-colors">
-                    1300 504 912
-                  </h4>
-                </div>
-              </a>
+             
 
               {/* EMAIL */}
 

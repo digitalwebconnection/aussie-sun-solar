@@ -92,7 +92,6 @@ Your continued use of our website after any changes constitutes acceptance of th
 
 Aussie Sun Solar Pty Ltd
 ABN: 14 657 213 873
-Phone: 1300 504 912
 Email: info@aussiesunsolar.com.au
 Address: 114 Burns Road, Kellyville NSW 2155
 

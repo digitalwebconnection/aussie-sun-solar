@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Phone, ArrowRight } from "lucide-react";
+import {  ArrowRight } from "lucide-react";
 import supportPerson from '../../assets/downloaded-images/support-person.jpg';
 
 export const ContactCTA: React.FC = () => {
@@ -26,7 +26,7 @@ export const ContactCTA: React.FC = () => {
             
             <div className="flex flex-wrap gap-6 mt-8">
               {/* Contact phone */}
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-[#FE9900] flex items-center justify-center text-white shadow-lg">
                   <Phone size={20} fill="currentColor" />
                 </div>
@@ -34,7 +34,7 @@ export const ContactCTA: React.FC = () => {
                   <p className="text-xs text-white/60 font-semibold uppercase">24/7 Support</p>
                   <h4 className="font-bold text-white text-lg">1300 504 912</h4>
                 </div>
-              </div>
+              </div> */}
 
               <Link
                 to="/contact"

@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronDown,
   ChevronRight,
-  Phone,
   ArrowRight,
   Menu,
   X,
@@ -537,7 +536,7 @@ const SolarNavbar = () => {
                 <div className="mt-6 bg-linear-to-br from-[#004093] to-[#0056c4] rounded-2xl p-5 text-white shadow-xl shadow-blue-200">
                   <p className="text-xs font-medium opacity-75 mb-1">Need Solar Help?</p>
                   <h3 className="text-xl font-bold mb-4">Call Us Today</h3>
-                  <a
+                  {/* <a
                     href="tel:1300504912"
                     className="flex items-center gap-2 mb-4 hover:opacity-80 transition"
                   >
@@ -545,7 +544,7 @@ const SolarNavbar = () => {
                       <Phone size={16} className="text-white" />
                     </div>
                     <span className="font-bold text-lg">1300 504 912</span>
-                  </a>
+                  </a> */}
                   <Link
                     to="/contact"
                     className="inline-flex items-center gap-2 bg-[#FE9900] hover:bg-[#e88a00] px-5 py-2.5 rounded-full font-bold text-sm transition shadow-md"

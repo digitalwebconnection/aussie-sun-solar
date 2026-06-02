@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import FlipFadeText from '../Animations/FlipFadeText';
 import solarHeroBg from '../../assets/downloaded-images/solar-hero-bg.jpg';
 
@@ -64,7 +63,7 @@ const ProjectsCTA: React.FC = () => {
                 Our experts will design a custom system that maximises your savings from day one.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
                   className="group inline-flex items-center justify-center gap-3 bg-[#FE9900] hover:bg-[#e68900] text-white  px-8 py-2 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-[0_20px_50px_rgba(254,153,0,0.35)]"
@@ -79,18 +78,13 @@ const ProjectsCTA: React.FC = () => {
                   <Phone className="w-5 h-5" />
                   1300 504 912
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Right: contact cards */}
             <div className="flex flex-col justify-center gap-8">
               {[
-                {
-                  icon: <Phone className="w-6 h-6" />,
-                  label: 'Call Us',
-                  value: '1300 504 912',
-                  sub: 'Mon–Sat: 8am – 6pm AEST',
-                },
+            
                 {
                   icon: <Mail className="w-6 h-6" />,
                   label: 'Email Us',

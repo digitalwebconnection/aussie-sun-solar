@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, ArrowRight } from 'lucide-react';
+
 import solarCtaBg from '../../../assets/downloaded-images/solar-cta-bg.jpg';
 
 const SolarCTA = () => {
@@ -31,7 +31,7 @@ const SolarCTA = () => {
               Whether you're going solar for the savings or the environment, Aussie Sun Solar is here to help at every step of your journey.
             </p>
             
-            <div className="flex flex-wrap gap-8 items-center">
+            {/* <div className="flex flex-wrap gap-8 items-center">
               <button className="bg-white text-[#004093] px-12 py-5 rounded-full font-black text-lg flex items-center gap-3 hover:bg-[#FE9900] hover:text-white transition-all duration-300 shadow-xl group">
                 GET A FREE QUOTE 
                 <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
@@ -46,7 +46,7 @@ const SolarCTA = () => {
                   <p className="text-2xl font-black group-hover:text-[#FE9900] transition-colors">1300 504 912</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
     
           <div 

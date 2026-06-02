@@ -38,7 +38,7 @@ const ContactBanner = () => {
                   </div>
                   <div>
                     <p className="text-sm font-bold opacity-60 uppercase tracking-widest">24/7 Support</p>
-                    <p className="text-xl font-black">1300 504 912</p>
+                    {/* <p className="text-xl font-black">1300 504 912</p> */}
                   </div>
                 </a>
               </div>

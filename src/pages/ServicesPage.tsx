@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Sun, Battery, Car, Building2, ArrowRight, ChevronRight, ShieldCheck, Users, Zap, Sparkles } from 'lucide-react';
+import { Sun, Battery, Car, Building2,  ChevronRight, ShieldCheck, Users, Zap, Sparkles } from 'lucide-react';
 import solarRoof1 from '../assets/downloaded-images/solar-roof-1.jpg';
 import batteryStorage1 from '../assets/downloaded-images/battery-storage-1.jpg';
 import commercialSolar1 from '../assets/downloaded-images/commercial-solar-1.jpg';
@@ -84,14 +84,14 @@ const ServicesPage = () => {
             <p className="mt-6 mx-auto max-w-3xl text-lg leading-relaxed text-white/90">
               From residential solar panels to commercial installations, battery storage, and EV charging — Aussie Sun Solar is your one-stop clean energy partner across Australia.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            {/* <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-[#FE9900] px-10 py-4 font-black text-black uppercase tracking-wider shadow-[0_20px_50px_rgba(254,153,0,0.5)] transition-all hover:scale-105 hover:bg-[#ffb033]">
                 Get A Free Quote <ArrowRight size={20} />
               </Link>
               <a href="tel:1300504912" className="inline-flex items-center gap-3 rounded-full border-2 border-white/60 px-10 py-4 font-bold text-white uppercase tracking-wider transition-all hover:border-[#FE9900] hover:text-[#FE9900]">
                 Call 1300 504 912
               </a>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>
@@ -187,14 +187,14 @@ const ServicesPage = () => {
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-black/70 text-xl leading-relaxed mb-10">
             Get a free, no-obligation quote from our solar experts today and start saving on your energy bills.
           </motion.p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          {/* <div className="flex flex-wrap items-center justify-center gap-4">
             <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-black text-white font-black px-10 py-4 uppercase tracking-wider shadow-2xl hover:scale-105 transition-all duration-300">
               Get Free Quote <ArrowRight size={20} />
             </Link>
             <a href="tel:1300504912" className="inline-flex items-center gap-3 rounded-full border-2 border-black/30 px-10 py-4 font-bold text-black uppercase tracking-wider hover:border-black transition-all">
               1300 504 912
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 

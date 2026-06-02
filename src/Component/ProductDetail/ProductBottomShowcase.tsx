@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useToast } from "../ui/Toast";
-import { MessageSquare, Phone, Mail, ShieldCheck, Zap, Award, CheckCircle } from "lucide-react";
+import { MessageSquare, Mail, ShieldCheck, Zap, Award, CheckCircle } from "lucide-react";
 import type { ProductData } from "../../data/products";
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 
@@ -162,7 +162,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
 
             {/* Direct Support Pill-shaped details */}
             <div className="mt-8 pt-6 border-t border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <a
+              {/* <a
                 href="tel:1300504912"
                 className="flex items-center gap-3 p-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition group"
               >
@@ -173,7 +173,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
                   <p className="text-[10px] text-slate-400 font-bold uppercase">Call Hotline</p>
                   <p className="text-xs font-black text-white group-hover:text-[#FE9900] transition">1300 504 912</p>
                 </div>
-              </a>
+              </a> */}
 
               <a
                 href="mailto:info@aussiesunsolar.com.au"
