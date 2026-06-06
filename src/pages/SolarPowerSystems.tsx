@@ -1,3 +1,4 @@
+import SEO from '../Component/SEO';
 import { motion } from 'framer-motion';
 import SolarHero from '../Component/Services/SolarPower/SolarHero';
 import SolarIntro from '../Component/Services/SolarPower/SolarIntro';
@@ -18,6 +19,7 @@ const SolarPowerSystems = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-white"
     >
+      <SEO title="Residential Solar Power Systems" description="Power your home with premium high-efficiency solar panel installations. Enjoy massive savings and local 25-year warranty support." />
       {/* 1. Cinematic Hero Section */}
       <SolarHero />
 

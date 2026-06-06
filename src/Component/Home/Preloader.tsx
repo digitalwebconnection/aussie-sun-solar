@@ -163,9 +163,9 @@ export default function Preloader() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center"
             >
-              <h1 className="text-white text-5xl font-black tracking-[-2px] mb-2 italic">
+              <div className="text-white text-5xl font-black tracking-[-2px] mb-2 italic">
                 AUSSIE <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-yellow-200">SUN</span>
-              </h1>
+              </div>
               
               <div className="flex flex-col items-center gap-4">
                 <AnimatePresence mode="wait">

@@ -74,7 +74,7 @@ const Footer = () => {
                 y: 0,
               }}
               viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight text-white"
+              className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-tight leading-tight text-white"
             >
               Start Your{" "}
               <span className="text-[#FE9900]">
@@ -146,7 +146,7 @@ const Footer = () => {
           ==================================== */}
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-8 flex items-center gap-3 text-[#004093]">
+            <h3 className="text-xl md:text-2xl font-serif font-semibold mb-8 flex items-center gap-3 text-[#004093]">
               <span className="w-2 h-7 bg-[#FE9900] rounded-full"></span>
 
               Contact Us
@@ -155,7 +155,24 @@ const Footer = () => {
             <div className="space-y-6">
               {/* PHONE */}
 
-             
+              <a
+                href="tel:1300672194"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#004093] flex items-center justify-center group-hover:bg-[#FE9900] transition-colors shadow-lg shadow-blue-900/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+
+                <div className="min-w-0">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                    Call Us
+                  </p>
+
+                  <h4 className="font-extrabold text-sm group-hover:text-[#FE9900] transition-colors">
+                    1300 672 194
+                  </h4>
+                </div>
+              </a>
 
               {/* EMAIL */}
 
@@ -188,7 +205,7 @@ const Footer = () => {
           ==================================== */}
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-8 flex items-center gap-3 text-[#004093]">
+            <h3 className="text-xl md:text-2xl font-serif font-semibold mb-8 flex items-center gap-3 text-[#004093]">
               <span className="w-2 h-7 bg-[#FE9900] rounded-full"></span>
 
               Our Offices
@@ -231,7 +248,7 @@ const Footer = () => {
           ==================================== */}
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-xl font-bold mb-8 flex items-center gap-3 text-[#004093]">
+            <h3 className="text-xl md:text-2xl font-serif font-semibold mb-8 flex items-center gap-3 text-[#004093]">
               <span className="w-2 h-7 bg-[#FE9900] rounded-full"></span>
               Quick Links
             </h3>
@@ -383,22 +400,26 @@ const Footer = () => {
             competitor advertised quotes only
             and must be for identical goods.
           </p>
-          <div className="flex justify-between">
-            <p className="text-[#004093] font-semibold mt-4 text-sm md:text-base">
+
+          <div className="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            {/* Terms */}
+            <p className="text-[#004093] font-semibold text-sm md:text-base">
               *Terms and conditions apply.
             </p>
-            <p className="text-xl flex text-gray-500 text-center lg:text-right">
 
-              <Code size={28} className="text-[#FE9900] pt-1 " />   Developed by{"  "}
+            {/* Developer Credit */}
+            <div className="flex items-center gap-2 text-sm md:text-base text-gray-500">
+              <Code size={18} className="text-[#004093] shrink-0" />
+              <span>Developed by</span>
               <a
                 href="https://digitalwebconnection.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#FE9900] hover:underline"
+                className="font-semibold text-[#004093] hover:underline transition-colors duration-200"
               >
-                {"  "}  Digital Web Connection
+                Digital Web Connection
               </a>
-            </p>
+            </div>
           </div>
         </div>
       </div>

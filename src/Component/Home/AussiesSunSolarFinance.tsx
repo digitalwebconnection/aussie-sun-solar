@@ -47,7 +47,7 @@ export default function AussiesSunSolarFinance() {
                 </div>
 
                 <div>
-                  <h2 className="text-3xl font-black text-white leading-none">
+                  <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-none">
                     Aussie Sun
                   </h2>
 
@@ -57,14 +57,14 @@ export default function AussiesSunSolarFinance() {
                 </div>
               </div>
 
-              <h3 className="text-3xl  md:text-4xl leading-tight font-black text-white mb-6">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold leading-tight text-white mb-6">
                 Easy Solar Finance
                 <span className="block text-[#004093]">
                   For Every Aussie Home
                 </span>
               </h3>
 
-              <p className="text-white text-md md:text-lg leading-relaxed mb-10">
+              <p className="text-white text-sm md:text-lg leading-relaxed mb-10">
                 Switch to premium solar with flexible repayment plans,
                 lower electricity bills, and long-term savings.
               </p>
@@ -138,7 +138,7 @@ export default function AussiesSunSolarFinance() {
                 </span>
               </div>
 
-              <h3 className="text-3xl  md:text-4xl font-black leading-tight text-white mb-8">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold leading-tight text-white mb-8">
                 Why Choose
                 <span className="block text-[#FE9900]">
                   Aussies Sun Solar?
@@ -191,7 +191,7 @@ export default function AussiesSunSolarFinance() {
             <div className="relative z-10">
 
               <div className="mb-8">
-                <h3 className="text-4xl font-black text-[#004093] mb-3">
+                <h3 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] mb-3">
                   Get Free Quote
                 </h3>
 

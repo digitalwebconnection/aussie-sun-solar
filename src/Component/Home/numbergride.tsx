@@ -72,7 +72,7 @@ export default function StatsSection() {
      
 
                 {/* STATS GRID */}
-                <div className="grid gap-8 grid-cols-2 xl:grid-cols-4">
+                <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
 
                     {STATS.map((item, i) => (
                         <motion.div

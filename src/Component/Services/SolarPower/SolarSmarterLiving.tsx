@@ -21,7 +21,7 @@ const SolarSmarterLiving = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section id="solarpower-smarter-living" aria-label="SolarPower Smart Living Features" className="relative overflow-hidden bg-white py-24">
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#004093]/10 rounded-full blur-3xl" />
@@ -41,7 +41,7 @@ const SolarSmarterLiving = () => {
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
               <img
                 src={sigenergySmarter}
-                alt="Solar Home"
+                alt="Residential sustainable home with solar energy system"
                 className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
               />
 
@@ -56,7 +56,7 @@ const SolarSmarterLiving = () => {
                 viewport={{ once: true }}
                 className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 rounded-lg shadow-xl max-w-xs"
               >
-                <h3 className="text-4xl font-black text-[#FE9900] leading-none">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#FE9900] leading-none">
                   10+
                 </h3>
                 <p className="text-[#004093] font-bold mt-2">
@@ -85,7 +85,7 @@ const SolarSmarterLiving = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mt-4 text-3xl md:text-5xl font-black leading-tight text-[#004093]"
+              className="mt-4 text-3xl md:text-5xl font-serif font-bold leading-tight text-[#004093]"
             >
               Power Your Home <br />
               The Smarter Way
@@ -96,7 +96,7 @@ const SolarSmarterLiving = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mt-4 text-gray-900 text-lg leading-relaxed max-w-xl"
+              className="mt-4 text-gray-900 text-base md:text-lg leading-relaxed max-w-xl"
             >
               Discover high-performance solar power systems designed to lower electricity bills, increase energy efficiency, and deliver sustainable energy solutions for Australian homes and families.
             </motion.p>
@@ -119,9 +119,9 @@ const SolarSmarterLiving = () => {
 
                   {/* Text */}
                   <div>
-                    <h4 className="text-xl font-black text-[#004093] mb-2 group-hover:text-[#FE9900] transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] mb-2 group-hover:text-[#FE9900] transition-colors duration-300">
                       {item.title}
-                    </h4>
+                    </h3>
 
                     <p className="text-gray-500 leading-relaxed">
                       {item.desc}

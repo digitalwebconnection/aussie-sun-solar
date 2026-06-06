@@ -30,7 +30,7 @@ const SolarTrust = () => {
   ];
 
   return (
-    <section className="relative py-12 overflow-hidden bg-white">
+    <section id="solarpower-trust" aria-label="SolarPower Trust Factors" className="relative py-12 overflow-hidden bg-white">
 
       {/* BACKGROUND EFFECTS */}
       <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#FE9900]/10 rounded-full blur-[140px] -translate-x-1/2 -translate-y-1/2" />
@@ -62,7 +62,7 @@ const SolarTrust = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-4xl md:text-6xl font-black text-[#0B1220] leading-tight"
+            className="text-3xl md:text-5xl font-serif font-bold text-[#0B1220] leading-tight"
           >
             What Makes Us
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-500">
@@ -75,7 +75,7 @@ const SolarTrust = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-gray-900 text-lg md:text-xl max-w-5xl mx-auto mt-4 leading-relaxed"
+            className="text-gray-900 text-base md:text-lg max-w-5xl mx-auto mt-4 leading-relaxed"
           >
             Premium solar solutions backed by expert installation,
             trusted components, and long-term energy performance.
@@ -135,12 +135,12 @@ const SolarTrust = () => {
               </div>
 
               {/* TITLE */}
-              <h3 className="relative z-10 text-3xl font-black text-[#0B1220] mb-6 leading-tight">
+              <h3 className="relative z-10 text-xl md:text-2xl font-serif font-semibold text-[#0B1220] mb-6 leading-tight">
                 {item.title}
               </h3>
 
               {/* DESC */}
-              <p className="relative z-10 text-gray-900 text-lg leading-relaxed">
+              <p className="relative z-10 text-gray-900 text-sm md:text-base leading-relaxed">
                 {item.desc}
               </p>
 

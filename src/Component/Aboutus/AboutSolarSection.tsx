@@ -48,7 +48,7 @@ export default function PremiumSolarAbout() {
                     <div className="flex items-center justify-between">
 
                       <div>
-                        <h3 className="text-4xl font-black text-white">
+                        <h3 className="text-xl md:text-2xl font-serif font-semibold text-white">
                           5000+
                         </h3>
 
@@ -86,7 +86,7 @@ export default function PremiumSolarAbout() {
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl lg:text-5xl font-black text-[#FE9900] leading-[1.1] tracking-tight">
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-[#FE9900] leading-[1.1] tracking-tight">
                 Leading Solar Company in Queensland <br />
                 <span className="block text-transparent bg-clip-text bg-[#004093] ">
                   Powering Australia’s Sustainable Future
@@ -94,7 +94,7 @@ export default function PremiumSolarAbout() {
               </h2>
 
               {/* Subtitle */}
-              <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-3xl">
+              <p className="mt-8 text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl">
                 We deliver high-quality solar energy solutions for homes, businesses, and industrial projects across Queensland and Australia. As a trusted solar company in Queensland, we specialise in premium solar panel installation, energy-efficient systems, and long-term power savings designed for Australian conditions.
               </p>
 
@@ -138,7 +138,7 @@ export default function PremiumSolarAbout() {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-5xl  font-black text-black leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-black leading-tight tracking-tight">
               Creating
               <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]">
                 {" "}Smarter Solar Energy Solutions{" "}
@@ -160,7 +160,7 @@ export default function PremiumSolarAbout() {
                   ☀️
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold mt-6 text-black">
                   Clean Renewable Energy
                 </h3>
 
@@ -176,7 +176,7 @@ export default function PremiumSolarAbout() {
                   ⚡
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold mt-6 text-black">
                   Lower Energy Costs
                 </h3>
 
@@ -192,7 +192,7 @@ export default function PremiumSolarAbout() {
                   🌱
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold mt-6 text-black">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold mt-6 text-black">
                   Sustainable Future
                 </h3>
 

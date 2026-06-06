@@ -49,7 +49,7 @@ const SolarWhyChoose = () => {
   ];
 
   return (
-    <section className="py-14 bg-white relative overflow-hidden">
+    <section id="solarpower-why-choose" aria-label="Why Choose SolarPower" className="py-14 bg-white relative overflow-hidden">
 
       {/* Background */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-3xl" />
@@ -73,7 +73,7 @@ const SolarWhyChoose = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-[#0B1220] leading-tight"
+            className="text-3xl md:text-5xl font-serif font-bold text-[#0B1220] leading-tight"
           >
             Trusted Solar Installation
             <span className="block text-[#FE9900]">
@@ -86,7 +86,7 @@ const SolarWhyChoose = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-500 text-lg max-w-6xl mx-auto mt-6 leading-relaxed"
+            className="text-gray-500 text-base md:text-lg max-w-6xl mx-auto mt-6 leading-relaxed"
           >
             Delivering high-performance solar energy systems with expert installation, premium solar products, and reliable long-term customer support for homes and businesses across Australia.
           </motion.p>
@@ -112,12 +112,12 @@ const SolarWhyChoose = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-black text-[#0B1220] mb-4 group-hover:text-[#FE9900] transition-colors">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#0B1220] mb-4 group-hover:text-[#FE9900] transition-colors">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 leading-relaxed text-lg">
+              <p className="text-gray-500 leading-relaxed text-sm md:text-base">
                 {item.desc}
               </p>
 

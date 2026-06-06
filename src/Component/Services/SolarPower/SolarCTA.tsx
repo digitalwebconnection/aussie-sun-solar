@@ -43,7 +43,7 @@ const SolarCTA = () => {
                 </div>
                 <div>
                   <p className="text-sm font-black text-[#FE9900] uppercase tracking-widest">24/7 Support Line</p>
-                  <p className="text-2xl font-black group-hover:text-[#FE9900] transition-colors">1300 504 912</p>
+                  <p className="text-2xl font-black group-hover:text-[#FE9900] transition-colors">1300 672 194</p>
                 </div>
               </div>
             </div> */}

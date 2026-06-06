@@ -48,7 +48,7 @@ const ContactPageHero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl font-bold leading-tight text-white md:text-6xl"
+            className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl"
           >
             Power Your Future
             <span className="block text-[#FE9900]">

@@ -21,11 +21,11 @@ const EVHero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-8">
+    <section id="evchargers-hero" aria-label="EVChargers Hero Banner" className="relative overflow-hidden pt-28 pb-8">
       <div className="absolute inset-0">
         <img
           src={evCharger1}
-          alt="EV Charger Background"
+          alt="EV electric vehicle charging station background"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-[#000000]/60" />
@@ -41,11 +41,11 @@ const EVHero = () => {
                 <div className="h-[2px] w-14 bg-[#FE9900]" />
                 <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">Our Services</span>
               </div>
-              <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
+              <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight text-white">
               Smart EV Charging  Made
 
                 <span className="block text-[#FE9900]"> for Modern Living</span>
-              </h2>
+              </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
              Power your electric vehicle with reliable EV charger installation Australia services designed for fast, efficient, and sustainable home charging solutions. </p>
             </motion.div>
@@ -54,7 +54,7 @@ const EVHero = () => {
           <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="relative">
             <div className="rounded-lg border shadow-xl shadow-black border-white/60 bg-white/5 p-4 backdrop-blur-xl">
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#FE9900]">Get In Touch</p>
-              <h3 className="mt-1 text-3xl font-black leading-tight text-white">Request A Free Consultation</h3>
+              <h3 className="mt-1 text-xl md:text-2xl font-serif font-semibold leading-tight text-white">Request A Free Consultation</h3>
               <p className="mt-1 leading-relaxed text-white/70">Fill out the form and our team will contact you shortly.</p>
               <form className="mt-4 space-y-2" onSubmit={onSubmit}>
                 <input type="text" name="name" required placeholder="Full Name" className="h-14 w-full rounded-xl border border-white/10 bg-white/10 px-5 text-white outline-none placeholder:text-white/50 focus:border-[#FE9900]" />

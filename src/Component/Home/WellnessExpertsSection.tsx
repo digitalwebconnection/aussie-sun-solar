@@ -96,14 +96,14 @@ export default function WellnessExpertsSection() {
                             Trusted Wellness Professionals
                         </p>
 
-                        <h2 className="text-3xl md:text-6xl font-black font-serif leading-[0.92] tracking-[-4px] text-[#111]">
+                        <h2 className="text-3xl md:text-6xl font-serif font-bold leading-[0.92] tracking-[-4px] text-[#111]">
                             Natural Wellness
                             <span className="block font-medium text-[#d4af37]">
                                 Transformation Experts
                             </span>
                         </h2>
 
-                        <p className="mx-auto mt-7 max-w-6xl text-md md:text-lg leading-[1.9] text-[#141414]">
+                        <p className="mx-auto mt-7 max-w-6xl text-sm md:text-lg leading-[1.9] text-[#141414]">
                             Helping people naturally transform their body,
                             lifestyle, and confidence through scientifically
                             designed wellness programs and expert guidance.
@@ -165,7 +165,7 @@ export default function WellnessExpertsSection() {
                                                 }`} />
                                         </div>
 
-                                        <h3 className="text-xl md:text-2xl font-black tracking-[-1px] text-[#111]">
+                                        <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-[-1px] text-[#111]">
                                             {item.title}
                                         </h3>
 
@@ -327,7 +327,7 @@ export default function WellnessExpertsSection() {
                                                 }`} />
                                         </div>
 
-                                        <h3 className="text-2xl font-black tracking-[-1px] text-[#111]">
+                                        <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-[-1px] text-[#111]">
                                             {item.title}
                                         </h3>
 

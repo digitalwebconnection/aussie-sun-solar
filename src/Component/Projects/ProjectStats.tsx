@@ -98,7 +98,7 @@ const ProjectStats: React.FC = () => {
             Our Achievements
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-5xl">
+          <h2 className="mt-4 text-3xl md:text-5xl font-serif font-bold text-[#111827]">
             Numbers That Reflect
             <span className="block text-[#FE9900]">
               Our Solar Excellence

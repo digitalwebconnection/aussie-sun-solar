@@ -47,7 +47,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
             </span>
           </div>
 
-          <h3 className="text-2xl md:text-4xl font-black tracking-tight leading-tight mb-4">
+          <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-tight leading-tight mb-4">
             Maximize Energy Yields With {product.brand}
           </h3>
 
@@ -89,7 +89,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
               />
             </div>
             <div>
-              <h4 className="text-sm font-black text-white mb-1">
+              <h4 className="text-sm font-bold text-white mb-1">
                 Monocrystalline Panel Showcase
               </h4>
               <p className="text-xs text-slate-400 font-semibold leading-relaxed">
@@ -102,7 +102,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
         {/* RIGHT COLUMN: Glassmorphic Callback Form */}
         <div className="lg:col-span-6">
           <div className="backdrop-blur-md bg-white/5 border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl relative">
-            <h4 className="text-lg font-black mb-1 flex items-center gap-2 text-white">
+            <h4 className="text-lg font-bold mb-1 flex items-center gap-2 text-white">
               <MessageSquare size={20} className="text-[#FE9900]" />
               Book Callback Request
             </h4>
@@ -163,7 +163,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
             {/* Direct Support Pill-shaped details */}
             <div className="mt-8 pt-6 border-t border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* <a
-                href="tel:1300504912"
+                href="tel:1300672194"
                 className="flex items-center gap-3 p-3 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition group"
               >
                 <div className="w-8 h-8 rounded-lg bg-[#FE9900]/10 flex items-center justify-center text-[#FE9900]">
@@ -171,7 +171,7 @@ export const ProductBottomShowcase: React.FC<ProductBottomShowcaseProps> = ({ pr
                 </div>
                 <div>
                   <p className="text-[10px] text-slate-400 font-bold uppercase">Call Hotline</p>
-                  <p className="text-xs font-black text-white group-hover:text-[#FE9900] transition">1300 504 912</p>
+                  <p className="text-xs font-black text-white group-hover:text-[#FE9900] transition">1300 672 194</p>
                 </div>
               </a> */}
 

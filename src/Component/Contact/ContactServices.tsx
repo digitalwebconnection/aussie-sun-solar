@@ -70,7 +70,7 @@ const ContactServices = () => {
             <div className="h-[2px] w-12 bg-[#FE9900]" />
           </div>
 
-          <h2 className="text-3xl font-black leading-tight text-[#111827] md:text-5xl">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827]">
             Smart Energy
             <span className="block text-[#004093]">
               Solutions For You
@@ -196,7 +196,7 @@ const ContactServices = () => {
                       "
                     />
 
-                    <h3 className="text-xl md:text-2xl font-black leading-tight text-white">
+                    <h3 className="text-xl md:text-2xl font-serif font-semibold leading-tight text-white">
                       {service.title}
                     </h3>
 

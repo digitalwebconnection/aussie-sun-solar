@@ -13,7 +13,7 @@ export default function DirectorMessage() {
   const imgY = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
   return (
-    <section ref={containerRef} className="relative py-12 lg:py-20 bg-white overflow-hidden" aria-label="Message from our director">
+    <section ref={containerRef} id="director-message" className="relative py-12 lg:py-20 bg-white overflow-hidden" aria-label="Message from our director">
       {/* Subtle Background Accents Restored for Depth */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FE9900]/5 blur-[100px] rounded-full -translate-y-1/2"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#004093]/5 blur-[80px] rounded-full translate-y-1/4"></div>
@@ -62,7 +62,7 @@ export default function DirectorMessage() {
                    <p className="text-[#FE9900] text-xs font-black tracking-[0.2em] uppercase">Leadership Message</p>
                 </div>
 
-                <h2 className="text-3xl lg:text-5xl font-black text-[#004093] leading-tight mb-8">
+                <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] leading-tight mb-8">
                   A Message <br />
                   <span className="text-[#FE9900]">From Our Director</span>
                 </h2>
@@ -73,11 +73,11 @@ export default function DirectorMessage() {
                   </span>
 
                   <div className="relative z-10 space-y-6">
-                    <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-medium">
+                    <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
                       Aussie Sun Solar was founded with a singular focus: to address the gaps we witnessed in the Australian solar market—unreliable installations and a lack of long-term accountability.
                     </p>
                     
-                    <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-medium">
+                    <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
                       As an electrician-led company, we prioritize <span className="text-[#004093] font-black underline decoration-[#FE9900] decoration-4 underline-offset-4">engineering excellence</span> and safety above all else. We don't just install panels; we build sustainable energy systems that empower our community.
                     </p>
                   </div>

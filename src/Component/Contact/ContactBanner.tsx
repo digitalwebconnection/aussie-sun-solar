@@ -18,7 +18,7 @@ const ContactBanner = () => {
           
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">
                 Work With a Team <br />
                 That Works for You
               </h2>
@@ -32,13 +32,13 @@ const ContactBanner = () => {
                   <ChevronRight size={20} />
                 </button>
                 
-                <a href="tel:1300504912" className="flex items-center gap-4 text-white hover:text-[#FE9900] transition-colors">
+                <a href="tel:1300672194" className="flex items-center gap-4 text-white hover:text-[#FE9900] transition-colors">
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
                     <Phone size={24} fill="currentColor" className="text-white" />
                   </div>
                   <div>
                     <p className="text-sm font-bold opacity-60 uppercase tracking-widest">24/7 Support</p>
-                    {/* <p className="text-xl font-black">1300 504 912</p> */}
+                    <p className="text-xl font-black">1300 672 194</p>
                   </div>
                 </a>
               </div>

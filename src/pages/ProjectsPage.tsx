@@ -1,3 +1,4 @@
+import SEO from '../Component/SEO';
 import ProjectsHero from '../Component/Projects/ProjectsHero';
 import ProjectStats from '../Component/Projects/ProjectStats';
 // import ProjectsGrid from '../Component/Projects/ProjectsGrid';
@@ -8,6 +9,7 @@ import ProjectProcess from '../Component/Projects/ProjectProcess';
 const ProjectsPage = () => {
   return (
     <main className="overflow-x-hidden">
+      <SEO title="Our Projects" description="See our real-world solar power systems and battery storage installation projects across Australia." />
       {/* 1. Cinematic hero with animated stats card */}
       <ProjectsHero />
 

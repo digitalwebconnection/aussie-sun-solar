@@ -64,11 +64,11 @@ export default function WhyChooseSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-6xl">
-                            The <span className="text-[#004093]">Aussie </span> Sun Solr
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900">
+                            The <span className="text-[#004093]">Aussie </span> Sun Solar
                         </h2>
                         <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#FE9900]" />
-                        <p className="mx-auto mt-8 max-w-4xl text-md md:text-lg leading-relaxed text-slate-500">
+                        <p className="mx-auto mt-8 max-w-4xl text-sm md:text-lg leading-relaxed text-slate-500">
                             We combine premium Australian standards with world-class solar technology
                             to deliver energy independence that lasts for decades.
                         </p>
@@ -98,10 +98,10 @@ export default function WhyChooseSection() {
 
                                 {/* TEXT CONTENT */}
                                 <div className="grow">
-                                    <h3 className="mb-4 text-2xl font-extrabold tracking-tight text-slate-900 transition-colors duration-500 group-hover:text-white">
+                                    <h3 className="mb-4 text-xl md:text-2xl font-serif font-semibold tracking-tight text-slate-900 transition-colors duration-500 group-hover:text-white">
                                         {item.title}
                                     </h3>
-                                    <p className="text-base leading-relaxed text-slate-500 transition-colors duration-500 group-hover:text-white/90">
+                                    <p className="text-sm md:text-base leading-relaxed text-slate-500 transition-colors duration-500 group-hover:text-white/90">
                                         {item.description}
                                     </p>
                                 </div>

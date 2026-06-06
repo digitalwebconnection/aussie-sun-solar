@@ -344,7 +344,7 @@ const SolarNavbar = () => {
             {/* ---- DESKTOP RIGHT: Phone + CTA ---- */}
             <div className="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0 pe-2">
               {/* <a
-                href="tel:1300504912"
+                href="tel:1300672194"
                 className="flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 xl:w-11 xl:h-11 rounded-full bg-[#004093] flex items-center justify-center shadow-md group-hover:bg-[#FE9900] transition duration-300">
@@ -353,7 +353,7 @@ const SolarNavbar = () => {
                 <div className="leading-tight">
                   <p className="text-[10px] xl:text-[11px] text-gray-500 font-medium">Call Us On</p>
                   <p className="text-[14px] xl:text-[16px] font-bold text-[#004093] group-hover:text-[#FE9900] transition duration-300">
-                    1300 504 912
+                    1300 672 194
                   </p>
                 </div>
               </a> */}
@@ -509,7 +509,7 @@ const SolarNavbar = () => {
                   {/* Sub-category items */}
                   <div className="space-y-0.5 pb-2">
                     {products[mobileProductSub]?.map((item, i) => (
-                      <Link
+                         <Link
                         key={i}
                         to={`/products/${item.slug}`}
                         className="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-[#f0f5ff] transition group"
@@ -533,18 +533,18 @@ const SolarNavbar = () => {
                 <MobileLink to="/contact" label="Contact Us" active={isActive("/contact")} />
 
                 {/* CTA Card */}
-                <div className="mt-6 bg-linear-to-br from-[#004093] to-[#0056c4] rounded-2xl p-5 text-white shadow-xl shadow-blue-200">
+                {/* <div className="mt-6 bg-linear-to-br from-[#004093] to-[#0056c4] rounded-2xl p-5 text-white shadow-xl shadow-blue-200">
                   <p className="text-xs font-medium opacity-75 mb-1">Need Solar Help?</p>
                   <h3 className="text-xl font-bold mb-4">Call Us Today</h3>
-                  {/* <a
-                    href="tel:1300504912"
+                  <a
+                    href="tel:1300672194"
                     className="flex items-center gap-2 mb-4 hover:opacity-80 transition"
                   >
                     <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
                       <Phone size={16} className="text-white" />
                     </div>
-                    <span className="font-bold text-lg">1300 504 912</span>
-                  </a> */}
+                    <span className="font-bold text-lg">1300 672 194</span>
+                  </a>
                   <Link
                     to="/contact"
                     className="inline-flex items-center gap-2 bg-[#FE9900] hover:bg-[#e88a00] px-5 py-2.5 rounded-full font-bold text-sm transition shadow-md"
@@ -552,7 +552,7 @@ const SolarNavbar = () => {
                     Get A Quote
                     <ArrowRight size={16} />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </motion.aside>
           </>

@@ -141,7 +141,7 @@ const ContactHero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl font-black leading-[1.1] text-[#111827] md:text-6xl">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold leading-[1.1] text-[#111827]">
               Let’s Discuss Your
               <span className="block text-[#004093]">
                 Solar Project
@@ -243,7 +243,7 @@ const ContactHero = () => {
 
             {/* Heading */}
             <div className="relative z-10 mb-8">
-              <h2 className="text-xl md:text-3xl font-black text-white">
+              <h2 className="text-xl md:text-2xl font-serif font-semibold text-white">
                 Send Us A Message
               </h2>
 

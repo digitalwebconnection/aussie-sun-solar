@@ -59,7 +59,7 @@ export const TechnicalAdvantages: React.FC<TechnicalAdvantagesProps> = ({
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
             {product.betterTitle}
           </h2>
 
@@ -107,7 +107,7 @@ export const TechnicalAdvantages: React.FC<TechnicalAdvantagesProps> = ({
                       {/* Top */}
                       <div className="flex items-start justify-between gap-4">
                         <div>
-                          <h3 className="text-2xl md:text-3xl font-black text-slate-900 leading-snug">
+                          <h3 className="text-xl md:text-2xl font-serif font-semibold text-slate-900 leading-snug">
                             {title}
                           </h3>
 

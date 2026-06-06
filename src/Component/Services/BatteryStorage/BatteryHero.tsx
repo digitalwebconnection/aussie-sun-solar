@@ -22,12 +22,12 @@ const BatteryHero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-8">
+    <section id="batterystorage-hero" aria-label="BatteryStorage Hero Banner" className="relative overflow-hidden pt-28 pb-8">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={batteryStorage1}
-          alt="Battery Storage Background"
+          alt="Solar battery units installation background"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-[#000000]/60" />
@@ -56,12 +56,12 @@ const BatteryHero = () => {
                 </span>
               </div>
 
-              <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
+              <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight text-white">
                  Battery Storage Solutions
                 <span className="block text-[#FE9900]">
                   Australia 
                 </span>
-              </h2>
+              </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
                 Store solar energy, cut electricity costs, and enjoy reliable backup power with smart battery storage solutions in Australia.Perfect for homes and businesses seeking sustainable, energy-efficient living.
@@ -91,7 +91,7 @@ const BatteryHero = () => {
                 Get In Touch
               </p>
 
-              <h3 className="mt-1 text-3xl font-black leading-tight text-white">
+              <h3 className="mt-1 text-xl md:text-2xl font-serif font-semibold leading-tight text-white">
                 Request A Free
                 Consultation
               </h3>

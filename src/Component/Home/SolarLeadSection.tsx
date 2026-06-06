@@ -101,7 +101,7 @@ const SolarLeadSection = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#004093] relative z-10">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-[#004093] relative z-10">
                         Build Your{" "}
 
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900] drop-shadow-[4px_4px_12px_rgba(254,153,0,0.35)]">
@@ -159,7 +159,7 @@ const SolarLeadSection = () => {
                                             <span className="inline-block px-8 py-1 rounded-lg bg-[#FE9900] text-sm font-semibold uppercase mb-2">
                                                 {solarOptions[activeTab].badge}
                                             </span>
-                                            <h3 className="text-4xl font-bold leading-tight">{solarOptions[activeTab].title}</h3>
+                                            <h3 className="text-xl md:text-2xl font-serif font-semibold leading-tight">{solarOptions[activeTab].title}</h3>
                                             <p className="text-white/90 text-md mt-1">{solarOptions[activeTab].subtitle}</p>
                                         </div>
                                     </div>
@@ -207,7 +207,7 @@ const SolarLeadSection = () => {
                                     </motion.div>
                                     <span className="text-xs font-black uppercase tracking-[0.2em]">Priority Access</span>
                                 </div>
-                                <h3 className="text-xl md:text-4xl font-black text-[#004093] tracking-tight">Instant Quote</h3>
+                                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] tracking-tight">Instant Quote</h3>
                                 <p className="text-slate-500 text-sm mt-3 font-medium leading-relaxed">
                                     Fill in your details below. Our AI-driven system will calculate your estimated savings instantly.
                                 </p>

@@ -39,12 +39,12 @@ export default function PremiumSolarCalculator() {
                         </div>
 
                         {/* Heading */}
-                        <h1 className="text-3xl leading-tight font-black text-white mb-4">
+                        <h2 className="text-3xl md:text-5xl leading-tight font-serif font-bold text-white mb-4">
                             Calculate Your
                             <span className="block text-[#FE9900]">
                                 Solar Savings
                             </span>
-                        </h1>
+                        </h2>
 
                         <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-lg">
                             Discover how much you can save every year with a premium solar
@@ -113,9 +113,9 @@ export default function PremiumSolarCalculator() {
                                 Estimated Monthly Savings
                             </p>
 
-                            <h2 className="text-5xl font-black text-[#FE9900]">
+                            <h3 className="text-3xl md:text-5xl font-serif font-bold text-[#FE9900]">
                                 ${monthlySavings.toFixed(0)}
-                            </h2>
+                            </h3>
 
                             <p className="text-white/60 mt-2">
                                 Per month on electricity bills
@@ -147,9 +147,9 @@ export default function PremiumSolarCalculator() {
                                 Solar Performance
                             </p>
 
-                            <h2 className="md:text-4xl text-2xl font-black text-[#004093]">
+                            <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093]">
                                 Estimated Benefits
-                            </h2>
+                            </h3>
                         </div>
                     </div>
 

@@ -29,7 +29,7 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
               BRAND ADVANTAGES
             </span>
 
-            <h2 className="text-3xl md:text-5xl font-black leading-tight text-[#004093]">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#004093]">
               Why Choose
               <span className="text-[#FE9900]">
                 {" "}
@@ -49,7 +49,7 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
           {/* RIGHT SIDE BADGES */}
           <div className="flex flex-wrap gap-4">
             <div className="bg-white border border-slate-500 rounded-lg px-5 py-4 shadow-sm min-w-[130px]">
-              <h4 className="text-2xl font-black text-[#004093]">
+              <h4 className="text-xl md:text-2xl font-serif font-semibold text-[#004093]">
                 25+
               </h4>
 
@@ -59,7 +59,7 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
             </div>
 
             <div className="bg-white border border-slate-500 rounded-lg px-5 py-4 shadow-sm min-w-[130px]">
-              <h4 className="text-2xl font-black text-green-600">
+              <h4 className="text-xl md:text-2xl font-serif font-semibold text-green-600">
                 Trusted
               </h4>
 
@@ -86,7 +86,7 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
                 {product.featuredCard?.badge ?? "PREMIUM QUALITY"}
               </span>
 
-              <h3 className="text-2xl font-black leading-tight mb-5">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold leading-tight mb-5">
                 {product.featuredCard?.heading ?? "Engineered for Maximum Solar Performance"}
               </h3>
 
@@ -199,7 +199,7 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
 
                 {/* CONTENT */}
                 <div className="relative z-10">
-                  <h4 className="text-lg font-black text-[#004093] mb-4 leading-snug">
+                  <h4 className="text-lg font-bold text-[#004093] mb-4 leading-snug">
                     {point.title}
                   </h4>
 

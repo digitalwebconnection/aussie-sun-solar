@@ -31,7 +31,7 @@ export const RangeSpecs: React.FC<RangeSpecsProps> = ({ product }) => {
         <div className="max-w-5xl">
           
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight tracking-tight">
             {product.rangeTitle}
           </h2>
 

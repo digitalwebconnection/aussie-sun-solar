@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block any dev/build artifacts from being indexed
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://aussiesunsolar.com.au/sitemap.xml

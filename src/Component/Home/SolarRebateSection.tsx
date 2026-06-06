@@ -46,7 +46,7 @@ const SolarBatterySection = () => {
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-6xl font-black leading-[1.1] text-[#004093]"
+              className="text-3xl md:text-6xl font-serif font-bold leading-[1.1] text-[#004093]"
             >
                Save More with Smart Solar {" "}
 
@@ -59,7 +59,7 @@ const SolarBatterySection = () => {
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-slate-900 md:text-lg text-md leading-relaxed mt-8 max-w-xl"
+              className="text-slate-900 text-sm md:text-lg leading-relaxed mt-8 max-w-xl"
             >
               Upgrade your home with smart solar battery solutions
               and take advantage of available government rebates
@@ -127,12 +127,12 @@ const SolarBatterySection = () => {
               </div>
 
               {/* Card Heading */}
-              <h3 className="md:text-4xl text-2xl font-black text-[#004093] leading-tight">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] leading-tight">
                 Smart Energy <br />
                 Backup Solution
               </h3>
 
-              <p className="text-slate-900 md:text-lg text-md leading-relaxed mt-6">
+              <p className="text-slate-900 text-sm md:text-lg leading-relaxed mt-6">
                 Store excess solar energy and use it anytime with
                 advanced battery systems designed for modern homes.
               </p>
@@ -143,7 +143,7 @@ const SolarBatterySection = () => {
                 <div className="bg-white rounded-lg p-6 border border-slate-400">
                   <Zap className="text-[#FE9900] mb-4" size={28} />
 
-                  <h4 className="text-3xl font-black text-[#004093]">
+                  <h4 className="text-3xl font-serif font-bold text-[#004093]">
                     80%
                   </h4>
 
@@ -158,7 +158,7 @@ const SolarBatterySection = () => {
                     size={28}
                   />
 
-                  <h4 className="text-3xl font-black text-[#004093]">
+                  <h4 className="text-3xl font-serif font-bold text-[#004093]">
                     24/7
                   </h4>
 
@@ -171,15 +171,15 @@ const SolarBatterySection = () => {
               {/* Bottom Box */}
               <div className="mt-8 bg-linear-to-r from-[#004093] to-[#0f5bc7] rounded-lg  md:p-6 p-3 flex items-center justify-between">
 
-                {/* <div>
+                <div>
                   <p className="text-white/90 text-sm uppercase tracking-wider">
                     Free Consultation
                   </p>
 
                   <h4 className="text-2xl font-black text-white mt-1">
-                    1300 504 912
+                    1300 672 194
                   </h4>
-                </div> */}
+                </div>
 
                 <button className="w-14 h-14 rounded-2xl bg-white text-[#004093] flex items-center justify-center hover:scale-110 transition-all duration-300">
                   <ArrowRight size={22} />

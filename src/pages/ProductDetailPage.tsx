@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import SEO from '../Component/SEO';
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
@@ -57,6 +58,7 @@ const ProductDetailPage = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-white"
     >
+      <SEO title={`${product.brand} ${product.name}`} description={`Learn about ${product.brand} ${product.name} specifications, features, and warranty options. Get premium solar installs with Aussie Sun Solar.`} />
       {/* 1. Hero Section */}
       <ProductHero product={product} />
 

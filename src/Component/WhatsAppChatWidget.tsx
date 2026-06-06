@@ -95,7 +95,7 @@ export default function WhatsAppChatWidget() {
             {/* BUTTON */}
 
             <a
-              href="https://wa.me/61412345678?text=Hi%20Aussies%20Sun%20Solar,%20I%20want%20a%20free%20quote"
+              href="https://wa.me/611300672194?text=Hi%20Aussie%20Sun%20Solar,%20I%20want%20a%20free%20quote"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 w-full h-12 sm:h-14 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] transition-all duration-300 flex items-center justify-center gap-3 text-white font-bold text-sm sm:text-lg shadow-lg"

@@ -102,7 +102,7 @@ export const ProductFAQ: React.FC<ProductFAQProps> = ({ product }) => {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
             Frequently Asked Questions
           </h2>
 

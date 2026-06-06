@@ -42,7 +42,7 @@ export default function SolarExpertiseSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-8 lg:py-12" aria-label="Solar expertise and services">
+    <section id="solar-expertise" className="relative overflow-hidden bg-white py-8 lg:py-12" aria-label="Solar expertise and services">
 
 
       <div className="container relative z-10 mx-auto px-6 lg:px-0">
@@ -62,7 +62,7 @@ export default function SolarExpertiseSection() {
             </p>
           </motion.div>
 
-                <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-5xl leading-[1.2]">
+                <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2]">
                            Complete Solar
                         <span className="block bg-[#004093] bg-clip-text text-transparent py-2 pb-4">
                                Energy Solutions
@@ -71,7 +71,7 @@ export default function SolarExpertiseSection() {
 
 
 
-                    <p className="mx-auto mt-5 max-w-7xl text-lg leading-loose text-slate-600">
+                    <p className="mx-auto mt-5 max-w-7xl text-base md:text-lg leading-loose text-slate-600">
                        From residential rooftop systems to large-scale industrial projects,
             we deliver high-performance solar solutions focused on savings,
             sustainability, and energy independence across Australia.
@@ -112,11 +112,11 @@ export default function SolarExpertiseSection() {
               {/* Content */}
               <div className="p-10 flex flex-col flex-1">
 
-                <h3 className="text-xl md:text-3xl font-black text-[#004093] leading-tight group-hover:text-[#FE9900] transition-all duration-300">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] leading-tight group-hover:text-[#FE9900] transition-all duration-300">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-500 mt-6 leading-relaxed text-lg font-medium">
+                <p className="text-gray-500 mt-6 leading-relaxed text-sm md:text-base font-medium">
                   {item.description}
                 </p>
 

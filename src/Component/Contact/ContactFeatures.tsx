@@ -40,7 +40,7 @@ const ContactFeatures = () => {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-black text-[#004093]">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093]">
             Why More Australians Choose <br />
             <span className="text-[#FE9900]">Aussie Sun Solar?</span>
           </h2>
@@ -61,7 +61,7 @@ const ContactFeatures = () => {
                 <div className="w-16 h-16 rounded-2xl bg-[#004093]/10 flex items-center justify-center text-[#004093] mx-auto mb-8">
                   <Icon size={32} />
                 </div>
-                <h3 className="text-xl font-black text-[#004093] mb-3">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-gray-500 font-medium">{feature.desc}</p>

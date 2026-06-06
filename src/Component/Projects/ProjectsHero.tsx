@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/75" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center justify-center px-6">
+      <div className="relative z-10 flex h-full items-center justify-center pt-10 md:pt-0 px-6">
         <div className="max-w-4xl text-center">
 
           {/* Small Tag */}
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
+            className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl lg:text-7xl"
           >
             Building Stronger
             <span className="block text-[#ff7d03]">

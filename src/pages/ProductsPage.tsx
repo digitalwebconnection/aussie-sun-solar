@@ -1,3 +1,4 @@
+import SEO from '../Component/SEO';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { productsData } from "../data/products";
@@ -21,6 +22,7 @@ const ProductsPage = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-slate-50"
     >
+      <SEO title="Solar Products & Brands" description="Browse our premium range of SAA-approved solar panels, smart inverters, and home battery storage systems from leading global brands." />
       {/* ==================== HERO HERO ==================== */}
       <section className="relative h-[300px] md:h-[400px] overflow-hidden pt-28 flex items-center">
         {/* Background Image */}
@@ -39,7 +41,7 @@ const ProductsPage = () => {
           <span className="text-xs md:text-sm font-black uppercase tracking-[0.3em] text-[#FE9900] mb-3 inline-block">
             Premium Solar Technology
           </span>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight leading-tight">
             Our Solar Products
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-slate-200 text-base md:text-lg font-medium">
@@ -64,7 +66,7 @@ const ProductsPage = () => {
                     <span className="text-xs font-black uppercase tracking-[0.2em] text-[#FE9900]">
                       World Class Brands
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-black text-[#004093] mt-2">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] mt-2">
                       {category}
                     </h2>
                   </div>
@@ -94,7 +96,7 @@ const ProductsPage = () => {
                           </span>
                         </div>
 
-                        <h3 className="text-2xl font-black text-slate-900 mb-2">
+                        <h3 className="text-xl md:text-2xl font-serif font-semibold text-slate-900 mb-2">
                           {product.name}
                         </h3>
 
@@ -133,21 +135,21 @@ const ProductsPage = () => {
       {/* ==================== TRUST FEATURE STRIP ==================== */}
       <section className="bg-[#004093] text-white py-16 border-t-4 border-[#FE9900]">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-10">We Only Install SAA Approved Products</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-10">We Only Install SAA Approved Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center">
               <Award size={40} className="text-[#FE9900] mb-4" />
-              <h4 className="font-bold text-lg mb-2">Tier 1 Brands</h4>
+              <h4 className="font-serif font-semibold text-lg mb-2">Tier 1 Brands</h4>
               <p className="text-white/70 text-sm leading-relaxed">We source panels directly from Tier 1 global manufacturers ensuring top efficiency and bankability.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center">
               <ShieldCheck size={40} className="text-[#FE9900] mb-4" />
-              <h4 className="font-bold text-lg mb-2">Extended Warranties</h4>
+              <h4 className="font-serif font-semibold text-lg mb-2">Extended Warranties</h4>
               <p className="text-white/70 text-sm leading-relaxed">All products carry extensive 10-30 year local manufacturer performance warranties.</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center">
               <Zap size={40} className="text-[#FE9900] mb-4" />
-              <h4 className="font-bold text-lg mb-2">Expert Consultation</h4>
+              <h4 className="font-serif font-semibold text-lg mb-2">Expert Consultation</h4>
               <p className="text-white/70 text-sm leading-relaxed">Our accredited consultants evaluate and tailor systems built specifically for your home's needs.</p>
             </div>
           </div>

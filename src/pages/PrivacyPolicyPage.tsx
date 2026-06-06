@@ -1,3 +1,4 @@
+import SEO from '../Component/SEO';
 import { motion } from "framer-motion";
 import { ShieldCheck, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -102,6 +103,7 @@ For privacy complaints, you may also contact the Office of the Australian Inform
 const PrivacyPolicyPage = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO title="Privacy Policy" description="Read the privacy policy of Aussie Sun Solar to understand how we collect, use, and protect your personal information." />
 
       {/* ── Hero ── */}
       <div className="relative bg-[#004093] overflow-hidden pt-32 pb-16">
@@ -119,7 +121,7 @@ const PrivacyPolicyPage = () => {
               <ShieldCheck size={20} />
               <span className="text-sm font-black uppercase tracking-[0.3em]">Legal</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
               Privacy{" "}
               <span className="text-[#FE9900]">Policy</span>
             </h1>
@@ -172,7 +174,7 @@ const PrivacyPolicyPage = () => {
                 <div className="w-8 h-8 rounded-xl bg-[#FE9900] flex items-center justify-center text-white text-sm font-black shrink-0 mt-0.5">
                   {index + 1}
                 </div>
-                <h2 className="text-xl md:text-2xl font-black text-[#004093]">
+                <h2 className="text-xl md:text-2xl font-serif font-semibold text-[#004093]">
                   {section.title}
                 </h2>
               </div>

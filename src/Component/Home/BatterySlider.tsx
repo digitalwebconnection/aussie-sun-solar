@@ -2,17 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Zap } from 'lucide-react';
 
-import battery1 from '../../assets/Battery Partners/1.webp';
+import battery1 from '../../assets/teslabettery.jpg';
 import battery2 from '../../assets/Battery Partners/2.webp';
 import battery3 from '../../assets/Battery Partners/3.webp';
 import battery4 from '../../assets/Battery Partners/4.webp';
-import battery5 from '../../assets/Battery Partners/5.webp';
+import battery5 from '../../assets/Battery Partners/10.png';
 
-import teslaPowerwall from '../../assets/downloaded-images/tesla-powerwall.jpg';
-import sigstorBattery from '../../assets/downloaded-images/sigstor-battery.png';
+import teslaPowerwall from '../../assets/Tesla-Powerwall-2-Off-Grid-Battery.jpg.jpeg';
+import sigstorBattery from '../../assets/saj-battery/saj-battery.webp';
 import alphaessBattery from '../../assets/downloaded-images/alphaess-battery.png';
 import neovoltBattery from '../../assets/downloaded-images/neovolt-battery.png';
-import goodweLynx from '../../assets/downloaded-images/goodwe-lynx-battery.png';
+import goodweLynx from '../../assets/goodwebettry.png';
 
 const batteries = [
   {
@@ -28,7 +28,7 @@ const batteries = [
     id: 2,
     image: sigstorBattery,
     logo: battery2,
-    name: 'SigStor Hybrid Battery',
+    name: 'SAJ Battery Systems',
     tag: 'Hybrid Storage',
     desc: 'Modern all-in-one battery and inverter solution delivering efficient energy storage for residential solar systems.',
   },
@@ -125,7 +125,7 @@ export default function BatterySlider() {
   const slide = batteries[current];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white md:py-14 py-10 px-4">
+    <section id="battery-showroom" aria-label="Solar battery showroom slider" className="relative w-full overflow-hidden bg-white md:py-14 py-10 px-4">
 
       <div className="relative z-10 mx-auto max-w-7xl">
 
@@ -145,14 +145,14 @@ export default function BatterySlider() {
             </span>
           </div>
 
-          <h2 className="text-5xl font-black tracking-tight text-slate-900 md:text-6xl">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900">
             Solar{' '}
             <span className="bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent">
               Battery
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-6xl text-lg leading-relaxed text-slate-900">
+          <p className="mx-auto mt-5 max-w-6xl text-base md:text-lg leading-relaxed text-slate-900">
             We work with the world's leading battery manufacturers to bring you
             reliable, high-performance energy storage for every home and business.
           </p>
@@ -217,7 +217,7 @@ export default function BatterySlider() {
                 </span>
 
                 {/* TITLE */}
-                <h3 className="mt-4 text-3xl font-black leading-tight text-slate-900 md:text-5xl">
+                <h3 className="mt-4 text-xl md:text-2xl font-serif font-semibold leading-tight text-slate-900">
                   {slide.name}
                 </h3>
 
@@ -225,7 +225,7 @@ export default function BatterySlider() {
                 <div className="mt-4 h-1 w-20 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
 
                 {/* DESCRIPTION */}
-                <p className="mt-6 text-md md:text-lg leading-relaxed text-slate-900">
+                <p className="mt-6 text-base md:text-lg leading-relaxed text-slate-900">
                   {slide.desc}
                 </p>
 

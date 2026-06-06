@@ -74,7 +74,7 @@ const ProjectProcess: React.FC = () => {
               />
               How It Works
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-[#004093] leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] leading-tight">
               From Quote to{' '}
               <span className="text-[#FE9900]">Power-On</span>
               <br /> in 4 Easy Steps
@@ -133,7 +133,7 @@ const ProjectProcess: React.FC = () => {
                 </motion.div>
 
                 <div className="text-center">
-                  <h3 className="text-xl font-black text-[#004093] mb-4 group-hover:text-[#FE9900] transition-colors">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] mb-4 group-hover:text-[#FE9900] transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-gray-900 leading-relaxed text-sm px-4">{step.desc}</p>

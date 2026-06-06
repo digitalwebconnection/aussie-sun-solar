@@ -68,7 +68,7 @@ const ProjectsSection: React.FC = () => {
             Our Projects
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold text-[#111827] md:text-5xl">
+          <h2 className="mt-4 text-3xl md:text-5xl font-serif font-bold text-[#111827]">
             Recent Solar
             <span className="block text-[#FE9900]">
               Installations
@@ -139,7 +139,7 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-[#111827] transition duration-300 group-hover:text-[#FE9900]">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#111827] transition duration-300 group-hover:text-[#FE9900]">
                   {project.title}
                 </h3>
 

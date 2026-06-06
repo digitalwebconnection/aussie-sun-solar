@@ -121,7 +121,7 @@ const ServicesSection = () => {
 
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl  font-black text-[#111827] mt-4">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#111827] mt-4">
 
                             Smart Solar
                             <span className="text-[#004093]">
@@ -142,10 +142,10 @@ const ServicesSection = () => {
                     {/* RIGHT */}
                     <div className="max-w-6xl space-y-4">
 
-                        <p className="text-gray-900 text-md md:text-lg">
+                        <p className="text-gray-900 text-sm md:text-lg">
                             We provide advanced solar solutions including solar panels, battery storage, and EV charging systems designed to reduce electricity costs and improve energy efficiency.
                         </p>
-                        <p className="text-gray-900 text-md md:text-lg">
+                        <p className="text-gray-900 text-sm md:text-lg">
                             Aussie Sun Solar helps Australian homes and businesses switch to smarter, cleaner, and more sustainable energy solutions for long-term savings.
                         </p>
 
@@ -238,7 +238,7 @@ const ServicesSection = () => {
                                         <div className="mt-auto">
                                             {/* TITLE */}
 
-                                            <h3 className="text-white text-[26px] sm:text-[30px] lg:text-[34px] leading-tight font-black max-w-[280px]">
+                                            <h3 className="text-white text-xl md:text-2xl leading-tight font-serif font-semibold max-w-[280px]">
                                                 {service.title}
                                             </h3>
 

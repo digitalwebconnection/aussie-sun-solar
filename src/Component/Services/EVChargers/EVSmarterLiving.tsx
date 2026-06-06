@@ -16,10 +16,10 @@ const EVSmarterLiving = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -80 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.15)]">
-              <img src={evChargingStation} alt="EV Charger" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={evChargingStation} alt="Electric vehicle charging on residential driveway" className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent" />
               <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }} className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 rounded-lg shadow-xl max-w-xs">
-                <h3 className="text-4xl font-black text-[#FE9900] leading-none">1K+</h3>
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#FE9900] leading-none">1K+</h3>
                 <p className="text-[#004093] font-bold mt-2">EV Chargers Installed Across Australia</p>
               </motion.div>
             </div>
@@ -28,10 +28,10 @@ const EVSmarterLiving = () => {
 
           <div>
             <motion.span initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block px-10 py-1 border-[#FE9900]/80 rounded-lg bg-[#FE9900]/80 text-black font-bold uppercase tracking-[0.2em] text-sm">Smart EV Charging</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-3xl md:text-5xl font-black leading-tight text-[#004093]">
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-4 text-3xl md:text-5xl font-serif font-bold leading-tight text-[#004093]">
               Drive Clean, <br /> Charge Smart
             </motion.h2>
-            <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="mt-4 text-gray-900 text-lg leading-relaxed max-w-xl">
+            <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="mt-4 text-gray-900 text-base md:text-lg leading-relaxed max-w-xl">
               Fast and reliable EV charging at home or your business premises. Our Level 2 AC chargers are compatible with all major EV brands.
             </motion.p>
             <div className="mt-8 grid gap-5">
@@ -41,7 +41,7 @@ const EVSmarterLiving = () => {
                     <item.icon size={30} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-black text-[#004093] mb-2 group-hover:text-[#FE9900] transition-colors duration-300">{item.title}</h4>
+                    <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] mb-2 group-hover:text-[#FE9900] transition-colors duration-300">{item.title}</h3>
                     <p className="text-gray-500 leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>

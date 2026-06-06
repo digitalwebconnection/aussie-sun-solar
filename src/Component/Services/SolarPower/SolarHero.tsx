@@ -27,13 +27,13 @@ const ContactServices = () => {
   };
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-8">
+    <section id="solarpower-hero" aria-label="SolarPower Hero Banner" className="relative overflow-hidden pt-28 pb-8">
 
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={solarRoof1}
-          alt="Background"
+          alt="Cinematic solar installation background"
           className="h-full w-full object-cover"
         />
 
@@ -68,12 +68,12 @@ const ContactServices = () => {
                 </span>
               </div>
 
-              <h2 className="text-4xl font-serif font-bold leading-tight text-white md:text-6xl">
+              <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight text-white">
                 Smart Solar Power Systems
                 <span className="block text-[#FE9900]">
                   in Australia for Homes & Businesses
                 </span>
-              </h2>
+              </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
                 Explore reliable solar power systems in Australia designed to reduce electricity costs, improve energy efficiency, and support sustainable living. We provide advanced solar panel installation, battery storage, EV charging, and electrical solutions tailored for residential, commercial, and industrial properties.
@@ -106,7 +106,7 @@ const ContactServices = () => {
                 Get In Touch
               </p>
 
-              <h3 className="mt-1 text-2xl md:text-3xl font-black leading-tight text-white">
+              <h3 className="mt-1 text-2xl md:text-xl md:text-2xl font-serif font-semibold leading-tight text-white">
                 Request A Free
                 Consultation
               </h3>

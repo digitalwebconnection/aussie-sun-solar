@@ -102,7 +102,7 @@ export default function ProcessTimelineSection() {
                     <div className="mx-auto mt-6 h-1 w-40 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
 
                     {/* DESCRIPTION */}
-                    <p className="mx-auto mt-4 md:mt-8 max-w-5xl text-md md:text-lg leading-loose text-slate-600">
+                    <p className="mx-auto mt-4 md:mt-8 max-w-5xl text-sm md:text-lg leading-loose text-slate-600">
                         From consultation and installation to lifetime monitoring,
                         we make switching to solar smooth, transparent, and stress-free.
                     </p>
@@ -216,7 +216,7 @@ export default function ProcessTimelineSection() {
                                     <div className="relative z-10 mt-10">
 
                                         {/* TITLE */}
-                                        <h3 className="text-xl md:text-2xl font-black leading-tight tracking-[-1px] text-slate-900">
+                                        <h3 className="text-xl md:text-2xl font-serif font-semibold leading-tight tracking-[-1px] text-slate-900">
                                             {item.title}
                                         </h3>
 

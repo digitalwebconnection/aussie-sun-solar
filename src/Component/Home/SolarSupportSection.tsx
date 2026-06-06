@@ -98,7 +98,7 @@ export default function SolarSupportSection() {
                                     once: true,
                                 }}
                                 className="
-                                mt-4 md:mt-8 text-3xl md:text-5xl font-black leading-tight
+                                mt-4 md:mt-8 text-3xl md:text-5xl font-serif font-bold leading-tight
                                 tracking-[-2px]
                                 text-white xl:text-6xl
                                 "
@@ -130,7 +130,7 @@ export default function SolarSupportSection() {
                                     once: true,
                                 }}
                                 className="
-                                mt-8 max-w-2xl text-lg leading-loose
+                                mt-8 max-w-2xl text-sm md:text-lg leading-loose
                                 text-white/90 space-y-4
                                 "
                             >
@@ -225,7 +225,8 @@ export default function SolarSupportSection() {
                                 </motion.button>
 
                                 {/* SUPPORT */}
-                                <motion.div
+                                <motion.a
+                                    href="tel:1300672194"
                                     initial={{
                                         opacity: 0,
                                         x: 20,
@@ -263,10 +264,10 @@ export default function SolarSupportSection() {
                                         </p>
 
                                         <h3 className="mt-1 text-2xl font-black text-white">
-                                            1300 589 245
+                                            1300 672 194
                                         </h3>
                                     </div>
-                                </motion.div>
+                                </motion.a>
                             </div>
                         </div>
 
@@ -332,7 +333,7 @@ export default function SolarSupportSection() {
                                             Live Assistance
                                         </p>
 
-                                        <h4 className="mt-1 text-2xl font-black text-white">
+                                        <h4 className="mt-1 text-xl md:text-2xl font-serif font-semibold text-white">
                                             Expert Support Team
                                         </h4>
                                     </div>

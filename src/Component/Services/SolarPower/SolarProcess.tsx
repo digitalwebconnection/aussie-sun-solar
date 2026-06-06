@@ -97,7 +97,7 @@ const SolarProcess = () => {
   };
 
   return (
-    <section className="py-14 bg-[#010816] relative overflow-hidden font-sans">
+    <section id="solarpower-process" aria-label="SolarPower Process Breakdown" className="py-14 bg-[#010816] relative overflow-hidden font-sans">
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-64 -mt-64" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] -ml-64 -mb-64" />
@@ -109,14 +109,14 @@ const SolarProcess = () => {
             ☀️ SMART SOLAR TECHNOLOGY
           </span>
 
-          <h2 className="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
             Smart Solar Energy
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">
               Solutions for Australian Homes & Businesses
             </span>
           </h2>
 
-          <p className="text-slate-100 text-lg mx-auto text-center leading-relaxed max-w-6xl">
+          <p className="text-slate-100 text-base md:text-lg mx-auto text-center leading-relaxed max-w-6xl">
             Power your property with advanced solar energy solutions designed to reduce electricity costs, improve energy efficiency, and deliver long-term energy independence. Our solar power systems in Australia combine premium solar panels, battery storage, and smart energy technology for maximum performance and savings.
           </p>
         </motion.div>
@@ -152,7 +152,7 @@ const SolarProcess = () => {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white flex items-center gap-2 mb-2">
+                      <h3 className="text-xl md:text-2xl font-serif font-semibold text-white flex items-center gap-2 mb-2">
                         {step.title}
 
                         <ArrowRight
@@ -219,7 +219,7 @@ const SolarProcess = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="relative z-10 text-3xl font-bold text-white mb-3">
+                  <h3 className="relative z-10 text-xl md:text-2xl font-serif font-semibold text-white mb-3">
                     {rightContent[activeIndex].title}
                   </h3>
 
@@ -229,7 +229,7 @@ const SolarProcess = () => {
                   </p>
 
                   {/* Description */}
-                  <p className="relative z-10 text-slate-400 text-lg leading-relaxed">
+                  <p className="relative z-10 text-slate-400 text-sm md:text-base leading-relaxed">
                     {rightContent[activeIndex].desc}
                   </p>
 

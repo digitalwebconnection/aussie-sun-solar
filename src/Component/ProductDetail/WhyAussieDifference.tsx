@@ -74,7 +74,7 @@ export const WhyAussieDifference: React.FC = () => {
           <span className="text-xs font-extrabold uppercase tracking-[0.35em] text-[#FE9900] bg-[#FE9900]/10 px-3 py-1.5 rounded-full">
             The Aussie Sun Solar Difference
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 mt-4 leading-tight tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mt-4 leading-tight tracking-tight">
             Why More Australians Choose Aussie Sun Solar?
           </h2>
           <div className="w-16 h-1.5 bg-[#FE9900] mx-auto mt-6 rounded-full" />
@@ -107,7 +107,7 @@ export const WhyAussieDifference: React.FC = () => {
               </div>
 
               {/* Title */}
-              <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#FE9900] transition-colors duration-200">
+              <h4 className="text-xl md:text-2xl font-serif font-semibold text-slate-900 mb-3 group-hover:text-[#FE9900] transition-colors duration-200">
                 {card.title}
               </h4>
 

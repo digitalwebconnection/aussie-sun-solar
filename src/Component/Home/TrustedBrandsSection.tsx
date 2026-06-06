@@ -86,7 +86,7 @@ export default function TrustedBrandsSection() {
                         Trusted Technology Partners
                     </p>
 
-                    <h2 className="text-3xl font-black tracking-tight text-slate-900 md:text-5xl leading-[1.2]">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2]">
                         Powered By
                         <span className="block bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent py-2 pb-4">
                             Leading Solar Brands
@@ -95,7 +95,7 @@ export default function TrustedBrandsSection() {
 
 
 
-                    <p className="mx-auto mt-5 max-w-7xl text-md md:text-lg leading-loose text-slate-900">
+                    <p className="mx-auto mt-5 max-w-7xl text-sm md:text-lg leading-loose text-slate-900">
                         We partner with globally trusted manufacturers to deliver
                         reliable solar systems built for performance, efficiency,
                         and long-term energy savings.
@@ -151,7 +151,7 @@ export default function TrustedBrandsSection() {
                                     </div>
 
                                     {/* TITLE */}
-                                    <h3 className="mt-6 text-3xl md:text-4xl font-black tracking-[-2px] text-slate-900">
+                                    <h3 className="mt-6 text-xl md:text-2xl font-serif font-semibold tracking-[-2px] text-slate-900">
                                         {item.category}
                                     </h3>
 

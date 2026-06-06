@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const SolarIntro = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-14">
+    <section id="solarpower-intro" aria-label="SolarPower Introduction" className="relative overflow-hidden bg-white py-14">
 
       {/* Background Glow Effects */}
       <div className="absolute left-[-10%] top-0 h-80 w-80 rounded-full bg-[#004093]/10 blur-[120px]" />
@@ -40,7 +40,7 @@ const SolarIntro = () => {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl md:text-5xl font-black font-serif leading-tight text-[#111827] ">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] ">
             Australia’s Trusted Partner in
             <span className="mt-2 block text-[#004093]">
               Solar Energy Solutions
@@ -48,7 +48,7 @@ const SolarIntro = () => {
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mt-8 max-w-7xl text-lg leading-relaxed text-gray-900 md:text-xl">
+          <p className="mx-auto mt-8 max-w-7xl text-base md:text-lg leading-relaxed text-gray-900">
             Aussie Sun Solar provides high-quality solar panels, battery storage systems, and renewable energy solutions for Australian homes and businesses. We help reduce electricity costs with reliable, energy-efficient solar technology designed for long-term performance and sustainability.
           </p>
 
@@ -97,7 +97,7 @@ const SolarIntro = () => {
                   hover:shadow-[0_20px_60px_rgba(0,64,147,0.58)]
                 "
               >
-                <h3 className="text-3xl font-black text-[#004093]">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093]">
                   {item.number}
                 </h3>
 
@@ -128,7 +128,7 @@ const SolarIntro = () => {
                 bg-[#FE9900]
                 px-10
                 py-2
-                text-md md:text-lg
+                text-base md:text-lg
                 font-black
                 uppercase
                 tracking-[0.15em]

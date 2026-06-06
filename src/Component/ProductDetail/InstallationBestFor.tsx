@@ -42,7 +42,7 @@ export const InstallationBestFor: React.FC<InstallationBestForProps> = ({
                 Setup & Support
               </span>
 
-              <h3 className="text-2xl md:text-3xl font-black text-white mt-2">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-white mt-2">
                 Installation & Compatibility
               </h3>
             </div>
@@ -85,7 +85,7 @@ export const InstallationBestFor: React.FC<InstallationBestForProps> = ({
                 Recommended Usage
               </span>
 
-              <h3 className="text-2xl md:text-3xl font-black text-slate-900 mt-2">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-slate-900 mt-2">
                 Who It’s Best For
               </h3>
             </div>

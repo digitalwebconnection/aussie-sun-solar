@@ -89,7 +89,7 @@ const AboutSection = () => {
         <div className="lg:pl-5">
 
           {/* MAIN HEADING */}
-          <h2 className="text-3xl lg:text-5xl font-extrabold text-[#111827] leading-tight tracking-tight flex flex-col items-start">
+          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-[#111827] leading-tight tracking-tight flex flex-col items-start">
             <BlurText
               text="Aussie Sun Solar:"
               delay={50}
@@ -121,14 +121,14 @@ const AboutSection = () => {
               delay={20}
               animateBy="words"
               direction="top"
-              className="text-gray-900 text-lg leading-relaxed block"
+              className="text-gray-900 text-base md:text-lg leading-relaxed block"
             />
             <BlurText
               text="With SAA-certified installers, Tier-1 solar technology, zero upfront cost options, and trusted local support, we make switching to smart solar energy simple, reliable, and affordable across Australia."
               delay={20}
               animateBy="words"
               direction="top"
-              className="text-gray-900 text-lg leading-relaxed mt-4 block"
+              className="text-gray-900 text-base md:text-lg leading-relaxed mt-4 block"
             />
           </div>
 

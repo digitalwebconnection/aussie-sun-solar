@@ -17,7 +17,7 @@ export const ContactCTA: React.FC = () => {
             <span className="text-xs font-black uppercase tracking-[0.3em] text-[#FE9900]">
               Unlock Premium Clean Energy
             </span>
-            <h2 className="text-3xl md:text-5xl font-black mt-3 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mt-3 leading-tight">
               Work With a Team That Works for You
             </h2>
             <p className="mt-4 text-white/80 text-base md:text-lg leading-relaxed max-w-2xl">

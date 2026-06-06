@@ -12,13 +12,13 @@ const CommercialWhyChoose = () => {
   ];
 
   return (
-    <section className="py-14 bg-white relative overflow-hidden">
+    <section id="commercialsolar-why-choose" aria-label="Why Choose CommercialSolar" className="py-14 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-10">
           <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block text-[#FE9900] font-bold uppercase tracking-[3px] text-sm mb-4">Why Choose Us</motion.span>
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-black text-[#0B1220] leading-tight">
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-serif font-bold text-[#0B1220] leading-tight">
             Trusted Commercial <span className="block text-[#FE9900]">Solar Experts</span>
           </motion.h2>
         </div>
@@ -28,8 +28,8 @@ const CommercialWhyChoose = () => {
               <div className={`w-20 h-20 rounded-3xl ${item.color} flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110`}>
                 <item.icon size={38} strokeWidth={1.8} />
               </div>
-              <h3 className="text-2xl font-black text-[#0B1220] mb-4 group-hover:text-[#FE9900] transition-colors">{item.title}</h3>
-              <p className="text-gray-500 leading-relaxed text-lg">{item.desc}</p>
+              <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#0B1220] mb-4 group-hover:text-[#FE9900] transition-colors">{item.title}</h3>
+              <p className="text-gray-500 leading-relaxed text-sm md:text-base">{item.desc}</p>
               <div className="w-12 h-1 bg-[#FE9900] rounded-full mt-8 group-hover:w-24 transition-all duration-500" />
             </motion.div>
           ))}

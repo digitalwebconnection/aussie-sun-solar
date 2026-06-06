@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- =====================
+       CORE PAGES
+  ===================== -->
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/about</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/contact</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/projects</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/privacy-policy</loc>
+    <priority>0.4</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- =====================
+       SERVICES PAGES
+  ===================== -->
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/services</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/services/solar-power-systems</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/services/battery-storage-solutions</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/services/ev-chargers</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/services/commercial-solar</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- =====================
+       PRODUCTS HUB
+  ===================== -->
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- =====================
+       SOLAR PANEL PRODUCTS
+  ===================== -->
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/jinko-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/ja-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/aiko-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/canadian-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/das-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/dmegc-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/eging-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/risen-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/trina-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/longi-solar-panels</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- =====================
+       INVERTER PRODUCTS
+  ===================== -->
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/goodwe-inverters</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/sungrow-inverters</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/growatt-inverters</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/solis-inverters</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/saj-inverters</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/solix-inverters</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- =====================
+       BATTERY PRODUCTS
+  ===================== -->
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/foxess-battery</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/growatt-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/saj-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/anker-solix-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/sungrow-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/alpha-ess-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/neovolt-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://aussiesunsolar.com.au/products/sigenergy-battery-systems</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>

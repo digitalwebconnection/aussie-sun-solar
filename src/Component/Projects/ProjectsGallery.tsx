@@ -211,7 +211,7 @@ const ProjectsGallery = () => {
               <Images size={15} className="text-[#004093]" />
               <span className="text-xs font-black uppercase tracking-[0.3em] text-[#004093]">Project Gallery</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-[#111827]">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#111827]">
               Real Installations,{" "} <br />
               <span className="text-[#FE9900]">Real Results</span>
             </h2>

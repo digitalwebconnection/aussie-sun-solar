@@ -133,7 +133,7 @@ export default function AboutFeatures() {
               <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
               <Award size={48} className="mb-2 text-[#FE9900] relative z-10" />
             </motion.div>
-            <h3 className="text-4xl md:text-5xl font-black tracking-tighter">7 +</h3>
+            <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tighter">7 +</h3>
             <p className="text-xs uppercase tracking-[0.2em] mt-2 font-black text-center text-white/90">
               Years Of Experience
             </p>
@@ -156,7 +156,7 @@ export default function AboutFeatures() {
               <span className="text-[#FE9900] font-black tracking-[0.3em] uppercase text-xs px-8 py-2 bg-white/5 rounded-full border border-white/10">
                 Our Philosophy
               </span>
-              <h2 className="text-3xl lg:text-4xl font-black mt-8 mb-12 leading-tight tracking-tighter text-white">
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold mt-8 mb-12 leading-tight tracking-tighter text-white">
                 Delivering Trusted Solar Solutions Across Queensland <br />
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">With Quality & Excellence</span>
               </h2>
@@ -204,7 +204,7 @@ export default function AboutFeatures() {
               <span className="text-[#004093] font-black tracking-[0.3em] uppercase text-xs px-4 py-2 bg-black/5 rounded-full border border-black/10">
                 WHY CHOOSE OUR SOLAR TEAM
               </span>
-              <h2 className="text-3xl lg:text-4xl font-black mt-8 mb-8 leading-tight tracking-tighter">
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold mt-8 mb-8 leading-tight tracking-tighter">
                 What Makes Our Solar Company <br />
                 <span className="text-white">Stand Out</span> Across Queensland & Australia
               </h2>
@@ -268,7 +268,7 @@ export default function AboutFeatures() {
               <div className="absolute -inset-4 bg-[#FE9900]/20 blur-xl rounded-full"></div>
               <Zap size={48} className="mb-2 text-[#FE9900] relative z-10" />
             </motion.div>
-            <h3 className="text-4xl md:text-5xl font-black tracking-tighter">400 +</h3>
+            <h3 className="text-xl md:text-2xl font-serif font-semibold tracking-tighter">400 +</h3>
             <p className="text-xs uppercase tracking-[0.2em] mt-2 font-black text-center text-white/90">
               Level 2 ASP Solar & Electrical Projects
             </p>

@@ -27,7 +27,7 @@ const BatteryProcess = () => {
   const itemVariants = { hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: easeOut } } };
 
   return (
-    <section className="py-14 bg-[#010816] relative overflow-hidden font-sans">
+    <section id="batterystorage-process" aria-label="BatteryStorage Process Breakdown" className="py-14 bg-[#010816] relative overflow-hidden font-sans">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -mr-64 -mt-64" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] -ml-64 -mb-64" />
 
@@ -36,11 +36,11 @@ const BatteryProcess = () => {
           <span className="flex items-center gap-2 text-[#FE9900] font-bold justify-center uppercase tracking-[3px] text-sm mb-5">
             <ShieldCheck size={18} /> Smart Battery Technology
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
             Battery Storage
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">Made Simple</span>
           </h2>
-          <p className="text-slate-100 text-lg mx-auto text-center leading-relaxed max-w-6xl">
+          <p className="text-slate-100 text-base md:text-lg mx-auto text-center leading-relaxed max-w-6xl">
             Power your home around the clock with intelligent battery systems designed for maximum reliability and energy independence.
           </p>
         </motion.div>
@@ -58,11 +58,11 @@ const BatteryProcess = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white flex items-center gap-2 mb-2">
+                      <h3 className="text-xl md:text-2xl font-serif font-semibold text-white flex items-center gap-2 mb-2">
                         {step.title}
                         <ArrowRight size={16} className="text-[#FE9900] opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                       </h3>
-                      <p className="text-slate-400">{step.desc}</p>
+                      <p className="text-slate-400 text-sm md:text-base">{step.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -79,9 +79,9 @@ const BatteryProcess = () => {
                   <div className={`absolute inset-0 bg-linear-to-br ${rightContent[activeIndex].color} opacity-10`} />
                   <div className="relative z-10 inline-flex items-center gap-2 px-10 py-2 rounded-full border border-[#FE9900]/90 bg-white/5 text-xs uppercase tracking-[2px] text-[#FE9900] mb-8">Battery Technology</div>
                   <div className="relative z-10 text-6xl md:text-7xl font-black text-white mb-5">{rightContent[activeIndex].value}</div>
-                  <h3 className="relative z-10 text-3xl font-bold text-white mb-3">{rightContent[activeIndex].title}</h3>
+                  <h3 className="relative z-10 text-xl md:text-2xl font-serif font-semibold text-white mb-3">{rightContent[activeIndex].title}</h3>
                   <p className="relative z-10 text-[#FE9900] uppercase tracking-[3px] text-sm mb-6">{rightContent[activeIndex].subtitle}</p>
-                  <p className="relative z-10 text-slate-400 text-lg leading-relaxed">{rightContent[activeIndex].desc}</p>
+                  <p className="relative z-10 text-slate-400 text-sm md:text-base leading-relaxed">{rightContent[activeIndex].desc}</p>
                   <div className="relative z-10 mt-10">
                     <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
                       <motion.div key={activeIndex} initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 4, ease: 'linear' }} className="h-full bg-linear-to-r from-[#FE9900] to-orange-400 rounded-full" />

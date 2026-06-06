@@ -13,7 +13,7 @@ const packages = [
   {
     title: "6.6kW",
     tier: "Residential Essential",
-    price: "3,499",
+    price: "3,699",
     savings: "2.5k",
     tagline: "Perfect for couples & small homes.",
     color: "#00d4ff",
@@ -24,7 +24,7 @@ const packages = [
   {
     title: "10.12kW",
     tier: "Family Executive",
-    price: "5,499",
+    price: "5,699",
     savings: "4.2k",
     tagline: "The gold standard for modern families.",
     color: "#FE9900",
@@ -35,7 +35,7 @@ const packages = [
   {
     title: "13.2kW",
     tier: "Estate Ultimate",
-    price: "5,999",
+    price: "6,199",
     savings: "5.5k",
     tagline: "Zero-compromise energy independence.",
     color: "#ffffff",
@@ -66,7 +66,7 @@ const PremiumSolarPackages = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-[0.9]"
+              className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[0.9]"
             >
               Future-Proof <br />
               <span className="text-[#FE9900]">Energy Portfolios.</span>
@@ -110,7 +110,7 @@ const PremiumSolarPackages = () => {
 
                 {/* Header */}
                 <div className="mb-10">
-                  <h3 className="text-white/50 text-xs font-bold uppercase tracking-widest mb-1">{pkg.tier}</h3>
+                  <h3 className="text-white/50 text-xs font-serif font-semibold uppercase tracking-widest mb-1">{pkg.tier}</h3>
                   <div className="flex items-baseline gap-2">
                     <h4 className="text-5xl font-black text-white">{pkg.title}</h4>
                     <div className="w-2 h-2 rounded-full bg-[#FE9900] animate-pulse" />

@@ -50,7 +50,7 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
 
   return (
     <div className="bg-white mx-auto max-w-7xl py-4 md:py-16" id="datasheet-section py-2">
-      <h3 className="text-3xl md:text-5xl font-black text-[#004093] mb-6 flex items-center gap-2">
+      <h3 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] mb-6 flex items-center gap-2">
         <span className="w-1.5 h-10 bg-[#FE9900] rounded-full inline-block" />
         Technical Datasheet & Specifications
       </h3>
@@ -58,7 +58,7 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-4 md:mb-8">
         {/* Technical Param List */}
         <div className={hasPdfs ? "lg:col-span-7" : "lg:col-span-12"}>
-          <h4 className="text-sm font-black text-[#004093] uppercase tracking-wider mb-4">
+          <h4 className="text-sm font-bold text-[#004093] uppercase tracking-wider mb-4">
             Technical Parameters
           </h4>
           <div className="border border-slate-300 rounded-lg overflow-hidden divide-y divide-slate-100">
@@ -83,7 +83,7 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
                 <div className="w-12 h-12 rounded-lg bg-[#004093] flex items-center justify-center text-white mb-4">
                   <FileText size={24} />
                 </div>
-                <h4 className="text-2xl font-black text-[#004093] mb-2">
+                <h4 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] mb-2">
                   Download Official PDF
                 </h4>
                 <p className="text-slate-900 text-xs font-semibold leading-relaxed mb-6">
@@ -127,7 +127,7 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
 
       {/* Available Models Options */}
       <div>
-        <h4 className="text-sm font-black text-[#004093] uppercase tracking-wider mb-4">
+        <h4 className="text-sm font-bold text-[#004093] uppercase tracking-wider mb-4">
           Available Product Models
         </h4>
         <div className="overflow-x-auto border border-slate-100 rounded-lg shadow-sm">

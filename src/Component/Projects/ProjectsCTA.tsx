@@ -46,7 +46,7 @@ const ProjectsCTA: React.FC = () => {
                 <span className="text-white font-bold text-sm tracking-widest uppercase">Free Consultation</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-black text-white leading-tight md:mb-8 mb-6">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight md:mb-8 mb-6">
                 Ready to Join the
                 <div className="mt-2 h-[1.2em]">
                   <FlipFadeText
@@ -72,11 +72,11 @@ const ProjectsCTA: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="tel:1300504912"
+                  href="tel:1300672194"
                   className="inline-flex items-center justify-center gap-3 border-2 border-white/20 hover:border-[#FE9900] bg-white/5 backdrop-blur-md text-white font-bold px-8 py-2 rounded-lg text-lg transition-all duration-300 hover:bg-[#FE9900]/10"
                 >
                   <Phone className="w-5 h-5" />
-                  1300 504 912
+                  1300 672 194
                 </a>
               </div> */}
             </div>

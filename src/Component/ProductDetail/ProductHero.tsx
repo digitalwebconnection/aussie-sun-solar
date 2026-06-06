@@ -34,7 +34,7 @@ export const ProductHero: React.FC<ProductHeroProps> = ({ product }) => {
             <span className="text-white/90">{product.category}</span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight drop-shadow-sm">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight drop-shadow-sm">
             {product.name}
           </h1>
         </div>

@@ -57,9 +57,16 @@ const whyUs = [
   { icon: Sparkles, title: 'Premium Products Only', desc: 'We only supply Tier-1 solar panels, inverters, and battery systems.' },
 ];
 
+import SEO from '../Component/SEO';
+
 const ServicesPage = () => {
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="min-h-screen bg-white">
+      <SEO 
+        title="Our Services" 
+        description="Explore our range of premium solar services, including residential solar power systems, commercial solar arrays, battery storage, and EV charger installations."
+        keywords="solar services, residential solar, commercial solar, solar batteries, EV charging solutions"
+      />
 
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden pt-36 pb-20">
@@ -88,8 +95,8 @@ const ServicesPage = () => {
               <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-[#FE9900] px-10 py-4 font-black text-black uppercase tracking-wider shadow-[0_20px_50px_rgba(254,153,0,0.5)] transition-all hover:scale-105 hover:bg-[#ffb033]">
                 Get A Free Quote <ArrowRight size={20} />
               </Link>
-              <a href="tel:1300504912" className="inline-flex items-center gap-3 rounded-full border-2 border-white/60 px-10 py-4 font-bold text-white uppercase tracking-wider transition-all hover:border-[#FE9900] hover:text-[#FE9900]">
-                Call 1300 504 912
+              <a href="tel:1300672194" className="inline-flex items-center gap-3 rounded-full border-2 border-white/60 px-10 py-4 font-bold text-white uppercase tracking-wider transition-all hover:border-[#FE9900] hover:text-[#FE9900]">
+                Call 1300 672 194
               </a>
             </div> */}
           </motion.div>
@@ -104,7 +111,7 @@ const ServicesPage = () => {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block text-[#FE9900] font-bold uppercase tracking-[3px] text-sm mb-4">All Services</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-5xl md:text-6xl font-black text-[#0B1220] leading-tight">
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-serif font-bold text-[#0B1220] leading-tight">
               Complete Clean Energy
               <span className="block text-[#FE9900]">Solutions</span>
             </motion.h2>
@@ -126,7 +133,7 @@ const ServicesPage = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h3 className="text-2xl font-black text-[#0B1220] mb-3 group-hover:text-[#FE9900] transition-colors">{service.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#0B1220] mb-3 group-hover:text-[#FE9900] transition-colors">{service.title}</h3>
                   <p className="text-gray-500 leading-relaxed mb-6">{service.desc}</p>
 
                   {/* Stats */}
@@ -157,7 +164,7 @@ const ServicesPage = () => {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-block text-[#FE9900] font-bold uppercase tracking-[3px] text-sm mb-4">Why Aussie Sun Solar</motion.span>
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-5xl md:text-6xl font-black text-white leading-tight">
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">
               Australia's Most Trusted
               <span className="block text-[#FE9900]">Solar Company</span>
             </motion.h2>
@@ -169,7 +176,7 @@ const ServicesPage = () => {
                 <div className="w-16 h-16 rounded-2xl bg-[#FE9900]/10 border border-[#FE9900]/30 flex items-center justify-center mb-6 group-hover:bg-[#FE9900] transition-all duration-300">
                   <item.icon size={28} className="text-[#FE9900] group-hover:text-black transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-black text-white mb-3 group-hover:text-[#FE9900] transition-colors">{item.title}</h3>
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-white mb-3 group-hover:text-[#FE9900] transition-colors">{item.title}</h3>
                 <p className="text-slate-400 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -181,7 +188,7 @@ const ServicesPage = () => {
       <section className="py-20 bg-[#FE9900] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(white 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-5xl md:text-6xl font-black text-black leading-tight mb-6">
+          <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl md:text-5xl font-serif font-bold text-black leading-tight mb-6">
             Ready To Go Solar?
           </motion.h2>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-black/70 text-xl leading-relaxed mb-10">
@@ -191,8 +198,8 @@ const ServicesPage = () => {
             <Link to="/contact" className="inline-flex items-center gap-3 rounded-full bg-black text-white font-black px-10 py-4 uppercase tracking-wider shadow-2xl hover:scale-105 transition-all duration-300">
               Get Free Quote <ArrowRight size={20} />
             </Link>
-            <a href="tel:1300504912" className="inline-flex items-center gap-3 rounded-full border-2 border-black/30 px-10 py-4 font-bold text-black uppercase tracking-wider hover:border-black transition-all">
-              1300 504 912
+            <a href="tel:1300672194" className="inline-flex items-center gap-3 rounded-full border-2 border-black/30 px-10 py-4 font-bold text-black uppercase tracking-wider hover:border-black transition-all">
+              1300 672 194
             </a>
           </div> */}
         </div>

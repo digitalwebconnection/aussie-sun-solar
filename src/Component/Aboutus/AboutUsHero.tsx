@@ -45,7 +45,7 @@ export default function SolarAboutHero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="text-white text-3xl md:text-5xl xl:text-6xl font-black leading-[1.1] tracking-tighter"
+            className="text-white text-4xl md:text-6xl font-serif font-bold leading-[1.1] tracking-tighter"
           >
             Trusted Solar Company Queensland <br />
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] via-orange-400 to-[#FE9900] animate-gradient-x">
