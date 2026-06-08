@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,9 @@
   <link rel="icon" type="image/png" href="/logopng.png" />
   <link rel="apple-touch-icon" href="/logopng.png" />
   <meta name="theme-color" content="#d4af37" />
+
+  <!-- Web App Manifest (PWA) -->
+  <link rel="manifest" href="/manifest.json" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,19 +28,47 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://aussiesunsolar.com.au/" />
 
+  <!-- Google Fonts Preconnect (performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Aussie Sun Solar | Premium Solar Energy Solutions" />
   <meta property="og:description"
     content="Australia's trusted solar energy partner. High-efficiency solar panels, battery storage and EV charging solutions for homes and businesses." />
-  <meta property="og:image" content="https://aussiesunsolar.com.au/favicon.svg" />
+  <meta property="og:image" content="https://aussiesunsolar.com.au/logopng.png" />
   <meta property="og:url" content="https://aussiesunsolar.com.au/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:site_name" content="Aussie Sun Solar" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Aussie Sun Solar | Premium Solar Energy Solutions" />
   <meta name="twitter:description" content="Australia's trusted solar energy partner. High-efficiency solar panels, battery storage and EV charging solutions for homes and businesses." />
-  <meta name="twitter:image" content="https://aussiesunsolar.com.au/favicon.svg" />
+  <meta name="twitter:image" content="https://aussiesunsolar.com.au/logopng.png" />
+
+  <!-- JSON-LD Local Business Schema (Rich Google Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aussie Sun Solar",
+    "url": "https://aussiesunsolar.com.au",
+    "logo": "https://aussiesunsolar.com.au/logopng.png",
+    "image": "https://aussiesunsolar.com.au/logopng.png",
+    "description": "Australia's trusted solar energy provider. Premium solar panels, battery storage, EV charging, and commercial solar solutions. SAA accredited installers.",
+    "telephone": "+611300672194",
+    "email": "info@aussiesunsolar.com.au",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AU"
+    },
+    "areaServed": "Australia",
+    "priceRange": "$$",
+    "sameAs": []
+  }
+  </script>
 </head>
 
 <body>

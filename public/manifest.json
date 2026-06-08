@@ -1,0 +1,21 @@
+{
+  "name": "Aussie Sun Solar",
+  "short_name": "Aussie Sun Solar",
+  "description": "Australia's trusted solar energy provider. Premium solar panels, battery storage, EV charging, and commercial solar solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "/logopng.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logopng.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
