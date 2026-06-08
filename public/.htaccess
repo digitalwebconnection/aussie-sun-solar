@@ -11,9 +11,9 @@
 Options -MultiViews
 RewriteEngine On
 
-# ── 1. Force HTTPS (uncomment after SSL is active) ──────────
-# RewriteCond %{HTTPS} off
-# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ── 1. Force HTTPS ──────────────────────────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ── 2. Force www → non-www (or flip it — pick ONE) ─────────
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]

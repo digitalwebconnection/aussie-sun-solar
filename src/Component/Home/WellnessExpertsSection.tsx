@@ -205,7 +205,7 @@ export default function WellnessExpertsSection() {
                                     repeat: Infinity,
                                     duration: 5,
                                 }}
-                                className="relative overflow-hidden rounded-lg border border-white/10 bg-white p-4 shadow-xl shadow-black/50"
+                                className="relative overflow-hidden rounded-lg border border-white/10 bg-white p-2 shadow-xl shadow-black/50"
                             >
 
                                 {/* IMAGE AUTO CHANGE */}
@@ -244,7 +244,7 @@ export default function WellnessExpertsSection() {
                                     transition={{
                                         duration: 0.5,
                                     }}
-                                    className="absolute bottom-8 left-8 rounded-lg border border-white/20 bg-white/85 p-6 shadow-2xl backdrop-blur-2xl"
+                                    className="absolute bottom-8 left-8 right-8 rounded-lg border border-white/20 bg-white/85 p-6 shadow-2xl backdrop-blur-2xl"
                                 >
 
                                     <div className="mb-4 flex items-center gap-3">
@@ -265,7 +265,7 @@ export default function WellnessExpertsSection() {
                                         </div>
                                     </div>
 
-                                    <p className="max-w-sm text-[15px] leading-[1.8] text-[#666]">
+                                    <p className="max-w-sm text-[15px] leading-[1.8] text-[#181818]">
                                         {FEATURES[activeIndex].description}
                                     </p>
                                 </motion.div>
@@ -305,7 +305,6 @@ export default function WellnessExpertsSection() {
                                         className={`group rounded-lg border bg-white/80
                                             
                                             md:p-7 p-4 shadow-xl shadow-black/30  backdrop-blur-2xl transition-all duration-500
-                                        
                                         ${isActive
                                                 ? 'border-[#f7d66d] shadow-[0_20px_70px_rgba(212,175,55,0.25)]'
                                                 : 'border-black/30'

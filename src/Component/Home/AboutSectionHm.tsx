@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 import solarInstalling from '../../assets/downloaded-images/installing-solar.jpg';
 import adaniPanel from '../../assets/downloaded-images/adani-solar-panel.jpg';
-import solarRoofStreet from '../../assets/downloaded-images/solar-roof-street.jpg';
+import solarRoofStreet from '../../assets/HeroImages/solar-roof-street.jpg';
 import aerialSolarHouse from '../../assets/downloaded-images/aerial-solar-house.jpg';
 
 const AboutSection = () => {
