@@ -23,7 +23,7 @@ const ContactBanner = () => {
                 That Works for You
               </h2>
               <p className="mt-6 text-white/70 text-lg leading-relaxed max-w-lg">
-                Whether you're going solar for the first time or upgrading your existing system, Hexa is here to help — with no shortcuts, no confusing jargon, and no fluff.
+                Whether you're going solar for the first time or upgrading your existing system, Aussie Sun Solar is here to help — with no shortcuts, no confusing jargon, and no fluff.
               </p>
               
               <div className="mt-12 flex flex-wrap gap-6 items-center">

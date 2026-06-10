@@ -41,7 +41,7 @@ const FEATURES = [
     {
         icon: Wrench,
         title: 'In-House Control',
-        description: 'End-to-end management by Hexa staff. No subcontractors, no compromises.',
+        description: 'End-to-end management by Aussie Sun Solar staff. No subcontractors, no compromises.',
     },
 ];
 

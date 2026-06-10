@@ -23,7 +23,7 @@ const items = [
   {
     id: 3,
     title: "Mark Benson",
-    description: "Tier-1 panels and local support. Knowing Hexa handles everything in-house gives me peace of mind. Highly recommend their solar solutions.",
+    description: "Tier-1 panels and local support. Knowing Aussie Sun Solar handles everything in-house gives me peace of mind. Highly recommend their solar solutions.",
     image: testimonial3,
   },
   {
