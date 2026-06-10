@@ -132,17 +132,15 @@ const SolarNavbar = () => {
           NAVBAR WRAPPER
       ============================================================ */}
       <div
-        className={`fixed left-1/2 -translate-x-1/2 w-[96%] lg:w-[94%] z-50 transition-all duration-500 ${
-          showNavbar ? "top-0 opacity-100" : "-top-32 opacity-0"
-        } ${scrolled ? "py-3" : "py-4"}`}
+        className={`fixed left-1/2 -translate-x-1/2 w-[96%] lg:w-[94%] z-50 transition-all duration-500 ${showNavbar ? "top-0 opacity-100" : "-top-32 opacity-0"
+          } ${scrolled ? "py-3" : "py-4"}`}
       >
         <div
           ref={menuRef}
-          className={`relative rounded-2xl lg:rounded-full shadow-2xl transition-all duration-500 ${
-            scrolled
+          className={`relative rounded-2xl lg:rounded-full shadow-2xl transition-all duration-500 ${scrolled
               ? "bg-white/98 border border-gray-200 shadow-blue-100/60"
               : "bg-white border border-gray-100"
-          }`}
+            }`}
         >
           <div className="relative flex items-center justify-between px-4 py-3 lg:py-3">
 
@@ -161,25 +159,23 @@ const SolarNavbar = () => {
               {/* Home */}
               <Link
                 to="/"
-                className={`relative pb-0.5 transition duration-300 ${
-                  isActive("/")
+                className={`relative pb-0.5 transition duration-300 ${isActive("/")
                     ? "text-[#FE9900]"
                     : "text-[#004093] hover:text-[#FE9900]"
-                }`}
+                  }`}
               >
                 Home
                 {isActive("/") && (
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#FE9900] rounded-full" />
                 )}
               </Link>
-  {/* About Us */}
+              {/* About Us */}
               <Link
                 to="/about"
-                className={`transition duration-300 ${
-                  isActive("/about")
+                className={`transition duration-300 ${isActive("/about")
                     ? "text-[#FE9900]"
                     : "text-[#004093] hover:text-[#FE9900]"
-                }`}
+                  }`}
               >
                 About Us
               </Link>
@@ -192,18 +188,16 @@ const SolarNavbar = () => {
               >
                 <Link
                   to="/services"
-                  className={`flex items-center gap-1 transition duration-300 ${
-                    isServiceActive()
+                  className={`flex items-center gap-1 transition duration-300 ${isServiceActive()
                       ? "text-[#FE9900]"
                       : "text-[#004093] hover:text-[#FE9900]"
-                  }`}
+                    }`}
                 >
                   Services
                   <ChevronDown
                     size={15}
-                    className={`transition-transform duration-300 ${
-                      activeMenu === "services" ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-300 ${activeMenu === "services" ? "rotate-180" : ""
+                      }`}
                   />
                 </Link>
 
@@ -249,18 +243,16 @@ const SolarNavbar = () => {
               >
                 <Link
                   to="/products"
-                  className={`flex items-center gap-1 transition duration-300 ${
-                    isProductActive()
+                  className={`flex items-center gap-1 transition duration-300 ${isProductActive()
                       ? "text-[#FE9900]"
                       : "text-[#004093] hover:text-[#FE9900]"
-                  }`}
+                    }`}
                 >
                   Products
                   <ChevronDown
                     size={15}
-                    className={`transition-transform duration-300 ${
-                      activeMenu === "products" ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-300 ${activeMenu === "products" ? "rotate-180" : ""
+                      }`}
                   />
                 </Link>
 
@@ -279,11 +271,10 @@ const SolarNavbar = () => {
                           <button
                             key={i}
                             onMouseEnter={() => setActiveSubMenu(cat)}
-                            className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl text-left font-semibold text-[14px] transition mb-1.5 ${
-                              activeSubMenu === cat
+                            className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl text-left font-semibold text-[14px] transition mb-1.5 ${activeSubMenu === cat
                                 ? "bg-[#004093] text-white shadow-md"
                                 : "hover:bg-white text-[#004093]"
-                            }`}
+                              }`}
                           >
                             {cat}
                             <ChevronRight size={16} />
@@ -314,16 +305,13 @@ const SolarNavbar = () => {
                 </AnimatePresence>
               </div>
 
-            
-
               {/* Our Projects */}
               <Link
                 to="/projects"
-                className={`transition duration-300 ${
-                  isActive("/projects")
+                className={`transition duration-300 ${isActive("/projects")
                     ? "text-[#FE9900]"
                     : "text-[#004093] hover:text-[#FE9900]"
-                }`}
+                  }`}
               >
                 Our Projects
               </Link>
@@ -331,11 +319,10 @@ const SolarNavbar = () => {
               {/* Contact Us */}
               <Link
                 to="/contact"
-                className={`transition duration-300 ${
-                  isActive("/contact")
+                className={`transition duration-300 ${isActive("/contact")
                     ? "text-[#FE9900]"
                     : "text-[#004093] hover:text-[#FE9900]"
-                }`}
+                  }`}
               >
                 Contact Us
               </Link>
@@ -446,6 +433,9 @@ const SolarNavbar = () => {
                 {/* Home */}
                 <MobileLink to="/" label="Home" active={isActive("/")} />
 
+                {/* About Us */}
+                <MobileLink to="/about" label="About Us" active={isActive("/about")} />
+                
                 {/* Services accordion */}
                 <MobileAccordion
                   label="Services"
@@ -495,11 +485,10 @@ const SolarNavbar = () => {
                       <button
                         key={i}
                         onClick={() => setMobileProductSub(cat)}
-                        className={`text-[12px] font-semibold px-3 py-1.5 rounded-full transition ${
-                          mobileProductSub === cat
+                        className={`text-[12px] font-semibold px-3 py-1.5 rounded-full transition ${mobileProductSub === cat
                             ? "bg-[#004093] text-white"
                             : "bg-[#f0f5ff] text-[#004093] hover:bg-[#dce8ff]"
-                        }`}
+                          }`}
                       >
                         {cat}
                       </button>
@@ -509,7 +498,7 @@ const SolarNavbar = () => {
                   {/* Sub-category items */}
                   <div className="space-y-0.5 pb-2">
                     {products[mobileProductSub]?.map((item, i) => (
-                         <Link
+                      <Link
                         key={i}
                         to={`/products/${item.slug}`}
                         className="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-[#f0f5ff] transition group"
@@ -522,9 +511,6 @@ const SolarNavbar = () => {
                     ))}
                   </div>
                 </MobileAccordion>
-
-                {/* About Us */}
-                <MobileLink to="/about" label="About Us" active={isActive("/about")} />
 
                 {/* Our Projects */}
                 <MobileLink to="/projects" label="Our Projects" active={isActive("/projects")} />
@@ -575,11 +561,10 @@ interface MobileLinkProps {
 const MobileLink = ({ to, label, active }: MobileLinkProps) => (
   <Link
     to={to}
-    className={`flex items-center justify-between px-4 py-3.5 rounded-xl font-semibold text-[15px] transition mb-1 ${
-      active
+    className={`flex items-center justify-between px-4 py-3.5 rounded-xl font-semibold text-[15px] transition mb-1 ${active
         ? "bg-[#f0f5ff] text-[#FE9900]"
         : "text-[#004093] hover:bg-[#f7f9fc]"
-    }`}
+      }`}
   >
     {label}
     <ArrowRight size={16} className={active ? "text-[#FE9900]" : "text-gray-400"} />
@@ -605,18 +590,16 @@ const MobileAccordion = ({
   <div className={`mb-1 rounded-xl overflow-hidden ${isOpen ? "bg-[#f7f9fc]" : ""}`}>
     <button
       onClick={onToggle}
-      className={`w-full flex items-center justify-between px-4 py-3.5 font-semibold text-[15px] transition ${
-        isActive
+      className={`w-full flex items-center justify-between px-4 py-3.5 font-semibold text-[15px] transition ${isActive
           ? "text-[#FE9900]"
           : "text-[#004093] hover:bg-[#f7f9fc]"
-      } ${isOpen ? "" : "hover:bg-[#f7f9fc] rounded-xl"}`}
+        } ${isOpen ? "" : "hover:bg-[#f7f9fc] rounded-xl"}`}
     >
       {label}
       <ChevronDown
         size={16}
-        className={`transition-transform duration-300 ${
-          isOpen ? "rotate-180 text-[#004093]" : "text-gray-400"
-        }`}
+        className={`transition-transform duration-300 ${isOpen ? "rotate-180 text-[#004093]" : "text-gray-400"
+          }`}
       />
     </button>
 

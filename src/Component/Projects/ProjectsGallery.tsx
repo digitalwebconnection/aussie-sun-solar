@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ChevronLeft, ChevronRight, Images } from "lucide-react";
 
@@ -145,11 +145,23 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }: {
   );
 }
 
-/* ── Gallery Item ─────────────────────────────────── */
+/* ── span lookup (must be full strings for Tailwind JIT) ── */
+const COL_MAP: Record<string, string> = {
+  "col-span-1": "md:col-span-1",
+  "col-span-2": "md:col-span-2",
+};
+const ROW_MAP: Record<string, string> = {
+  "row-span-1": "md:row-span-1",
+  "row-span-2": "md:row-span-2",
+};
+
+/* ── Gallery Item (desktop bento) ────────────────── */
 function GalleryItem({ src, index, globalIndex, onClick }: {
   src: string; index: number; globalIndex: number; onClick: (i: number) => void;
 }) {
   const { col, row } = BENTO[index % BENTO.length];
+  const mdCol = COL_MAP[col] ?? "md:col-span-1";
+  const mdRow = ROW_MAP[row] ?? "md:row-span-1";
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -157,25 +169,25 @@ function GalleryItem({ src, index, globalIndex, onClick }: {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: (index % 10) * 0.04 }}
       onClick={() => onClick(globalIndex)}
-      className={`${col} ${row} relative group cursor-zoom-in overflow-hidden rounded-lg shadow-lg shadow-black/70`}
+      className={`col-span-1 row-span-1 ${mdCol} ${mdRow} relative group cursor-zoom-in overflow-hidden rounded-xl shadow-md shadow-black/40`}
     >
       <img
         src={src} alt={`Solar installation ${globalIndex + 1}`}
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
-
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-
       {/* Zoom icon */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="w-14 h-14 rounded-full bg-[#FE9900] flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
-          <ZoomIn size={22} className="text-white" />
+        <div className="w-12 h-12 rounded-full bg-[#FE9900] flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
+          <ZoomIn size={18} className="text-white" />
         </div>
       </div>
-
-      {/* Label on large items */}
+      {/* Always-visible tap hint on mobile */}
+      <div className="absolute bottom-2 right-2 md:hidden bg-black/50 backdrop-blur-sm rounded-full p-1.5">
+        <ZoomIn size={12} className="text-white" />
+      </div>
       {(index % BENTO.length === 0 || index % BENTO.length === 8) && (
         <div className="absolute bottom-3 left-3 bg-[#FE9900] text-white text-xs font-black px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-wider uppercase">
           Featured
@@ -185,10 +197,33 @@ function GalleryItem({ src, index, globalIndex, onClick }: {
   );
 }
 
+
+
 /* ── Main Component ───────────────────────────────── */
 const ProjectsGallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
+  const [sliderIndex, setSliderIndex] = useState(0);
+  const sliderTimer = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Auto-advance slider every 3s
+  useEffect(() => {
+    sliderTimer.current = setInterval(() => {
+      setSliderIndex(i => (i + 1) % allPhotos.length);
+    }, 3000);
+    return () => { if (sliderTimer.current) clearInterval(sliderTimer.current); };
+  }, []);
+
+  const sliderPrev = () => {
+    if (sliderTimer.current) clearInterval(sliderTimer.current);
+    setSliderIndex(i => (i - 1 + allPhotos.length) % allPhotos.length);
+    sliderTimer.current = setInterval(() => setSliderIndex(i => (i + 1) % allPhotos.length), 3000);
+  };
+  const sliderNext = () => {
+    if (sliderTimer.current) clearInterval(sliderTimer.current);
+    setSliderIndex(i => (i + 1) % allPhotos.length);
+    sliderTimer.current = setInterval(() => setSliderIndex(i => (i + 1) % allPhotos.length), 3000);
+  };
 
   const visible = showAll ? allPhotos : allPhotos.slice(0, INITIAL_SHOW);
   const open = useCallback((i: number) => setLightboxIndex(i), []);
@@ -198,52 +233,119 @@ const ProjectsGallery = () => {
 
   return (
     <>
-      <section className="bg-white py-14 md:py-14">
+      <section className="bg-white py-8 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-12"
           >
-            <div className="inline-flex items-center gap-2 bg-[#004093]/8 border border-[#004093]/15 px-5 py-2 rounded-full mb-5">
+            <div className="inline-flex items-center gap-2 bg-[#004093]/8 border border-[#004093]/15 px-5 py-2 rounded-full mb-4">
               <Images size={15} className="text-[#004093]" />
               <span className="text-xs font-black uppercase tracking-[0.3em] text-[#004093]">Project Gallery</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#111827]">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-[#111827]">
               Real Installations,{" "} <br />
               <span className="text-[#FE9900]">Real Results</span>
             </h2>
-            <p className="mt-4 text-gray-900 text-base md:text-lg max-w-6xl mx-auto">
+            <p className="mt-3 text-gray-600 text-sm md:text-lg max-w-6xl mx-auto">
               Every photo is a genuine solar installation completed by our SAA-accredited team across Australia.
             </p>
-            <div className="flex items-center justify-center gap-3 mt-5">
-              <div className="h-px w-16 bg-[#FE9900]" />
-              <span className="text-sm font-bold text-gray-400"> Real Project Photos</span>
-              <div className="h-px w-16 bg-[#FE9900]" />
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <div className="h-px w-12 bg-[#FE9900]" />
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Real Project Photos</span>
+              <div className="h-px w-12 bg-[#FE9900]" />
             </div>
           </motion.div>
 
-          {/* Bento Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3 md:gap-4">
+          {/* ── MOBILE LAYOUT ── */}
+          <div className="md:hidden">
+
+            {/* Full-width Auto Slider */}
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-xl mb-5" style={{ aspectRatio: '16/10' }}>
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={sliderIndex}
+                  src={allPhotos[sliderIndex]}
+                  alt={`Slide ${sliderIndex + 1}`}
+                  initial={{ opacity: 0, x: 60 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -60 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onClick={() => open(sliderIndex)}
+                />
+              </AnimatePresence>
+
+              {/* Gradient bottom */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+
+              {/* Counter badge */}
+              <div className="absolute top-3 left-3 bg-black/55 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
+                {sliderIndex + 1} / {allPhotos.length}
+              </div>
+
+              {/* Tap to zoom */}
+              <div className="absolute top-3 right-3 bg-[#FE9900] rounded-full p-2 shadow-lg" onClick={() => open(sliderIndex)}>
+                <ZoomIn size={14} className="text-white" />
+              </div>
+
+              {/* Prev arrow */}
+              <button
+                onClick={sliderPrev}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white active:bg-[#FE9900] transition-colors z-10"
+              >
+                <ChevronLeft size={18} />
+              </button>
+
+              {/* Next arrow */}
+              <button
+                onClick={sliderNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white active:bg-[#FE9900] transition-colors z-10"
+              >
+                <ChevronRight size={18} />
+              </button>
+
+              {/* Dot indicators (show max 10 dots) */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {allPhotos.slice(0, 10).map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setSliderIndex(i)}
+                    className={`rounded-full transition-all duration-300 ${
+                      i === sliderIndex % 10
+                        ? 'bg-[#FE9900] w-5 h-2'
+                        : 'bg-white/50 w-2 h-2'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+
+          </div>
+
+          {/* ── DESKTOP BENTO GRID ── */}
+          <div className="hidden md:grid md:grid-cols-4 md:auto-rows-[200px] gap-4">
             {visible.map((photo, i) => (
               <GalleryItem key={photo} src={photo} index={i} globalIndex={i} onClick={open} />
             ))}
           </div>
 
-          {/* Load More */}
+          {/* Desktop Load More */}
           {allPhotos.length > INITIAL_SHOW && (
             <motion.div
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} className="flex justify-center mt-12"
+              viewport={{ once: true }} className="hidden md:flex justify-center mt-12"
             >
               <button
                 onClick={() => setShowAll(v => !v)}
-                className="group inline-flex items-center gap-3 bg-[#004093] hover:bg-[#FE9900] text-white font-black px-10 py-4 rounded-lg shadow-lg shadow-black/50 transition-all duration-300 hover:scale-105 "
+                className="group inline-flex items-center gap-3 bg-[#004093] hover:bg-[#FE9900] text-white font-black px-10 py-4 rounded-lg shadow-lg shadow-black/50 transition-all duration-300 hover:scale-105"
               >
                 <Images size={18} />
-                {showAll ? "Show Less" : `View All  Photos`}
+                {showAll ? 'Show Less' : 'View All Photos'}
               </button>
             </motion.div>
           )}

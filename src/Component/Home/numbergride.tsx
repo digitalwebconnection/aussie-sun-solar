@@ -13,7 +13,7 @@ const STATS = [
         label: 'Happy Customers',
     },
     {
-        value: 18,
+        value: 8,
         suffix: '+',
         label: 'Years Experience',
     },

@@ -1,8 +1,102 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, SunMedium } from "lucide-react";
+import { CheckCircle2, SunMedium, ChevronDown } from "lucide-react";
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 import zodiacCommercial from '../../assets/downloaded-images/zodiac-commercial-solar.png';
 import graceIndustrial from '../../assets/downloaded-images/grace-industrial-solar.webp';
+
+
+/* ── Mobile accordion card ─────────────────────────── */
+function ExpertiseCard({ item, index }: {
+  item: { title: string; image: string; description: string; points: string[]; color: string };
+  index: number;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.15 }}
+      className="group relative bg-white rounded-lg shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-300 hover:shadow-2xl transition-all duration-500 lg:hover:-translate-y-4 flex flex-col"
+    >
+      {/* Top Image */}
+      <div className="relative h-[220px] sm:h-[280px] lg:h-[320px] overflow-hidden">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
+        {/* Tag */}
+        <div className="absolute top-4 left-4 lg:top-6 lg:left-6 flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 text-white px-4 py-1.5 rounded-lg shadow-xl">
+          <SunMedium size={16} className="text-[#FE9900]" />
+          <span className="font-black text-xs uppercase tracking-wider">Tier 1 Solar</span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6 lg:p-10 flex flex-col flex-1">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-[#004093] leading-tight group-hover:text-[#FE9900] transition-all duration-300">
+          {item.title}
+        </h3>
+
+        {/* ── MOBILE: Read More accordion ── */}
+        <div className="lg:hidden mt-3">
+          <button
+            onClick={() => setOpen(o => !o)}
+            className="flex items-center gap-1.5 text-[#004093] text-xs font-black uppercase tracking-wider"
+          >
+            {open ? "Show Less" : "Read More"}
+            <ChevronDown
+              size={14}
+              className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-[600px] mt-4" : "max-h-0"}`}>
+            <p className="text-gray-500 leading-relaxed text-sm font-medium mb-5">
+              {item.description}
+            </p>
+            <div className="space-y-3 mb-5">
+              {item.points.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className={`w-7 h-7 rounded-lg bg-linear-to-r ${item.color} flex items-center justify-center text-white shadow shrink-0 mt-0.5`}>
+                    <CheckCircle2 size={15} />
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed font-bold">{point}</p>
+                </div>
+              ))}
+            </div>
+            <button className={`w-full py-3 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-sm shadow-lg`}>
+              Explore Solutions
+            </button>
+          </div>
+        </div>
+
+        {/* ── DESKTOP: always visible ── */}
+        <div className="hidden lg:flex flex-col flex-1">
+          <p className="text-gray-500 mt-6 leading-relaxed text-sm md:text-base font-medium">
+            {item.description}
+          </p>
+          <div className="space-y-5 mt-10 mb-12 flex-1">
+            {item.points.map((point, i) => (
+              <div key={i} className="flex items-center gap-4 group/item">
+                <div className={`w-8 h-8 rounded-lg bg-linear-to-r ${item.color} flex items-center justify-center text-white shadow-lg shrink-0 group-hover/item:scale-110 transition-transform duration-300`}>
+                  <CheckCircle2 size={18} />
+                </div>
+                <p className="text-gray-700 text-lg leading-relaxed font-bold">{point}</p>
+              </div>
+            ))}
+          </div>
+          <button className={`mt-auto w-full py-5 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-xl shadow-xl hover:shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300`}>
+            Explore Solutions
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function SolarExpertiseSection() {
   const locations = [
@@ -43,109 +137,37 @@ export default function SolarExpertiseSection() {
 
   return (
     <section id="solar-expertise" className="relative overflow-hidden bg-white py-8 lg:py-12" aria-label="Solar expertise and services">
-
-
-      <div className="container relative z-10 mx-auto px-6 lg:px-0">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-0">
 
         {/* Heading */}
-        <div className="max-w-7xl mx-auto text-center mb-14">
-
+        <div className="max-w-7xl mx-auto text-center mb-8 md:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-10 py-2 rounded-full bg-[#004093]/10 border border-[#004093]/20 mb-6"
+            className="inline-flex items-center gap-3 px-6 sm:px-10 py-2 rounded-full bg-[#004093]/10 border border-[#004093]/20 mb-5"
           >
-            <div className="w-2.5 h-2.5 rounded-full bg-[#FE9900] animate-pulse"></div>
-            <p className="text-[#004093] uppercase tracking-[0.25em] text-xs font-black">
-              Solar Expertise
-            </p>
+            <div className="w-2.5 h-2.5 rounded-full bg-[#FE9900] animate-pulse" />
+            <p className="text-[#004093] uppercase tracking-[0.25em] text-xs font-black">Solar Expertise</p>
           </motion.div>
 
-                <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2]">
-                           Complete Solar
-                        <span className="block bg-[#004093] bg-clip-text text-transparent py-2 pb-4">
-                               Energy Solutions
-                        </span>
-                    </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2]">
+            Complete Solar
+            <span className="block bg-[#004093] bg-clip-text text-transparent py-2 pb-3">Energy Solutions</span>
+          </h2>
 
-
-
-                    <p className="mx-auto mt-5 max-w-7xl text-base md:text-lg leading-loose text-slate-600">
-                       From residential rooftop systems to large-scale industrial projects,
+          <p className="mx-auto mt-4 max-w-7xl text-sm md:text-base lg:text-lg leading-loose text-slate-600">
+            From residential rooftop systems to large-scale industrial projects,
             we deliver high-performance solar solutions focused on savings,
             sustainability, and energy independence across Australia.
-                    </p>
+          </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
-
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8 lg:gap-10">
           {locations.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              className="group relative bg-white rounded-lg shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-300 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 flex flex-col"
-            >
-
-              {/* Top Image */}
-              <div className="relative h-[320px] overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent"></div>
-
-                {/* Tag */}
-                <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 text-white px-5 py-2 rounded-lg shadow-xl">
-                  <SunMedium size={18} className="text-[#FE9900]" />
-                  <span className="font-black text-sm uppercase tracking-wider">
-                    Tier 1 Solar
-                  </span>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-10 flex flex-col flex-1">
-
-                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] leading-tight group-hover:text-[#FE9900] transition-all duration-300">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-500 mt-6 leading-relaxed text-sm md:text-base font-medium">
-                  {item.description}
-                </p>
-
-                {/* Points */}
-                <div className="space-y-5 mt-10 mb-12 flex-1">
-                  {item.points.map((point, i) => (
-                    <div key={i} className="flex items-center gap-4 group/item">
-                      <div className={`w-8 h-8 rounded-lg bg-linear-to-r ${item.color} flex items-center justify-center text-white shadow-lg shrink-0 group-hover/item:scale-110 transition-transform duration-300`}>
-                        <CheckCircle2 size={18} />
-                      </div>
-                      <p className="text-gray-700 text-lg leading-relaxed font-bold">
-                        {point}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Button */}
-                <button
-                  className={`w-full py-5 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-xl shadow-xl hover:shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300`}
-                >
-                  Explore Solutions
-                </button>
-
-              </div>
-
-            </motion.div>
+            <ExpertiseCard key={index} item={item} index={index} />
           ))}
-
         </div>
       </div>
     </section>

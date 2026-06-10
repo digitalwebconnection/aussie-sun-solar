@@ -64,7 +64,7 @@ const ContactHero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-10 md:py-24">
 
       {/* Background Grid */}
       <div

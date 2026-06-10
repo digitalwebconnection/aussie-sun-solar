@@ -34,7 +34,7 @@ const services = [
 
 const ContactServices = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-14">
+    <section className="relative overflow-hidden bg-white py-10 md:py-14">
 
       {/* Background Glow */}
       <div className="absolute left-[-10%] top-0 h-80 w-80 rounded-full bg-[#004093]/10 blur-[120px]" />

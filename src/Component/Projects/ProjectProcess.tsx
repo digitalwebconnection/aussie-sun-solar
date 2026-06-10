@@ -50,7 +50,7 @@ const itemVariants = {
 
 const ProjectProcess: React.FC = () => {
   return (
-    <section className="py-10 bg-white relative overflow-hidden">
+    <section className="py-4 md:py-10 bg-white relative overflow-hidden">
       {/* Subtle background */}
       <div className="absolute right-0 top-0 w-1/2 h-full pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#004093_1px,transparent_1px)] bg-size-[30px_30px] opacity-[0.025]" />
@@ -107,12 +107,12 @@ const ProjectProcess: React.FC = () => {
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="relative z-10 group"
+                className="relative z-10  group"
               >
                 {/* Step number circle */}
                 <motion.div
                   whileHover={{ y: -10, scale: 1.05 }}
-                  className="relative w-20 h-20 rounded-3xl bg-white border-2 border-[#004093]/10 group-hover:border-[#FE9900] shadow-lg group-hover:shadow-[#FE9900]/20 transition-all duration-500 flex items-center justify-center mx-auto mb-8 group-hover:bg-[#004093]"
+                  className="relative w-20 h-20 rounded-lg  bg-white border-2 border-[#004093]/40 group-hover:border-[#FE9900] shadow-lg group-hover:shadow-[#FE9900]/20 transition-all duration-500 flex items-center justify-center mx-auto mb-8 group-hover:bg-[#004093]"
                 >
                   <motion.span
                     whileHover={{ rotate: [0, -10, 10, 0] }}

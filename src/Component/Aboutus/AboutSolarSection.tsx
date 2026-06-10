@@ -24,7 +24,7 @@ export default function PremiumSolarAbout() {
             <div className="relative flex justify-center">
 
               {/* Decorative Shape */}
-              <div className="absolute top-0 left-10 w-[440px] h-[530px] rounded-lg border-2 border-[#004093]/80 rotate-10"></div>
+              <div className="absolute top-0 left-2 md:left-10 w-80 h-80 md:w-[440px] md:h-[530px] rounded-lg border-2 border-[#004093]/80 rotate-12 md:rotate-10"></div>
 
               {/* Main Image Card */}
               <div className="relative group">

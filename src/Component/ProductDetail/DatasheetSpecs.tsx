@@ -1,9 +1,49 @@
-import React from "react";
-import { FileText, Download, Check } from "lucide-react";
+import React, { useState } from "react";
+import { FileText, Download, Check, ChevronDown } from "lucide-react";
 import type { ProductData } from "../../data/products";
 
 interface DatasheetSpecsProps {
   product: ProductData;
+}
+
+/* ── Mobile accordion item ─────────────────────────── */
+function MobileModelAccordion({ model }: { model: { name: string; watts: string; efficiency: string; type: string } }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      {/* Title row — always visible, tap to toggle */}
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="w-full flex items-center justify-between px-4 py-3.5 bg-white hover:bg-[#004093]/5 transition-colors text-left"
+      >
+        <span className="text-sm font-black text-[#004093]">{model.name}</span>
+        <ChevronDown
+          size={16}
+          className={`text-[#004093] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {/* Collapsible details */}
+      <div
+        className={`overflow-hidden transition-all duration-300 ${open ? "max-h-60" : "max-h-0"}`}
+      >
+        <div className="divide-y divide-slate-100 bg-slate-50/60">
+          <div className="flex justify-between items-center px-4 py-2.5">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Power Output</span>
+            <span className="text-sm font-semibold text-slate-700">{model.watts}</span>
+          </div>
+          <div className="flex justify-between items-center px-4 py-2.5">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Efficiency</span>
+            <span className="text-sm font-bold text-green-600">{model.efficiency}</span>
+          </div>
+          <div className="flex justify-between items-center px-4 py-2.5">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Type</span>
+            <span className="text-sm font-semibold text-slate-500">{model.type}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
@@ -130,10 +170,19 @@ export const DatasheetSpecs: React.FC<DatasheetSpecsProps> = ({ product }) => {
         <h4 className="text-sm font-bold text-[#004093] uppercase tracking-wider mb-4">
           Available Product Models
         </h4>
-        <div className="overflow-x-auto border border-slate-100 rounded-lg shadow-sm">
+
+        {/* ── MOBILE: accordion (FAQ style) ── */}
+        <div className="flex flex-col divide-y divide-slate-200 border border-slate-200 rounded-xl overflow-hidden md:hidden">
+          {modelsList.map((model, idx) => (
+            <MobileModelAccordion key={idx} model={model} />
+          ))}
+        </div>
+
+        {/* ── DESKTOP: full table ── */}
+        <div className="hidden md:block overflow-x-auto border border-slate-100 rounded-lg shadow-sm">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-slate-2000 border-b border-slate-300">
+              <tr className="bg-slate-50 border-b border-slate-300">
                 <th className="p-4 text-xs font-black text-[#004093] uppercase tracking-wider">Model Name</th>
                 <th className="p-4 text-xs font-black text-[#004093] uppercase tracking-wider">Power Output / Capacity</th>
                 <th className="p-4 text-xs font-black text-[#004093] uppercase tracking-wider">Efficiency Rating</th>

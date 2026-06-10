@@ -16,9 +16,6 @@ const ProjectsPage = () => {
       {/* 2. Floating dark stats band */}
       <ProjectStats />
 
-      {/* 3. Filterable projects grid */}
-      {/* <ProjectsGrid /> */}
-
       {/* 4. Real project photo gallery */}
       <ProjectsGallery />
 

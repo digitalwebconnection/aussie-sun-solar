@@ -11,7 +11,8 @@ import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
+  // FaLinkedinIn,    
+  FaYoutube,
 } from "react-icons/fa";
 
 import logo from "../assets/logo.png";
@@ -160,7 +161,7 @@ const Footer = () => {
                 className="flex items-center gap-4 group"
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#004093] flex items-center justify-center group-hover:bg-[#FE9900] transition-colors shadow-lg shadow-blue-900/10">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                 </div>
 
                 <div className="min-w-0">
@@ -294,40 +295,26 @@ const Footer = () => {
 
             <div className="flex items-center gap-4">
               {[
-                { Icon: FaFacebookF, label: "Follow us on Facebook" },
-                { Icon: FaInstagram, label: "Follow us on Instagram" },
-                { Icon: FaLinkedinIn, label: "Connect with us on LinkedIn" },
-              ].map(({ Icon, label }, i) => (
+
+                { Icon: FaInstagram, href: "https://www.instagram.com/aussiesun_solar/", label: "Follow us on Instagram" },
+                { Icon: FaFacebookF, href: "https://www.facebook.com/people/Aussie-Sun-Solar/61590361358977/", label: "Follow us on Facebook" },
+                // { Icon: FaLinkedinIn, href: "#", label: "Connect with us on LinkedIn" },
+                { Icon: FaYoutube, href: "https://www.youtube.com/@AussieSunSolar", label: "Watch us on YouTube" },
+              ].map(({ Icon, href, label }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target={href === "#" ? undefined : "_blank"}
+                  rel={href === "#" ? undefined : "noopener noreferrer"}
                   aria-label={label}
                   className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-300 flex items-center justify-center text-[#004093] hover:bg-[#FE9900] hover:text-white hover:border-[#FE9900] transition-all duration-300"
                 >
                   <Icon size={18} />
                 </a>
               ))}
-
-              {/* YOUTUBE */}
-
-              <a
-                href="#"
-                aria-label="Watch us on YouTube"
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gray-300 flex items-center justify-center text-[#004093] hover:bg-[#FE9900] hover:text-white hover:border-[#FE9900] transition-all duration-300"
-              >
-                ▶
-              </a>
             </div>
           </div>
 
-          {/* RIGHT */}
-
-          <div className="text-center lg:text-right">
-            <p className="text-[#004093] font-semibold text-sm md:text-base">
-              QLD : 83780 / VIC : 27677 / SA :
-              BLD286542 / NSW : 322855c
-            </p>
-          </div>
         </div>
       </div>
 

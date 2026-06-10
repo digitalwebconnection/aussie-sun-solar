@@ -21,13 +21,13 @@ const SolarSmarterLiving = () => {
   ];
 
   return (
-    <section id="solarpower-smarter-living" aria-label="SolarPower Smart Living Features" className="relative overflow-hidden bg-white py-24">
+    <section id="solarpower-smarter-living" aria-label="SolarPower Smart Living Features" className="relative overflow-hidden bg-white py-10 md:py-24">
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#004093]/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           
           {/* Left Image */}
           <motion.div
@@ -42,7 +42,7 @@ const SolarSmarterLiving = () => {
               <img
                 src={sigenergySmarter}
                 alt="Residential sustainable home with solar energy system"
-                className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-[260px] sm:h-[380px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-700"
               />
 
               {/* Overlay Gradient */}
@@ -54,19 +54,19 @@ const SolarSmarterLiving = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
-                className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-6 rounded-lg shadow-xl max-w-xs"
+                className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 bg-white/95 backdrop-blur-md p-3 sm:p-6 rounded-lg shadow-xl max-w-[180px] sm:max-w-xs"
               >
-                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#FE9900] leading-none">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold text-[#FE9900] leading-none">
                   10+
                 </h3>
-                <p className="text-[#004093] font-bold mt-2">
+                <p className="text-[#004093] font-bold mt-1 sm:mt-2 text-xs sm:text-sm">
                   Years Delivering Reliable Solar Energy Solutions Across Australia
                 </p>
               </motion.div>
             </div>
 
-            {/* Decorative Border */}
-            <div className="absolute -top-7 -right-7 w-full h-full border-4 border-dashed border-[#FE9900]/80 rounded-lg -z-10" />
+            {/* Decorative Border — hidden on mobile to avoid overflow */}
+            <div className="hidden sm:block absolute -top-7 -right-7 w-full h-full border-4 border-dashed border-[#FE9900]/80 rounded-lg -z-10" />
           </motion.div>
 
           {/* Right Content */}

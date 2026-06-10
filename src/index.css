@@ -4,3 +4,9 @@ html,
 body {
   overflow-x: hidden;
 }
+
+/* Global justified text for all paragraphs */
+p {
+  text-align: justify;
+  hyphens: auto;
+}

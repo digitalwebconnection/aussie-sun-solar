@@ -21,9 +21,9 @@ import BatterySlider from './BatterySlider'
 const HomeMain = () => {
   return (
     <>
-      <SEO 
-        title="Aussie Sun Solar | Premium Solar & Battery Storage Systems" 
-        description="Experience reliable, clean, and cheap solar energy with Aussie Sun Solar. Premium Tier-1 solar panels, batteries, EV chargers, and commercial solar installations across Australia." 
+      <SEO
+        title="Aussie Sun Solar | Premium Solar & Battery Storage Systems"
+        description="Experience reliable, clean, and cheap solar energy with Aussie Sun Solar. Premium Tier-1 solar panels, batteries, EV chargers, and commercial solar installations across Australia."
         keywords="solar panels, solar battery storage, commercial solar, EV chargers, Aussie Sun Solar, Australia solar, solar installation, clean energy, renewable energy"
       />
       <HeroSection />
@@ -31,9 +31,9 @@ const HomeMain = () => {
       <AboutSection />
       <ServicesSection />
       <SolarPackages />
-      <RecentInstallationsSlider /> 
+      <RecentInstallationsSlider />
       <SolarLeadSection />
-       <SolarSavingsCalculator/>
+      <SolarSavingsCalculator />
       <SolarRebateSection />
       <StatsSection />
       <WellnessExpertsSection />
@@ -42,7 +42,7 @@ const HomeMain = () => {
       <SolarSupportSection />
       <TestimonialsSection />
       <TrustedBrandsSection />
-       <AussiesSunSolarFinance />
+      <AussiesSunSolarFinance />
       <BatterySlider />
     </>
   )

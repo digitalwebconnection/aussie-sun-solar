@@ -92,9 +92,6 @@ export default function WellnessExpertsSection() {
                         className="mx-auto mb-10 max-w-7xl text-center"
                     >
 
-                        <p className="mb-4 text-[11px] font-black uppercase tracking-[0.85em] text-[#d4af37]">
-                            Trusted Wellness Professionals
-                        </p>
 
                         <h2 className="text-3xl md:text-6xl font-serif font-bold leading-[0.92] tracking-[-4px] text-[#111]">
                             Natural Wellness
@@ -224,7 +221,7 @@ export default function WellnessExpertsSection() {
                                     transition={{
                                         duration: 0.8,
                                     }}
-                                    className="h-[650px] w-full shadow shadow-black rounded-lg object-cover"
+                                    className="h-[280px] sm:h-[420px] md:h-[650px] w-full shadow shadow-black rounded-lg object-cover"
                                 />
 
                                 {/* OVERLAY */}
@@ -244,14 +241,13 @@ export default function WellnessExpertsSection() {
                                     transition={{
                                         duration: 0.5,
                                     }}
-                                    className="absolute bottom-8 left-8 right-8 rounded-lg border border-white/20 bg-white/85 p-6 shadow-2xl backdrop-blur-2xl"
+                                    className="absolute bottom-3 left-3 right-3 sm:bottom-8 sm:left-8 sm:right-8 rounded-lg border border-white/20 bg-white/85 p-3 sm:p-6 shadow-2xl backdrop-blur-2xl"
                                 >
 
                                     <div className="mb-4 flex items-center gap-3">
 
-                                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#302c2c]">
-
-                                            <Zap className="h-6 w-6 text-[#d4af37]" />
+                                        <div className="flex h-9 w-9 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-[#302c2c] shrink-0">
+                                            <Zap className="h-4 w-4 sm:h-6 sm:w-6 text-[#d4af37]" />
                                         </div>
 
                                         <div>
@@ -259,13 +255,13 @@ export default function WellnessExpertsSection() {
                                                 Active Program
                                             </p>
 
-                                            <h3 className="text-2xl font-black tracking-[-1px] text-[#111]">
+                                            <h3 className="text-base sm:text-xl md:text-2xl font-black tracking-[-0.5px] sm:tracking-[-1px] text-[#111]">
                                                 {FEATURES[activeIndex].title}
                                             </h3>
                                         </div>
                                     </div>
 
-                                    <p className="max-w-sm text-[15px] leading-[1.8] text-[#181818]">
+                                    <p className="hidden sm:block max-w-sm text-[13px] sm:text-[15px] leading-[1.8] text-[#181818]">
                                         {FEATURES[activeIndex].description}
                                     </p>
                                 </motion.div>
