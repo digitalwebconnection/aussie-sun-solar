@@ -16,7 +16,7 @@ import aerialSolarHouse from '../../assets/downloaded-images/aerial-solar-house.
 
 const AboutSection = () => {
   return (
-    <section className="relative py-12 md:py-24 bg-white overflow-hidden" aria-label="About Aussie Sun Solar">
+    <section className="relative py-12 md:py-10 bg-white overflow-hidden" aria-label="About Aussie Sun Solar">
       {/* SUBTLE BACKGROUND TEXTURE */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">

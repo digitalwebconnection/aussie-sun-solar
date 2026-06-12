@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Lenis from "lenis"
 import { HelmetProvider } from 'react-helmet-async'
 import SolarNavbar from './Component/Navbar'
 import Footer from './Component/Footer'
@@ -10,7 +12,6 @@ import ContactPage from './pages/ContactPage'
 import './App.css'
 // import WhatsAppChatWidget from './Component/WhatsAppChatWidget'
 import Preloader from './Component/Home/Preloader'
-import SmoothScroll from './Component/SmoothScroll'
 import ScrollToTop from './Component/ScrollToTop'
 import AboutMain from './Component/Aboutus/AboutMain'
 import ProjectsCTA from './Component/Projects/ProjectsCTA'
@@ -20,15 +21,45 @@ import EVChargersPage from './pages/EVChargersPage'
 import CommercialSolarPage from './pages/CommercialSolarPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage'
+import ComplaintsHandlingPolicyPage from './pages/ComplaintsHandlingPolicyPage'
+import CookiesPolicyPage from './pages/CookiesPolicyPage'
 import { ToastProvider } from './Component/ui/Toast'
 import CookieBanner from './Component/CookieBanner'
+import GlobalPopupForm from './Component/GlobalPopupForm'
+import { PopupProvider } from './context/PopupContext'
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.04,            // Lower = silkier glide (0.05–0.1 range)
+      smoothWheel: true,
+      wheelMultiplier: 1.0,  // Slightly faster wheel to compensate for lower lerp
+      touchMultiplier: 1.5,  // Snappy on mobile touch
+      infinite: false,
+    });
+    
+    // @ts-ignore
+    window.lenis = lenis;
+
+    let raf: number;
+    const loop = (time: number) => {
+      lenis.raf(time);
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <HelmetProvider>
         <ToastProvider>
-          <SmoothScroll />
+          <PopupProvider>
           <ScrollToTop />
           <Preloader />
           {/* Fixed Navbar — sits above all pages */}
@@ -51,14 +82,19 @@ function App() {
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
+              <Route path="/complaints-handling-policy" element={<ComplaintsHandlingPolicyPage />} />
+              <Route path="/cookie-policy" element={<CookiesPolicyPage />} />
             </Routes>
           </main>
           {/* <WhatsAppChatWidget/> */}
           <ProjectsCTA />
+          <GlobalPopupForm />
           {/* Cookie Consent Banner */}
           <CookieBanner />
           {/* Footer — shown on every page */}
           <Footer />
+          </PopupProvider>
         </ToastProvider>
       </HelmetProvider>
     </BrowserRouter>

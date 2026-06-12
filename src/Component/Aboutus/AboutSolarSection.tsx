@@ -1,6 +1,10 @@
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+import { usePopup } from "../../context/PopupContext";
+import { Link } from "react-router-dom";
 
 export default function PremiumSolarAbout() {
+  const { openPopup } = usePopup();
+
   return (
 
     <>
@@ -101,7 +105,7 @@ export default function PremiumSolarAbout() {
               {/* CTA */}
               <div className="flex  gap-5 mt-14">
 
-                <button className="group relative overflow-hidden w-full sm:w-auto bg-[#004093] hover:bg-[#00306e] text-white px-10 py-2 rounded-2xl text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105">
+                <button onClick={openPopup} className="group relative overflow-hidden w-full sm:w-auto bg-[#004093] hover:bg-[#00306e] text-white px-10 py-2 rounded-2xl text-lg font-bold shadow-2xl transition-all duration-300 hover:scale-105">
 
                   <span className="relative z-10">
                     Get Free Solar Quote
@@ -109,9 +113,9 @@ export default function PremiumSolarAbout() {
 
                 </button>
 
-                <button className="w-full sm:w-auto px-10 py-2 rounded-2xl border border-gray-300 hover:border-[#004093] text-black hover:text-[#004093] text-lg font-semibold transition-all duration-300">
+                <Link to="/services" className="flex items-center justify-center w-full sm:w-auto px-10 py-2 rounded-2xl border border-gray-300 hover:border-[#004093] text-black hover:text-[#004093] text-lg font-semibold transition-all duration-300">
                   Explore Solar Solutions
-                </button>
+                </Link>
 
               </div>
 

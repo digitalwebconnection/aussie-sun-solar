@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle2, SunMedium, ChevronDown } from "lucide-react";
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
@@ -68,9 +69,9 @@ function ExpertiseCard({ item, index }: {
                 </div>
               ))}
             </div>
-            <button className={`w-full py-3 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-sm shadow-lg`}>
+            <Link to="/services" className={`block text-center w-full py-3 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-sm shadow-lg`}>
               Explore Solutions
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -89,9 +90,9 @@ function ExpertiseCard({ item, index }: {
               </div>
             ))}
           </div>
-          <button className={`mt-auto w-full py-5 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-xl shadow-xl hover:shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300`}>
+          <Link to="/services" className={`block text-center mt-auto w-full py-5 rounded-lg bg-linear-to-r ${item.color} text-white font-black text-xl shadow-xl hover:shadow-[0_15px_30px_-5px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-300`}>
             Explore Solutions
-          </button>
+          </Link>
         </div>
       </div>
     </motion.div>

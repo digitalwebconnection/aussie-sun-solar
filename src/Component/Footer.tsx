@@ -7,6 +7,7 @@ import {
   Code,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { usePopup } from "../context/PopupContext";
 
 import {
   FaFacebookF,
@@ -54,6 +55,8 @@ const itemVariants: Variants = {
 };
 
 const Footer = () => {
+  const { openPopup } = usePopup();
+
   return (
     <footer className="relative bg-white text-[#004093] overflow-hidden border-t border-gray-100">
       {/* ====================================
@@ -91,8 +94,8 @@ const Footer = () => {
 
           {/* BUTTON */}
 
-          <Link
-            to="/contact"
+          <button
+            onClick={openPopup}
             className="flex items-center justify-center gap-3 bg-[#FE9900] text-white px-6 sm:px-8 py-3 rounded-lg font-bold text-base sm:text-lg shadow-xl shadow-[#FE9900]/20 transition-all group w-full sm:w-auto hover:bg-[#e68900] hover:scale-105"
           >
             Get A Free Quote
@@ -100,7 +103,7 @@ const Footer = () => {
               size={20}
               className="group-hover:rotate-45 transition-transform"
             />
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -216,10 +219,12 @@ const Footer = () => {
               {[
                 {
                   state: "New South Wales",
-                  addr: "114 burns road, kellyville nsw 2155",
+                  addr: "114 Burns Road, Kellyville NSW 2155",
                 },
-
-
+                {
+                  state: "Queensland",
+                  addr: "17 Western Avenue, Chermside, QLD 4032",
+                },
               ].map((loc, i) => (
                 <div
                   key={i}
@@ -256,8 +261,8 @@ const Footer = () => {
             <ul className="space-y-4">
               {[
                 { label: "Home", to: "/" },
+                   { label: "About Us", to: "/about" },
                 { label: "Products", to: "/products" },
-                { label: "About Us", to: "/about" },
                 { label: "Our Projects", to: "/projects" },
                 { label: "Contact Us", to: "/contact" },
               ].map((link, i) => (
@@ -334,19 +339,26 @@ const Footer = () => {
               Privacy Policy
             </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/cookie-policy"
+              className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
+            >
+              Cookie Policy
+            </Link>
+
+            <Link
+              to="/terms-and-conditions"
               className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
             >
               Terms &amp; Conditions
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="/complaints-handling-policy"
               className="text-gray-600 hover:text-[#FE9900] transition-all font-medium"
             >
               Complaints Handling Policy
-            </a>
+            </Link>
           </div>
 
           {/* COPYRIGHT */}

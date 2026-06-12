@@ -6,6 +6,7 @@ import {
   SunMedium,
   Zap,
 } from "lucide-react";
+import { usePopup } from "../../context/PopupContext";
 
 const rebatePoints = [
   "Government rebates available for new battery systems",
@@ -15,6 +16,8 @@ const rebatePoints = [
 ];
 
 const SolarBatterySection = () => {
+  const { openPopup } = usePopup();
+
   return (
     <section className="relative md:py-24 py-10 bg-white overflow-hidden" aria-label="Solar battery rebates and savings">
 
@@ -93,7 +96,7 @@ const SolarBatterySection = () => {
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 mt-8">
 
-              <button className="group w-full sm:w-auto px-10 py-3 rounded-2xl bg-[#004093] text-white font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-3 hover:bg-[#FE9900] transition-all duration-300 shadow-xl">
+              <button onClick={openPopup} className="group w-full sm:w-auto px-10 py-3 rounded-2xl bg-[#004093] text-white font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-3 hover:bg-[#FE9900] transition-all duration-300 shadow-xl">
                 Get Free Quote
 
                 <ArrowRight
@@ -102,9 +105,7 @@ const SolarBatterySection = () => {
                 />
               </button>
 
-              <button className="w-full sm:w-auto px-10 py-3 rounded-2xl border border-slate-200 text-[#004093] font-bold uppercase tracking-wider text-sm hover:border-[#004093] transition-all">
-                Learn More
-              </button>
+             
             </div>
           </div>
 
@@ -181,7 +182,7 @@ const SolarBatterySection = () => {
                   </h4>
                 </div>
 
-                <button className="w-14 h-14 rounded-2xl bg-white text-[#004093] flex items-center justify-center hover:scale-110 transition-all duration-300">
+                <button onClick={openPopup} className="w-14 h-14 rounded-2xl bg-white text-[#004093] flex items-center justify-center hover:scale-110 transition-all duration-300">
                   <ArrowRight size={22} />
                 </button>
               </div>

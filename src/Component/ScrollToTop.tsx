@@ -14,18 +14,19 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Small timeout lets React finish painting the new route first,
-    // then we instantly jump to the top before Lenis takes over.
-    const timer = setTimeout(() => {
-      // Native scroll reset (fallback + Lenis sync)
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    // 1. Force native scroll to top immediately
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 
-      // Also reset document element in case of any stale scroll state
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }, 0);
-
-    return () => clearTimeout(timer);
+    // 2. Tell Lenis to reset its internal scroll position
+    // @ts-ignore
+    if (window.lenis) {
+      requestAnimationFrame(() => {
+        // @ts-ignore
+        window.lenis.scrollTo(0, { immediate: true });
+      });
+    }
   }, [pathname]);
 
   return null;

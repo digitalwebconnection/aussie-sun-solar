@@ -1,9 +1,11 @@
 
 import { motion } from "framer-motion";
 import { Phone, ChevronRight } from "lucide-react";
+import { usePopup } from "../../context/PopupContext";
 import contactBannerPerson from '../../assets/downloaded-images/contact-banner-person.jpg';
 
 const ContactBanner = () => {
+  const { openPopup } = usePopup();
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -27,7 +29,7 @@ const ContactBanner = () => {
               </p>
               
               <div className="mt-12 flex flex-wrap gap-6 items-center">
-                <button className="flex items-center gap-3 bg-white text-[#004093] px-8 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-[#FE9900] hover:text-white transition-all">
+                <button onClick={openPopup} className="flex items-center gap-3 bg-white text-[#004093] px-8 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-[#FE9900] hover:text-white transition-all">
                   Book a Consultation
                   <ChevronRight size={20} />
                 </button>

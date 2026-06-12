@@ -8,7 +8,8 @@ import {
     Car,
     ShieldCheck,
 } from "lucide-react";
-import { motion } from "framer-motion";
+
+import { usePopup } from "../../context/PopupContext";
 
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 import energyStorage from '../../assets/downloaded-images/energy-storage.webp';
@@ -73,6 +74,7 @@ const services = [
 ];
 
 const ServicesSection = () => {
+    const { openPopup } = usePopup();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     /* =========================================
@@ -278,6 +280,7 @@ const ServicesSection = () => {
                                             {/* BUTTON */}
 
                                             <button
+                                                onClick={openPopup}
                                                 className="
                   mt-5
                   sm:mt-7
@@ -328,17 +331,7 @@ const ServicesSection = () => {
                         })}
                     </div>
                 </div>
-                <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(254 153 0 / 0.2)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex mt-6 md:mt-15 items-center gap-3 bg-[#FE9900] hover:bg-[#004093] text-white px-15 py-3 rounded-lg font-bold text-lg shadow-xl shadow-[#FE9900]/20 transition-all group"
-                >
-                    How we can help you
-                    <ArrowRight
-                        size={30}
-                        className="transition-transform duration-300 group-hover:translate-x-10"
-                    />
-                </motion.button>
+            
 
 
 

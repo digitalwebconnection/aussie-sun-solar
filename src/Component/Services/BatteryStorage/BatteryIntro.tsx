@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const BatteryIntro = () => {
   return (
@@ -50,12 +49,7 @@ const BatteryIntro = () => {
             ))}
           </div>
 
-          <motion.div initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} viewport={{ once: true }} className="mt-14">
-            <button className="group inline-flex items-center gap-4 rounded-full bg-[#FE9900] px-10 py-2 text-lg font-black uppercase tracking-[0.15em] text-white shadow-[0_20px_50px_rgba(254,153,0,0.85)] transition-all duration-300 hover:scale-105 hover:bg-[#ffb033]">
-              Explore Battery Systems
-              <ArrowRight size={22} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
-          </motion.div>
+         
         </motion.div>
       </div>
     </section>

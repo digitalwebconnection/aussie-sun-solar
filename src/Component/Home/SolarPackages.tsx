@@ -8,6 +8,7 @@ import {
   Cpu,
   Globe,
 } from "lucide-react";
+import { usePopup } from "../../context/PopupContext";
 
 const packages = [
   {
@@ -46,6 +47,7 @@ const packages = [
 ];
 
 const PremiumSolarPackages = () => {
+  const { openPopup } = usePopup();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
@@ -162,6 +164,7 @@ const PremiumSolarPackages = () => {
 
                 {/* Button */}
                 <motion.button
+                  onClick={openPopup}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`relative w-full py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] overflow-hidden transition-all duration-300 ${pkg.popular

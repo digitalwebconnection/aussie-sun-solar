@@ -7,8 +7,10 @@ import {
     Leaf,
     ArrowRight,
 } from "lucide-react";
+import { usePopup } from "../../context/PopupContext";
 
 export default function PremiumSolarCalculator() {
+    const { openPopup } = usePopup();
     const [bill, setBill] = useState(250);
     const [systemSize, setSystemSize] = useState(6.6);
 
@@ -123,7 +125,7 @@ export default function PremiumSolarCalculator() {
                         </div>
 
                         {/* CTA */}
-                        <button className="group w-full bg-[#FE9900] hover:bg-orange-500 transition-all duration-300 py-5 rounded-3xl text-[#004093] text-lg font-black flex items-center justify-center gap-3 shadow-2xl">
+                        <button onClick={openPopup} className="group w-full bg-[#FE9900] hover:bg-orange-500 transition-all duration-300 py-5 rounded-3xl text-[#004093] text-lg font-black flex items-center justify-center gap-3 shadow-2xl">
                             Get Free Solar Quote
 
                             <ArrowRight

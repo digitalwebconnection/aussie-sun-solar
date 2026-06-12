@@ -46,13 +46,13 @@ const ProjectsCTA: React.FC = () => {
                 <span className="text-white font-bold text-xs sm:text-sm tracking-widest uppercase">Free Consultation</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-3 md:mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white leading-tight mb-3 md:mb-8">
                 Ready to Join the
                 <div className="mt-2 h-[1.2em]">
                   <FlipFadeText
                     words={["Solar Revolution?", "Energy Future?", "Clean Economy?", "Green Movement?"]}
                     className="justify-start min-h-0"
-                    textClassName="text-2xl sm:text-3xl md:text-5xl text-[#FE9900] drop-shadow-[0_0_20px_rgba(254,153,0,0.3)]"
+                    textClassName="text-2xl sm:text-3xl md:text-4xl text-[#FE9900] drop-shadow-[0_0_20px_rgba(254,153,0,0.3)]"
                     interval={3000}
                   />
                 </div>

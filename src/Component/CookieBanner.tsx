@@ -2,28 +2,37 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cookie, X, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { usePopup } from "../context/PopupContext";
 
-const STORAGE_KEY = "aussie_cookie_consent";
+const STORAGE_KEY = "aussie_cookie_consent_v2";
 
 const CookieBanner = () => {
   const [visible, setVisible] = useState(false);
+  const { isOpen } = usePopup();
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (!stored) {
-      // Slight delay so it doesn't flash on initial load
-      const timer = setTimeout(() => setVisible(true), 1500);
+    
+    // If user already made a choice, do nothing
+    if (stored) return;
+
+    if (!isOpen) {
+      // Show the banner 3 seconds after opening the website (or closing the popup)
+      const timer = setTimeout(() => setVisible(true), 3000);
       return () => clearTimeout(timer);
+    } else {
+      // Hide the banner if the popup is open
+      setVisible(false);
     }
-  }, []);
+  }, [isOpen]);
 
   const accept = () => {
     localStorage.setItem(STORAGE_KEY, "accepted");
     setVisible(false);
   };
 
-  const decline = () => {
-    localStorage.setItem(STORAGE_KEY, "declined");
+  const reject = () => {
+    localStorage.setItem(STORAGE_KEY, "rejected");
     setVisible(false);
   };
 
@@ -36,7 +45,7 @@ const CookieBanner = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 backdrop-blur-[2px] z-9990 pointer-events-none md:hidden"
+            className="fixed inset-0 bg-black/20 backdrop-blur-[2px] z-9999 pointer-events-none md:hidden"
           />
 
           {/* Banner */}
@@ -87,22 +96,22 @@ const CookieBanner = () => {
                 {/* Buttons */}
                 <div className="flex items-center gap-3 shrink-0 w-full md:w-auto">
                   <button
-                    onClick={decline}
+                    onClick={reject}
                     className="flex-1 md:flex-none px-5 py-2.5 rounded-xl border border-gray-300 text-gray-600 font-bold text-sm hover:bg-gray-50 transition-all duration-200"
                   >
-                    Decline
+                    Reject
                   </button>
                   <button
                     onClick={accept}
                     className="flex-1 md:flex-none px-6 py-2.5 rounded-xl bg-[#004093] hover:bg-[#003070] text-white font-black text-sm transition-all duration-200 shadow-lg shadow-[#004093]/20 hover:scale-[1.02]"
                   >
-                    Accept All
+                    Accept
                   </button>
                 </div>
 
                 {/* Close */}
                 <button
-                  onClick={decline}
+                  onClick={reject}
                   aria-label="Close cookie banner"
                   className="absolute top-3 right-3 w-7 h-7 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 transition-colors"
                 >
