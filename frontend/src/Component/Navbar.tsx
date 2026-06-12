@@ -316,6 +316,17 @@ const SolarNavbar = () => {
                 Our Projects
               </Link>
 
+              {/* Blog */}
+              <Link
+                to="/blog"
+                className={`transition duration-300 ${isActive("/blog")
+                    ? "text-[#FE9900]"
+                    : "text-[#004093] hover:text-[#FE9900]"
+                  }`}
+              >
+                Blog
+              </Link>
+
               {/* Contact Us */}
               <Link
                 to="/contact"
@@ -514,6 +525,9 @@ const SolarNavbar = () => {
 
                 {/* Our Projects */}
                 <MobileLink to="/projects" label="Our Projects" active={isActive("/projects")} />
+
+                {/* Blog */}
+                <MobileLink to="/blog" label="Blog" active={isActive("/blog")} />
 
                 {/* Contact Us */}
                 <MobileLink to="/contact" label="Contact Us" active={isActive("/contact")} />
