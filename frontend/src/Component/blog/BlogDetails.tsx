@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import LeadPopup from "../../component/LeadPopup";
+import LeadPopup from "../../Component/LeadPopup";
 import { useState, useEffect, useRef } from "react";
 import { Clock, Calendar, ArrowLeft, Loader2, AlertCircle, RefreshCw } from "lucide-react";
 import { Helmet } from "react-helmet";
