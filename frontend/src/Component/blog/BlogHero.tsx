@@ -1,95 +1,103 @@
-import {
-    SunMedium,
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, BookOpen, SunMedium} from "lucide-react";
 import BlogPage from "./BlogPage";
 import heroImg from "../../assets/blog-img2.webp";
-import heroImgMobile from "../../assets/blog-img3.webp";
 
 export default function SolarBlogPage() {
-
     return (
         <>
             {/* ===== BLOG HERO / INTRO ===== */}
-            <section className="relative overflow-hidden text-slate-50 px-6 py-8 md:px-10 md:py-32">
-                {/* Background image */}
-                <div className="absolute inset-0">
-                    {/* Mobile Image */}
-                    <img
-                        src={heroImgMobile}
-                        alt="Solar panels mobile"
-                        className="h-full w-full object-cover md:hidden"
-                    />
-                    {/* Desktop Image */}
-                    <img
-                        src={heroImg}
-                        alt="Solar panels desktop"
-                        className="hidden md:block h-full w-full object-cover"
-                    />
-                    {/* Dark gradient overlay */}
-                    <div className="absolute inset-0 bg-black/40" />
-                </div>
+            <section className="relative bg-[#f8fbff] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+                {/* Decorative background shapes */}
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-[#004093]/5 rounded-bl-[100px] -z-10" />
+                <div className="absolute -left-20 top-20 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-[80px] -z-10" />
 
-                {/* Subtle corner glow */}
-                <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#FC763A]/15 blur-3xl" />
-                <div className="pointer-events-none absolute -left-16 bottom-0 h-40 w-40 rounded-full bg-sky-500/10 blur-3xl" />
+                <div className="max-w-7xl mx-auto px-4 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                        
+                        {/* Left Content */}
+                        <div className="space-y-8">
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#e8f0fe] border border-[#004093]/10">
+                                <SunMedium className="h-4 w-4 text-[#FE9900]" />
+                                <span className="text-sm font-bold text-[#004093] uppercase tracking-wider">
+                                    Aussie Sun Solar Knowledge Base
+                                </span>
+                            </div>
 
-                {/* Content */}
-                <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between py-18 md:py-0">
-                    <div className="space-y-4 max-w-xl">
-                        <div className="text-[#FC763A] inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/70 px-3 py-1 text-[11px] font-medium tracking-[0.18em] uppercase backdrop-blur-sm">
-                            <span className="flex h-4 w-4 items-center justify-center rounded-full bg-[#FC763A]/20">
-                                <SunMedium className="h-3 w-3" />
-                            </span>
-                            Solar Knowledge Hub
-                        </div>
-
-                        <div className="space-y-3">
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                                Learn Solar in <span className="text-[#FC763A]">Simple, Practical Language.</span>
+                            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-[#004093] leading-[1.15]">
+                                Master Your Transition to <br className="hidden md:block" />
+                                <span className="text-[#FE9900]">Clean Energy</span>
                             </h1>
-                            <p className="text-md md:text-lg text-white">
-                                Guides, case studies and explainers to help you make confident
-                                solar decisions for your home, factory or business.
+
+                            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-lg">
+                                Explore expert guides, breaking industry news, and in-depth case studies. Get the facts you need to maximize your solar savings in Australia.
                             </p>
+
+                            <div className="flex flex-wrap gap-4 pt-4">
+                                <Link to="/contact" className="group bg-[#FE9900] hover:bg-[#e88a00] text-white px-8 py-3.5 rounded-full font-bold flex items-center gap-2 transition duration-300 shadow-lg shadow-orange-200 text-[15px] inline-flex w-fit">
+                                    Contact Us
+                                    <ArrowRight size={18} className="group-hover:translate-x-1 transition duration-300" />
+                                </Link>
+                            </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-3 text-xs text-slate-100">
-                            <span className="rounded-full border border-slate-600/70 bg-slate-900/60 px-3 py-1 backdrop-blur-sm">
-                                Payback & savings
-                            </span>
-                            <span className="rounded-full border border-slate-600/70 bg-slate-900/60 px-3 py-1 backdrop-blur-sm">
-                                Rooftop design basics
-                            </span>
-                            <span className="rounded-full border border-slate-600/70 bg-slate-900/60 px-3 py-1 backdrop-blur-sm">
-                                Approvals & policy
-                            </span>
+                        {/* Right Content - Images */}
+                        <div className="relative mt-8 lg:mt-0">
+                            {/* Main large image */}
+                            <div className="relative rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
+                                <img
+                                    src={heroImg}
+                                    alt="Solar installation on a modern home"
+                                    className="w-full h-[400px] md:h-[500px] object-cover"
+                                />
+                                {/* Overlay badge */}
+                                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-2xl p-5 shadow-xl">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-full bg-[#004093]/10 flex items-center justify-center shrink-0">
+                                            <BookOpen className="h-6 w-6 text-[#004093]" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs font-bold text-[#FE9900] uppercase mb-1">Featured Article</p>
+                                            <p className="text-sm md:text-base font-bold text-slate-900 leading-tight">
+                                                How to Choose the Right Battery Storage System in 2026
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Decorative background accent */}
+                            <div className="absolute -top-6 -right-6 w-full h-full border-2 border-[#004093]/10 rounded-3xl -z-10" />
+                            
+                            {/* Stats card floating */}
+                            <div className="absolute -right-6 top-12 bg-white rounded-xl shadow-xl p-4 border border-slate-100 z-20 animate-bounce-slow hidden md:block">
+                                <div className="flex items-center gap-3">
+                                    <div className="text-3xl font-black text-[#FE9900]">#1</div>
+                                    <div className="text-xs font-semibold text-slate-600 uppercase tracking-widest leading-tight">
+                                        Solar Guide<br />In Australia
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Right highlight card */}
-                    <div className="relative mt-2 md:mt-0">
-                        {/* <div className="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-4 md:px-5 md:py-5 shadow-xl backdrop-blur-sm max-w-xs md:max-w-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                            <p className="text-xs uppercase tracking-[0.18em] text-[#FC763A] mb-2">
-                                Featured Reading
-                            </p>
-                            <p className="text-sm md:text-base font-medium text-slate-50">
-                                &ldquo;Solar Payback in 5 Minutes&rdquo; is a great place to
-                                start if you’re new to rooftop solar.
-                            </p>
-                         
-                        </div> */}
-
-                        {/* subtle glow behind card */}
-                        <div className="pointer-events-none absolute -right-10 -bottom-10 h-32 w-32 rounded-full bg-[#FC763A]/25 blur-3xl" />
                     </div>
                 </div>
             </section>
 
-            <main className="mx-auto max-w-7xl px-4 md:px-0 py-6 md:py-10 space-y-10 md:space-y-14">
+            <main id="latest" className="mx-auto max-w-7xl px-4 md:px-0 py-6 md:py-10 space-y-10 md:space-y-14">
                 {/* ===== MAIN CONTENT: BLOG GRID + SIDEBAR ===== */}
                 <BlogPage />
             </main>
+
+            <style>{`
+                .animate-bounce-slow {
+                    animation: bounce-slow 4s infinite ease-in-out;
+                }
+                @keyframes bounce-slow {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                }
+            `}</style>
         </>
     );
 }
-

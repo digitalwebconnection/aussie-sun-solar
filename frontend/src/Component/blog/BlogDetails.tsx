@@ -54,7 +54,7 @@ const BlogDetails = () => {
     const deletedSlugs: string[] = deletedRaw ? JSON.parse(deletedRaw) : [];
     if (deletedSlugs.includes(slug || "")) {
       // Blog was deleted, navigate back to list
-      navigate('/Knowledgwe');
+      navigate('/blog');
       return;
     }
 
@@ -118,7 +118,7 @@ const BlogDetails = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[500px] gap-3">
-        <Loader2 className="animate-spin text-[#FC763A]" size={40} />
+        <Loader2 className="animate-spin text-[#FE9900]" size={40} />
         <p className="text-gray-500 font-medium">Loading post...</p>
       </div>
     );
@@ -129,7 +129,7 @@ const BlogDetails = () => {
       <div className="flex flex-col items-center justify-center min-h-[500px] gap-3 text-center px-4">
         <AlertCircle className="text-red-500" size={40} />
         <h2 className="text-2xl font-bold text-slate-800">{error || "Blog post not found"}</h2>
-        <Link to="/Knowledgwe" className="text-[#FC763A] font-semibold hover:underline mt-2">Back to all blogs</Link>
+        <Link to="/blog" className="text-[#FE9900] font-semibold hover:underline mt-2">Back to all blogs</Link>
       </div>
     );
   }
@@ -154,7 +154,7 @@ const BlogDetails = () => {
 
       <div className="flex items-center justify-between mt-12 mb-8">
         <Link
-          to="/Knowledgwe"
+          to="/blog"
           className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors shadow-sm w-fit"
         >
           <ArrowLeft size={16} />
@@ -162,7 +162,7 @@ const BlogDetails = () => {
         </Link>
         {isRefreshing && (
           <span className="inline-flex items-center gap-1.5 text-xs text-slate-400">
-            <RefreshCw size={14} className="animate-spin text-[#FC763A]" />
+            <RefreshCw size={14} className="animate-spin text-[#FE9900]" />
             Refreshing…
           </span>
         )}
@@ -211,7 +211,7 @@ const BlogDetails = () => {
         <h3 className="text-2xl font-bold mb-4 text-slate-900">Ready to Switch to Solar?</h3>
         <p className="text-slate-600 mb-6 max-w-lg mx-auto">Take control of your energy costs and join the sustainable revolution today with ass's expert solutions.</p>
         <button onClick={() => setOpenLeadPopup(true)}
-          className="px-8 py-3 bg-[#FC763A] hover:bg-[#e0652e] transition rounded-full text-white font-semibold shadow-md inline-block">
+          className="px-8 py-3 bg-[#FE9900] hover:bg-[#e88a00] transition rounded-full text-white font-semibold shadow-md inline-block">
           Get Free Consultation
         </button>
       </div>
@@ -267,8 +267,8 @@ const BlogDetails = () => {
         .blog-content img { max-width: 100% !important; height: auto !important; border-radius: 12px !important; margin: 2rem 0 !important; }
         .blog-content table { width: 100% !important; border-collapse: collapse !important; margin: 1.5rem 0 !important; display: block !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
         .blog-content table td, .blog-content table th { border: 1px solid #e2e8f0 !important; padding: 0.75rem !important; text-align: left !important; }
-        .blog-content a { color: #FC763A !important; text-decoration: underline !important; }
-        .blog-content blockquote { border-left: 4px solid #FC763A !important; padding-left: 1.5rem !important; font-style: italic !important; margin: 1.5rem 0 !important; color: #475569 !important; }
+        .blog-content a { color: #FE9900 !important; text-decoration: underline !important; }
+        .blog-content blockquote { border-left: 4px solid #FE9900 !important; padding-left: 1.5rem !important; font-style: italic !important; margin: 1.5rem 0 !important; color: #475569 !important; }
         .blog-content pre { background: #f1f5f9 !important; padding: 1rem !important; border-radius: 8px !important; overflow-x: auto !important; margin: 1.5rem 0 !important; }
         .blog-content iframe, .blog-content video { max-width: 100% !important; border-radius: 12px !important; margin: 2rem 0 !important; }
         
