@@ -2,7 +2,7 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Underline from '@tiptap/extension-underline';
-import { useEffect, useCallback, useState } from 'react';
+import { useEffect, useCallback, useState, useReducer } from 'react';
 
 interface RichTextEditorProps {
   value: string;
@@ -14,6 +14,9 @@ interface RichTextEditorProps {
 export default function RichTextEditor({ value, onChange, placeholder, label }: RichTextEditorProps) {
   const [linkUrl, setLinkUrl] = useState('');
   const [showLinkInput, setShowLinkInput] = useState(false);
+  // Force re-render whenever TipTap's selection or transaction changes
+  // so toolbar active states (B, I, U, etc.) always reflect the real mark state
+  const [, forceUpdate] = useReducer((x: number) => x + 1, 0);
 
   const editor = useEditor({
     extensions: [
@@ -32,6 +35,13 @@ export default function RichTextEditor({ value, onChange, placeholder, label }: 
     content: value,
     onUpdate({ editor }) {
       onChange(editor.getHTML());
+      forceUpdate();
+    },
+    onSelectionUpdate() {
+      forceUpdate();
+    },
+    onTransaction() {
+      forceUpdate();
     },
     editorProps: {
       attributes: {

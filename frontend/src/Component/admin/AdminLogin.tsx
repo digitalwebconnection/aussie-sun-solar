@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sun, Eye, EyeOff, Lock, User } from 'lucide-react';
+import { Eye, EyeOff, Lock, User } from 'lucide-react';
 import { apiUrl } from '../../lib/api';
+import logo from '../../assets/logo.png';
 
 /* ── Styles ────────────────────────────────────────────────── */
 const S: Record<string, React.CSSProperties> = {
   page: {
     minHeight: '100vh',
-    background: 'linear-gradient(135deg, #0f0c17 0%, #1a1533 50%, #0f2027 100%)',
+    background: 'radial-gradient(circle at 10% 20%, rgba(254, 194, 74, 0.15) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(252, 118, 58, 0.18) 0%, transparent 50%), linear-gradient(135deg, #FFF5EE 0%, #E8F0FE 100%)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -16,121 +17,103 @@ const S: Record<string, React.CSSProperties> = {
   },
   card: {
     width: '100%',
-    maxWidth: '420px',
-    background: 'rgba(255,255,255,0.04)',
-    border: '1px solid rgba(255,255,255,0.1)',
-    borderRadius: '20px',
+    maxWidth: '400px',
+    background: '#ffffff',
+    border: '1px solid #E2E5E9',
+    borderTop: '4px solid #FC763A',
+    borderRadius: '16px',
     padding: '2.5rem 2rem',
-    backdropFilter: 'blur(20px)',
-    boxShadow: '0 25px 60px rgba(0,0,0,0.5)',
+    boxShadow: '0 20px 40px rgba(252, 118, 58, 0.05), 0 1px 3px rgba(0,0,0,0.02)',
   },
-  logoRow: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '0.5rem',
-    marginBottom: '0.5rem',
-  },
-  logoCircle: {
-    width: 44,
-    height: 44,
-    borderRadius: '50%',
-    background: 'linear-gradient(135deg, #FC763A, #FEC24A)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    boxShadow: '0 4px 15px rgba(252,118,58,0.4)',
-  },
-  brand: {
-    fontSize: '1.4rem',
-    fontWeight: 800,
-    color: '#fff',
-    letterSpacing: '-0.5px',
-  },
-  brandOrange: { color: '#FC763A' },
+
   subtitle: {
     textAlign: 'center',
-    color: 'rgba(255,255,255,0.45)',
+    color: '#64748b',
     fontSize: '0.78rem',
+    fontWeight: 600,
     letterSpacing: '0.15em',
     textTransform: 'uppercase',
     marginBottom: '2rem',
   },
   label: {
     display: 'block',
-    color: 'rgba(255,255,255,0.6)',
-    fontSize: '0.72rem',
+    color: '#475569',
+    fontSize: '0.78rem',
     fontWeight: 600,
-    letterSpacing: '0.1em',
+    letterSpacing: '0.08em',
     textTransform: 'uppercase',
-    marginBottom: '0.4rem',
+    marginBottom: '0.45rem',
   },
   inputWrap: {
     position: 'relative',
-    marginBottom: '1rem',
+    marginBottom: '1.25rem',
   },
   inputIcon: {
     position: 'absolute',
-    left: '0.9rem',
+    left: '0.95rem',
     top: '50%',
     transform: 'translateY(-50%)',
-    color: 'rgba(255,255,255,0.3)',
+    color: '#94a3b8',
     pointerEvents: 'none',
+    display: 'flex',
   },
   input: {
     width: '100%',
-    padding: '0.7rem 2.75rem',
-    background: 'rgba(255,255,255,0.06)',
-    border: '1px solid rgba(255,255,255,0.12)',
+    padding: '0.65rem 2.6rem 0.65rem 2.6rem',
+    background: '#ffffff',
+    border: '1px solid #cbd5e1',
     borderRadius: '10px',
-    color: '#fff',
+    color: '#1e293b',
     fontSize: '0.9rem',
     outline: 'none',
     boxSizing: 'border-box',
-    transition: 'border-color 0.2s',
+    transition: 'all 0.18s ease-in-out',
   },
   eyeBtn: {
     position: 'absolute',
-    right: '0.9rem',
+    right: '0.95rem',
     top: '50%',
     transform: 'translateY(-50%)',
     background: 'none',
     border: 'none',
     cursor: 'pointer',
-    color: 'rgba(255,255,255,0.3)',
+    color: '#94a3b8',
     padding: 0,
     display: 'flex',
+    transition: 'color 0.15s ease',
   },
   error: {
-    background: 'rgba(239,68,68,0.15)',
-    border: '1px solid rgba(239,68,68,0.3)',
+    background: '#fff5f5',
+    border: '1px solid #fca5a5',
     borderRadius: '8px',
-    color: '#fca5a5',
+    color: '#dc2626',
     fontSize: '0.8rem',
     padding: '0.6rem 0.9rem',
-    marginBottom: '1rem',
+    marginBottom: '1.25rem',
     textAlign: 'center',
+    fontWeight: 500,
   },
   btn: {
     width: '100%',
-    padding: '0.75rem',
+    padding: '0.7rem',
     background: 'linear-gradient(135deg, #FC763A, #FEC24A)',
     border: 'none',
     borderRadius: '10px',
     color: '#fff',
-    fontSize: '0.95rem',
+    fontSize: '0.92rem',
     fontWeight: 700,
     cursor: 'pointer',
     letterSpacing: '0.05em',
-    transition: 'opacity 0.2s, transform 0.1s',
+    transition: 'all 0.2s ease-in-out',
     marginTop: '0.5rem',
-    boxShadow: '0 4px 15px rgba(252,118,58,0.35)',
+    boxShadow: '0 4px 12px rgba(252,118,58,0.25)',
   },
   hint: {
-    marginTop: '1.5rem',
+    marginTop: '1.75rem',
     textAlign: 'center',
-    color: 'rgba(255,255,255,0.25)',
-    fontSize: '0.72rem',
+    color: '#94a3b8',
+    fontSize: '0.75rem',
+    fontWeight: 500,
   },
 };
 
@@ -180,13 +163,8 @@ export default function AdminLogin() {
     <div style={S.page}>
       <div style={S.card}>
         {/* Logo */}
-        <div style={S.logoRow}>
-          <div style={S.logoCircle}>
-            <Sun size={20} color="#fff" strokeWidth={2.5} />
-          </div>
-          <span style={S.brand}>
-            Aussie<span style={S.brandOrange}>SunSolar</span>
-          </span>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.5rem' }}>
+          <img src={logo} alt="Aussie Sun Solar Logo" style={{ height: '38px', objectFit: 'contain', width: 'auto' }} />
         </div>
         <p style={S.subtitle}>Admin Panel</p>
 
@@ -204,8 +182,9 @@ export default function AdminLogin() {
               placeholder="Enter username"
               required
               style={S.input}
-              onFocus={e => (e.currentTarget.style.borderColor = 'rgba(252,118,58,0.6)')}
-              onBlur={e => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)')}
+              className="login-input"
+              onFocus={e => (e.currentTarget.style.borderColor = '#FC763A')}
+              onBlur={e => (e.currentTarget.style.borderColor = '#cbd5e1')}
             />
           </div>
 
@@ -222,12 +201,14 @@ export default function AdminLogin() {
               placeholder="Enter password"
               required
               style={S.input}
-              onFocus={e => (e.currentTarget.style.borderColor = 'rgba(252,118,58,0.6)')}
-              onBlur={e => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)')}
+              className="login-input"
+              onFocus={e => (e.currentTarget.style.borderColor = '#FC763A')}
+              onBlur={e => (e.currentTarget.style.borderColor = '#cbd5e1')}
             />
             <button
               type="button"
               style={S.eyeBtn}
+              className="login-eye-btn"
               onClick={() => setShowPass(p => !p)}
               aria-label={showPass ? 'Hide password' : 'Show password'}
             >
@@ -240,9 +221,8 @@ export default function AdminLogin() {
           <button
             type="submit"
             style={{ ...S.btn, opacity: loading ? 0.7 : 1 }}
+            className="login-btn"
             disabled={loading}
-            onMouseEnter={e => { if (!loading) (e.currentTarget as HTMLButtonElement).style.opacity = '0.88'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.opacity = loading ? '0.7' : '1'; }}
           >
             {loading ? 'Signing in…' : 'Sign In'}
           </button>
@@ -250,6 +230,37 @@ export default function AdminLogin() {
 
         <p style={S.hint}>ass Energy · Secure Admin Access</p>
       </div>
+      <style>{`
+        .login-input {
+          border: 1px solid #cbd5e1 !important;
+          transition: all 0.18s ease-in-out !important;
+        }
+        .login-input:focus {
+          border-color: #FC763A !important;
+          box-shadow: 0 0 0 3px rgba(252, 118, 58, 0.15) !important;
+        }
+        .login-eye-btn {
+          transition: color 0.15s ease !important;
+        }
+        .login-eye-btn:hover {
+          color: #1e293b !important;
+        }
+        .login-btn {
+          background: #FC763A !important;
+          color: #ffffff !important;
+          border-color: #FC763A !important;
+          transition: all 0.2s ease-in-out !important;
+        }
+        .login-btn:hover {
+          background: #e05e26 !important;
+          border-color: #e05e26 !important;
+          box-shadow: 0 5px 15px rgba(252, 118, 58, 0.35) !important;
+          transform: translateY(-1px);
+        }
+        .login-btn:active {
+          transform: translateY(0);
+        }
+      `}</style>
     </div>
   );
 }

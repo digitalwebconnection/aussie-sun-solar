@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, SunMedium} from "lucide-react";
+import { ArrowRight, SunMedium } from "lucide-react";
 import BlogPage from "./BlogPage";
 import heroImg from "../../assets/blog-img2.webp";
 
@@ -7,16 +7,19 @@ export default function SolarBlogPage() {
     return (
         <>
             {/* ===== BLOG HERO / INTRO ===== */}
-            <section className="relative bg-[#f8fbff] pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+            <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden h-[100vh]">
+                {/* Background Image */}
+                <div className="absolute inset-0"><img src={heroImg} alt="Solar installation hero" className="w-full h-full object-cover" /></div>
+                <div className="absolute inset-0 bg-black/30"></div>
                 {/* Decorative background shapes */}
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-[#004093]/5 rounded-bl-[100px] -z-10" />
-                <div className="absolute -left-20 top-20 w-72 h-72 bg-[#FE9900]/10 rounded-full blur-[80px] -z-10" />
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-black/5 rounded-bl-[100px] -z-10" />
+                <div className="absolute -left-20 top-20 w-72 h-72 bg-black/10 rounded-full blur-[80px] -z-10" />
 
-                <div className="max-w-7xl mx-auto px-4 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-                        
+                <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 h-full flex items-center">
+                    <div className="grid grid-cols-1 gap-8 items-center justify-items-start">
+
                         {/* Left Content */}
-                        <div className="space-y-8">
+                        <div className="space-y-6 text-left">
                             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#e8f0fe] border border-[#004093]/10">
                                 <SunMedium className="h-4 w-4 text-[#FE9900]" />
                                 <span className="text-sm font-bold text-[#004093] uppercase tracking-wider">
@@ -29,7 +32,7 @@ export default function SolarBlogPage() {
                                 <span className="text-[#FE9900]">Clean Energy</span>
                             </h1>
 
-                            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-lg">
+                            <p className="text-lg md:text-xl text-white leading-relaxed max-w-lg">
                                 Explore expert guides, breaking industry news, and in-depth case studies. Get the facts you need to maximize your solar savings in Australia.
                             </p>
 
@@ -40,46 +43,6 @@ export default function SolarBlogPage() {
                                 </Link>
                             </div>
                         </div>
-
-                        {/* Right Content - Images */}
-                        <div className="relative mt-8 lg:mt-0">
-                            {/* Main large image */}
-                            <div className="relative rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
-                                <img
-                                    src={heroImg}
-                                    alt="Solar installation on a modern home"
-                                    className="w-full h-[400px] md:h-[500px] object-cover"
-                                />
-                                {/* Overlay badge */}
-                                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-2xl p-5 shadow-xl">
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-[#004093]/10 flex items-center justify-center shrink-0">
-                                            <BookOpen className="h-6 w-6 text-[#004093]" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs font-bold text-[#FE9900] uppercase mb-1">Featured Article</p>
-                                            <p className="text-sm md:text-base font-bold text-slate-900 leading-tight">
-                                                How to Choose the Right Battery Storage System in 2026
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Decorative background accent */}
-                            <div className="absolute -top-6 -right-6 w-full h-full border-2 border-[#004093]/10 rounded-3xl -z-10" />
-                            
-                            {/* Stats card floating */}
-                            <div className="absolute -right-6 top-12 bg-white rounded-xl shadow-xl p-4 border border-slate-100 z-20 animate-bounce-slow hidden md:block">
-                                <div className="flex items-center gap-3">
-                                    <div className="text-3xl font-black text-[#FE9900]">#1</div>
-                                    <div className="text-xs font-semibold text-slate-600 uppercase tracking-widest leading-tight">
-                                        Solar Guide<br />In Australia
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </section>

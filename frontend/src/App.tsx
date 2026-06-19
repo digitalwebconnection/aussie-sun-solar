@@ -35,6 +35,31 @@ import GlobalPopupForm from './Component/GlobalPopupForm'
 import { PopupProvider } from './context/PopupContext'
 
 function MainLayout() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.04,            // Lower = silkier glide (0.05–0.1 range)
+      smoothWheel: true,
+      wheelMultiplier: 1.0,  // Slightly faster wheel to compensate for lower lerp
+      touchMultiplier: 1.5,  // Snappy on mobile touch
+      infinite: false,
+    });
+    
+    // @ts-ignore
+    window.lenis = lenis;
+
+    let raf: number;
+    const loop = (time: number) => {
+      lenis.raf(time);
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <>
       <Preloader />
@@ -78,30 +103,6 @@ function MainLayout() {
 }
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.04,            // Lower = silkier glide (0.05–0.1 range)
-      smoothWheel: true,
-      wheelMultiplier: 1.0,  // Slightly faster wheel to compensate for lower lerp
-      touchMultiplier: 1.5,  // Snappy on mobile touch
-      infinite: false,
-    });
-    
-    // @ts-ignore
-    window.lenis = lenis;
-
-    let raf: number;
-    const loop = (time: number) => {
-      lenis.raf(time);
-      raf = requestAnimationFrame(loop);
-    };
-    raf = requestAnimationFrame(loop);
-
-    return () => {
-      cancelAnimationFrame(raf);
-      lenis.destroy();
-    };
-  }, []);
 
   return (
     <BrowserRouter>

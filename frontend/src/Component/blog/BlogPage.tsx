@@ -58,14 +58,14 @@ const BlogPage = () => {
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12 md:py-12">
-        
+
         {/* Section Header */}
-        <div className="flex flex-col items-center justify-center text-center mb-16 space-y-4">
+        <div className="flex flex-col items-center  mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f0f5ff] text-[#004093] text-sm font-bold tracking-wide uppercase shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#FE9900] animate-pulse"></span>
             News & Updates
           </div>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center gap-4">
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
               Latest from the <span className="text-[#FE9900]">Blog</span>
             </h2>
@@ -73,8 +73,8 @@ const BlogPage = () => {
               <RefreshCw size={24} className="text-[#FE9900] animate-spin opacity-80" />
             )}
           </div>
-          <p className="text-slate-600 max-w-2xl text-lg mt-4">
-            Stay informed with the latest trends in renewable energy, product announcements, and expert tips to maximize your solar savings.
+          <p className="mt-4 max-w-4xl mx-auto text-center text-lg leading-relaxed text-slate-600">
+            Explore the latest renewable energy insights, solar industry updates, product announcements, and practical tips to help you maximize energy efficiency and savings.
           </p>
         </div>
 
@@ -124,9 +124,9 @@ const BlogPage = () => {
                 <Link
                   to={`/blog/${post.slug || post._id}`}
                   key={post._id}
-                  className="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-100 shadow-2xl shadow-black-800 hover:shadow-black/80 transition-all duration-500 hover:-translate-y-2"
+                  className="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-100 shadow-2xl shadow-black/100 hover:shadow-black/80 transition-all duration-500 hover:-translate-y-2"
                 >
-                  <div className="relative h-64 overflow-hidden bg-slate-100">
+                  <div className="relative h-56 overflow-hidden bg-slate-100">
                     <img
                       src={displayImage}
                       alt={post.title}
@@ -134,7 +134,7 @@ const BlogPage = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
+
                     {/* Floating Category Badge */}
                     <div className="absolute top-5 left-5">
                       <span className="backdrop-blur-md bg-white/90 text-[#004093] text-xs font-extrabold tracking-wide uppercase px-4 py-2 rounded-full shadow-lg">
@@ -143,7 +143,7 @@ const BlogPage = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col grow p-8 relative bg-white">
+                  <div className="flex flex-col grow p-5 relative bg-white">
                     {/* Meta info */}
                     <div className="flex items-center text-slate-400 text-sm font-medium gap-4 mb-4">
                       <div className="flex items-center gap-1.5">
@@ -157,12 +157,12 @@ const BlogPage = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-slate-900 leading-snug mb-4 group-hover:text-[#004093] transition-colors duration-300 line-clamp-2">
+                    <h3 className="text-2xl font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#004093] transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="text-slate-600 line-clamp-3 mb-8 leading-relaxed">
+                    <p className="text-slate-600 line-clamp-3 mb-4 leading-relaxed">
                       {post.excerpt}
                     </p>
 

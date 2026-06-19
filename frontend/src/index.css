@@ -5,8 +5,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Global justified text for all paragraphs */
-p {
-  text-align: justify;
-  hyphens: auto;
+/* ── Admin panel: lock body scroll so inner content div scrolls ── */
+html:has(.admin-layout),
+body:has(.admin-layout) {
+  overflow: hidden !important;
 }
