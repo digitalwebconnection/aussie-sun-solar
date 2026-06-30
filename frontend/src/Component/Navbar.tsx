@@ -337,6 +337,17 @@ const SolarNavbar = () => {
               >
                 Contact Us
               </Link>
+
+              {/* Payment */}
+              <Link
+                to="/payment"
+                className={`transition duration-300 ${isActive("/payment")
+                    ? "text-[#FE9900]"
+                    : "text-[#004093] hover:text-[#FE9900]"
+                  }`}
+              >
+                Payment
+              </Link>
             </nav>
 
             {/* ---- DESKTOP RIGHT: Phone + CTA ---- */}
@@ -531,6 +542,9 @@ const SolarNavbar = () => {
 
                 {/* Contact Us */}
                 <MobileLink to="/contact" label="Contact Us" active={isActive("/contact")} />
+
+                {/* Payment */}
+                <MobileLink to="/payment" label="Payment" active={isActive("/payment")} />
 
                 {/* CTA Card */}
                 {/* <div className="mt-6 bg-linear-to-br from-[#004093] to-[#0056c4] rounded-2xl p-5 text-white shadow-xl shadow-blue-200">

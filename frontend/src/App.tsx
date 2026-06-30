@@ -9,6 +9,7 @@ import ServicesPage from './pages/ServicesPage'
 import ProductsPage from './pages/ProductsPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
+import PaymentPage from './pages/PaymentPage'
 import './App.css'
 // import WhatsAppChatWidget from './Component/WhatsAppChatWidget'
 import Preloader from './Component/Home/Preloader'
@@ -84,6 +85,7 @@ function MainLayout() {
           <Route path="/blog" element={<BlogMain />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/payment" element={<PaymentPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
           <Route path="/complaints-handling-policy" element={<ComplaintsHandlingPolicyPage />} />
