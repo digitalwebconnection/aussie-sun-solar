@@ -13,55 +13,55 @@ import panel10 from "../assets/Panel/10.webp"
 // Jinko Solar page
 import j1 from "../assets/Jinko Solar/1.jpg";
 import j2 from "../assets/Jinko Solar/2.jpg";
-import pdf330 from "../assets/Jinko Solar/Jinko-330-cheetah-mono-perc.pdf";
-import pdf390 from "../assets/Jinko Solar/Jinko-Tiger-390W-Datasheet.pdf";
-import pdfji440 from "../assets/Jinko Solar/jinko-475w-n-type-neo-datasheet.pdf";
+// Moved to public/datasheets: import pdf330 from "../assets/Jinko Solar/Jinko-330-cheetah-mono-perc.pdf";
+// Moved to public/datasheets: import pdf390 from "../assets/Jinko Solar/Jinko-Tiger-390W-Datasheet.pdf";
+// Moved to public/datasheets: import pdfji440 from "../assets/Jinko Solar/jinko-475w-n-type-neo-datasheet.pdf";
 
 // ja solar page
 import ja1 from "../assets/ja solar/JA-solar-panel-600-watt.jpg";
 import ja2 from "../assets/ja solar/2.webp";
-import pdfja from "../assets/ja solar/c12d2b6d60d6f81.pdf";
+// Moved to public/datasheets: import pdfja from "../assets/ja solar/c12d2b6d60d6f81.pdf";
 
 // AIKO Solar page
 import ai1 from "../assets/AIKO Solar/1.avif";
 import ai2 from "../assets/AIKO Solar/2.jpg";
-import pdfai from "../assets/AIKO Solar/Aiko-Neostar-475w.pdf";
+// Moved to public/datasheets: import pdfai from "../assets/AIKO Solar/Aiko-Neostar-475w.pdf";
 
 // Canadian Solar page
 import ca1 from "../assets/Canadian Solar/canadian-665watt-solar-panel.jpg";
 import ca2 from "../assets/Canadian Solar/BiHiKu-BiKu.png";
-import pdf1 from "../assets/Canadian Solar/Canadian-Hiku-330W-poly.pdf";
+// Moved to public/datasheets: import pdf1 from "../assets/Canadian Solar/Canadian-Hiku-330W-poly.pdf";
 
 // das-solar page
 import da1 from "../assets/das-solar/1.jfif";
 import da2 from "../assets/das-solar/2.png";
-import pdf440 from "../assets/das-solar/Datasheet-DAS-DH108ND-440.pdf";
+// Moved to public/datasheets: import pdf440 from "../assets/das-solar/Datasheet-DAS-DH108ND-440.pdf";
 
 // DMEGC Solar  page
 import dm1 from "../assets/DMEGC Solar/1.webp";
 import dm2 from "../assets/DMEGC Solar/2.webp";
-import pdfB54 from "../assets/DMEGC Solar/EN-DMxxxM10RT-B54HBT-HST.pdf";
+// Moved to public/datasheets: import pdfB54 from "../assets/DMEGC Solar/EN-DMxxxM10RT-B54HBT-HST.pdf";
 
 // EGing PV solar page
 import eg1 from "../assets/EGing PV/1.png";
 import eg2 from "../assets/EGing PV/2.webp";
-import pdfeg1 from "../assets/EGing PV/EG-440N-Bifacial-DG.pdf";
-import pdfeg2 from "../assets/EGing PV/Eging-Datasheet-EG-440NT54-HLV_30-.pdf";
+// Moved to public/datasheets: import pdfeg1 from "../assets/EGing PV/EG-440N-Bifacial-DG.pdf";
+// Moved to public/datasheets: import pdfeg2 from "../assets/EGing PV/Eging-Datasheet-EG-440NT54-HLV_30-.pdf";
 
 // risen-solar page
 import ri1 from "../assets/risen-solar/1.avif";
 import ri2 from "../assets/risen-solar/2.jfif";
-import pdfri from "../assets/risen-solar/Risen-370W-Silver-Frame.pdf";
+// Moved to public/datasheets: import pdfri from "../assets/risen-solar/Risen-370W-Silver-Frame.pdf";
 
 // Trina Solar page
 import tr1 from "../assets/Trina Solar/1.jpg";
 import tr2 from "../assets/Trina Solar/2.webp";
-import pdftr from "../assets/Trina Solar/Trina-Mono-perc-330w-HC.pdf"
+// Moved to public/datasheets: import pdftr from "../assets/Trina Solar/Trina-Mono-perc-330w-HC.pdf"
 
 // Longi Solar page
 import lo1 from "../assets/Longi Solar/1.jpg";
 import lo2 from "../assets/Longi Solar/2.jfif";
-import pdflo from "../assets/Longi Solar/Longi-370W-Technical-Datasheet.pdf";
+// Moved to public/datasheets: import pdflo from "../assets/Longi Solar/Longi-370W-Technical-Datasheet.pdf";
 
 
 // Solar Inverters logoes
@@ -76,42 +76,42 @@ import inverter6 from '../assets/Inverters/6.webp';
 // GoodWe Inverters
 import go1 from "../assets/GoodWe Inverters/goodwe-grid-tie-5kw-inverter.jpg";
 import go2 from "../assets/GoodWe Inverters/2.webp";
-import pdfgo from "../assets/GoodWe Inverters/GW_Lynx-F-G2-Series_Datasheet-AU.pdf"
-import pdfgo1 from "../assets/GoodWe Inverters/GW_EH_Datasheet-AU.pdf"
+// Moved to public/datasheets: import pdfgo from "../assets/GoodWe Inverters/GW_Lynx-F-G2-Series_Datasheet-AU.pdf"
+// Moved to public/datasheets: import pdfgo1 from "../assets/GoodWe Inverters/GW_EH_Datasheet-AU.pdf"
 
 
 // Sungrow
 import sungrow1 from "../assets/Sungrow/1.jpg";
 import sungrow2 from "../assets/Sungrow/2.webp";
-import pdfsg1 from "../assets/Sungrow/sungrow-5kW-single-phase.pdf";
-import pdfsg2 from "../assets/Sungrow/sungrow-5kw-three-phase.pdf";
+// Moved to public/datasheets: import pdfsg1 from "../assets/Sungrow/sungrow-5kW-single-phase.pdf";
+// Moved to public/datasheets: import pdfsg2 from "../assets/Sungrow/sungrow-5kw-three-phase.pdf";
 
 // Growatt Inverters
 import grow1 from "../assets/Growatt Inverters/1.jpg";
 import grow2 from "../assets/Growatt Inverters/2.jpg";
-import pdfgr1 from "../assets/Growatt Inverters/growatt-3-phase-inverter-3-6kw-TL3-latest-model.pdf";
-import pdfgr2 from "../assets/Growatt Inverters/growatt-3kW-single-phase-Inverter.pdf";
+// Moved to public/datasheets: import pdfgr1 from "../assets/Growatt Inverters/growatt-3-phase-inverter-3-6kw-TL3-latest-model.pdf";
+// Moved to public/datasheets: import pdfgr2 from "../assets/Growatt Inverters/growatt-3kW-single-phase-Inverter.pdf";
 
 // Solis
 import solis1 from "../assets/Solis/1.jpg";
 import solis2 from "../assets/Solis/2.jpg";
 import solis3 from "../assets/Solis/3.jpg";
-import pdfsolis1 from "../assets/Solis/solis-hybrid-5kw-inverter.pdf";
-import pdfsolis2 from "../assets/Solis/solis-single-phase.pdf";
-import pdfsolis3 from "../assets/Solis/solis-three-phase-5-20kW.pdf";
+// Moved to public/datasheets: import pdfsolis1 from "../assets/Solis/solis-hybrid-5kw-inverter.pdf";
+// Moved to public/datasheets: import pdfsolis2 from "../assets/Solis/solis-single-phase.pdf";
+// Moved to public/datasheets: import pdfsolis3 from "../assets/Solis/solis-three-phase-5-20kW.pdf";
 
 // saj
 import saj1 from "../assets/saj/1.jpg";
 import saj2 from "../assets/saj/2.jpg";
-import pdfsaj1 from "../assets/saj/SAJ-5kW-1P-datasheet.pdf";
-import pdfsaj2 from "../assets/saj/SAJ-5-10kW-3P-datasheet.pdf";
+// Moved to public/datasheets: import pdfsaj1 from "../assets/saj/SAJ-5kW-1P-datasheet.pdf";
+// Moved to public/datasheets: import pdfsaj2 from "../assets/saj/SAJ-5-10kW-3P-datasheet.pdf";
 
 
 // Anker Solix
 
 import s1 from "../assets/Anker Solix/1.png";
 import s2 from "../assets/Anker Solix/2.jfif";
-import pdfsolix from "../assets/Anker Solix/Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25.pdf";
+// Moved to public/datasheets: import pdfsolix from "../assets/Anker Solix/Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25.pdf";
 
 
 
@@ -131,7 +131,7 @@ import battery5 from "../assets/Battery Partners/5.webp";
 // FoxESS
 import fox1 from "../assets/FoxESS/1.jpg";
 import fox2 from "../assets/FoxESS/2.png";
-import pdffox from "../assets/FoxESS/EN-EQ4800-Datasheet(AU)-V1.3-20250915.pdf"
+// Moved to public/datasheets: import pdffox from "../assets/FoxESS/EN-EQ4800-Datasheet(AU)-V1.3-20250915.pdf"
 
 // growatt-battery-systems
 import growatt1 from "../assets/growatt bettry/1.png";
@@ -140,22 +140,22 @@ import growatt2 from "../assets/growatt bettry/2.jfif";
 // saj-battery
 import sajo1 from "../assets/saj-battery/saj-battery.webp"
 import sajo2 from "../assets/saj-battery/1.webp"
-import pdfsaj from "../assets/saj-battery/B2-X-HVa-S-EN-AU-20260525.pdf"
+// Moved to public/datasheets: import pdfsaj from "../assets/saj-battery/B2-X-HVa-S-EN-AU-20260525.pdf"
 
 // anker-solix-battery-systems
 import ank1 from "../assets/anker-solix-battery/1.webp"
 import ank2 from "../assets/anker-solix-battery/2.webp"
-import pdfank from "../assets/anker-solix-battery/Spec-Anker-Solar-Battery.pdf"
+// Moved to public/datasheets: import pdfank from "../assets/anker-solix-battery/Spec-Anker-Solar-Battery.pdf"
 
 // sungrow-battery-systems
 import sun1 from "../assets/sungrow-battery/1.webp"
 import sun2 from "../assets/sungrow-battery/2.png"
-import pdfsun from "../assets/sungrow-battery/DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU.pdf"
+// Moved to public/datasheets: import pdfsun from "../assets/sungrow-battery/DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU.pdf"
 
 // alpha-ess-battery-systems
 import alpha1 from "../assets/alpha-ess-battery/1.webp"
 import alpha2 from "../assets/alpha-ess-battery/2.jpg"
-import pdfalp from "../assets/alpha-ess-battery/ALP_LV_2024.pdf"
+// Moved to public/datasheets: import pdfalp from "../assets/alpha-ess-battery/ALP_LV_2024.pdf"
 
 // neovolt-battery-systems
 import neo1 from "../assets/neovolt-battery/1.webp"
@@ -274,9 +274,9 @@ export const productsData: Record<string, ProductData> = {
     ],
 
     pdfUrls: [
-      { label: "Jinko Cheetah 330W", url: pdf330 },
-      { label: "Jinko Tiger 370W", url: pdf390 },
-      { label: "jinko-475w-n-type-neo-datasheet", url: pdfji440 },
+      { label: "Jinko Cheetah 330W", url: "/datasheets/Jinko-330-cheetah-mono-perc.pdf" },
+      { label: "Jinko Tiger 370W", url: "/datasheets/Jinko-Tiger-390W-Datasheet.pdf" },
+      { label: "jinko-475w-n-type-neo-datasheet", url: "/datasheets/jinko-475w-n-type-neo-datasheet.pdf" },
     ],
     datasheetSpecs: [
       { label: "Solar Cell Type", value: "N-Type TOPCon" },
@@ -375,7 +375,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: panel2,
     pdfUrls: [
-      { label: "JAM54S43 LR 475W EN", url: pdfja },
+      { label: "JAM54S43 LR 475W EN", url: "/datasheets/c12d2b6d60d6f81.pdf" },
     ],
     productImages: [
       ja1, ja2
@@ -492,7 +492,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: panel3,
     pdfUrls: [
-      { label: "Aiko-Neostar-475w", url: pdfai },
+      { label: "Aiko-Neostar-475w", url: "/datasheets/Aiko-Neostar-475w.pdf" },
     ],
     productImages: [
       ai1, ai2
@@ -601,7 +601,7 @@ export const productsData: Record<string, ProductData> = {
       ca1, ca2
     ],
     pdfUrls: [
-      { label: "Canadian Solar HiKu 330W", url: pdf1 }
+      { label: "Canadian Solar HiKu 330W", url: "/datasheets/Canadian-Hiku-330W-poly.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "Mono PERC / N-Type" },
@@ -717,7 +717,7 @@ export const productsData: Record<string, ProductData> = {
       da1, da2
     ],
     pdfUrls: [
-      { label: "DAS-DH108ND-440", url: pdf440 }
+      { label: "DAS-DH108ND-440", url: "/datasheets/Datasheet-DAS-DH108ND-440.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "N-Type TOPCon" },
@@ -827,7 +827,7 @@ export const productsData: Record<string, ProductData> = {
       dm1, dm2
     ],
     pdfUrls: [
-      { label: "DMEGCM10RT-B54HBT-HST", url: pdfB54 }
+      { label: "DMEGCM10RT-B54HBT-HST", url: "/datasheets/EN-DMxxxM10RT-B54HBT-HST.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "N-Type TOPCon" },
@@ -937,8 +937,8 @@ export const productsData: Record<string, ProductData> = {
       eg1, eg2
     ],
     pdfUrls: [
-      { label: "EG-440N-Bifacial-DG", url: pdfeg1 },
-      { label: "Eging-Datasheet-EG-440NT54-HLV_30-", url: pdfeg2 }
+      { label: "EG-440N-Bifacial-DG", url: "/datasheets/EG-440N-Bifacial-DG.pdf" },
+      { label: "Eging-Datasheet-EG-440NT54-HLV_30-", url: "/datasheets/Eging-Datasheet-EG-440NT54-HLV_30-.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "N-Type TOPCon" },
@@ -1047,7 +1047,7 @@ export const productsData: Record<string, ProductData> = {
       ri1, ri2
     ],
     pdfUrls: [
-      { label: "Risen-370W-Silver-Frame", url: pdfri }
+      { label: "Risen-370W-Silver-Frame", url: "/datasheets/Risen-370W-Silver-Frame.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "N-Type TOPCon" },
@@ -1150,7 +1150,7 @@ export const productsData: Record<string, ProductData> = {
       tr1, tr2
     ],
     pdfUrls: [
-      { label: "Trina-Mono-perc-330w-HC", url: pdftr }
+      { label: "Trina-Mono-perc-330w-HC", url: "/datasheets/Trina-Mono-perc-330w-HC.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "N-Type TOPCon" },
@@ -1254,7 +1254,7 @@ export const productsData: Record<string, ProductData> = {
       lo1, lo2
     ],
     pdfUrls: [
-      { label: "Longi-370W-Technical-Datasheet", url: pdflo }
+      { label: "Longi-370W-Technical-Datasheet", url: "/datasheets/Longi-370W-Technical-Datasheet.pdf" }
     ],
     datasheetSpecs: [
       { label: "Solar Cell Technology", value: "HPBC / N-Type Mono" },
@@ -1360,8 +1360,8 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: inverter1,
     pdfUrls: [
-      { label: "GW_Lynx-F-G2-Series_Datasheet-AU", url: pdfgo },
-      { label: "GW_EH_Datasheet-AU", url: pdfgo1 },
+      { label: "GW_Lynx-F-G2-Series_Datasheet-AU", url: "/datasheets/GW_Lynx-F-G2-Series_Datasheet-AU.pdf" },
+      { label: "GW_EH_Datasheet-AU", url: "/datasheets/GW_EH_Datasheet-AU.pdf" },
     ],
     productImages: [
       go1, go2
@@ -1467,8 +1467,8 @@ export const productsData: Record<string, ProductData> = {
     productImages: [
       sungrow1, sungrow2],
     pdfUrls: [
-      { label: "sungrow-5kW-single-phase", url: pdfsg1 },
-      { label: "sungrow-5kw-three-phase", url: pdfsg2 },
+      { label: "sungrow-5kW-single-phase", url: "/datasheets/sungrow-5kW-single-phase.pdf" },
+      { label: "sungrow-5kw-three-phase", url: "/datasheets/sungrow-5kw-three-phase.pdf" },
     ],
     datasheetSpecs: [
       { label: "Inverter Type", value: "Hybrid & String Inverter" },
@@ -1568,8 +1568,8 @@ export const productsData: Record<string, ProductData> = {
     productImages: [
       grow1, grow2],
     pdfUrls: [
-      { label: "growatt-3-phase-inverter-3-6kw-TL3-latest-model", url: pdfgr1 },
-      { label: "growatt-3kW-single-phase-Inverter", url: pdfgr2 }
+      { label: "growatt-3-phase-inverter-3-6kw-TL3-latest-model", url: "/datasheets/growatt-3-phase-inverter-3-6kw-TL3-latest-model.pdf" },
+      { label: "growatt-3kW-single-phase-Inverter", url: "/datasheets/growatt-3kW-single-phase-Inverter.pdf" }
     ],
     datasheetSpecs: [
       { label: "Inverter Type", value: "Hybrid & String Inverter" },
@@ -1674,9 +1674,9 @@ export const productsData: Record<string, ProductData> = {
       solis3,
     ],
     pdfUrls: [
-      { label: "solis-hybrid-5kw-inverter", url: pdfsolis1 },
-      { label: "solis-single-phase", url: pdfsolis2 },
-      { label: "solis-three-phase-5-20kW", url: pdfsolis3 },
+      { label: "solis-hybrid-5kw-inverter", url: "/datasheets/solis-hybrid-5kw-inverter.pdf" },
+      { label: "solis-single-phase", url: "/datasheets/solis-single-phase.pdf" },
+      { label: "solis-three-phase-5-20kW", url: "/datasheets/solis-three-phase-5-20kW.pdf" },
     ],
     datasheetSpecs: [
       { label: "Inverter Type", value: "String & Hybrid Inverter" },
@@ -1780,8 +1780,8 @@ export const productsData: Record<string, ProductData> = {
       saj2
     ],
     pdfUrls: [
-      { label: "SAJ-5kW-1P-datasheet", url: pdfsaj1 },
-      { label: "SAJ-5-10kW-3P-datasheet", url: pdfsaj2 },
+      { label: "SAJ-5kW-1P-datasheet", url: "/datasheets/SAJ-5kW-1P-datasheet.pdf" },
+      { label: "SAJ-5-10kW-3P-datasheet", url: "/datasheets/SAJ-5-10kW-3P-datasheet.pdf" },
     ],
     datasheetSpecs: [
       { label: "Inverter Type", value: "Hybrid & Smart Inverter" },
@@ -1881,7 +1881,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: inverter6,
     pdfUrls: [
-      { label: "Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25-F-G2-Series_Datasheet-AU", url: pdfsolix },
+      { label: "Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25-F-G2-Series_Datasheet-AU", url: "/datasheets/Anker SOLIX X1 Hybrid Single-Phase_Datasheet_31-12-25.pdf" },
     ],
     productImages: [
       s1,
@@ -1986,7 +1986,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery1,
     pdfUrls: [
-      { label: "EN-EQ4800-Datasheet(AU)-V1.3-20250915", url: pdffox },
+      { label: "EN-EQ4800-Datasheet(AU)-V1.3-20250915", url: "/datasheets/EN-EQ4800-Datasheet(AU)-V1.3-20250915.pdf" },
     ],
     productImages: [
       fox1,
@@ -2190,7 +2190,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery3,
     pdfUrls: [
-      { label: "B2-X-HVa-S-EN-AU-20260525", url: pdfsaj },
+      { label: "B2-X-HVa-S-EN-AU-20260525", url: "/datasheets/B2-X-HVa-S-EN-AU-20260525.pdf" },
     ],
     productImages: [
       sajo1, sajo2
@@ -2291,7 +2291,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery7,
     pdfUrls: [
-      { label: "Spec-Anker-Solar-Battery", url: pdfank },
+      { label: "Spec-Anker-Solar-Battery", url: "/datasheets/Spec-Anker-Solar-Battery.pdf" },
     ],
     productImages: [
       ank1,
@@ -2395,7 +2395,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery8,
     pdfUrls: [
-      { label: "DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU", url: pdfsun },
+      { label: "DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU", url: "/datasheets/DS_20230721_SBR064_128_160_192_224_256_datasheet_V1_AU.pdf" },
     ],
     productImages: [
       sun1, sun2],
@@ -2497,7 +2497,7 @@ export const productsData: Record<string, ProductData> = {
     // Extra fields dynamically merged
     logoUrl: battery2,
     pdfUrls: [
-      { label: "ALP_LV_2024", url: pdfalp },
+      { label: "ALP_LV_2024", url: "/datasheets/ALP_LV_2024.pdf" },
     ],
     productImages: [
       alpha1, alpha2

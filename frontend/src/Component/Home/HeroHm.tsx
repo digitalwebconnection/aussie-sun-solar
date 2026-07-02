@@ -1,10 +1,17 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+// decstop view
 import hero1 from "../../assets/HeroImages/1.png";
 import hero2 from "../../assets/HeroImages/2.png";
 import hero3 from "../../assets/HeroImages/3.png";
+import hero7 from "../../assets/HeroImages/7.jpeg";
+import hero8 from "../../assets/HeroImages/8.jpeg";
+
+// mobile view
 import hero4 from "../../assets/HeroImages/4.png";
 import hero5 from "../../assets/HeroImages/5.png";
 import hero6 from "../../assets/HeroImages/6.png";
+import hero9 from "../../assets/HeroImages/9.jpeg";
+import hero10 from "../../assets/HeroImages/10.jpeg";
 
 /* ================================
    HERO IMAGES
@@ -24,8 +31,8 @@ const HeroSection = () => {
   }, []);
 
   const heroImages = isMobile
-    ? [hero4, hero5, hero6]
-    : [hero1, hero2, hero3];
+    ? [hero4, hero5, hero6, hero9, hero10]
+    : [hero1, hero2, hero3, hero7, hero8];
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const touchStartX = useRef<number | null>(null);
