@@ -1,4 +1,5 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+﻿import { useState, useCallback, useEffect, useRef } from "react";
+import BlurText from '../BlurText';
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, ChevronLeft, ChevronRight, Images } from "lucide-react";
 
@@ -60,19 +61,7 @@ const allPhotos = [
 
 const INITIAL_SHOW = 10;
 
-/* Bento pattern repeating every 10 images
-   Grid: 4 columns, auto-rows: 200px
-   pos 0 → col-span-2 row-span-2  (big featured, 400px tall)
-   pos 1 → col-span-1 row-span-1  (small square)
-   pos 2 → col-span-1 row-span-1  (small square)
-   pos 3 → col-span-1 row-span-1  (small square)
-   pos 4 → col-span-1 row-span-1  (small square)
-   pos 5 → col-span-1 row-span-2  (tall portrait)
-   pos 6 → col-span-2 row-span-1  (wide landscape)
-   pos 7 → col-span-1 row-span-1  (small square)
-   pos 8 → col-span-2 row-span-2  (big featured, 400px tall)
-   pos 9 → col-span-1 row-span-1  (small square)
-*/
+
 
 const BENTO: { col: string; row: string }[] = [
   { col: "col-span-2", row: "row-span-2" },
@@ -246,10 +235,9 @@ const ProjectsGallery = () => {
               <Images size={15} className="text-[#004093]" />
               <span className="text-xs font-black uppercase tracking-[0.3em] text-[#004093]">Project Gallery</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-[#111827]">
-              Real Installations,{" "} <br />
-              <span className="text-[#FE9900]">Real Results</span>
-            </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-[#111827] flex flex-col items-center">
+            <BlurText text="Installation Gallery" delay={80} animateBy="words" direction="top" />
+          </h2>
             <p className="mt-3 text-gray-600 text-sm md:text-lg max-w-6xl mx-auto">
               Every photo is a genuine solar installation completed by our SAA-accredited team across Australia.
             </p>

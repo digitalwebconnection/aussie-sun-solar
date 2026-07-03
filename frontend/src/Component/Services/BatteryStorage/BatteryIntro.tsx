@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
+import BlurText from "../../BlurText";
 
 const BatteryIntro = () => {
   return (
@@ -18,9 +19,9 @@ const BatteryIntro = () => {
             <div className="h-[2px] w-14 bg-[#FE9900]" />
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827]">
-            Australia’s Trusted Battery  
-            <span className="mt-2 block text-[#004093]">Storage Solutions Experts</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] flex flex-col items-center">
+            <BlurText text="Australia's Trusted Battery Storage" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Solutions Experts" delay={80} animateBy="words" direction="bottom" className="mt-2 text-[#004093]" />
           </h2>
 
           <p className="mx-auto mt-8 max-w-7xl text-base md:text-lg leading-relaxed text-gray-900">

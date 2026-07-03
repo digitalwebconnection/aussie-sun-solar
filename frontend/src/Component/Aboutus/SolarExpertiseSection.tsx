@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle2, SunMedium, ChevronDown } from "lucide-react";
+import BlurText from "../BlurText";
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 import zodiacCommercial from '../../assets/downloaded-images/zodiac-commercial-solar.png';
 import graceIndustrial from '../../assets/downloaded-images/grace-industrial-solar.webp';
@@ -152,9 +153,20 @@ export default function SolarExpertiseSection() {
             <p className="text-[#004093] uppercase tracking-[0.25em] text-xs font-black">Solar Expertise</p>
           </motion.div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2]">
-            Complete Solar
-            <span className="block bg-[#004093] bg-clip-text text-transparent py-2 pb-3">Energy Solutions</span>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2] flex flex-col items-center">
+            <BlurText
+              text="Complete Solar"
+              delay={80}
+              animateBy="words"
+              direction="top"
+            />
+            <BlurText
+              text="Energy Solutions"
+              delay={80}
+              animateBy="words"
+              direction="bottom"
+              className="text-[#004093] py-2 pb-3"
+            />
           </h2>
 
           <p className="mx-auto mt-4 max-w-7xl text-sm md:text-base lg:text-lg leading-loose text-slate-600">

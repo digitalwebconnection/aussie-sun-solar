@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
+import BlurText from "../../BlurText";
 
 const SolarIntro = () => {
   return (
@@ -39,11 +40,9 @@ const SolarIntro = () => {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] ">
-            Australia’s Trusted Partner in
-            <span className="mt-2 block text-[#004093]">
-              Solar Energy Solutions
-            </span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] flex flex-col items-center">
+            <BlurText text="Australia's Trusted Partner in" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Solar Energy Solutions" delay={80} animateBy="words" direction="bottom" className="mt-2 text-[#004093]" />
           </h2>
 
           {/* Description */}

@@ -8,6 +8,7 @@ import {
     Car,
     ShieldCheck,
 } from "lucide-react";
+import BlurText from "../BlurText";
 
 import { usePopup } from "../../context/PopupContext";
 
@@ -123,20 +124,20 @@ const ServicesSection = () => {
 
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#111827] mt-4">
-
-                            Smart Solar
-                            <span className="text-[#004093]">
-                                {" "}Solutions
-                            </span>
-
-                            <br />
-
-                            For Every
-                            <span className="text-[#FE9900]">
-                                {" "}Energy Need
-                            </span>
-
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#111827] mt-4 flex flex-col items-center">
+                            <BlurText
+                                text="Smart Solar Solutions"
+                                delay={80}
+                                animateBy="words"
+                                direction="top"
+                            />
+                            <BlurText
+                                text="For Every Energy Need"
+                                delay={80}
+                                animateBy="words"
+                                direction="bottom"
+                                className="text-[#004093]"
+                            />
                         </h2>
 
                     </div>

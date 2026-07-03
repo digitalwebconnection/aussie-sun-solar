@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
+import BlurText from '../../BlurText';
 
 const CommercialIntro = () => {
   return (
@@ -14,9 +15,9 @@ const CommercialIntro = () => {
             <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">Commercial Energy</span>
             <div className="h-[2px] w-14 bg-[#FE9900]" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827]">
-            Australia’s Trusted Experts In 
-            <span className="mt-2 block text-[#004093]">Commercial Solar Solutions</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] flex flex-col items-center">
+            <BlurText text="Australia's Trusted Commercial Solar" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Energy Solutions" delay={80} animateBy="words" direction="bottom" className="mt-2 text-[#004093]" />
           </h2>
           <p className="mx-auto mt-8 max-w-7xl text-base md:text-lg leading-relaxed text-gray-900">
          Aussie Sun Solar provides trusted Commercial Solar Solutions Australia businesses rely on for lower energy costs and better efficiency.Smart solar systems for warehouses, offices, and commercial properties across Australia. </p>

@@ -1,3 +1,4 @@
+﻿import BlurText from "../BlurText";
 import React from "react";
 import {
   Sparkles,
@@ -59,9 +60,9 @@ export const TechnicalAdvantages: React.FC<TechnicalAdvantagesProps> = ({
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
-            {product.betterTitle}
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight flex flex-col items-start">
+          <BlurText text="Technical Advantages" delay={80} animateBy="words" direction="top" />
+        </h2>
 
           <p className="text-slate-900 text-base md:text-lg leading-relaxed mt-5">
             Engineered with advanced solar technology for maximum durability,

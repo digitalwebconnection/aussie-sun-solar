@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Phone, ChevronRight } from "lucide-react";
 import { usePopup } from "../../context/PopupContext";
+import BlurText from "../BlurText";
 import contactBannerPerson from '../../assets/downloaded-images/contact-banner-person.jpg';
 
 const ContactBanner = () => {
@@ -20,9 +21,13 @@ const ContactBanner = () => {
           
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">
-                Work With a Team <br />
-                That Works for You
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight flex flex-col items-start">
+                <BlurText
+                  text="Work With a Team That Works for You"
+                  delay={80}
+                  animateBy="words"
+                  direction="top"
+                />
               </h2>
               <p className="mt-6 text-white/70 text-lg leading-relaxed max-w-lg">
                 Whether you're going solar for the first time or upgrading your existing system, Aussie Sun Solar is here to help — with no shortcuts, no confusing jargon, and no fluff.

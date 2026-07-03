@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Hammer, Zap, BadgeDollarSign, Battery, Activity, Users } from "lucide-react";
+import BlurText from "../BlurText";
 
 const features = [
   {
@@ -40,9 +41,20 @@ const ContactFeatures = () => {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093]">
-            Why More Australians Choose <br />
-            <span className="text-[#FE9900]">Aussie Sun Solar?</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] flex flex-col items-center">
+            <BlurText
+              text="Why More Australians Choose"
+              delay={80}
+              animateBy="words"
+              direction="top"
+            />
+            <BlurText
+              text="Aussie Sun Solar?"
+              delay={80}
+              animateBy="words"
+              direction="bottom"
+              className="text-[#FE9900]"
+            />
           </h2>
         </div>
 

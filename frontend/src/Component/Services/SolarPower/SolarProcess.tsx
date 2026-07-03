@@ -1,4 +1,5 @@
-import  { useEffect, useState } from 'react';
+﻿import  { useEffect, useState } from 'react';
+import BlurText from "../../BlurText";
 import { easeOut, motion, AnimatePresence } from 'framer-motion';
 import {
   Sun,
@@ -109,11 +110,9 @@ const SolarProcess = () => {
             ☀️ SMART SOLAR TECHNOLOGY
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
-            Smart Solar Energy
-            <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">
-              Solutions for Australian Homes & Businesses
-            </span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6 flex flex-col items-center">
+            <BlurText text="Smart Solar Energy" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Solutions for Australian Homes & Businesses" delay={60} animateBy="words" direction="bottom" className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400" />
           </h2>
 
           <p className="text-slate-100 text-base md:text-lg mx-auto text-center leading-relaxed max-w-6xl">

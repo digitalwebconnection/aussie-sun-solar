@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Zap } from 'lucide-react';
+import BlurText from '../BlurText';
 
 import battery1 from '../../assets/teslabettery.jpg';
 import battery2 from '../../assets/Battery Partners/2.webp';
@@ -145,11 +146,14 @@ export default function BatterySlider() {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900">
-            Solar{' '}
-            <span className="bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent">
-              Battery
-            </span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 flex justify-center">
+            <BlurText
+              text="Solar Battery Showroom"
+              delay={80}
+              animateBy="words"
+              direction="top"
+              className="[&>span:nth-child(2)]:bg-linear-to-r [&>span:nth-child(2)]:from-[#004093] [&>span:nth-child(2)]:to-[#FE9900] [&>span:nth-child(2)]:bg-clip-text [&>span:nth-child(2)]:text-transparent"
+            />
           </h2>
 
           <p className="mx-auto mt-5 max-w-6xl text-base md:text-lg leading-relaxed text-slate-900">

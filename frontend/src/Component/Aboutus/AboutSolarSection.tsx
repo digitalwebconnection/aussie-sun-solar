@@ -1,6 +1,7 @@
-import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
+﻿import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 import { usePopup } from "../../context/PopupContext";
 import { Link } from "react-router-dom";
+import BlurText from "../BlurText";
 
 export default function PremiumSolarAbout() {
   const { openPopup } = usePopup();
@@ -90,11 +91,9 @@ export default function PremiumSolarAbout() {
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-[#FE9900] leading-[1.1] tracking-tight">
-                Leading Solar Company in Queensland <br />
-                <span className="block text-transparent bg-clip-text bg-[#004093] ">
-                  Powering Australia’s Sustainable Future
-                </span>
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-[#FE9900] leading-[1.1] tracking-tight flex flex-col items-start">
+                <BlurText text="Leading Solar Company in Queensland" delay={80} animateBy="words" direction="top" />
+                <BlurText text="Powering Australia's Sustainable Future" delay={60} animateBy="words" direction="bottom" className="text-[#004093]" />
               </h2>
 
               {/* Subtitle */}
@@ -142,12 +141,20 @@ export default function PremiumSolarAbout() {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-black leading-tight tracking-tight">
-              Creating
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]">
-                {" "}Smarter Solar Energy Solutions{" "}
-              </span>
-              for Homes & Businesses Across Queensland
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-black leading-tight tracking-tight flex flex-col items-center">
+              <BlurText
+                text="Creating Smarter Solar Energy Solutions"
+                delay={60}
+                animateBy="words"
+                direction="top"
+              />
+              <BlurText
+                text="for Homes & Businesses Across Queensland"
+                delay={50}
+                animateBy="words"
+                direction="bottom"
+                className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]"
+              />
             </h2>
 
             {/* Description */}

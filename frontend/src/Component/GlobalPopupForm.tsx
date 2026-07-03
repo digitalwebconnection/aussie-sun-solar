@@ -119,7 +119,7 @@ Aussie Sun Solar Lead Management`;
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 30 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="relative flex w-full max-w-5xl flex-col overflow-hidden rounded-xl bg-white shadow-[0_40px_100px_rgba(0,0,0,0.6)] lg:flex-row"
+            className="relative flex w-full max-w-5xl flex-col overflow-hidden rounded-xl bg-white shadow-[0_40px_100px_rgba(0,0,0,0.6)] lg:flex-row max-h-[92vh] overflow-y-auto"
           >
             {/* Close Button */}
             <button
@@ -179,28 +179,24 @@ Aussie Sun Solar Lead Management`;
             </div>
 
             {/* Right Form Section */}
-            <div className="relative w-full p-8 lg:w-7/12 lg:p-14">
+            <div className="relative w-full p-6 sm:p-8 lg:w-7/12 lg:p-14">
               {/* Decorative Background */}
               <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#004093]/5 blur-[80px]" />
               <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-[#FE9900]/10 blur-[80px]" />
 
               <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left">
                 {/* Logo */}
-                <img src={logo} alt="Aussie Sun Solar Logo" className="mb-8 h-12 lg:h-14 object-contain" />
+                <img src={logo} alt="Aussie Sun Solar Logo" className="mb-4 sm:mb-8 h-10 sm:h-12 lg:h-14 object-contain" />
 
-                <h3 className="mb-2 font-serif text-2xl font-bold text-[#004093] md:text-3xl">
+                <h3 className="mb-1 sm:mb-2 font-serif text-xl sm:text-2xl font-bold text-[#004093] md:text-3xl">
                   Get a Free Solar Quote
                 </h3>
-                <p className="mb-8 text-gray-500 text-sm max-w-[400px]">
+                <p className="mb-4 sm:mb-8 text-xs sm:text-sm text-gray-500 max-w-[400px]">
                   Take the first step towards energy independence. Fill out the form below and our experts will be in touch.
                 </p>
 
-                <form className="w-full space-y-5" onSubmit={onSubmit}>
-                  {/* Web3Forms Advanced Configuration for Better Email Format */}
-                  <input type="hidden" name="subject" value="🌟 New Premium Solar Quote Request" />
-                  <input type="hidden" name="from_name" value="Aussie Sun Solar Website" />
-
-                  <div className="grid gap-5 sm:grid-cols-2">
+                <form className="w-full space-y-3 sm:space-y-5" onSubmit={onSubmit}>
+                                 <div className="grid gap-3 sm:gap-5 sm:grid-cols-2">
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-400 group-focus-within:text-[#004093] transition-colors">
                         <User size={18} />
@@ -210,7 +206,7 @@ Aussie Sun Solar Lead Management`;
                         name="name"
                         required
                         placeholder="Full Name"
-                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
+                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-2.5 sm:py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
                       />
                     </div>
                     <div className="relative group">
@@ -222,12 +218,12 @@ Aussie Sun Solar Lead Management`;
                         name="phone"
                         required
                         placeholder="Phone Number"
-                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
+                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-2.5 sm:py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
                       />
                     </div>
                   </div>
 
-                  <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="grid gap-3 sm:gap-5 sm:grid-cols-2">
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-400 group-focus-within:text-[#004093] transition-colors">
                         <Mail size={18} />
@@ -237,7 +233,7 @@ Aussie Sun Solar Lead Management`;
                         name="email"
                         required
                         placeholder="Email Address"
-                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
+                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-2.5 sm:py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
                       />
                     </div>
                     <div className="relative group">
@@ -249,7 +245,7 @@ Aussie Sun Solar Lead Management`;
                         name="electricity_bill"
                         required
                         placeholder="Quarterly Electricity Bill ($)"
-                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
+                        className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-2.5 sm:py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
                       />
                     </div>
                   </div>
@@ -263,7 +259,7 @@ Aussie Sun Solar Lead Management`;
                       name="address"
                       required
                       placeholder="Full Property Address"
-                      className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
+                      className="w-full rounded-xl border-2 border-gray-300 bg-gray-50/50 py-2.5 sm:py-3.5 pl-12 pr-4 text-sm font-semibold text-[#004093] outline-none transition-all placeholder:text-gray-400 focus:border-[#004093] focus:bg-white focus:ring-4 focus:ring-[#004093]/10"
                     />
                   </div>
 
@@ -272,7 +268,7 @@ Aussie Sun Solar Lead Management`;
                     disabled={isSubmitting}
                     whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                     whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                    className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-linear-to-r from-[#004093] to-[#0052bd] px-6 py-4 text-sm font-black uppercase tracking-widest text-white shadow-[0_15px_30px_-10px_rgba(0,64,147,0.5)] transition-all hover:shadow-[0_20px_40px_-10px_rgba(0,64,147,0.7)] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-linear-to-r from-[#004093] to-[#0052bd] px-6 py-3 sm:py-4 text-sm font-black uppercase tracking-widest text-white shadow-[0_15px_30px_-10px_rgba(0,64,147,0.5)] transition-all hover:shadow-[0_20px_40px_-10px_rgba(0,64,147,0.7)] disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     <div className="absolute inset-0 flex h-full w-full justify-center transform-[skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:transform-[skew(-12deg)_translateX(100%)]">
                       <div className="relative h-full w-8 bg-white/20" />
@@ -283,7 +279,7 @@ Aussie Sun Solar Lead Management`;
                     )}
                   </motion.button>
 
-                  <p className="text-center text-[11px] font-medium text-gray-400 mt-4">
+                  <p className="text-center text-[11px] font-medium text-gray-400 mt-3 sm:mt-4">
                     Your data is secure and encrypted. We respect your privacy.
                   </p>
                 </form>

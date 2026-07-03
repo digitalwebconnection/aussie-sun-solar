@@ -9,6 +9,7 @@ import {
     BatteryCharging,
     Wrench,
 } from 'lucide-react';
+import BlurText from '../BlurText';
 
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 import solarMonitoring from '../../assets/downloaded-images/solar-monitoring.jpg';
@@ -93,11 +94,20 @@ export default function WellnessExpertsSection() {
                     >
 
 
-                        <h2 className="text-3xl md:text-6xl font-serif font-bold leading-[0.92] tracking-[-4px] text-[#111]">
-                            Natural Wellness
-                            <span className="block font-medium text-[#d4af37]">
-                                Transformation Experts
-                            </span>
+                        <h2 className="text-3xl md:text-6xl font-serif font-bold leading-[0.92] tracking-[-4px] text-[#111] flex flex-col items-center">
+                            <BlurText
+                                text="Trusted Solar"
+                                delay={80}
+                                animateBy="words"
+                                direction="top"
+                            />
+                            <BlurText
+                                text="Energy Experts"
+                                delay={80}
+                                animateBy="words"
+                                direction="bottom"
+                                className="font-medium text-[#004093]"
+                            />
                         </h2>
 
                         <p className="mx-auto mt-7 max-w-6xl text-sm md:text-lg leading-[1.9] text-[#141414]">

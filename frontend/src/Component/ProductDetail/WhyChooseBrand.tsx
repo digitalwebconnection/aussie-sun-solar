@@ -1,3 +1,4 @@
+﻿import BlurText from "../BlurText";
 import React from "react";
 import {
   CheckCircle2,
@@ -29,15 +30,10 @@ export const WhyChooseBrand: React.FC<WhyChooseBrandProps> = ({
               BRAND ADVANTAGES
             </span>
 
-            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#004093]">
-              Why Choose
-              <span className="text-[#FE9900]">
-                {" "}
-                {product.brand}
-                 {" "}
-              </span>
-              Panels Australia?
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#004093] flex flex-col items-start">
+            <BlurText text="Why Choose" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Premium Solar Panels Australia?" delay={60} animateBy="words" direction="bottom" className="text-[#FE9900]" />
+          </h2>
 
             <p className="text-slate-900 mt-4 max-w-2xl text-base leading-relaxed">
               Trusted performance, advanced technology, certified

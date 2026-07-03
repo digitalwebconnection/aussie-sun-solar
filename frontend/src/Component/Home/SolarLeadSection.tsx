@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useToast } from "../ui/Toast";
 import { motion, AnimatePresence } from "framer-motion";
+import BlurText from "../BlurText";
 import {
     Battery,
     Zap,
@@ -101,18 +102,20 @@ const SolarLeadSection = () => {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-[#004093] relative z-10">
-                        Build Your{" "}
-
-                        <span className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900] drop-shadow-[4px_4px_12px_rgba(254,153,0,0.35)]">
-                            Smart Solar
-                        </span>
-
-                        <br />
-
-                        <span className="drop-shadow-[8px_8px_20px_rgba(0,64,147,0.18)]">
-                            Ecosystem Today.
-                        </span>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-[#004093] relative z-10 flex flex-col items-center">
+                        <BlurText
+                            text="Build Your Smart Solar"
+                            delay={80}
+                            animateBy="words"
+                            direction="top"
+                        />
+                        <BlurText
+                            text="Ecosystem Today."
+                            delay={80}
+                            animateBy="words"
+                            direction="bottom"
+                            className="text-transparent bg-clip-text bg-linear-to-r from-[#004093] to-[#FE9900]"
+                        />
                     </h2>
                 </div>
                 {/* Minimalist Tabs */}

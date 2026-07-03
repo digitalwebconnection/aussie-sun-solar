@@ -9,6 +9,7 @@ import {
   Globe,
 } from "lucide-react";
 import { usePopup } from "../../context/PopupContext";
+import BlurText from "../BlurText";
 
 const packages = [
   {
@@ -65,14 +66,21 @@ const PremiumSolarPackages = () => {
             >
               System Selection 2026
             </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[0.9]"
-            >
-              Future-Proof <br />
-              <span className="text-[#FE9900]">Energy Portfolios.</span>
-            </motion.h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[0.9] flex flex-col items-center">
+              <BlurText
+                text="Future-Proof"
+                delay={80}
+                animateBy="words"
+                direction="top"
+              />
+              <BlurText
+                text="Energy Portfolios."
+                delay={80}
+                animateBy="words"
+                direction="bottom"
+                className="text-[#FE9900]"
+              />
+            </h2>
           </div>
 
         </div>

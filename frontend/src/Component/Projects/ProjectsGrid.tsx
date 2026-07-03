@@ -1,5 +1,6 @@
-import React from "react";
+﻿import React from "react";
 import { motion } from "framer-motion";
+import BlurText from '../BlurText';
 import { MapPin, ArrowRight } from "lucide-react";
 
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
@@ -68,11 +69,9 @@ const ProjectsSection: React.FC = () => {
             Our Projects
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-serif font-bold text-[#111827]">
-            Recent Solar
-            <span className="block text-[#FE9900]">
-              Installations
-            </span>
+          <h2 className="mt-4 text-3xl md:text-5xl font-serif font-bold text-[#111827] flex flex-col items-center">
+            <BlurText text="Our Solar Projects" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Across Australia" delay={80} animateBy="words" direction="bottom" className="text-[#FE9900]" />
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-gray-600">

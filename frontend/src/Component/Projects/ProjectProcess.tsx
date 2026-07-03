@@ -1,5 +1,6 @@
 import React from 'react';
 import { easeOut, motion } from 'framer-motion';
+import BlurText from '../BlurText';
 
 const steps = [
   {
@@ -74,10 +75,20 @@ const ProjectProcess: React.FC = () => {
               />
               How It Works
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] leading-tight">
-              From Quote to{' '}
-              <span className="text-[#FE9900]">Power-On</span>
-              <br /> in 4 Easy Steps
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] leading-tight flex flex-col items-center">
+              <BlurText
+                text="From Quote to Power-On"
+                delay={80}
+                animateBy="words"
+                direction="top"
+              />
+              <BlurText
+                text="in 4 Easy Steps"
+                delay={80}
+                animateBy="words"
+                direction="bottom"
+                className="text-[#FE9900]"
+              />
             </h2>
           </div>
           <p className="mt-4 text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -101,22 +112,25 @@ const ProjectProcess: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="flex flex-col lg:grid lg:grid-cols-4 gap-12 lg:gap-8 relative"
           >
+            {/* Animated Vertical connector line for mobile */}
+            <div className="lg:hidden absolute left-8 top-8 bottom-8 w-[2px] bg-linear-to-b from-[#004093]/20 via-[#FE9900]/60 to-[#004093]/20 z-0" />
+
             {steps.map((step, i) => (
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="relative z-10  group"
+                className="relative z-10 group flex flex-row items-start gap-6 text-left lg:flex-col lg:items-center lg:text-center"
               >
                 {/* Step number circle */}
                 <motion.div
                   whileHover={{ y: -10, scale: 1.05 }}
-                  className="relative w-20 h-20 rounded-lg  bg-white border-2 border-[#004093]/40 group-hover:border-[#FE9900] shadow-lg group-hover:shadow-[#FE9900]/20 transition-all duration-500 flex items-center justify-center mx-auto mb-8 group-hover:bg-[#004093]"
+                  className="relative w-16 h-16 lg:w-20 lg:h-20 shrink-0 rounded-lg bg-white border-2 border-[#004093]/40 group-hover:border-[#FE9900] shadow-lg group-hover:shadow-[#FE9900]/20 transition-all duration-500 flex items-center justify-center group-hover:bg-[#004093]"
                 >
                   <motion.span
                     whileHover={{ rotate: [0, -10, 10, 0] }}
-                    className="text-4xl"
+                    className="text-3xl lg:text-4xl"
                   >
                     {step.icon}
                   </motion.span>
@@ -126,17 +140,17 @@ const ProjectProcess: React.FC = () => {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ delay: 0.5 + (i * 0.1) }}
-                    className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#FE9900] text-black text-xs font-black flex items-center justify-center shadow-md"
+                    className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-[#FE9900] text-black text-[10px] lg:text-xs font-black flex items-center justify-center shadow-md"
                   >
                     {step.num}
                   </motion.div>
                 </motion.div>
 
-                <div className="text-center">
-                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[#004093] mb-4 group-hover:text-[#FE9900] transition-colors">
+                <div className="flex-1 mt-1 lg:mt-8 lg:text-center">
+                  <h3 className="text-lg lg:text-2xl font-serif font-semibold text-[#004093] mb-2 lg:mb-4 group-hover:text-[#FE9900] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-900 leading-relaxed text-sm px-4">{step.desc}</p>
+                  <p className="text-gray-900 leading-relaxed text-sm lg:px-4">{step.desc}</p>
                 </div>
               </motion.div>
             ))}

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import BlurText from '../BlurText';
 import directorImg from '../../assets/downloaded-images/director.jpg';
 
 export default function DirectorMessage() {
@@ -62,9 +63,14 @@ export default function DirectorMessage() {
                    <p className="text-[#FE9900] text-xs font-black tracking-[0.2em] uppercase">Leadership Message</p>
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] leading-tight mb-8">
-                  A Message <br />
-                  <span className="text-[#FE9900]">From Our Director</span>
+                <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] leading-tight mb-8 flex flex-col items-start">
+                  <BlurText
+                    text="A Message From Our Director"
+                    delay={80}
+                    animateBy="words"
+                    direction="top"
+                    className="text-[#FE9900]"
+                  />
                 </h2>
 
                 <div className="relative">

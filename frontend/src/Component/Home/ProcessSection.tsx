@@ -9,6 +9,7 @@ import {
     ArrowRight,
     Sparkles,
 } from 'lucide-react';
+import BlurText from '../BlurText';
 
 const PROCESS = [
     {
@@ -88,14 +89,20 @@ export default function ProcessTimelineSection() {
                     </div>
 
                     {/* TITLE */}
-                    <h2 className="text-3xl md:text-5xl  font-serif font-bold tracking-[-3px] text-slate-900 xl:text-7xl">
-
-                        Simple Process.
-                        <br />
-
-                        <span className="bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent">
-                            Powerful Results.
-                        </span>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-[-3px] text-slate-900 xl:text-7xl flex flex-col items-center">
+                        <BlurText
+                            text="Simple Process."
+                            delay={80}
+                            animateBy="words"
+                            direction="top"
+                        />
+                        <BlurText
+                            text="Powerful Results."
+                            delay={80}
+                            animateBy="words"
+                            direction="bottom"
+                            className="bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent"
+                        />
                     </h2>
 
                     {/* LINE */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import BlurText from '../BlurText';
 
 // Battery Partners
 import battery1 from '../../assets/Battery Partners/1.webp';
@@ -86,11 +87,20 @@ export default function TrustedBrandsSection() {
                         Trusted Technology Partners
                     </p>
 
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2]">
-                        Powered By
-                        <span className="block bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent py-2 pb-4">
-                            Leading Solar Brands
-                        </span>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 leading-[1.2] flex flex-col items-center">
+                        <BlurText
+                            text="Powered By"
+                            delay={80}
+                            animateBy="words"
+                            direction="top"
+                        />
+                        <BlurText
+                            text="Leading Solar Brands"
+                            delay={80}
+                            animateBy="words"
+                            direction="bottom"
+                            className="bg-linear-to-r from-[#004093] to-[#FE9900] bg-clip-text text-transparent py-2 pb-4"
+                        />
                     </h2>
 
 

@@ -20,7 +20,7 @@ export const staticBlogs: StaticBlog[] = [
     readTime: "7 min",
     date: "June 26, 2026",
     excerpt: "Considering N-Type vs P-Type Solar Panels? Discover the pros, cons, efficiency, and cost differences to make the right choice for your Australian home or business.",
-    image: "/staticblog-img1.jpg",
+    image: "/staticblog-img1.png",
     content: `
       <p>As solar technology continues to evolve, Australian homeowners and businesses are faced with an important decision when investing in a solar energy system: choosing between N-Type and P-Type solar panels. With advancements in efficiency, durability, and long-term performance, understanding the differences between these two technologies can help you make a smarter investment.</p>
       

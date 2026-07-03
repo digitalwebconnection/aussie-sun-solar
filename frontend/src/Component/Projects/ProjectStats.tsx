@@ -7,6 +7,7 @@ import {
   Leaf,
 } from "lucide-react";
 import CountUp from "../Animations/CountUp";
+import BlurText from "../BlurText";
 
 const stats = [
   {
@@ -98,11 +99,20 @@ const ProjectStats: React.FC = () => {
             Our Achievements
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-serif font-bold text-[#111827]">
-            Numbers That Reflect
-            <span className="block text-[#FE9900]">
-              Our Solar Excellence
-            </span>
+          <h2 className="mt-4 text-3xl md:text-5xl font-serif font-bold text-[#111827] flex flex-col items-center">
+            <BlurText
+              text="Numbers That Reflect"
+              delay={80}
+              animateBy="words"
+              direction="top"
+            />
+            <BlurText
+              text="Our Solar Excellence"
+              delay={80}
+              animateBy="words"
+              direction="bottom"
+              className="text-[#FE9900]"
+            />
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-gray-900">
@@ -117,7 +127,7 @@ const ProjectStats: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-4"
         >
           {stats.map((s, i) => {
             const Icon = s.icon;
@@ -159,13 +169,13 @@ const ProjectStats: React.FC = () => {
 
                 {/* Icon Container */}
                 <div
-                  className="mb-8 flex h-20 w-20 items-center justify-center rounded-lg transition-transform duration-500 group-hover:scale-110"
+                  className="mb-4 md:mb-8 flex h-14 w-14 md:h-20 md:w-20 items-center justify-center rounded-lg transition-transform duration-500 group-hover:scale-110"
                   style={{
                     backgroundColor: `${s.color}50`,
                   }}
                 >
                   <Icon
-                    className="h-10 w-10"
+                    className="h-7 w-7 md:h-10 md:w-10"
                     style={{
                       color: s.color,
                     }}
@@ -175,7 +185,7 @@ const ProjectStats: React.FC = () => {
                 {/* Number with CountUp */}
                 <div className="flex items-baseline gap-1">
                   <h3
-                    className="text-5xl font-black tracking-tight md:text-6xl"
+                    className="text-3xl sm:text-5xl font-black tracking-tight md:text-6xl"
                     style={{
                       color: s.color,
                     }}
@@ -189,7 +199,7 @@ const ProjectStats: React.FC = () => {
                     />
                   </h3>
                   <span
-                    className="text-2xl font-bold"
+                    className="text-lg sm:text-2xl font-bold"
                     style={{ color: s.color }}
                   >
                     {s.suffix}
@@ -197,12 +207,12 @@ const ProjectStats: React.FC = () => {
                 </div>
 
                 {/* Label */}
-                <p className="mt-4 text-xl font-bold text-[#111827]">
+                <p className="mt-2 md:mt-4 text-base md:text-xl font-bold text-[#111827]">
                   {s.label}
                 </p>
 
                 {/* Description */}
-                <p className="mt-3 text-base leading-relaxed text-gray-800/80">
+                <p className="mt-2 md:mt-3 text-xs md:text-base leading-relaxed text-gray-800/80">
                   {s.desc}
                 </p>
 

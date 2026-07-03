@@ -1,3 +1,4 @@
+﻿import BlurText from "../../BlurText";
 import { useEffect, useState } from 'react';
 import { easeOut, motion, AnimatePresence } from 'framer-motion';
 import { Sun, Battery, Zap, Home, ArrowRight, ShieldCheck } from 'lucide-react';
@@ -36,9 +37,9 @@ const BatteryProcess = () => {
           <span className="flex items-center gap-2 text-[#FE9900] font-bold justify-center uppercase tracking-[3px] text-sm mb-5">
             <ShieldCheck size={18} /> Smart Battery Technology
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
-            Battery Storage
-            <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">Made Simple</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6 flex flex-col items-center">
+            <BlurText text="Smart Battery Storage" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Solutions for Your Home" delay={60} animateBy="words" direction="bottom" className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400" />
           </h2>
           <p className="text-slate-100 text-base md:text-lg mx-auto text-center leading-relaxed max-w-6xl">
             Power your home around the clock with intelligent battery systems designed for maximum reliability and energy independence.

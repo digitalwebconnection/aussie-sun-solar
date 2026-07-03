@@ -8,6 +8,7 @@ import {
     ArrowRight,
 } from "lucide-react";
 import { usePopup } from "../../context/PopupContext";
+import BlurText from "../BlurText";
 
 export default function PremiumSolarCalculator() {
     const { openPopup } = usePopup();
@@ -41,11 +42,20 @@ export default function PremiumSolarCalculator() {
                         </div>
 
                         {/* Heading */}
-                        <h2 className="text-3xl md:text-5xl leading-tight font-serif font-bold text-white mb-4">
-                            Calculate Your
-                            <span className="block text-[#FE9900]">
-                                Solar Savings
-                            </span>
+                        <h2 className="text-3xl md:text-5xl leading-tight font-serif font-bold text-white mb-4 flex flex-col items-start">
+                            <BlurText
+                                text="Calculate Your"
+                                delay={80}
+                                animateBy="words"
+                                direction="top"
+                            />
+                            <BlurText
+                                text="Solar Savings"
+                                delay={80}
+                                animateBy="words"
+                                direction="bottom"
+                                className="text-[#FE9900]"
+                            />
                         </h2>
 
                         <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-lg">

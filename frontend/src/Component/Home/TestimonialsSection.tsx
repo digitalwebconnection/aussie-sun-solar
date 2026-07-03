@@ -1,6 +1,7 @@
 import { TestimonialsCard } from "../ui/testimonials-card";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import BlurText from "../BlurText";
 
 import testimonial1 from '../../assets/downloaded-images/testimonial-1.jpg';
 import testimonial2 from '../../assets/downloaded-images/testimonial-2.jpg';
@@ -56,8 +57,13 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900">
-            What Our <br /> <span className="text-[#004093]">Customers</span> Say
+          <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 flex flex-col items-center">
+            <BlurText
+              text="What Our Customers Say"
+              delay={80}
+              animateBy="words"
+              direction="top"
+            />
           </h2>
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-linear-to-r from-[#004093] to-[#FE9900]" />
           <p className="mt-8 text-base md:text-lg text-slate-600">

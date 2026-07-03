@@ -7,7 +7,7 @@ export default function SolarBlogPage() {
     return (
         <>
             {/* ===== BLOG HERO / INTRO ===== */}
-            <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden h-[100vh]">
+            <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden h-screen">
                 {/* Background Image */}
                 <div className="absolute inset-0"><img src={heroImg} alt="Solar installation hero" className="w-full h-full object-cover" /></div>
                 <div className="absolute inset-0 bg-black/30"></div>
@@ -37,7 +37,7 @@ export default function SolarBlogPage() {
                             </p>
 
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <Link to="/contact" className="group bg-[#FE9900] hover:bg-[#e88a00] text-white px-8 py-3.5 rounded-full font-bold flex items-center gap-2 transition duration-300 shadow-lg shadow-orange-200 text-[15px] inline-flex w-fit">
+                                <Link to="/contact" className="group bg-[#FE9900] hover:bg-[#e88a00] text-white px-8 py-3.5 rounded-full font-bold flex items-center gap-2 transition duration-300 shadow-lg shadow-orange-200 text-[15px] w-fit">
                                     Contact Us
                                     <ArrowRight size={18} className="group-hover:translate-x-1 transition duration-300" />
                                 </Link>

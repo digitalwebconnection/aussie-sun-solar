@@ -1,6 +1,7 @@
 import  { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import BlurText from "../BlurText";
 
 const faqs = [
   {
@@ -28,8 +29,13 @@ const ContactFAQ = () => {
     <section className="py-24 bg-white" aria-label="Frequently asked questions">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093]">
-            Common Questions
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#004093] flex flex-col items-center">
+            <BlurText
+              text="Common Questions"
+              delay={80}
+              animateBy="words"
+              direction="top"
+            />
           </h2>
           <p className="mt-4 text-gray-500 font-medium">
             Everything you need to know about starting your solar journey.

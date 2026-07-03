@@ -1,7 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
+import BlurText from '../BlurText';
 import { motion } from 'framer-motion';
 import { Mail, MapPin } from 'lucide-react';
-import FlipFadeText from '../Animations/FlipFadeText';
+// import FlipFadeText from '../Animations/FlipFadeText';
 import solarHeroBg from '../../assets/downloaded-images/solar-hero-bg.jpg';
 
 const ProjectsCTA: React.FC = () => {
@@ -46,17 +47,9 @@ const ProjectsCTA: React.FC = () => {
                 <span className="text-white font-bold text-xs sm:text-sm tracking-widest uppercase">Free Consultation</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white leading-tight mb-3 md:mb-8">
-                Ready to Join the
-                <div className="mt-2 h-[1.2em]">
-                  <FlipFadeText
-                    words={["Solar Revolution?", "Energy Future?", "Clean Economy?", "Green Movement?"]}
-                    className="justify-start min-h-0"
-                    textClassName="text-2xl sm:text-3xl md:text-4xl text-[#FE9900] drop-shadow-[0_0_20px_rgba(254,153,0,0.3)]"
-                    interval={3000}
-                  />
-                </div>
-              </h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white leading-tight mb-3 md:mb-8 flex flex-col items-center">
+              <BlurText text="Ready to Power Your Home or Business?" delay={80} animateBy="words" direction="top" />
+            </h2>
 
               <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-2 md:mb-10">
                 Get a completely free, no-obligation solar assessment for your home or business.

@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
+import BlurText from '../../BlurText';
 
 const EVIntro = () => {
   return (
@@ -14,9 +15,9 @@ const EVIntro = () => {
             <span className="text-lg font-bold uppercase tracking-[0.3em] text-[#FE9900]">EV Charging</span>
             <div className="h-[2px] w-14 bg-[#FE9900]" />
           </div>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827]">
-            Australia’s Trusted EV 
-            <span className="mt-2 block text-[#004093]">Charging Specialists</span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] flex flex-col items-center">
+            <BlurText text="Australia's Leading EV Charger" delay={80} animateBy="words" direction="top" />
+            <BlurText text="Installation Experts" delay={80} animateBy="words" direction="bottom" className="mt-2 text-[#004093]" />
           </h2>
           <p className="mx-auto mt-8 max-w-7xl text-base md:text-lg leading-relaxed text-gray-900">
           Aussie Sun Solar delivers smart EV Chargers Australia solutions for fast, reliable, and energy-efficient vehicle charging. Power your EV with solar compatible charging systems built for Australian homes and businesses. </p>

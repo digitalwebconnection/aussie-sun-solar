@@ -10,6 +10,7 @@ import {
     Wrench,
     ArrowUpRight,
 } from 'lucide-react';
+import BlurText from '../BlurText';
 
 
 const FEATURES = [
@@ -64,8 +65,13 @@ export default function WhyChooseSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900">
-                            The <span className="text-[#004093]">Aussie </span> Sun Solar
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold tracking-tight text-slate-900 flex flex-wrap justify-center">
+                            <BlurText
+                                text="The Aussie Sun Solar"
+                                delay={80}
+                                animateBy="words"
+                                direction="top"
+                            />
                         </h2>
                         <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#FE9900]" />
                         <p className="mx-auto mt-8 max-w-4xl text-sm md:text-lg leading-relaxed text-slate-500">

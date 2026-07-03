@@ -1,3 +1,4 @@
+﻿import BlurText from "../BlurText";
 import React from "react";
 import {
   ShieldCheck,
@@ -41,8 +42,8 @@ export const WarrantySupport: React.FC<WarrantySupportProps> = ({
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
-           Warranty & Direct  Support
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight flex flex-col items-center">
+            <BlurText text="Warranty & Direct Support" delay={80} animateBy="words" direction="top" />
           </h2>
 
           <p className="text-slate-900 text-base md:text-lg mt-5 leading-relaxed">

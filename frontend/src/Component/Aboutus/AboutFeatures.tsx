@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView, type Variants } from "framer-motion";
 import { CheckCircle2, Zap, Award } from "lucide-react";
+import BlurText from "../BlurText";
 import gsap from "gsap";
 import { Canvas } from "@react-three/fiber";
 import { Float, Sphere, MeshDistortMaterial } from "@react-three/drei";
@@ -156,9 +157,20 @@ export default function AboutFeatures() {
               <span className="text-[#FE9900] font-black tracking-[0.3em] uppercase text-xs px-8 py-2 bg-white/5 rounded-full border border-white/10">
                 Our Philosophy
               </span>
-              <h2 className="text-3xl lg:text-5xl font-serif font-bold mt-8 mb-12 leading-tight tracking-tighter text-white">
-                Delivering Trusted Solar Solutions Across Queensland <br />
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400">With Quality & Excellence</span>
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold mt-8 mb-12 leading-tight tracking-tighter text-white flex flex-col items-start">
+                <BlurText
+                  text="Delivering Trusted Solar Solutions"
+                  delay={70}
+                  animateBy="words"
+                  direction="top"
+                />
+                <BlurText
+                  text="With Quality & Excellence"
+                  delay={70}
+                  animateBy="words"
+                  direction="bottom"
+                  className="text-transparent bg-clip-text bg-linear-to-r from-[#FE9900] to-orange-400"
+                />
               </h2>
             </motion.div>
 
@@ -204,9 +216,20 @@ export default function AboutFeatures() {
               <span className="text-[#004093] font-black tracking-[0.3em] uppercase text-xs px-4 py-2 bg-black/5 rounded-full border border-black/10">
                 WHY CHOOSE OUR SOLAR TEAM
               </span>
-              <h2 className="text-3xl lg:text-5xl font-serif font-bold mt-8 mb-8 leading-tight tracking-tighter">
-                What Makes Our Solar Company <br />
-                <span className="text-white">Stand Out</span> Across Queensland & Australia
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold mt-8 mb-8 leading-tight tracking-tighter flex flex-col items-start">
+                <BlurText
+                  text="What Makes Our Solar Company Stand Out"
+                  delay={70}
+                  animateBy="words"
+                  direction="top"
+                />
+                <BlurText
+                  text="Across Queensland & Australia"
+                  delay={60}
+                  animateBy="words"
+                  direction="bottom"
+                  className="text-white"
+                />
               </h2>
             </motion.div>
 

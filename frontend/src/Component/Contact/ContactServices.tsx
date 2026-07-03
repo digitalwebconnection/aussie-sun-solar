@@ -3,6 +3,7 @@ import {
   ChevronRight,
   ArrowUpRight,
 } from "lucide-react";
+import BlurText from "../BlurText";
 
 import newSolarSystem from '../../assets/downloaded-images/new-solar-system.webp';
 import expandingSolar from '../../assets/downloaded-images/expanding-solar.webp';
@@ -70,11 +71,20 @@ const ContactServices = () => {
             <div className="h-[2px] w-12 bg-[#FE9900]" />
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827]">
-            Smart Energy
-            <span className="block text-[#004093]">
-              Solutions For You
-            </span>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight text-[#111827] flex flex-col items-center">
+            <BlurText
+              text="Smart Energy"
+              delay={80}
+              animateBy="words"
+              direction="top"
+            />
+            <BlurText
+              text="Solutions For You"
+              delay={80}
+              animateBy="words"
+              direction="bottom"
+              className="text-[#004093]"
+            />
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed text-gray-600">
