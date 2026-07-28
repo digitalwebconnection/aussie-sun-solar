@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import BlurText from "../BlurText";
 
-import testimonial1 from '../../assets/downloaded-images/testimonial-1.jpg';
-import testimonial2 from '../../assets/downloaded-images/testimonial-2.jpg';
-import testimonial3 from '../../assets/downloaded-images/testimonial-3.jpg';
-import testimonial4 from '../../assets/downloaded-images/support-person.jpg';
+import testimonial1 from '../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07 (2).jpeg';
+import testimonial2 from '../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.09 (1).jpeg';
+import testimonial4 from '../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.07.jpeg';
+import testimonial3 from '../../assets/WhatsApp Unknown 2026-05-13 at 11.35.02/WhatsApp Image 2026-05-12 at 19.12.11.jpeg';
 
 const items = [
   {

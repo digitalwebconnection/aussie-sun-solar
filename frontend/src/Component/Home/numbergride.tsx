@@ -2,30 +2,26 @@
 
 import { motion } from 'framer-motion';
 import { BadgeCheck } from 'lucide-react';
-import Counter from './Counter';
+
 
 import solarRoof1 from '../../assets/downloaded-images/solar-roof-1.jpg';
 
 const STATS = [
     {
-        value: 20,
-        suffix: 'K+',
-        label: 'Happy Customers',
+  
+        label: 'Sustainable Energy Solutions',
     },
     {
-        value: 8,
-        suffix: '+',
-        label: 'Years Experience',
+     
+        label: 'Precision Installation Experts',
     },
     {
-        value: 98,
-        suffix: '%',
-        label: 'Success Rate',
+
+        label: 'Trusted Across Australia',
     },
     {
-        value: 24,
-        suffix: '/7',
-        label: 'Support Available',
+
+        label: 'Dedicated Customer Support',
     },
 ];
 
@@ -126,39 +122,7 @@ export default function StatsSection() {
                                 <BadgeCheck className="h-5 w-5 md:h-8 md:w-8" />
                             </div>
 
-                            {/* NUMBER */}
-                            <div className="relative z-10 flex items-center justify-center text-[#FE9900]">
-
-                                <div className="**:bg-transparent! **:shadow-none!">
-                                    <Counter
-                                        value={item.value}
-                                        fontSize={54}
-                                            fontWeight={900}
-                                        textColor="#FE9900"
-                                        padding={0}
-                                        gradientHeight={0}
-                                        horizontalPadding={0}
-                                        gap={0}
-                                        containerStyle={{
-                                            display: 'flex',
-                                            alignItems: 'baseline',
-                                            background: 'transparent',
-                                            boxShadow: 'none',
-                                        }}
-                                        digitStyle={{
-                                            background: 'transparent',
-                                            boxShadow: 'none',
-                                            border: 'none',
-                                        }}
-                                    />
-                                </div>
-
-                                {item.suffix && (
-                                    <span className="ml-1 text-3xl md:text-5xl font-black tracking-[-2px]">
-                                        {item.suffix}
-                                    </span>
-                                )}
-                            </div>
+                          
 
                             {/* LABEL */}
                             <p className="relative z-10 mt-4 text-sm md:text-lg font-semibold uppercase tracking-[0.25em] text-[#FE9900]">
@@ -166,7 +130,7 @@ export default function StatsSection() {
                             </p>
 
                             {/* BOTTOM LINE */}
-                            <div className="relative z-10 mx-auto mt-7 h-[2px] w-16 bg-[#FE9900]/50 transition-all duration-500 group-hover:w-28" />
+                            <div className="relative z-10 mx-auto mt-7 h-0.5 w-16 bg-[#FE9900]/50 transition-all duration-500 group-hover:w-28" />
                         </motion.div>
                     ))}
                 </div>

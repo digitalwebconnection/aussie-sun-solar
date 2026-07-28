@@ -21,8 +21,13 @@ export default defineConfig({
     },
   },
   build: {
-    // Suppress large chunk warnings (PDFs/images are expected to be large)
     chunkSizeWarningLimit: 3000,
+
+    rolldownOptions: {
+      checks: {
+        pluginTimings: false,
+      },
+    },
 
     rollupOptions: {
       output: {

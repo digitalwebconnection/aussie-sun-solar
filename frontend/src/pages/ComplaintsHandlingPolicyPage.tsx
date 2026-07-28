@@ -30,7 +30,7 @@ When lodging a complaint, please provide your full name, contact details, proper
     content: `If you are not satisfied with the proposed resolution, you can request that your complaint be escalated to a senior manager or the Director for review.
 If the matter remains unresolved, you have the right to escalate your complaint to the relevant external body, such as:
 • Your state's Department of Fair Trading or Consumer Affairs
-• The Clean Energy Council (CEC) if the complaint relates to a breach of the CEC Approved Solar Retailer Code of Conduct.`,
+• The Clean Energy Council (SAA & NETCC) if the complaint relates to a breach of the SAA & NETCC Approved Solar Retailer Code of Conduct.`,
   },
   {
     title: "5. Record Keeping",
